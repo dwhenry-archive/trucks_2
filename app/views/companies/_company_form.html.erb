@@ -1,0 +1,118 @@
+<% form_for company do |form| %>
+<div class="data_imput_row">
+	<div class="data_input_header">
+		Company Details
+	</div>
+</div>
+<div class="data_imput_row">
+	<div class="data_input_field">
+		<%= form.label :name, 'Company Name' %>
+	</div>
+	<div class="data_input_data">
+		<%= form.text_field :name %>
+	</div>
+</div>
+<div class="data_imput_row">
+	<div class="data_input_field">
+		<%= form.label :abn, 'ABN' %>
+	</div>
+	<div class="data_input_data">
+		<%= form.text_field :abn %> ###-####-####
+	</div>
+</div>
+<div class="data_imput_row">
+	<div class="data_input_field">
+		<%= form.label :pref_type, 'Primary Company Type' %>
+	</div>
+	<div class="data_input_data">
+		<%= form.radio_button :pref_type, :contract %> Grower
+		<%= form.radio_button :pref_type, :truck %> Trucker
+	</div>
+</div>
+<div class="data_imput_row">
+	<div class="data_input_field">
+		<%= form.label :phone %>
+	</div>
+	<div class="data_input_data">
+		<%= form.text_field :phone %> ##-####-####
+	</div>
+</div>
+<div class="data_imput_row">
+	<div class="data_input_field">
+		<%= form.label :address1, 'Address Line 1' %>
+	</div>
+	<div class="data_input_data">
+		<%= form.text_field :address1 %>
+	</div>
+</div>
+<div class="data_imput_row">
+	<div class="data_input_field">
+		<%= form.label :address2, 'Address Line 2' %>
+	</div>
+	<div class="data_input_data">
+		<%= form.text_field :address2 %>
+	</div>
+</div>
+<div class="data_imput_row">
+	<div class="data_input_field">
+		<%= form.label :town %>
+	</div>
+	<div class="data_input_data">
+		<%= form.text_field :town %>
+	</div>
+</div>
+<div class="data_imput_row">
+	<div class="data_input_field">
+		<%= form.label :state %>
+	</div>
+	<div class="data_input_data">
+		<%= form.text_field :state %>
+	</div>
+</div>
+<div class="data_imput_row">
+	<div class="data_input_field">
+		<%= form.label :postcode %>
+	</div>
+	<div class="data_input_data">
+		<%= form.text_field :postcode %> ####
+	</div>
+</div>
+
+<div class="data_imput_row">
+	<div class="data_input_header">
+		User(s)
+	</div>
+</div>
+<hr>
+
+<% company.users.each do |user| %>
+<% fields_for 'company[new_users][]', user do |u| %>
+<div id="users">
+	<div class="user">
+		<div class="data_imput_row">
+			<div class="data_input_field">
+				<%= u.label :login, 'Email Address' %>
+			</div>
+			<div class="data_input_data">
+				<%= u.text_field :login %>
+				<%= link_to "DEL USER", dashboard_home_path, {:title => 'Delete User Record', :class => 'del_user'} %>
+			</div>
+		</div>
+		<hr>
+	</div>
+</div>
+<% end %>
+<% end %>
+
+<% unless company.users.inject(company.errors.empty?){|res, user| res and user.errors.empty?} %> 
+	<!-- just put an error message rather than the full list of errors -->
+	<div id="errorContainer">
+		<div id="errorExplanation">
+			<h2>Error During Company Creation</h2>
+			<p>Please fix the highlighted fields and try again.</p>
+		</div>
+	</div>
+	<br>
+<% end %>
+<%= render :partial => 'companies/buttons/#{action_name}', :locals => {:form => form} %>
+<% end %>

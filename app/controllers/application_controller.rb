@@ -18,7 +18,7 @@ public
   
   include AuthenticatedSystem
 
-  #before_filter :login_required #:login_required_local 
+  before_filter :login_required #:login_required_local 
 
   helper :all # include all helpers, all the time
   protect_from_forgery # See ActionController::RequestForgeryProtection for details

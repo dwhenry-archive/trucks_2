@@ -1,0 +1,11 @@
+config/database.yml
+log/*.log
+tmp/**/*
+.DS_Store
+doc/api
+doc/app
+.*.swp
+*~
+.project
+tmp/webrat*
+config/user_details.rb

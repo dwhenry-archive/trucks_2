@@ -1,3 +1,53 @@
-body {
-	
+.data_imput_row {
+	overflow: hidden;
+	padding: 0.2em;
+	min-height:1.7em;
+	height:auto !important;
+	height:1.7em;
 }
+
+.data_input_field {
+	float: left;
+	width: 250px;
+	padding: 0 20px 0 0;
+	text-align: right;
+	color: #3F3F1B;
+	/*font-style: italic;*/
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.data_input_data {
+	float: left;
+	width: 340px;
+	color: #3F3F1B;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.data_input_header, .data_input_buttons {
+	float: left;
+	width: 340px;
+	padding: 0 0 0 270px;
+}
+
+.data_input_header {
+	/* text-align: right;
+	/* color: #3F3F1B;*/
+	font-style: italic;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+/* special case stuff
+ */
+
+ /* Red X to indicate delete of User record in create screen #errorContainer */
+a.del_user,a:visited.del_user,a:hover.del_user {
+ 	color: red;
+	font-weight: bolder;
+	font-size: 14px;
+	text-align: right;
+ }
+
+  

@@ -1,6 +1,6 @@
 <h1>Editing companies</h1>
 
-<% form_for(@companies) do |f| %>
+<% form_for(@company) do |f| %>
   <%= f.error_messages %>
 
   <p>
@@ -8,5 +8,5 @@
   </p>
 <% end %>
 
-<%= link_to 'Show', @companies %> |
+<%= link_to 'Show', @company %> |
 <%= link_to 'Back', companies_path %>

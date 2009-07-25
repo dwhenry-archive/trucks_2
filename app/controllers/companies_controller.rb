@@ -1,8 +1,10 @@
 class CompaniesController < ApplicationController
-  # GET /companies
-  # GET /companies.xml
+  skip_before_filter :login_required, :only => [:new, :create]
+
+  # GET /company
+  # GET /company.xml
   def index
-    @companies = Companies.all
+    @companies = Company.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -10,75 +12,76 @@ class CompaniesController < ApplicationController
     end
   end
 
-  # GET /companies/1
-  # GET /companies/1.xml
+  # GET /company/1
+  # GET /company/1.xml
   def show
-    @companies = Companies.find(params[:id])
+    @company = Company.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
-      format.xml  { render :xml => @companies }
+      format.xml  { render :xml => @company }
     end
   end
 
-  # GET /companies/new
-  # GET /companies/new.xml
+  # GET /company/new
+  # GET /company/new.xml
   def new
-    @companies = Companies.new
+    @company = Company.new
+    @company.users.build()
 
     respond_to do |format|
       format.html # new.html.erb
-      format.xml  { render :xml => @companies }
+      format.xml  { render :xml => @company }
     end
   end
 
-  # GET /companies/1/edit
+  # GET /company/1/edit
   def edit
-    @companies = Companies.find(params[:id])
+    @company = Company.find(params[:id])
   end
 
-  # POST /companies
-  # POST /companies.xml
+  # POST /company
+  # POST /company.xml
   def create
-    @companies = Companies.new(params[:companies])
+    @company = Company.new(params[:company])
 
     respond_to do |format|
-      if @companies.save
-        flash[:notice] = 'Companies was successfully created.'
-        format.html { redirect_to(@companies) }
-        format.xml  { render :xml => @companies, :status => :created, :location => @companies }
+      if @company.save
+        flash[:notice] = 'Company was successfully created.'
+        format.html { redirect_to(@company) }
+        format.xml  { render :xml => @company, :status => :created, :location => @company }
       else
         format.html { render :action => "new" }
-        format.xml  { render :xml => @companies.errors, :status => :unprocessable_entity }
+        format.xml  { render :xml => @company.errors, :status => :unprocessable_entity }
       end
     end
   end
 
-  # PUT /companies/1
-  # PUT /companies/1.xml
+  # PUT /company/1
+  # PUT /company/1.xml
   def update
-    @companies = Companies.find(params[:id])
+    @company = Company.find(params[:id])
 
     respond_to do |format|
-      if @companies.update_attributes(params[:companies])
-        flash[:notice] = 'Companies was successfully updated.'
-        format.html { redirect_to(@companies) }
+      if @company.update_attributes(params[:company])
+        flash[:notice] = 'Company was successfully updated.'
+        format.html { redirect_to(@company) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
-        format.xml  { render :xml => @companies.errors, :status => :unprocessable_entity }
+        format.xml  { render :xml => @company.errors, :status => :unprocessable_entity }
       end
     end
   end
 
-  # DELETE /companies/1
-  # DELETE /companies/1.xml
+  # DELETE /company/1
+  # DELETE /company/1.xml
   def destroy
-    @companies = Companies.find(params[:id])
-    @companies.destroy
+    @company = Company.find(params[:id])
+    @company.destroy
 
     respond_to do |format|
-      format.html { redirect_to(companies_url) }
+      format.html { redirect_to(company_url) }
       format.xml  { head :ok }
     end
   end

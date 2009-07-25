@@ -1296,3 +1296,2948 @@ Completed in 15ms (View: 15, DB: 0) | 200 OK [http://localhost/dashboard/home]
   [4;35;1mSQL (31.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090725142030')[0m
   [4;36;1mSQL (31.0ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20090725142010')[0m
   [4;35;1mSQL (31.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090725142018')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (31.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (344.0ms)[0m   [0;1mDROP DATABASE IF EXISTS `trucks2_test`[0m
+  [4;35;1mSQL (31.0ms)[0m   [0mCREATE DATABASE `trucks2_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (62.0ms)[0m   [0;1mCREATE TABLE `companies` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `abn` varchar(255), `address1` varchar(255), `address2` varchar(255), `town` varchar(255), `state` varchar(255), `postcode` varchar(255), `pref_type` varchar(255), `phone` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (93.0ms)[0m   [0;1mCREATE TABLE `loads` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `load_type` varchar(255), `start_loc` varchar(255), `start_pos` varchar(255), `end_loc` varchar(255), `end_pos` varchar(255), `start_date` date, `end_date` date, `am_load` int(11) DEFAULT 0, `company_id` int(11), `filled` tinyint(1) DEFAULT 0, `deleted` tinyint(1) DEFAULT 0, `comment` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (157.0ms)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `login` varchar(100), `crypted_password` varchar(40), `salt` varchar(40), `created_at` datetime, `updated_at` datetime, `remember_token` varchar(40), `remember_token_expires_at` datetime, `activation_code` varchar(40), `activated_at` datetime, `last_action` datetime, `ip_address` varchar(255), `company_id` int(11)) ENGINE=InnoDB[0m
+  [4;35;1mSQL (234.0ms)[0m   [0mCREATE UNIQUE INDEX `index_users_on_login` ON `users` (`login`)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (109.0ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (187.0ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (32.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090725142030')[0m
+  [4;36;1mSQL (31.0ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20090725142010')[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090725142018')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (203.0ms)[0m   [0;1mDROP DATABASE IF EXISTS `trucks2_test`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE DATABASE `trucks2_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (78.0ms)[0m   [0;1mCREATE TABLE `companies` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `abn` varchar(255), `address1` varchar(255), `address2` varchar(255), `town` varchar(255), `state` varchar(255), `postcode` varchar(255), `pref_type` varchar(255), `phone` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (141.0ms)[0m   [0;1mCREATE TABLE `loads` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `load_type` varchar(255), `start_loc` varchar(255), `start_pos` varchar(255), `end_loc` varchar(255), `end_pos` varchar(255), `start_date` date, `end_date` date, `am_load` int(11) DEFAULT 0, `company_id` int(11), `filled` tinyint(1) DEFAULT 0, `deleted` tinyint(1) DEFAULT 0, `comment` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (109.0ms)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `login` varchar(100), `crypted_password` varchar(40), `salt` varchar(40), `created_at` datetime, `updated_at` datetime, `remember_token` varchar(40), `remember_token_expires_at` datetime, `activation_code` varchar(40), `activated_at` datetime, `last_action` datetime, `ip_address` varchar(255), `company_id` int(11)) ENGINE=InnoDB[0m
+  [4;35;1mSQL (266.0ms)[0m   [0mCREATE UNIQUE INDEX `index_users_on_login` ON `users` (`login`)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (93.0ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (157.0ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090725142030')[0m
+  [4;36;1mSQL (31.0ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20090725142010')[0m
+  [4;35;1mSQL (63.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090725142018')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (172.0ms)[0m   [0;1mDROP DATABASE IF EXISTS `trucks2_test`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE DATABASE `trucks2_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (62.0ms)[0m   [0;1mCREATE TABLE `companies` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `abn` varchar(255), `address1` varchar(255), `address2` varchar(255), `town` varchar(255), `state` varchar(255), `postcode` varchar(255), `pref_type` varchar(255), `phone` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (78.0ms)[0m   [0;1mCREATE TABLE `loads` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `load_type` varchar(255), `start_loc` varchar(255), `start_pos` varchar(255), `end_loc` varchar(255), `end_pos` varchar(255), `start_date` date, `end_date` date, `am_load` int(11) DEFAULT 0, `company_id` int(11), `filled` tinyint(1) DEFAULT 0, `deleted` tinyint(1) DEFAULT 0, `comment` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (110.0ms)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `login` varchar(100), `crypted_password` varchar(40), `salt` varchar(40), `created_at` datetime, `updated_at` datetime, `remember_token` varchar(40), `remember_token_expires_at` datetime, `activation_code` varchar(40), `activated_at` datetime, `last_action` datetime, `ip_address` varchar(255), `company_id` int(11)) ENGINE=InnoDB[0m
+  [4;35;1mSQL (250.0ms)[0m   [0mCREATE UNIQUE INDEX `index_users_on_login` ON `users` (`login`)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (109.0ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (188.0ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (31.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090725142030')[0m
+  [4;36;1mSQL (31.0ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20090725142010')[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090725142018')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (172.0ms)[0m   [0;1mDROP DATABASE IF EXISTS `trucks2_test`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE DATABASE `trucks2_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (93.0ms)[0m   [0;1mCREATE TABLE `companies` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `abn` varchar(255), `address1` varchar(255), `address2` varchar(255), `town` varchar(255), `state` varchar(255), `postcode` varchar(255), `pref_type` varchar(255), `phone` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (94.0ms)[0m   [0;1mCREATE TABLE `loads` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `load_type` varchar(255), `start_loc` varchar(255), `start_pos` varchar(255), `end_loc` varchar(255), `end_pos` varchar(255), `start_date` date, `end_date` date, `am_load` int(11) DEFAULT 0, `company_id` int(11), `filled` tinyint(1) DEFAULT 0, `deleted` tinyint(1) DEFAULT 0, `comment` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (78.0ms)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `login` varchar(100), `crypted_password` varchar(40), `salt` varchar(40), `created_at` datetime, `updated_at` datetime, `remember_token` varchar(40), `remember_token_expires_at` datetime, `activation_code` varchar(40), `activated_at` datetime, `last_action` datetime, `ip_address` varchar(255), `company_id` int(11)) ENGINE=InnoDB[0m
+  [4;35;1mSQL (203.0ms)[0m   [0mCREATE UNIQUE INDEX `index_users_on_login` ON `users` (`login`)[0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (125.0ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (250.0ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (47.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090725142030')[0m
+  [4;36;1mSQL (32.0ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20090725142010')[0m
+  [4;35;1mSQL (46.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090725142018')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (110.0ms)[0m   [0;1mDROP DATABASE IF EXISTS `trucks2_test`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE DATABASE `trucks2_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (62.0ms)[0m   [0;1mCREATE TABLE `companies` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `abn` varchar(255), `address1` varchar(255), `address2` varchar(255), `town` varchar(255), `state` varchar(255), `postcode` varchar(255), `pref_type` varchar(255), `phone` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (78.0ms)[0m   [0;1mCREATE TABLE `loads` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `load_type` varchar(255), `start_loc` varchar(255), `start_pos` varchar(255), `end_loc` varchar(255), `end_pos` varchar(255), `start_date` date, `end_date` date, `am_load` int(11) DEFAULT 0, `company_id` int(11), `filled` tinyint(1) DEFAULT 0, `deleted` tinyint(1) DEFAULT 0, `comment` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (79.0ms)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `login` varchar(100), `crypted_password` varchar(40), `salt` varchar(40), `created_at` datetime, `updated_at` datetime, `remember_token` varchar(40), `remember_token_expires_at` datetime, `activation_code` varchar(40), `activated_at` datetime, `last_action` datetime, `ip_address` varchar(255), `company_id` int(11)) ENGINE=InnoDB[0m
+  [4;35;1mSQL (203.0ms)[0m   [0mCREATE UNIQUE INDEX `index_users_on_login` ON `users` (`login`)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (78.0ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (172.0ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (31.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090725142030')[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20090725142010')[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090725142018')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (172.0ms)[0m   [0;1mDROP DATABASE IF EXISTS `trucks2_test`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE DATABASE `trucks2_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (141.0ms)[0m   [0;1mCREATE TABLE `companies` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `abn` varchar(255), `address1` varchar(255), `address2` varchar(255), `town` varchar(255), `state` varchar(255), `postcode` varchar(255), `pref_type` varchar(255), `phone` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (187.0ms)[0m   [0;1mCREATE TABLE `loads` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `load_type` varchar(255), `start_loc` varchar(255), `start_pos` varchar(255), `end_loc` varchar(255), `end_pos` varchar(255), `start_date` date, `end_date` date, `am_load` int(11) DEFAULT 0, `company_id` int(11), `filled` tinyint(1) DEFAULT 0, `deleted` tinyint(1) DEFAULT 0, `comment` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (94.0ms)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `login` varchar(100), `crypted_password` varchar(40), `salt` varchar(40), `created_at` datetime, `updated_at` datetime, `remember_token` varchar(40), `remember_token_expires_at` datetime, `activation_code` varchar(40), `activated_at` datetime, `last_action` datetime, `ip_address` varchar(255), `company_id` int(11)) ENGINE=InnoDB[0m
+  [4;35;1mSQL (234.0ms)[0m   [0mCREATE UNIQUE INDEX `index_users_on_login` ON `users` (`login`)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (172.0ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (234.0ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (32.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090725142030')[0m
+  [4;36;1mSQL (31.0ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20090725142010')[0m
+  [4;35;1mSQL (31.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090725142018')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (219.0ms)[0m   [0;1mDROP DATABASE IF EXISTS `trucks2_test`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE DATABASE `trucks2_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (78.0ms)[0m   [0;1mCREATE TABLE `companies` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `abn` varchar(255), `address1` varchar(255), `address2` varchar(255), `town` varchar(255), `state` varchar(255), `postcode` varchar(255), `pref_type` varchar(255), `phone` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (141.0ms)[0m   [0;1mCREATE TABLE `loads` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `load_type` varchar(255), `start_loc` varchar(255), `start_pos` varchar(255), `end_loc` varchar(255), `end_pos` varchar(255), `start_date` date, `end_date` date, `am_load` int(11) DEFAULT 0, `company_id` int(11), `filled` tinyint(1) DEFAULT 0, `deleted` tinyint(1) DEFAULT 0, `comment` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (125.0ms)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `login` varchar(100), `crypted_password` varchar(40), `salt` varchar(40), `created_at` datetime, `updated_at` datetime, `remember_token` varchar(40), `remember_token_expires_at` datetime, `activation_code` varchar(40), `activated_at` datetime, `last_action` datetime, `ip_address` varchar(255), `company_id` int(11)) ENGINE=InnoDB[0m
+  [4;35;1mSQL (234.0ms)[0m   [0mCREATE UNIQUE INDEX `index_users_on_login` ON `users` (`login`)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (94.0ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (203.0ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (15.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090725142030')[0m
+  [4;36;1mSQL (32.0ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20090725142010')[0m
+  [4;35;1mSQL (15.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090725142018')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (156.0ms)[0m   [0;1mDROP DATABASE IF EXISTS `trucks2_test`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE DATABASE `trucks2_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (78.0ms)[0m   [0;1mCREATE TABLE `companies` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `abn` varchar(255), `address1` varchar(255), `address2` varchar(255), `town` varchar(255), `state` varchar(255), `postcode` varchar(255), `pref_type` varchar(255), `phone` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (93.0ms)[0m   [0;1mCREATE TABLE `loads` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `load_type` varchar(255), `start_loc` varchar(255), `start_pos` varchar(255), `end_loc` varchar(255), `end_pos` varchar(255), `start_date` date, `end_date` date, `am_load` int(11) DEFAULT 0, `company_id` int(11), `filled` tinyint(1) DEFAULT 0, `deleted` tinyint(1) DEFAULT 0, `comment` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (79.0ms)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `login` varchar(100), `crypted_password` varchar(40), `salt` varchar(40), `created_at` datetime, `updated_at` datetime, `remember_token` varchar(40), `remember_token_expires_at` datetime, `activation_code` varchar(40), `activated_at` datetime, `last_action` datetime, `ip_address` varchar(255), `company_id` int(11)) ENGINE=InnoDB[0m
+  [4;35;1mSQL (187.0ms)[0m   [0mCREATE UNIQUE INDEX `index_users_on_login` ON `users` (`login`)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (94.0ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (265.0ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (32.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090725142030')[0m
+  [4;36;1mSQL (31.0ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20090725142010')[0m
+  [4;35;1mSQL (31.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090725142018')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (172.0ms)[0m   [0;1mDROP DATABASE IF EXISTS `trucks2_test`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE DATABASE `trucks2_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (62.0ms)[0m   [0;1mCREATE TABLE `companies` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `abn` varchar(255), `address1` varchar(255), `address2` varchar(255), `town` varchar(255), `state` varchar(255), `postcode` varchar(255), `pref_type` varchar(255), `phone` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (125.0ms)[0m   [0;1mCREATE TABLE `loads` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `load_type` varchar(255), `start_loc` varchar(255), `start_pos` varchar(255), `end_loc` varchar(255), `end_pos` varchar(255), `start_date` date, `end_date` date, `am_load` int(11) DEFAULT 0, `company_id` int(11), `filled` tinyint(1) DEFAULT 0, `deleted` tinyint(1) DEFAULT 0, `comment` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (94.0ms)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `login` varchar(100), `crypted_password` varchar(40), `salt` varchar(40), `created_at` datetime, `updated_at` datetime, `remember_token` varchar(40), `remember_token_expires_at` datetime, `activation_code` varchar(40), `activated_at` datetime, `last_action` datetime, `ip_address` varchar(255), `company_id` int(11)) ENGINE=InnoDB[0m
+  [4;35;1mSQL (219.0ms)[0m   [0mCREATE UNIQUE INDEX `index_users_on_login` ON `users` (`login`)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (94.0ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (203.0ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (31.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090725142030')[0m
+  [4;36;1mSQL (31.0ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20090725142010')[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090725142018')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (156.0ms)[0m   [0;1mDROP DATABASE IF EXISTS `trucks2_test`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE DATABASE `trucks2_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (78.0ms)[0m   [0;1mCREATE TABLE `companies` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `abn` varchar(255), `address1` varchar(255), `address2` varchar(255), `town` varchar(255), `state` varchar(255), `postcode` varchar(255), `pref_type` varchar(255), `phone` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (94.0ms)[0m   [0;1mCREATE TABLE `loads` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `load_type` varchar(255), `start_loc` varchar(255), `start_pos` varchar(255), `end_loc` varchar(255), `end_pos` varchar(255), `start_date` date, `end_date` date, `am_load` int(11) DEFAULT 0, `company_id` int(11), `filled` tinyint(1) DEFAULT 0, `deleted` tinyint(1) DEFAULT 0, `comment` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (109.0ms)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `login` varchar(100), `crypted_password` varchar(40), `salt` varchar(40), `created_at` datetime, `updated_at` datetime, `remember_token` varchar(40), `remember_token_expires_at` datetime, `activation_code` varchar(40), `activated_at` datetime, `last_action` datetime, `ip_address` varchar(255), `company_id` int(11)) ENGINE=InnoDB[0m
+  [4;35;1mSQL (203.0ms)[0m   [0mCREATE UNIQUE INDEX `index_users_on_login` ON `users` (`login`)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (78.0ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (219.0ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (31.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090725142030')[0m
+  [4;36;1mSQL (31.0ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20090725142010')[0m
+  [4;35;1mSQL (32.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090725142018')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (437.0ms)[0m   [0;1mDROP DATABASE IF EXISTS `trucks2_test`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE DATABASE `trucks2_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (62.0ms)[0m   [0;1mCREATE TABLE `companies` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `abn` varchar(255), `address1` varchar(255), `address2` varchar(255), `town` varchar(255), `state` varchar(255), `postcode` varchar(255), `pref_type` varchar(255), `phone` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (125.0ms)[0m   [0;1mCREATE TABLE `loads` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `load_type` varchar(255), `start_loc` varchar(255), `start_pos` varchar(255), `end_loc` varchar(255), `end_pos` varchar(255), `start_date` date, `end_date` date, `am_load` int(11) DEFAULT 0, `company_id` int(11), `filled` tinyint(1) DEFAULT 0, `deleted` tinyint(1) DEFAULT 0, `comment` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (79.0ms)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `login` varchar(100), `crypted_password` varchar(40), `salt` varchar(40), `created_at` datetime, `updated_at` datetime, `remember_token` varchar(40), `remember_token_expires_at` datetime, `activation_code` varchar(40), `activated_at` datetime, `last_action` datetime, `ip_address` varchar(255), `company_id` int(11)) ENGINE=InnoDB[0m
+  [4;35;1mSQL (234.0ms)[0m   [0mCREATE UNIQUE INDEX `index_users_on_login` ON `users` (`login`)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (109.0ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (188.0ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (78.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090725142030')[0m
+  [4;36;1mSQL (31.0ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20090725142010')[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090725142018')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (188.0ms)[0m   [0;1mDROP DATABASE IF EXISTS `trucks2_test`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE DATABASE `trucks2_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (78.0ms)[0m   [0;1mCREATE TABLE `companies` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `abn` varchar(255), `address1` varchar(255), `address2` varchar(255), `town` varchar(255), `state` varchar(255), `postcode` varchar(255), `pref_type` varchar(255), `phone` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (78.0ms)[0m   [0;1mCREATE TABLE `loads` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `load_type` varchar(255), `start_loc` varchar(255), `start_pos` varchar(255), `end_loc` varchar(255), `end_pos` varchar(255), `start_date` date, `end_date` date, `am_load` int(11) DEFAULT 0, `company_id` int(11), `filled` tinyint(1) DEFAULT 0, `deleted` tinyint(1) DEFAULT 0, `comment` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (94.0ms)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `login` varchar(100), `crypted_password` varchar(40), `salt` varchar(40), `created_at` datetime, `updated_at` datetime, `remember_token` varchar(40), `remember_token_expires_at` datetime, `activation_code` varchar(40), `activated_at` datetime, `last_action` datetime, `ip_address` varchar(255), `company_id` int(11)) ENGINE=InnoDB[0m
+  [4;35;1mSQL (234.0ms)[0m   [0mCREATE UNIQUE INDEX `index_users_on_login` ON `users` (`login`)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (94.0ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (188.0ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (62.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090725142030')[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20090725142010')[0m
+  [4;35;1mSQL (47.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090725142018')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DashboardController#home (for 127.0.0.1 at 2009-07-25 20:14:34) [GET]
+Rendering template within layouts/application
+Rendering dashboard/home
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/dashboard/home]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 20:14:38) [GET]
+  [4;36;1mCompany Columns (125.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mUser Columns (109.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+
+ActionView::TemplateError (No route matches {:controller=>"account", :action=>"add_company"}) on line #10 of app/views/companies/new.html.erb:
+7: <% end %>
+8: <h1>Create New Company Account</h1><br/>
+9: <h2>Company Details</h2>
+10: <% form_for :company, :url => {:controller => :account, :action => :add_company } do |form| %>
+11: <table>
+12: 	<tr>
+13: 		<td width="150"><b>Company Name</b></td>
+
+    app/views/companies/new.html.erb:10
+    app/controllers/companies_controller.rb:30:in `new'
+
+Rendered rescues/_trace (187.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 20:14:56) [GET]
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+
+ActionView::TemplateError (uninitialized constant ActionView::Base::CompiledTemplates::TownMap) on line #36 of app/views/companies/new.html.erb:
+33: 	</tr>
+34: 	<tr>
+35: 		<td><b>Town</b></td>
+36: 		<td><%= form.select(:town, TownMap.find(:all, :conditions => "level = 3").map{|u| u.pos}) %></td>
+37: 	</tr>
+38: 	<tr>
+39: 		<td><b>State</b></td>
+
+    app/views/companies/new.html.erb:36
+    app/views/companies/new.html.erb:10
+    app/controllers/companies_controller.rb:30:in `new'
+
+Rendered rescues/_trace (172.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 20:16:08) [GET]
+  [4;36;1mCompany Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+
+ActionView::TemplateError (undefined method `name' for #<User:0x4720f98>) on line #69 of app/views/companies/new.html.erb:
+66: 
+67: 	<tr>
+68: 		<td><b>Full Name<b/></td>
+69: 		<td><%= u.text_field :name %></td>
+70: 	</tr>
+71: 
+72: 	<tr class="hidden">
+
+    app/views/companies/new.html.erb:69
+    app/views/companies/new.html.erb:50
+    app/views/companies/new.html.erb:10
+    app/controllers/companies_controller.rb:30:in `new'
+
+Rendered rescues/_trace (109.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 20:16:42) [GET]
+  [4;35;1mCompany Columns (62.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+
+ActionView::TemplateError (undefined method `user_type_id' for #<User:0x46cc5d8>) on line #69 of app/views/companies/new.html.erb:
+66: 
+67: 	<tr class="hidden">
+68: 		<td><b>User Type<b/></td>
+69: 		<td><%= u.select(:user_type_id, @user_type) %></td>
+70: 	</tr>
+71: 
+72: 	<tr>
+
+    app/views/companies/new.html.erb:69
+    app/views/companies/new.html.erb:50
+    app/views/companies/new.html.erb:10
+    app/controllers/companies_controller.rb:30:in `new'
+
+Rendered rescues/_trace (109.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 20:17:15) [GET]
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 94ms (View: 47, DB: 0) | 200 OK [http://localhost/companies/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (172.0ms)[0m   [0;1mDROP DATABASE IF EXISTS `trucks2_test`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE DATABASE `trucks2_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (31.0ms)[0m   [0;1mCREATE TABLE `companies` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `abn` varchar(255), `address1` varchar(255), `address2` varchar(255), `town` varchar(255), `state` varchar(255), `postcode` varchar(255), `pref_type` varchar(255), `phone` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (94.0ms)[0m   [0;1mCREATE TABLE `loads` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `load_type` varchar(255), `start_loc` varchar(255), `start_pos` varchar(255), `end_loc` varchar(255), `end_pos` varchar(255), `start_date` date, `end_date` date, `am_load` int(11) DEFAULT 0, `company_id` int(11), `filled` tinyint(1) DEFAULT 0, `deleted` tinyint(1) DEFAULT 0, `comment` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (93.0ms)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `login` varchar(100), `crypted_password` varchar(40), `salt` varchar(40), `created_at` datetime, `updated_at` datetime, `remember_token` varchar(40), `remember_token_expires_at` datetime, `activation_code` varchar(40), `activated_at` datetime, `last_action` datetime, `ip_address` varchar(255), `company_id` int(11)) ENGINE=InnoDB[0m
+  [4;35;1mSQL (188.0ms)[0m   [0mCREATE UNIQUE INDEX `index_users_on_login` ON `users` (`login`)[0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (125.0ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (204.0ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (15.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090725142030')[0m
+  [4;36;1mSQL (31.0ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20090725142010')[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090725142018')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 20:57:30) [GET]
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mUser Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 47ms (View: 0, DB: 16) | 200 OK [http://localhost/companies/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 20:59:57) [GET]
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mUser Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 46ms (View: 0, DB: 15) | 200 OK [http://localhost/companies/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 21:02:31) [GET]
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 62ms (View: 15, DB: 0) | 200 OK [http://localhost/companies/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (172.0ms)[0m   [0;1mDROP DATABASE IF EXISTS `trucks2_test`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE DATABASE `trucks2_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (78.0ms)[0m   [0;1mCREATE TABLE `companies` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `abn` varchar(255), `address1` varchar(255), `address2` varchar(255), `town` varchar(255), `state` varchar(255), `postcode` varchar(255), `pref_type` varchar(255), `phone` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (78.0ms)[0m   [0;1mCREATE TABLE `loads` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `load_type` varchar(255), `start_loc` varchar(255), `start_pos` varchar(255), `end_loc` varchar(255), `end_pos` varchar(255), `start_date` date, `end_date` date, `am_load` int(11) DEFAULT 0, `company_id` int(11), `filled` tinyint(1) DEFAULT 0, `deleted` tinyint(1) DEFAULT 0, `comment` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (79.0ms)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `login` varchar(100), `crypted_password` varchar(40), `salt` varchar(40), `created_at` datetime, `updated_at` datetime, `remember_token` varchar(40), `remember_token_expires_at` datetime, `activation_code` varchar(40), `activated_at` datetime, `last_action` datetime, `ip_address` varchar(255), `company_id` int(11)) ENGINE=InnoDB[0m
+  [4;35;1mSQL (234.0ms)[0m   [0mCREATE UNIQUE INDEX `index_users_on_login` ON `users` (`login`)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (78.0ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (172.0ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090725142030')[0m
+  [4;36;1mSQL (31.0ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20090725142010')[0m
+  [4;35;1mSQL (31.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090725142018')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 21:03:39) [GET]
+  [4;36;1mCompany Columns (62.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 125ms (View: 15, DB: 62) | 200 OK [http://localhost/companies/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 21:04:28) [GET]
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 47ms (View: 0, DB: 0) | 200 OK [http://localhost/companies/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 21:08:42) [GET]
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mUser Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 79ms (View: 16, DB: 16) | 200 OK [http://localhost/companies/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 21:10:51) [GET]
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/companies/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (140.0ms)[0m   [0;1mDROP DATABASE IF EXISTS `trucks2_test`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE DATABASE `trucks2_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (47.0ms)[0m   [0;1mCREATE TABLE `companies` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `abn` varchar(255), `address1` varchar(255), `address2` varchar(255), `town` varchar(255), `state` varchar(255), `postcode` varchar(255), `pref_type` varchar(255), `phone` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (94.0ms)[0m   [0;1mCREATE TABLE `loads` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `load_type` varchar(255), `start_loc` varchar(255), `start_pos` varchar(255), `end_loc` varchar(255), `end_pos` varchar(255), `start_date` date, `end_date` date, `am_load` int(11) DEFAULT 0, `company_id` int(11), `filled` tinyint(1) DEFAULT 0, `deleted` tinyint(1) DEFAULT 0, `comment` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (78.0ms)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `login` varchar(100), `crypted_password` varchar(40), `salt` varchar(40), `created_at` datetime, `updated_at` datetime, `remember_token` varchar(40), `remember_token_expires_at` datetime, `activation_code` varchar(40), `activated_at` datetime, `last_action` datetime, `ip_address` varchar(255), `company_id` int(11)) ENGINE=InnoDB[0m
+  [4;35;1mSQL (234.0ms)[0m   [0mCREATE UNIQUE INDEX `index_users_on_login` ON `users` (`login`)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (78.0ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (250.0ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (31.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090725142030')[0m
+  [4;36;1mSQL (32.0ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20090725142010')[0m
+  [4;35;1mSQL (15.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090725142018')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 21:14:02) [GET]
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mUser Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 62ms (View: 16, DB: 15) | 200 OK [http://localhost/companies/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 21:16:20) [GET]
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 62ms (View: 15, DB: 0) | 200 OK [http://localhost/companies/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 21:16:35) [GET]
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mUser Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 62ms (View: 15, DB: 16) | 200 OK [http://localhost/companies/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 21:18:42) [GET]
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+
+ActionView::TemplateError (undefined local variable or method `f' for #<ActionView::Base:0x4736e74>) on line #113 of app/views/companies/new.html.erb:
+110: </div>
+111: 
+112: <span class="button lt_blue"><%= link_to 'Cancel', dashboard_home_path %></span>&nbsp;
+113: <%= f.submit "Create", {:class => 'button lt_blue', :style => "display:inline"} %>
+114: 			
+115: <% end %>
+116: <% end %>
+
+    app/views/companies/new.html.erb:113
+    app/views/companies/new.html.erb:85
+    app/views/companies/new.html.erb:10
+    app/controllers/companies_controller.rb:30:in `new'
+
+Rendered rescues/_trace (78.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 21:18:53) [GET]
+  [4;36;1mCompany Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 62ms (View: 31, DB: 16) | 200 OK [http://localhost/companies/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 21:19:10) [GET]
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 234ms (View: 125, DB: 0) | 200 OK [http://localhost/companies/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-25 21:19:11) [GET]
+
+ActionController::RoutingError (No route matches "/images/formbg_lt_blue.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 21:19:45) [GET]
+  [4;35;1mCompany Columns (63.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 110ms (View: 16, DB: 63) | 200 OK [http://localhost/companies/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 21:20:12) [GET]
+  [4;36;1mCompany Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 62ms (View: 31, DB: 15) | 200 OK [http://localhost/companies/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (188.0ms)[0m   [0;1mDROP DATABASE IF EXISTS `trucks2_test`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE DATABASE `trucks2_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (15.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (63.0ms)[0m   [0;1mCREATE TABLE `companies` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `abn` varchar(255), `address1` varchar(255), `address2` varchar(255), `town` varchar(255), `state` varchar(255), `postcode` varchar(255), `pref_type` varchar(255), `phone` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (78.0ms)[0m   [0;1mCREATE TABLE `loads` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `load_type` varchar(255), `start_loc` varchar(255), `start_pos` varchar(255), `end_loc` varchar(255), `end_pos` varchar(255), `start_date` date, `end_date` date, `am_load` int(11) DEFAULT 0, `company_id` int(11), `filled` tinyint(1) DEFAULT 0, `deleted` tinyint(1) DEFAULT 0, `comment` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (109.0ms)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `login` varchar(100), `crypted_password` varchar(40), `salt` varchar(40), `created_at` datetime, `updated_at` datetime, `remember_token` varchar(40), `remember_token_expires_at` datetime, `activation_code` varchar(40), `activated_at` datetime, `last_action` datetime, `ip_address` varchar(255), `company_id` int(11)) ENGINE=InnoDB[0m
+  [4;35;1mSQL (219.0ms)[0m   [0mCREATE UNIQUE INDEX `index_users_on_login` ON `users` (`login`)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (94.0ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (203.0ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (15.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090725142030')[0m
+  [4;36;1mSQL (31.0ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20090725142010')[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090725142018')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#create (for 127.0.0.1 at 2009-07-25 21:22:31) [POST]
+  Parameters: {"company"=>{"address1"=>"", "name"=>"", "address2"=>"", "postcode"=>"", "abn"=>"", "pref_type"=>"", "town"=>"", "phone"=>"", "state"=>""}, "user"=>{"password_confirmation"=>"", "password"=>"", "login"=>""}, "commit"=>"Create", "authenticity_token"=>"ha/Pq3kduPe86gdiyBhThGhdCjsCADpL1QrVN9DpUKU="}
+  [4;35;1mCompany Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCompany Create (0.0ms)[0m   [0mINSERT INTO `companies` (`name`, `address1`, `address2`, `updated_at`, `abn`, `postcode`, `pref_type`, `town`, `phone`, `state`, `created_at`) VALUES('', '', '', '2009-07-25 20:22:31', '', '', '', '', '', '', '2009-07-25 20:22:31')[0m
+  [4;36;1mSQL (328.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/companies/3
+Completed in 359ms (DB: 343) | 302 Found [http://localhost/companies]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#show (for 127.0.0.1 at 2009-07-25 21:22:31) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM `companies` WHERE (`companies`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering companies/show
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 93ms (View: 78, DB: 0) | 200 OK [http://localhost/companies/3]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#create (for 127.0.0.1 at 2009-07-25 21:30:59) [POST]
+  Parameters: {"company"=>{"address1"=>"", "name"=>"", "address2"=>"", "postcode"=>"", "abn"=>"", "pref_type"=>"", "town"=>"", "phone"=>"", "state"=>""}, "user"=>{"password_confirmation"=>"", "password"=>"", "login"=>""}, "commit"=>"Create", "authenticity_token"=>"ha/Pq3kduPe86gdiyBhThGhdCjsCADpL1QrVN9DpUKU="}
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCompany Exists (297.0ms)[0m   [0mSELECT `companies`.id FROM `companies` WHERE (`companies`.`name` = BINARY '') LIMIT 1[0m
+  [4;36;1mCompany Exists (0.0ms)[0m   [0;1mSELECT `companies`.id FROM `companies` WHERE (`companies`.`abn` = BINARY '') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 344ms (View: 16, DB: 297) | 200 OK [http://localhost/companies]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#index (for 127.0.0.1 at 2009-07-25 21:31:19) [GET]
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM `companies` [0m
+Rendering template within layouts/application
+Rendering companies/index
+  [4;36;1mCompany Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+
+ActionView::TemplateError (undefined method `edit_companies_path' for #<ActionView::Base:0x47ad6a0>) on line #10 of app/views/companies/index.html.erb:
+7: <% @companies.each do |companies| %>
+8:   <tr>
+9:     <td><%= link_to 'Show', companies %></td>
+10:     <td><%= link_to 'Edit', edit_companies_path(companies) %></td>
+11:     <td><%= link_to 'Destroy', companies, :confirm => 'Are you sure?', :method => :delete %></td>
+12:   </tr>
+13: <% end %>
+
+    app/views/companies/index.html.erb:10
+    app/views/companies/index.html.erb:7:in `each'
+    app/views/companies/index.html.erb:7
+    app/controllers/companies_controller.rb:7:in `index'
+
+Rendered rescues/_trace (156.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#create (for 127.0.0.1 at 2009-07-25 21:33:12) [POST]
+  Parameters: {"company"=>{"address1"=>"", "name"=>"", "address2"=>"", "postcode"=>"", "abn"=>"", "pref_type"=>"", "town"=>"", "phone"=>"", "state"=>""}, "user"=>{"password_confirmation"=>"", "password"=>"", "login"=>""}, "commit"=>"Create", "authenticity_token"=>"ha/Pq3kduPe86gdiyBhThGhdCjsCADpL1QrVN9DpUKU="}
+  [4;36;1mCompany Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mCompany Exists (0.0ms)[0m   [0;1mSELECT `companies`.id FROM `companies` WHERE (`companies`.`name` = BINARY '') LIMIT 1[0m
+  [4;35;1mCompany Exists (0.0ms)[0m   [0mSELECT `companies`.id FROM `companies` WHERE (`companies`.`abn` = BINARY '') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 63ms (View: 0, DB: 16) | 200 OK [http://localhost/companies]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#create (for 127.0.0.1 at 2009-07-25 21:36:11) [POST]
+  Parameters: {"company"=>{"address1"=>"", "name"=>"", "address2"=>"", "postcode"=>"", "abn"=>"", "pref_type"=>"", "town"=>"", "phone"=>"", "state"=>""}, "user"=>{"password_confirmation"=>"", "password"=>"", "login"=>""}, "commit"=>"Create", "authenticity_token"=>"ha/Pq3kduPe86gdiyBhThGhdCjsCADpL1QrVN9DpUKU="}
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mCompany Exists (0.0ms)[0m   [0;1mSELECT `companies`.id FROM `companies` WHERE (`companies`.`name` = BINARY '') LIMIT 1[0m
+  [4;35;1mCompany Exists (0.0ms)[0m   [0mSELECT `companies`.id FROM `companies` WHERE (`companies`.`abn` = BINARY '') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/companies]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#create (for 127.0.0.1 at 2009-07-25 21:36:17) [POST]
+  Parameters: {"company"=>{"address1"=>"", "name"=>"", "address2"=>"", "postcode"=>"", "abn"=>"asdd", "pref_type"=>"", "town"=>"", "phone"=>"", "state"=>""}, "user"=>{"password_confirmation"=>"", "password"=>"", "login"=>""}, "commit"=>"Create", "authenticity_token"=>"ha/Pq3kduPe86gdiyBhThGhdCjsCADpL1QrVN9DpUKU="}
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mCompany Exists (0.0ms)[0m   [0;1mSELECT `companies`.id FROM `companies` WHERE (`companies`.`name` = BINARY '') LIMIT 1[0m
+  [4;35;1mCompany Exists (0.0ms)[0m   [0mSELECT `companies`.id FROM `companies` WHERE (`companies`.`abn` = BINARY 'asdd') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/companies]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#index (for 127.0.0.1 at 2009-07-25 21:36:42) [GET]
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `companies` [0m
+Rendering template within layouts/application
+Rendering companies/index
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+
+ActionView::TemplateError (undefined method `edit_companies_path' for #<ActionView::Base:0x48be404>) on line #10 of app/views/companies/index.html.erb:
+7: <% @companies.each do |companies| %>
+8:   <tr>
+9:     <td><%= link_to 'Show', companies %></td>
+10:     <td><%= link_to 'Edit', edit_companies_path(companies) %></td>
+11:     <td><%= link_to 'Destroy', companies, :confirm => 'Are you sure?', :method => :delete %></td>
+12:   </tr>
+13: <% end %>
+
+    app/views/companies/index.html.erb:10
+    app/views/companies/index.html.erb:7:in `each'
+    app/views/companies/index.html.erb:7
+    app/controllers/companies_controller.rb:7:in `index'
+
+Rendered rescues/_trace (94.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#index (for 127.0.0.1 at 2009-07-25 21:37:13) [GET]
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM `companies` [0m
+Rendering template within layouts/application
+Rendering companies/index
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+
+ActionView::TemplateError (undefined local variable or method `company' for #<ActionView::Base:0x46a4844>) on line #9 of app/views/companies/index.html.erb:
+6: 
+7: <% @companies.each do |companies| %>
+8:   <tr>
+9:     <td><%= link_to 'Show', company %></td>
+10:     <td><%= link_to 'Edit', edit_company_path(company) %></td>
+11:     <td><%= link_to 'Destroy', company, :confirm => 'Are you sure?', :method => :delete %></td>
+12:   </tr>
+
+    app/views/companies/index.html.erb:9
+    app/views/companies/index.html.erb:7:in `each'
+    app/views/companies/index.html.erb:7
+    app/controllers/companies_controller.rb:7:in `index'
+
+Rendered rescues/_trace (94.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#index (for 127.0.0.1 at 2009-07-25 21:37:24) [GET]
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `companies` [0m
+Rendering template within layouts/application
+Rendering companies/index
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+
+ActionView::TemplateError (undefined local variable or method `new_companies_path' for #<ActionView::Base:0x4905e80>) on line #18 of app/views/companies/index.html.erb:
+15: 
+16: <br />
+17: 
+18: <%= link_to 'New companies', new_companies_path %>
+
+    app/views/companies/index.html.erb:18
+    app/controllers/companies_controller.rb:7:in `index'
+
+Rendered rescues/_trace (94.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#index (for 127.0.0.1 at 2009-07-25 21:37:38) [GET]
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM `companies` [0m
+Rendering template within layouts/application
+Rendering companies/index
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/companies]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 21:37:41) [GET]
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 62ms (View: 16, DB: 0) | 200 OK [http://localhost/companies/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#create (for 127.0.0.1 at 2009-07-25 21:37:45) [POST]
+  Parameters: {"company"=>{"address1"=>"", "name"=>"", "address2"=>"", "postcode"=>"", "abn"=>"", "pref_type"=>"", "town"=>"", "phone"=>"", "state"=>""}, "user"=>{"password_confirmation"=>"", "password"=>"", "login"=>""}, "commit"=>"Create", "authenticity_token"=>"ha/Pq3kduPe86gdiyBhThGhdCjsCADpL1QrVN9DpUKU="}
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCompany Exists (0.0ms)[0m   [0mSELECT `companies`.id FROM `companies` WHERE (`companies`.`name` = BINARY '') LIMIT 1[0m
+  [4;36;1mCompany Exists (0.0ms)[0m   [0;1mSELECT `companies`.id FROM `companies` WHERE (`companies`.`abn` = BINARY '') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 32ms (View: 0, DB: 0) | 200 OK [http://localhost/companies]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#create (for 127.0.0.1 at 2009-07-25 21:38:50) [POST]
+  Parameters: {"company"=>{"address1"=>"", "name"=>"", "address2"=>"", "postcode"=>"", "abn"=>"", "pref_type"=>"", "town"=>"", "phone"=>"", "state"=>""}, "user"=>{"password_confirmation"=>"", "password"=>"", "login"=>""}, "commit"=>"Create", "authenticity_token"=>"ha/Pq3kduPe86gdiyBhThGhdCjsCADpL1QrVN9DpUKU="}
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCompany Exists (0.0ms)[0m   [0mSELECT `companies`.id FROM `companies` WHERE (`companies`.`name` = BINARY '') LIMIT 1[0m
+  [4;36;1mCompany Exists (0.0ms)[0m   [0;1mSELECT `companies`.id FROM `companies` WHERE (`companies`.`abn` = BINARY '') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 46ms (View: 15, DB: 0) | 200 OK [http://localhost/companies]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#index (for 127.0.0.1 at 2009-07-25 21:41:14) [GET]
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM `companies` [0m
+Rendering template within layouts/application
+Rendering companies/index
+  [4;36;1mCompany Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+Rendered shared/_user_bar (16.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 78ms (View: 32, DB: 15) | 200 OK [http://localhost/companies]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 21:41:15) [GET]
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 141ms (View: 16, DB: 0) | 200 OK [http://localhost/companies/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#create (for 127.0.0.1 at 2009-07-25 21:43:10) [POST]
+  Parameters: {"company"=>{"address1"=>"", "name"=>"", "address2"=>"", "postcode"=>"", "abn"=>"", "pref_type"=>"", "town"=>"", "phone"=>"", "state"=>""}, "user"=>{"password_confirmation"=>"", "password"=>"", "login"=>""}, "commit"=>"Create", "authenticity_token"=>"ha/Pq3kduPe86gdiyBhThGhdCjsCADpL1QrVN9DpUKU="}
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCompany Exists (0.0ms)[0m   [0mSELECT `companies`.id FROM `companies` WHERE (`companies`.`name` = BINARY '') LIMIT 1[0m
+  [4;36;1mCompany Exists (0.0ms)[0m   [0;1mSELECT `companies`.id FROM `companies` WHERE (`companies`.`abn` = BINARY '') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/companies]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#create (for 127.0.0.1 at 2009-07-25 21:43:34) [POST]
+  Parameters: {"company"=>{"address1"=>"", "name"=>"", "address2"=>"", "postcode"=>"", "abn"=>"", "pref_type"=>"", "town"=>"", "phone"=>"", "state"=>""}, "user"=>{"password_confirmation"=>"", "password"=>"", "login"=>""}, "commit"=>"Create", "authenticity_token"=>"ha/Pq3kduPe86gdiyBhThGhdCjsCADpL1QrVN9DpUKU="}
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCompany Exists (0.0ms)[0m   [0mSELECT `companies`.id FROM `companies` WHERE (`companies`.`name` = BINARY '') LIMIT 1[0m
+  [4;36;1mCompany Exists (0.0ms)[0m   [0;1mSELECT `companies`.id FROM `companies` WHERE (`companies`.`abn` = BINARY '') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 46ms (View: 15, DB: 0) | 200 OK [http://localhost/companies]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#create (for 127.0.0.1 at 2009-07-25 21:43:55) [POST]
+  Parameters: {"company"=>{"address1"=>"", "name"=>"", "address2"=>"", "postcode"=>"", "abn"=>"", "pref_type"=>"", "town"=>"", "phone"=>"", "state"=>""}, "user"=>{"password_confirmation"=>"", "password"=>"", "login"=>""}, "commit"=>"Create", "authenticity_token"=>"ha/Pq3kduPe86gdiyBhThGhdCjsCADpL1QrVN9DpUKU="}
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCompany Exists (0.0ms)[0m   [0mSELECT `companies`.id FROM `companies` WHERE (`companies`.`name` = BINARY '') LIMIT 1[0m
+  [4;36;1mCompany Exists (0.0ms)[0m   [0;1mSELECT `companies`.id FROM `companies` WHERE (`companies`.`abn` = BINARY '') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 47ms (View: 32, DB: 15) | 200 OK [http://localhost/companies]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#create (for 127.0.0.1 at 2009-07-25 21:45:08) [POST]
+  Parameters: {"company"=>{"address1"=>"", "name"=>"", "address2"=>"", "postcode"=>"", "abn"=>"", "pref_type"=>"", "town"=>"", "phone"=>"", "state"=>""}, "user"=>{"password_confirmation"=>"", "password"=>"", "login"=>""}, "commit"=>"Create", "authenticity_token"=>"ha/Pq3kduPe86gdiyBhThGhdCjsCADpL1QrVN9DpUKU="}
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCompany Exists (0.0ms)[0m   [0mSELECT `companies`.id FROM `companies` WHERE (`companies`.`name` = BINARY '') LIMIT 1[0m
+  [4;36;1mCompany Exists (0.0ms)[0m   [0;1mSELECT `companies`.id FROM `companies` WHERE (`companies`.`abn` = BINARY '') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/companies]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#create (for 127.0.0.1 at 2009-07-25 21:45:17) [POST]
+  Parameters: {"company"=>{"address1"=>"", "name"=>"", "address2"=>"", "postcode"=>"", "abn"=>"", "pref_type"=>"", "town"=>"", "phone"=>"", "state"=>""}, "user"=>{"password_confirmation"=>"", "password"=>"", "login"=>""}, "commit"=>"Create", "authenticity_token"=>"ha/Pq3kduPe86gdiyBhThGhdCjsCADpL1QrVN9DpUKU="}
+  [4;35;1mCompany Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCompany Exists (0.0ms)[0m   [0mSELECT `companies`.id FROM `companies` WHERE (`companies`.`name` = BINARY '') LIMIT 1[0m
+  [4;36;1mCompany Exists (0.0ms)[0m   [0;1mSELECT `companies`.id FROM `companies` WHERE (`companies`.`abn` = BINARY '') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 47ms (View: 15, DB: 16) | 200 OK [http://localhost/companies]
+  [4;36;1mSQL (15.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#create (for 127.0.0.1 at 2009-07-25 21:46:22) [POST]
+  Parameters: {"company"=>{"address1"=>"", "name"=>"", "address2"=>"", "postcode"=>"", "abn"=>"", "pref_type"=>"", "town"=>"", "phone"=>"", "state"=>""}, "user"=>{"password_confirmation"=>"", "password"=>"", "login"=>""}, "commit"=>"Create", "authenticity_token"=>"ha/Pq3kduPe86gdiyBhThGhdCjsCADpL1QrVN9DpUKU="}
+  [4;35;1mCompany Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCompany Exists (16.0ms)[0m   [0mSELECT `companies`.id FROM `companies` WHERE (`companies`.`name` = BINARY '') LIMIT 1[0m
+  [4;36;1mCompany Exists (0.0ms)[0m   [0;1mSELECT `companies`.id FROM `companies` WHERE (`companies`.`abn` = BINARY '') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 47ms (View: 16, DB: 46) | 200 OK [http://localhost/companies]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#create (for 127.0.0.1 at 2009-07-25 21:46:28) [POST]
+  Parameters: {"company"=>{"address1"=>"", "name"=>"", "address2"=>"", "postcode"=>"", "abn"=>"", "pref_type"=>"", "town"=>"", "phone"=>"", "state"=>""}, "user"=>{"password_confirmation"=>"", "password"=>"", "login"=>""}, "commit"=>"Create", "authenticity_token"=>"ha/Pq3kduPe86gdiyBhThGhdCjsCADpL1QrVN9DpUKU="}
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCompany Exists (0.0ms)[0m   [0mSELECT `companies`.id FROM `companies` WHERE (`companies`.`name` = BINARY '') LIMIT 1[0m
+  [4;36;1mCompany Exists (0.0ms)[0m   [0;1mSELECT `companies`.id FROM `companies` WHERE (`companies`.`abn` = BINARY '') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/companies]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#create (for 127.0.0.1 at 2009-07-25 21:47:33) [POST]
+  Parameters: {"company"=>{"address1"=>"", "name"=>"", "address2"=>"", "postcode"=>"", "abn"=>"", "pref_type"=>"", "town"=>"", "phone"=>"", "state"=>""}, "user"=>{"password_confirmation"=>"", "password"=>"", "login"=>""}, "commit"=>"Create", "authenticity_token"=>"ha/Pq3kduPe86gdiyBhThGhdCjsCADpL1QrVN9DpUKU="}
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCompany Exists (0.0ms)[0m   [0mSELECT `companies`.id FROM `companies` WHERE (`companies`.`name` = BINARY '') LIMIT 1[0m
+  [4;36;1mCompany Exists (0.0ms)[0m   [0;1mSELECT `companies`.id FROM `companies` WHERE (`companies`.`abn` = BINARY '') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/companies]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#create (for 127.0.0.1 at 2009-07-25 21:48:59) [POST]
+  Parameters: {"company"=>{"address1"=>"", "name"=>"", "address2"=>"", "postcode"=>"", "abn"=>"", "pref_type"=>"", "town"=>"", "phone"=>"", "state"=>""}, "user"=>{"password_confirmation"=>"", "password"=>"", "login"=>""}, "commit"=>"Create", "authenticity_token"=>"ha/Pq3kduPe86gdiyBhThGhdCjsCADpL1QrVN9DpUKU="}
+  [4;35;1mCompany Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCompany Exists (0.0ms)[0m   [0mSELECT `companies`.id FROM `companies` WHERE (`companies`.`name` = BINARY '') LIMIT 1[0m
+  [4;36;1mCompany Exists (0.0ms)[0m   [0;1mSELECT `companies`.id FROM `companies` WHERE (`companies`.`abn` = BINARY '') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 63ms (View: 16, DB: 16) | 200 OK [http://localhost/companies]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#create (for 127.0.0.1 at 2009-07-25 21:49:27) [POST]
+  Parameters: {"company"=>{"address1"=>"", "name"=>"", "address2"=>"", "postcode"=>"", "abn"=>"", "pref_type"=>"", "town"=>"", "phone"=>"", "state"=>""}, "user"=>{"password_confirmation"=>"", "password"=>"", "login"=>""}, "commit"=>"Create", "authenticity_token"=>"ha/Pq3kduPe86gdiyBhThGhdCjsCADpL1QrVN9DpUKU="}
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCompany Exists (0.0ms)[0m   [0mSELECT `companies`.id FROM `companies` WHERE (`companies`.`name` = BINARY '') LIMIT 1[0m
+  [4;36;1mCompany Exists (0.0ms)[0m   [0;1mSELECT `companies`.id FROM `companies` WHERE (`companies`.`abn` = BINARY '') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://localhost/companies]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#create (for 127.0.0.1 at 2009-07-25 21:50:08) [POST]
+  Parameters: {"company"=>{"address1"=>"", "name"=>"", "address2"=>"", "postcode"=>"", "abn"=>"", "pref_type"=>"", "town"=>"", "phone"=>"", "state"=>""}, "user"=>{"password_confirmation"=>"", "password"=>"", "login"=>""}, "commit"=>"Create", "authenticity_token"=>"ha/Pq3kduPe86gdiyBhThGhdCjsCADpL1QrVN9DpUKU="}
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCompany Exists (0.0ms)[0m   [0mSELECT `companies`.id FROM `companies` WHERE (`companies`.`name` = BINARY '') LIMIT 1[0m
+  [4;36;1mCompany Exists (0.0ms)[0m   [0;1mSELECT `companies`.id FROM `companies` WHERE (`companies`.`abn` = BINARY '') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 46ms (View: 15, DB: 0) | 200 OK [http://localhost/companies]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 21:50:27) [GET]
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 63ms (View: 16, DB: 0) | 200 OK [http://localhost/companies/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 21:50:41) [GET]
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 63ms (View: 16, DB: 0) | 200 OK [http://localhost/companies/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 21:51:10) [GET]
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 78ms (View: 31, DB: 0) | 200 OK [http://localhost/companies/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 21:53:29) [GET]
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 78ms (View: 16, DB: 0) | 200 OK [http://localhost/companies/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 21:53:42) [GET]
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/companies/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 21:53:58) [GET]
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 47ms (View: 15, DB: 0) | 200 OK [http://localhost/companies/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 21:54:12) [GET]
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 63ms (View: 16, DB: 0) | 200 OK [http://localhost/companies/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 21:54:42) [GET]
+  [4;36;1mCompany Columns (47.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 125ms (View: 15, DB: 47) | 200 OK [http://localhost/companies/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 21:55:04) [GET]
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/companies/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 21:55:15) [GET]
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 62ms (View: 15, DB: 0) | 200 OK [http://localhost/companies/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 21:55:45) [GET]
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 62ms (View: 15, DB: 0) | 200 OK [http://localhost/companies/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 21:56:02) [GET]
+  [4;36;1mCompany Columns (31.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 78ms (View: 16, DB: 31) | 200 OK [http://localhost/companies/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 21:56:45) [GET]
+  [4;35;1mCompany Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 141ms (View: 94, DB: 16) | 200 OK [http://localhost/companies/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (234.0ms)[0m   [0;1mDROP DATABASE IF EXISTS `trucks2_test`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE DATABASE `trucks2_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (47.0ms)[0m   [0;1mCREATE TABLE `companies` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `abn` varchar(255), `address1` varchar(255), `address2` varchar(255), `town` varchar(255), `state` varchar(255), `postcode` varchar(255), `pref_type` varchar(255), `phone` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (79.0ms)[0m   [0;1mCREATE TABLE `loads` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `load_type` varchar(255), `start_loc` varchar(255), `start_pos` varchar(255), `end_loc` varchar(255), `end_pos` varchar(255), `start_date` date, `end_date` date, `am_load` int(11) DEFAULT 0, `company_id` int(11), `filled` tinyint(1) DEFAULT 0, `deleted` tinyint(1) DEFAULT 0, `comment` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (109.0ms)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `login` varchar(100), `crypted_password` varchar(40), `salt` varchar(40), `created_at` datetime, `updated_at` datetime, `remember_token` varchar(40), `remember_token_expires_at` datetime, `activation_code` varchar(40), `activated_at` datetime, `last_action` datetime, `ip_address` varchar(255), `company_id` int(11)) ENGINE=InnoDB[0m
+  [4;35;1mSQL (219.0ms)[0m   [0mCREATE UNIQUE INDEX `index_users_on_login` ON `users` (`login`)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (93.0ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (344.0ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (31.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090725142030')[0m
+  [4;36;1mSQL (32.0ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20090725142010')[0m
+  [4;35;1mSQL (31.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090725142018')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (172.0ms)[0m   [0;1mDROP DATABASE IF EXISTS `trucks2_test`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE DATABASE `trucks2_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (109.0ms)[0m   [0;1mCREATE TABLE `companies` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `abn` varchar(255), `address1` varchar(255), `address2` varchar(255), `town` varchar(255), `state` varchar(255), `postcode` varchar(255), `pref_type` varchar(255), `phone` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (78.0ms)[0m   [0;1mCREATE TABLE `loads` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `load_type` varchar(255), `start_loc` varchar(255), `start_pos` varchar(255), `end_loc` varchar(255), `end_pos` varchar(255), `start_date` date, `end_date` date, `am_load` int(11) DEFAULT 0, `company_id` int(11), `filled` tinyint(1) DEFAULT 0, `deleted` tinyint(1) DEFAULT 0, `comment` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (78.0ms)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `login` varchar(100), `crypted_password` varchar(40), `salt` varchar(40), `created_at` datetime, `updated_at` datetime, `remember_token` varchar(40), `remember_token_expires_at` datetime, `activation_code` varchar(40), `activated_at` datetime, `last_action` datetime, `ip_address` varchar(255), `company_id` int(11)) ENGINE=InnoDB[0m
+  [4;35;1mSQL (219.0ms)[0m   [0mCREATE UNIQUE INDEX `index_users_on_login` ON `users` (`login`)[0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (79.0ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (187.0ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (15.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090725142030')[0m
+  [4;36;1mSQL (32.0ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20090725142010')[0m
+  [4;35;1mSQL (15.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090725142018')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 22:01:03) [GET]
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 63ms (View: 31, DB: 0) | 200 OK [http://localhost/companies/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 22:01:41) [GET]
+  [4;35;1mCompany Columns (62.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 109ms (View: 15, DB: 62) | 200 OK [http://localhost/companies/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 22:02:20) [GET]
+  [4;36;1mCompany Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 62ms (View: 31, DB: 15) | 200 OK [http://localhost/companies/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 22:05:11) [GET]
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 62ms (View: 31, DB: 0) | 200 OK [http://localhost/companies/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 22:06:10) [GET]
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mUser Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered shared/_user_bar (0.0ms)
+Completed in 63ms (View: 16, DB: 15) | 200 OK [http://localhost/companies/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 22:06:14) [GET]
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered shared/_user_bar (0.0ms)
+Completed in 109ms (View: 0, DB: 0) | 200 OK [http://localhost/companies/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 22:06:42) [GET]
+  [4;36;1mCompany Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered shared/_user_bar (0.0ms)
+Completed in 47ms (View: 15, DB: 16) | 200 OK [http://localhost/companies/new]
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 22:08:56) [GET]
+  [4;35;1mCompany Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered shared/_user_bar (0.0ms)
+Completed in 62ms (View: 15, DB: 31) | 200 OK [http://localhost/companies/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (219.0ms)[0m   [0;1mDROP DATABASE IF EXISTS `trucks2_test`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE DATABASE `trucks2_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (63.0ms)[0m   [0;1mCREATE TABLE `companies` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `abn` varchar(255), `address1` varchar(255), `address2` varchar(255), `town` varchar(255), `state` varchar(255), `postcode` varchar(255), `pref_type` varchar(255), `phone` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (78.0ms)[0m   [0;1mCREATE TABLE `loads` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `load_type` varchar(255), `start_loc` varchar(255), `start_pos` varchar(255), `end_loc` varchar(255), `end_pos` varchar(255), `start_date` date, `end_date` date, `am_load` int(11) DEFAULT 0, `company_id` int(11), `filled` tinyint(1) DEFAULT 0, `deleted` tinyint(1) DEFAULT 0, `comment` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (93.0ms)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `login` varchar(100), `crypted_password` varchar(40), `salt` varchar(40), `created_at` datetime, `updated_at` datetime, `remember_token` varchar(40), `remember_token_expires_at` datetime, `activation_code` varchar(40), `activated_at` datetime, `last_action` datetime, `ip_address` varchar(255), `company_id` int(11)) ENGINE=InnoDB[0m
+  [4;35;1mSQL (266.0ms)[0m   [0mCREATE UNIQUE INDEX `index_users_on_login` ON `users` (`login`)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (78.0ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (187.0ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090725142030')[0m
+  [4;36;1mSQL (31.0ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20090725142010')[0m
+  [4;35;1mSQL (47.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090725142018')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (172.0ms)[0m   [0;1mDROP DATABASE IF EXISTS `trucks2_test`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE DATABASE `trucks2_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (94.0ms)[0m   [0;1mCREATE TABLE `companies` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `abn` varchar(255), `address1` varchar(255), `address2` varchar(255), `town` varchar(255), `state` varchar(255), `postcode` varchar(255), `pref_type` varchar(255), `phone` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (109.0ms)[0m   [0;1mCREATE TABLE `loads` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `load_type` varchar(255), `start_loc` varchar(255), `start_pos` varchar(255), `end_loc` varchar(255), `end_pos` varchar(255), `start_date` date, `end_date` date, `am_load` int(11) DEFAULT 0, `company_id` int(11), `filled` tinyint(1) DEFAULT 0, `deleted` tinyint(1) DEFAULT 0, `comment` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (94.0ms)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `login` varchar(100), `crypted_password` varchar(40), `salt` varchar(40), `created_at` datetime, `updated_at` datetime, `remember_token` varchar(40), `remember_token_expires_at` datetime, `activation_code` varchar(40), `activated_at` datetime, `last_action` datetime, `ip_address` varchar(255), `company_id` int(11)) ENGINE=InnoDB[0m
+  [4;35;1mSQL (266.0ms)[0m   [0mCREATE UNIQUE INDEX `index_users_on_login` ON `users` (`login`)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (93.0ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (204.0ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (31.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090725142030')[0m
+  [4;36;1mSQL (31.0ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20090725142010')[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090725142018')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#create (for 127.0.0.1 at 2009-07-25 22:31:57) [POST]
+  Parameters: {"company"=>{"address1"=>"Moorak", "name"=>"Test", "address2"=>"", "postcode"=>"1425", "abn"=>"124-1234-1254", "pref_type"=>"contract", "town"=>"morven", "phone"=>"07 4659 1964", "state"=>"qld"}, "user"=>{"password_confirmation"=>"ybt486", "password"=>"ybt486", "login"=>"dw_henry@yahoo.com"}, "commit"=>"Create", "authenticity_token"=>"ha/Pq3kduPe86gdiyBhThGhdCjsCADpL1QrVN9DpUKU="}
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mCompany Exists (0.0ms)[0m   [0;1mSELECT `companies`.id FROM `companies` WHERE (`companies`.`name` = BINARY 'Test') LIMIT 1[0m
+  [4;35;1mCompany Exists (0.0ms)[0m   [0mSELECT `companies`.id FROM `companies` WHERE (`companies`.`abn` = BINARY '124-1234-1254') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered shared/_user_bar (0.0ms)
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/companies]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#create (for 127.0.0.1 at 2009-07-25 22:45:12) [POST]
+  Parameters: {"company"=>{"address1"=>"Moorak", "name"=>"Test", "address2"=>"", "postcode"=>"1425", "abn"=>"124-1234-1254", "pref_type"=>"contract", "town"=>"morven", "phone"=>"07 4659 1964", "state"=>"qld"}, "user"=>{"password_confirmation"=>"ybt486", "password"=>"ybt486", "login"=>"dw_henry@yahoo.com"}, "commit"=>"Create", "authenticity_token"=>"ha/Pq3kduPe86gdiyBhThGhdCjsCADpL1QrVN9DpUKU="}
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mCompany Exists (0.0ms)[0m   [0;1mSELECT `companies`.id FROM `companies` WHERE (`companies`.`name` = BINARY 'Test') LIMIT 1[0m
+  [4;35;1mCompany Exists (0.0ms)[0m   [0mSELECT `companies`.id FROM `companies` WHERE (`companies`.`abn` = BINARY '124-1234-1254') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered shared/_user_bar (0.0ms)
+Completed in 32ms (View: 16, DB: 0) | 200 OK [http://localhost/companies]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#create (for 127.0.0.1 at 2009-07-25 22:45:23) [POST]
+  Parameters: {"company"=>{"address1"=>"Moorak", "name"=>"Test", "address2"=>"", "postcode"=>"1425", "abn"=>"124-1234-1254", "pref_type"=>"contract", "town"=>"morven", "phone"=>"07 4659 1964", "state"=>"qld"}, "user"=>{"password_confirmation"=>"", "password"=>"", "login"=>""}, "commit"=>"Create", "authenticity_token"=>"ha/Pq3kduPe86gdiyBhThGhdCjsCADpL1QrVN9DpUKU="}
+  [4;36;1mCompany Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mCompany Exists (0.0ms)[0m   [0;1mSELECT `companies`.id FROM `companies` WHERE (`companies`.`name` = BINARY 'Test') LIMIT 1[0m
+  [4;35;1mCompany Exists (0.0ms)[0m   [0mSELECT `companies`.id FROM `companies` WHERE (`companies`.`abn` = BINARY '124-1234-1254') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered shared/_user_bar (0.0ms)
+Completed in 32ms (View: 16, DB: 16) | 200 OK [http://localhost/companies]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#create (for 127.0.0.1 at 2009-07-25 22:45:25) [POST]
+  Parameters: {"company"=>{"address1"=>"Moorak", "name"=>"Test", "address2"=>"", "postcode"=>"1425", "abn"=>"124-1234-1254", "pref_type"=>"contract", "town"=>"morven", "phone"=>"07 4659 1964", "state"=>"qld"}, "user"=>{"password_confirmation"=>"", "password"=>"", "login"=>""}, "commit"=>"Create", "authenticity_token"=>"ha/Pq3kduPe86gdiyBhThGhdCjsCADpL1QrVN9DpUKU="}
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mCompany Exists (0.0ms)[0m   [0;1mSELECT `companies`.id FROM `companies` WHERE (`companies`.`name` = BINARY 'Test') LIMIT 1[0m
+  [4;35;1mCompany Exists (0.0ms)[0m   [0mSELECT `companies`.id FROM `companies` WHERE (`companies`.`abn` = BINARY '124-1234-1254') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered shared/_user_bar (0.0ms)
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/companies]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#create (for 127.0.0.1 at 2009-07-25 22:45:27) [POST]
+  Parameters: {"company"=>{"address1"=>"Moorak", "name"=>"Test", "address2"=>"", "postcode"=>"1425", "abn"=>"124-1234-1254", "pref_type"=>"contract", "town"=>"morven", "phone"=>"07 4659 1964", "state"=>"qld"}, "user"=>{"password_confirmation"=>"", "password"=>"", "login"=>""}, "commit"=>"Create", "authenticity_token"=>"ha/Pq3kduPe86gdiyBhThGhdCjsCADpL1QrVN9DpUKU="}
+  [4;36;1mCompany Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mCompany Exists (0.0ms)[0m   [0;1mSELECT `companies`.id FROM `companies` WHERE (`companies`.`name` = BINARY 'Test') LIMIT 1[0m
+  [4;35;1mCompany Exists (0.0ms)[0m   [0mSELECT `companies`.id FROM `companies` WHERE (`companies`.`abn` = BINARY '124-1234-1254') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered shared/_user_bar (0.0ms)
+Completed in 32ms (View: 16, DB: 16) | 200 OK [http://localhost/companies]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#create (for 127.0.0.1 at 2009-07-25 22:46:03) [POST]
+  Parameters: {"company"=>{"address1"=>"Moorak", "name"=>"Test", "address2"=>"", "postcode"=>"1425", "abn"=>"124-1234-1254", "pref_type"=>"contract", "town"=>"morven", "phone"=>"07 4659 1964", "state"=>"qld"}, "user"=>{"password_confirmation"=>"", "password"=>"", "login"=>""}, "commit"=>"Create", "authenticity_token"=>"ha/Pq3kduPe86gdiyBhThGhdCjsCADpL1QrVN9DpUKU="}
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mCompany Exists (0.0ms)[0m   [0;1mSELECT `companies`.id FROM `companies` WHERE (`companies`.`name` = BINARY 'Test') LIMIT 1[0m
+  [4;35;1mCompany Exists (0.0ms)[0m   [0mSELECT `companies`.id FROM `companies` WHERE (`companies`.`abn` = BINARY '124-1234-1254') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered shared/_user_bar (0.0ms)
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/companies]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#create (for 127.0.0.1 at 2009-07-25 23:06:03) [POST]
+  Parameters: {"company"=>{"address1"=>"Moorak", "name"=>"Test", "address2"=>"", "postcode"=>"1425", "abn"=>"124-1234-1254", "pref_type"=>"truck", "town"=>"morven", "phone"=>"07 4659 1964", "state"=>"qld"}, "user"=>{"password_confirmation"=>"", "password"=>"", "login"=>""}, "commit"=>"Create", "authenticity_token"=>"ha/Pq3kduPe86gdiyBhThGhdCjsCADpL1QrVN9DpUKU="}
+
+SyntaxError (C:/Aptana/trucks2/app/models/company.rb:30: invalid regular expression: /^(\(?(\d{2})[)- ]?(\d{4})[- ]?(\d{4})|(\(?(\d{4})[)- ]?(\d{3})[- ]?(\d{3}))$/
+C:/Aptana/trucks2/app/models/company.rb:36: syntax error, unexpected kEND, expecting ')'):
+  app/controllers/companies_controller.rb:44:in `create'
+
+Rendered rescues/_trace (141.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#create (for 127.0.0.1 at 2009-07-25 23:06:40) [POST]
+  Parameters: {"company"=>{"address1"=>"Moorak", "name"=>"Test", "address2"=>"", "postcode"=>"1425", "abn"=>"124-1234-1254", "pref_type"=>"truck", "town"=>"morven", "phone"=>"07 4659 1964", "state"=>"qld"}, "user"=>{"password_confirmation"=>"", "password"=>"", "login"=>""}, "commit"=>"Create", "authenticity_token"=>"ha/Pq3kduPe86gdiyBhThGhdCjsCADpL1QrVN9DpUKU="}
+
+SyntaxError (C:/Aptana/trucks2/app/models/company.rb:30: invalid regular expression: /^(\(?(\d{2})[)- ]?(\d{4})[- ]?(\d{4})|\(?(\d{4})[)- ]?(\d{3})[- ]?(\d{3}))$/
+C:/Aptana/trucks2/app/models/company.rb:36: syntax error, unexpected kEND, expecting ')'):
+  app/controllers/companies_controller.rb:44:in `create'
+
+Rendered rescues/_trace (78.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#create (for 127.0.0.1 at 2009-07-25 23:07:15) [POST]
+  Parameters: {"company"=>{"address1"=>"Moorak", "name"=>"Test", "address2"=>"", "postcode"=>"1425", "abn"=>"124-1234-1254", "pref_type"=>"truck", "town"=>"morven", "phone"=>"07 4659 1964", "state"=>"qld"}, "user"=>{"password_confirmation"=>"", "password"=>"", "login"=>""}, "commit"=>"Create", "authenticity_token"=>"ha/Pq3kduPe86gdiyBhThGhdCjsCADpL1QrVN9DpUKU="}
+
+SyntaxError (C:/Aptana/trucks2/app/models/company.rb:30: invalid regular expression: /^(\(?(\d{2})[\)- ]?(\d{4})[- ]?(\d{4})|\(?(\d{4})[\)- ]?(\d{3})[- ]?(\d{3}))$/
+C:/Aptana/trucks2/app/models/company.rb:36: syntax error, unexpected kEND, expecting ')'):
+  app/controllers/companies_controller.rb:44:in `create'
+
+Rendered rescues/_trace (78.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#create (for 127.0.0.1 at 2009-07-25 23:09:35) [POST]
+  Parameters: {"company"=>{"address1"=>"Moorak", "name"=>"Test", "address2"=>"", "postcode"=>"1425", "abn"=>"124-1234-1254", "pref_type"=>"truck", "town"=>"morven", "phone"=>"07 4659 1964", "state"=>"qld"}, "user"=>{"password_confirmation"=>"", "password"=>"", "login"=>""}, "commit"=>"Create", "authenticity_token"=>"ha/Pq3kduPe86gdiyBhThGhdCjsCADpL1QrVN9DpUKU="}
+
+SyntaxError (C:/Aptana/trucks2/app/models/company.rb:36: syntax error, unexpected kEND, expecting ')'):
+  app/controllers/companies_controller.rb:44:in `create'
+
+Rendered rescues/_trace (172.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#create (for 127.0.0.1 at 2009-07-25 23:10:49) [POST]
+  Parameters: {"company"=>{"address1"=>"Moorak", "name"=>"Test", "address2"=>"", "postcode"=>"1425", "abn"=>"124-1234-1254", "pref_type"=>"truck", "town"=>"morven", "phone"=>"07 4659 1964", "state"=>"qld"}, "user"=>{"password_confirmation"=>"", "password"=>"", "login"=>""}, "commit"=>"Create", "authenticity_token"=>"ha/Pq3kduPe86gdiyBhThGhdCjsCADpL1QrVN9DpUKU="}
+
+SyntaxError (C:/Aptana/trucks2/app/models/company.rb:37: syntax error, unexpected kEND, expecting ')'):
+  app/controllers/companies_controller.rb:44:in `create'
+
+Rendered rescues/_trace (63.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#create (for 127.0.0.1 at 2009-07-25 23:12:18) [POST]
+  Parameters: {"company"=>{"address1"=>"Moorak", "name"=>"Test", "address2"=>"", "postcode"=>"1425", "abn"=>"124-1234-1254", "pref_type"=>"truck", "town"=>"morven", "phone"=>"07 4659 1964", "state"=>"qld"}, "user"=>{"password_confirmation"=>"", "password"=>"", "login"=>""}, "commit"=>"Create", "authenticity_token"=>"ha/Pq3kduPe86gdiyBhThGhdCjsCADpL1QrVN9DpUKU="}
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCompany Exists (0.0ms)[0m   [0mSELECT `companies`.id FROM `companies` WHERE (`companies`.`name` = BINARY 'Test') LIMIT 1[0m
+  [4;36;1mCompany Exists (0.0ms)[0m   [0;1mSELECT `companies`.id FROM `companies` WHERE (`companies`.`abn` = BINARY '124-1234-1254') LIMIT 1[0m
+  [4;35;1mCompany Create (0.0ms)[0m   [0mINSERT INTO `companies` (`name`, `address1`, `address2`, `updated_at`, `abn`, `postcode`, `pref_type`, `town`, `phone`, `state`, `created_at`) VALUES('Test', 'Moorak', '', '2009-07-25 22:12:18', '124-1234-1254', '1425', 'truck', 'morven', '07 4659 1964', 'qld', '2009-07-25 22:12:18')[0m
+  [4;36;1mSQL (328.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/companies/4
+Completed in 359ms (DB: 328) | 302 Found [http://localhost/companies]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#show (for 127.0.0.1 at 2009-07-25 23:12:19) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mCompany Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM `companies` WHERE (`companies`.`id` = 4) [0m
+Rendering template within layouts/application
+Rendering companies/show
+Rendered shared/_user_bar (0.0ms)
+Completed in 16ms (View: 0, DB: 16) | 200 OK [http://localhost/companies/4]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#index (for 127.0.0.1 at 2009-07-25 23:12:28) [GET]
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM `companies` [0m
+Rendering template within layouts/application
+Rendering companies/index
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+Rendered shared/_user_bar (0.0ms)
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/companies]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#show (for 127.0.0.1 at 2009-07-25 23:12:30) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM `companies` WHERE (`companies`.`id` = 4) [0m
+Rendering template within layouts/application
+Rendering companies/show
+Rendered shared/_user_bar (0.0ms)
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://localhost/companies/4]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#index (for 127.0.0.1 at 2009-07-25 23:18:30) [GET]
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/companies]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-07-25 23:18:30) [GET]
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/session/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-07-25 23:18:30) [GET]
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/session/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-07-25 23:18:30) [GET]
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/session/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-07-25 23:18:30) [GET]
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/session/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-07-25 23:18:30) [GET]
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/session/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-07-25 23:18:30) [GET]
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/session/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-07-25 23:18:30) [GET]
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/session/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-07-25 23:18:30) [GET]
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/session/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-07-25 23:18:30) [GET]
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/session/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-07-25 23:18:30) [GET]
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/session/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-07-25 23:18:30) [GET]
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/session/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-07-25 23:18:30) [GET]
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/session/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-07-25 23:18:31) [GET]
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/session/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-07-25 23:18:31) [GET]
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/session/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-07-25 23:18:31) [GET]
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/session/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-07-25 23:18:31) [GET]
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 16ms (DB: 0) | 302 Found [http://localhost/session/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-07-25 23:18:31) [GET]
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/session/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-07-25 23:18:31) [GET]
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/session/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-07-25 23:18:31) [GET]
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/session/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-07-25 23:18:31) [GET]
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/session/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 23:18:38) [GET]
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+ERROR: compiling _run_erb_app47views47companies47new46html46erb RAISED compile error
+C:/Aptana/trucks2/app/views/companies/new.html.erb:4: syntax error, unexpected '=', expecting tASSOC
+@output_buffer.concat(( render :partial => 'company_form', :locals => {:company => @company, :user = @user} ).to_s); @output_buffer.concat "\n"
+                                                                                                    ^
+Function body:           def _run_erb_app47views47companies47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<div class=\"PageTitle\">\n"
+@output_buffer.concat "\tCreate New Company Account\n"
+@output_buffer.concat "</div>\n"
+@output_buffer.concat(( render :partial => 'company_form', :locals => {:company => @company, :user = @user} ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\n"
+ if not (@company.errors.empty? and @user.errors.empty?) ; @output_buffer.concat " \n"
+@output_buffer.concat "\t<!-- just put an error message rather than the full list of errors -->\n"
+@output_buffer.concat "\t<br>\n"
+@output_buffer.concat "\t<div id=\"errorContainer\">\n"
+@output_buffer.concat "\t\t<div id=\"errorExplanation\">\n"
+@output_buffer.concat "\t\t\t<h2>Error During Company Creation</h2>\n"
+@output_buffer.concat "\t\t\t<p>Please fix the highlighted fields and try again.</p>\n"
+@output_buffer.concat "\t\t</div>\n"
+@output_buffer.concat "\t</div>\n"
+ end ; @output_buffer.concat "\n"
+@output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/Aptana/trucks2/app/views/companies/new.html.erb:19:in `compile!'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:61:in `compile'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:260:in `render'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:343:in `_render_with_layout'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:257:in `render'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1241:in `render_for_file'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:943:in `render_without_benchmark'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:135:in `send'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:135:in `custom'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:179:in `call'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:179:in `respond'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:173:in `each'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:173:in `respond'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:107:in `respond_to'
+C:/Aptana/trucks2/app/controllers/companies_controller.rb:32:in `new'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1322:in `send'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1322:in `perform_action_without_filters'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `process'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/chunked.rb:15:in `call'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:61:in `process'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:159:in `process_client'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `each'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `process_client'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `initialize'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `new'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `initialize'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `new'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `run'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:34:in `run'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+C:/Aptana/trucks2/app/views/companies/new.html.erb:4: syntax error, unexpected '=', expecting tASSOC
+@output_buffer.concat(( render :partial => 'company_form', :locals => {:company => @company, :user = @user} ).to_s); @output_buffer.concat "\n"
+                                                                                                    ^) on line #4 of app/views/companies/new.html.erb:
+1: <div class="PageTitle">
+2: 	Create New Company Account
+3: </div>
+4: <%= render :partial => 'company_form', :locals => {:company => @company, :user = @user} %>
+5: 
+6: <% if not (@company.errors.empty? and @user.errors.empty?) %> 
+7: 	<!-- just put an error message rather than the full list of errors -->
+
+    app/views/companies/new.html.erb:19:in `compile!'
+    app/controllers/companies_controller.rb:32:in `new'
+
+Rendered rescues/_trace (156.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 23:18:55) [GET]
+  [4;35;1mCompany Columns (62.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mUser Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered companies/_company_form (16.0ms)
+Rendered shared/_user_bar (0.0ms)
+Completed in 125ms (View: 16, DB: 77) | 200 OK [http://localhost/companies/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 23:19:16) [GET]
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered companies/_company_form (15.0ms)
+Rendered shared/_user_bar (0.0ms)
+Completed in 78ms (View: 15, DB: 0) | 200 OK [http://localhost/companies/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 23:19:46) [GET]
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mUser Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered companies/_company_form (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Completed in 63ms (View: 16, DB: 15) | 200 OK [http://localhost/companies/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 23:19:58) [GET]
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered companies/_company_form (16.0ms)
+Rendered shared/_user_bar (0.0ms)
+Completed in 62ms (View: 16, DB: 0) | 200 OK [http://localhost/companies/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 23:22:42) [GET]
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered companies/_company_form (16.0ms)
+Rendered shared/_user_bar (0.0ms)
+Completed in 79ms (View: 32, DB: 0) | 200 OK [http://localhost/companies/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 23:23:31) [GET]
+  [4;36;1mCompany Columns (62.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered companies/_company_form (15.0ms)
+Rendered shared/_user_bar (0.0ms)
+Completed in 140ms (View: 15, DB: 62) | 200 OK [http://localhost/companies/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 23:23:46) [GET]
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered companies/_company_form (16.0ms)
+Rendered shared/_user_bar (0.0ms)
+Completed in 78ms (View: 16, DB: 0) | 200 OK [http://localhost/companies/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 23:24:20) [GET]
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered companies/_company_form (15.0ms)
+Rendered shared/_user_bar (0.0ms)
+Completed in 78ms (View: 31, DB: 0) | 200 OK [http://localhost/companies/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 23:24:48) [GET]
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mUser Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered companies/_company_form (15.0ms)
+Rendered shared/_user_bar (0.0ms)
+Completed in 78ms (View: 15, DB: 16) | 200 OK [http://localhost/companies/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 23:25:27) [GET]
+  [4;36;1mCompany Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered companies/_company_form (15.0ms)
+Rendered shared/_user_bar (0.0ms)
+Completed in 62ms (View: 31, DB: 16) | 200 OK [http://localhost/companies/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 23:25:42) [GET]
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered companies/_company_form (16.0ms)
+Rendered shared/_user_bar (0.0ms)
+Completed in 63ms (View: 16, DB: 0) | 200 OK [http://localhost/companies/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 23:26:00) [GET]
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mUser Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered companies/_company_form (15.0ms)
+Rendered shared/_user_bar (0.0ms)
+Completed in 78ms (View: 15, DB: 16) | 200 OK [http://localhost/companies/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 23:26:47) [GET]
+  [4;35;1mCompany Columns (47.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered companies/_company_form (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Completed in 110ms (View: 16, DB: 47) | 200 OK [http://localhost/companies/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 23:26:52) [GET]
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered companies/_company_form (16.0ms)
+Rendered shared/_user_bar (0.0ms)
+Completed in 79ms (View: 16, DB: 0) | 200 OK [http://localhost/companies/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 23:27:44) [GET]
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered companies/_company_form (16.0ms)
+Rendered shared/_user_bar (0.0ms)
+Completed in 79ms (View: 32, DB: 0) | 200 OK [http://localhost/companies/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#create (for 127.0.0.1 at 2009-07-25 23:27:51) [POST]
+  Parameters: {"company"=>{"address1"=>"", "name"=>"", "address2"=>"", "postcode"=>"", "abn"=>"123", "town"=>"", "phone"=>"", "state"=>""}, "user"=>{"password_confirmation"=>"", "password"=>"", "login"=>""}, "commit"=>"Create", "authenticity_token"=>"ha/Pq3kduPe86gdiyBhThGhdCjsCADpL1QrVN9DpUKU="}
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 16ms (DB: 0) | 302 Found [http://localhost/companies]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-07-25 23:27:52) [GET]
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/session/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-07-25 23:27:52) [GET]
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/session/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-07-25 23:27:52) [GET]
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/session/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-07-25 23:27:52) [GET]
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/session/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-07-25 23:27:52) [GET]
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/session/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-07-25 23:27:52) [GET]
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/session/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-07-25 23:27:52) [GET]
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/session/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-07-25 23:27:52) [GET]
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/session/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-07-25 23:27:52) [GET]
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/session/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-07-25 23:27:52) [GET]
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/session/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-07-25 23:27:52) [GET]
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 16ms (DB: 0) | 302 Found [http://localhost/session/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-07-25 23:27:52) [GET]
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/session/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-07-25 23:27:52) [GET]
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/session/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-07-25 23:27:52) [GET]
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/session/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-07-25 23:27:52) [GET]
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/session/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-07-25 23:27:52) [GET]
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/session/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-07-25 23:27:52) [GET]
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/session/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-07-25 23:27:52) [GET]
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/session/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-07-25 23:27:52) [GET]
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/session/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-07-25 23:27:52) [GET]
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/session/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-07-25 23:28:10) [GET]
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 16ms (DB: 0) | 302 Found [http://localhost/session/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-07-25 23:28:10) [GET]
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/session/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-07-25 23:28:10) [GET]
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/session/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-07-25 23:28:10) [GET]
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 16ms (DB: 0) | 302 Found [http://localhost/session/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-07-25 23:28:10) [GET]
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/session/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-07-25 23:28:10) [GET]
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 15ms (DB: 0) | 302 Found [http://localhost/session/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-07-25 23:28:10) [GET]
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/session/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-07-25 23:28:10) [GET]
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/session/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-07-25 23:28:10) [GET]
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/session/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-07-25 23:28:10) [GET]
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/session/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-07-25 23:28:10) [GET]
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/session/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-07-25 23:28:10) [GET]
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/session/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-07-25 23:28:10) [GET]
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 16ms (DB: 0) | 302 Found [http://localhost/session/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-07-25 23:28:10) [GET]
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/session/new]
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-07-25 23:28:10) [GET]
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 16) | 302 Found [http://localhost/session/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-07-25 23:28:10) [GET]
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/session/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-07-25 23:28:11) [GET]
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/session/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-07-25 23:28:11) [GET]
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/session/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-07-25 23:28:11) [GET]
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/session/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-07-25 23:28:11) [GET]
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/session/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-07-25 23:28:11) [GET]
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/session/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#create (for 127.0.0.1 at 2009-07-25 23:28:14) [POST]
+  Parameters: {"company"=>{"address1"=>"", "name"=>"", "address2"=>"", "postcode"=>"", "abn"=>"123", "town"=>"", "phone"=>"", "state"=>""}, "user"=>{"password_confirmation"=>"", "password"=>"", "login"=>""}, "commit"=>"Create", "authenticity_token"=>"ha/Pq3kduPe86gdiyBhThGhdCjsCADpL1QrVN9DpUKU="}
+  [4;36;1mCompany Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mCompany Exists (0.0ms)[0m   [0;1mSELECT `companies`.id FROM `companies` WHERE (`companies`.`name` = BINARY '') LIMIT 1[0m
+  [4;35;1mCompany Exists (0.0ms)[0m   [0mSELECT `companies`.id FROM `companies` WHERE (`companies`.`abn` = BINARY '123') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered companies/_company_form (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Completed in 47ms (View: 16, DB: 15) | 200 OK [http://localhost/companies]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#create (for 127.0.0.1 at 2009-07-25 23:29:37) [POST]
+  Parameters: {"company"=>{"address1"=>"", "name"=>"", "address2"=>"", "postcode"=>"", "abn"=>"123", "town"=>"", "phone"=>"", "state"=>""}, "user"=>{"password_confirmation"=>"", "password"=>"", "login"=>""}, "commit"=>"Create", "authenticity_token"=>"ha/Pq3kduPe86gdiyBhThGhdCjsCADpL1QrVN9DpUKU="}
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mCompany Exists (0.0ms)[0m   [0;1mSELECT `companies`.id FROM `companies` WHERE (`companies`.`name` = BINARY '') LIMIT 1[0m
+  [4;35;1mCompany Exists (0.0ms)[0m   [0mSELECT `companies`.id FROM `companies` WHERE (`companies`.`abn` = BINARY '123') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered companies/_company_form (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/companies]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#create (for 127.0.0.1 at 2009-07-25 23:30:38) [POST]
+  Parameters: {"company"=>{"address1"=>"", "name"=>"", "address2"=>"", "postcode"=>"", "abn"=>"123", "town"=>"", "phone"=>"", "state"=>""}, "user"=>{"password_confirmation"=>"", "password"=>"", "login"=>""}, "commit"=>"Create", "authenticity_token"=>"ha/Pq3kduPe86gdiyBhThGhdCjsCADpL1QrVN9DpUKU="}
+  [4;36;1mCompany Columns (63.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mCompany Exists (0.0ms)[0m   [0;1mSELECT `companies`.id FROM `companies` WHERE (`companies`.`name` = BINARY '') LIMIT 1[0m
+  [4;35;1mCompany Exists (0.0ms)[0m   [0mSELECT `companies`.id FROM `companies` WHERE (`companies`.`abn` = BINARY '123') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered companies/_company_form (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Completed in 110ms (View: 32, DB: 63) | 200 OK [http://localhost/companies]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 23:36:59) [GET]
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mUser Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+
+ActionView::TemplateError (undefined method `user=' for #<Company:0x466da38>) on line #88 of app/views/companies/_company_form.html.erb:
+85: 	</div>
+86: 	<span class="button green"><%= link_to 'Add User', dashboard_home_path %></span>&nbsp;
+87: </div>
+88: <% company.users.each do |company.user| %>
+89: <% fields_for user do |u| %>
+90: <div id="users">
+91: 	<div class="user">
+
+    app/views/companies/_company_form.html.erb:88
+    app/views/companies/_company_form.html.erb:88
+    app/views/companies/_company_form.html.erb:1
+    app/views/companies/new.html.erb:4
+    app/controllers/companies_controller.rb:32:in `new'
+
+Rendered rescues/_trace (203.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 23:37:28) [GET]
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered companies/_company_form (16.0ms)
+Rendered shared/_user_bar (0.0ms)
+Completed in 62ms (View: 31, DB: 0) | 200 OK [http://localhost/companies/new]
+  [4;35;1mSQL (16.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 23:37:45) [GET]
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered companies/_company_form (16.0ms)
+Rendered shared/_user_bar (0.0ms)
+Completed in 79ms (View: 16, DB: 16) | 200 OK [http://localhost/companies/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 23:38:48) [GET]
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered companies/_company_form (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Completed in 78ms (View: 31, DB: 0) | 200 OK [http://localhost/companies/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 23:41:43) [GET]
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mUser Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+
+ActionView::TemplateError (undefined local variable or method `dashbaord_home_path' for #<ActionView::Base:0x48ae518>) on line #115 of app/views/companies/_company_form.html.erb:
+112: 			</div>
+113: 			<div class="data_input_data">
+114: 				<%= u.password_field :password_confirmation %>
+115: 				<%= link_to "X", dashbaord_home_path, :style => 'del_user' %>
+116: 			</div>
+117: 		</div>
+118: 		<hr>
+
+    app/views/companies/_company_form.html.erb:115
+    app/views/companies/_company_form.html.erb:90
+    app/views/companies/_company_form.html.erb:89
+    app/views/companies/_company_form.html.erb:1
+    app/views/companies/new.html.erb:4
+    app/controllers/companies_controller.rb:33:in `new'
+
+Rendered rescues/_trace (172.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 23:41:58) [GET]
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered companies/_company_form (15.0ms)
+Rendered shared/_user_bar (0.0ms)
+Completed in 62ms (View: 31, DB: 0) | 200 OK [http://localhost/companies/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 23:42:16) [GET]
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered companies/_company_form (15.0ms)
+Rendered shared/_user_bar (0.0ms)
+Completed in 78ms (View: 31, DB: 0) | 200 OK [http://localhost/companies/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 23:42:33) [GET]
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered companies/_company_form (16.0ms)
+Rendered shared/_user_bar (0.0ms)
+Completed in 63ms (View: 31, DB: 0) | 200 OK [http://localhost/companies/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 23:42:42) [GET]
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered companies/_company_form (16.0ms)
+Rendered shared/_user_bar (0.0ms)
+Completed in 78ms (View: 31, DB: 0) | 200 OK [http://localhost/companies/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DashboardController#home (for 127.0.0.1 at 2009-07-25 23:42:49) [GET]
+Rendering template within layouts/application
+Rendering dashboard/home
+Rendered shared/_user_bar (0.0ms)
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://localhost/dashboard/home]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 23:44:19) [GET]
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered companies/_company_form (78.0ms)
+Rendered shared/_user_bar (0.0ms)
+Completed in 140ms (View: 78, DB: 0) | 200 OK [http://localhost/companies/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 23:45:11) [GET]
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered companies/_company_form (16.0ms)
+Rendered shared/_user_bar (0.0ms)
+Completed in 78ms (View: 16, DB: 0) | 200 OK [http://localhost/companies/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 23:45:53) [GET]
+  [4;36;1mCompany Columns (62.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered companies/_company_form (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Completed in 125ms (View: 15, DB: 62) | 200 OK [http://localhost/companies/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 23:46:35) [GET]
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered companies/_company_form (15.0ms)
+Rendered shared/_user_bar (0.0ms)
+Completed in 78ms (View: 15, DB: 0) | 200 OK [http://localhost/companies/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 23:46:37) [GET]
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered companies/_company_form (15.0ms)
+Rendered shared/_user_bar (0.0ms)
+Completed in 62ms (View: 15, DB: 0) | 200 OK [http://localhost/companies/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 23:47:09) [GET]
+  [4;35;1mCompany Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mUser Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered companies/_company_form (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Completed in 63ms (View: 16, DB: 31) | 200 OK [http://localhost/companies/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 23:47:21) [GET]
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered companies/_company_form (15.0ms)
+Rendered shared/_user_bar (0.0ms)
+Completed in 78ms (View: 15, DB: 0) | 200 OK [http://localhost/companies/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 23:47:32) [GET]
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered companies/_company_form (16.0ms)
+Rendered shared/_user_bar (0.0ms)
+Completed in 78ms (View: 16, DB: 0) | 200 OK [http://localhost/companies/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 23:48:00) [GET]
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered companies/_company_form (16.0ms)
+Rendered shared/_user_bar (0.0ms)
+Completed in 141ms (View: 94, DB: 0) | 200 OK [http://localhost/companies/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 23:48:57) [GET]
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered companies/_company_form (16.0ms)
+Rendered shared/_user_bar (0.0ms)
+Completed in 63ms (View: 16, DB: 0) | 200 OK [http://localhost/companies/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 23:50:00) [GET]
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered companies/_company_form (15.0ms)
+Rendered shared/_user_bar (0.0ms)
+Completed in 78ms (View: 15, DB: 0) | 200 OK [http://localhost/companies/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 23:50:11) [GET]
+  [4;35;1mCompany Columns (47.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered companies/_company_form (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Completed in 125ms (View: 31, DB: 47) | 200 OK [http://localhost/companies/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 23:50:41) [GET]
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered companies/_company_form (15.0ms)
+Rendered shared/_user_bar (0.0ms)
+Completed in 78ms (View: 15, DB: 0) | 200 OK [http://localhost/companies/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 23:53:14) [GET]
+  [4;35;1mCompany Columns (47.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered companies/_company_form (16.0ms)
+Rendered shared/_user_bar (0.0ms)
+Completed in 141ms (View: 31, DB: 47) | 200 OK [http://localhost/companies/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 23:55:07) [GET]
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered companies/_company_form (16.0ms)
+Rendered shared/_user_bar (0.0ms)
+Completed in 63ms (View: 31, DB: 0) | 200 OK [http://localhost/companies/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#create (for 127.0.0.1 at 2009-07-25 23:55:25) [POST]
+  Parameters: {"company"=>{"address1"=>"", "name"=>"", "address2"=>"", "postcode"=>"", "abn"=>"", "new_user"=>[{"login"=>""}, {"login"=>""}], "town"=>"", "phone"=>"", "state"=>""}, "commit"=>"Create", "authenticity_token"=>"ha/Pq3kduPe86gdiyBhThGhdCjsCADpL1QrVN9DpUKU="}
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+
+ActiveRecord::UnknownAttributeError (unknown attribute: new_user):
+  app/controllers/companies_controller.rb:47:in `new'
+  app/controllers/companies_controller.rb:47:in `create'
+
+Rendered rescues/_trace (62.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-25 23:55:40) [GET]
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered companies/_company_form (16.0ms)
+Rendered shared/_user_bar (0.0ms)
+Completed in 78ms (View: 16, DB: 0) | 200 OK [http://localhost/companies/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DashboardController#home (for 127.0.0.1 at 2009-07-25 23:55:43) [GET]
+Rendering template within layouts/application
+Rendering dashboard/home
+Rendered shared/_user_bar (0.0ms)
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/dashboard/home]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#create (for 127.0.0.1 at 2009-07-25 23:55:56) [POST]
+  Parameters: {"company"=>{"address1"=>"", "name"=>"", "address2"=>"", "new_users"=>[{"login"=>""}, {"login"=>""}], "postcode"=>"", "abn"=>"", "town"=>"", "phone"=>"", "state"=>""}, "commit"=>"Create", "authenticity_token"=>"ha/Pq3kduPe86gdiyBhThGhdCjsCADpL1QrVN9DpUKU="}
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCompany Exists (0.0ms)[0m   [0mSELECT `companies`.id FROM `companies` WHERE (`companies`.`name` = BINARY '') LIMIT 1[0m
+  [4;36;1mCompany Exists (0.0ms)[0m   [0;1mSELECT `companies`.id FROM `companies` WHERE (`companies`.`abn` = BINARY '') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered companies/_company_form (47.0ms)
+Rendered shared/_user_bar (0.0ms)
+Completed in 94ms (View: 63, DB: 0) | 200 OK [http://localhost/companies]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#create (for 127.0.0.1 at 2009-07-26 00:00:36) [POST]
+  Parameters: {"company"=>{"address1"=>"", "name"=>"", "address2"=>"", "postcode"=>"", "abn"=>"", "town"=>"", "phone"=>"", "state"=>""}, "commit"=>"Create", "authenticity_token"=>"ha/Pq3kduPe86gdiyBhThGhdCjsCADpL1QrVN9DpUKU="}
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCompany Exists (0.0ms)[0m   [0mSELECT `companies`.id FROM `companies` WHERE (`companies`.`name` = BINARY '') LIMIT 1[0m
+  [4;36;1mCompany Exists (0.0ms)[0m   [0;1mSELECT `companies`.id FROM `companies` WHERE (`companies`.`abn` = BINARY '') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered companies/_company_form (31.0ms)
+Rendered shared/_user_bar (0.0ms)
+Completed in 62ms (View: 31, DB: 0) | 200 OK [http://localhost/companies]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-26 00:00:46) [GET]
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered companies/_company_form (15.0ms)
+Rendered shared/_user_bar (0.0ms)
+Completed in 62ms (View: 15, DB: 0) | 200 OK [http://localhost/companies/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#create (for 127.0.0.1 at 2009-07-26 00:00:48) [POST]
+  Parameters: {"company"=>{"address1"=>"", "name"=>"", "address2"=>"", "new_users"=>[{"login"=>""}, {"login"=>""}], "postcode"=>"", "abn"=>"", "town"=>"", "phone"=>"", "state"=>""}, "commit"=>"Create", "authenticity_token"=>"ha/Pq3kduPe86gdiyBhThGhdCjsCADpL1QrVN9DpUKU="}
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+
+NoMethodError (undefined method `merge' for [{"login"=>""}, {"login"=>""}]:Array):
+  app/models/company.rb:23:in `new_users='
+  app/models/company.rb:22:in `map'
+  app/models/company.rb:22:in `new_users='
+  app/controllers/companies_controller.rb:47:in `new'
+  app/controllers/companies_controller.rb:47:in `create'
+
+Rendered rescues/_trace (156.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#create (for 127.0.0.1 at 2009-07-26 00:01:10) [POST]
+  Parameters: {"company"=>{"address1"=>"", "name"=>"", "address2"=>"", "new_users"=>[{"login"=>""}, {"login"=>""}], "postcode"=>"", "abn"=>"", "town"=>"", "phone"=>"", "state"=>""}, "commit"=>"Create", "authenticity_token"=>"ha/Pq3kduPe86gdiyBhThGhdCjsCADpL1QrVN9DpUKU="}
+  [4;36;1mCompany Columns (47.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+WARNING: Can't mass-assign these protected attributes: company
+WARNING: Can't mass-assign these protected attributes: company
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Exists (297.0ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`login` = BINARY '') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+
+NoMethodError (undefined method `name' for #<User:0x47c9508>):
+  app/controllers/companies_controller.rb:50:in `create'
+  app/controllers/companies_controller.rb:49:in `create'
+
+Rendered rescues/_trace (297.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#create (for 127.0.0.1 at 2009-07-26 00:02:08) [POST]
+  Parameters: {"company"=>{"address1"=>"", "name"=>"", "address2"=>"", "new_users"=>[{"login"=>""}, {"login"=>""}], "postcode"=>"", "abn"=>"", "town"=>"", "phone"=>"", "state"=>""}, "commit"=>"Create", "authenticity_token"=>"ha/Pq3kduPe86gdiyBhThGhdCjsCADpL1QrVN9DpUKU="}
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+WARNING: Can't mass-assign these protected attributes: company
+WARNING: Can't mass-assign these protected attributes: company
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Exists (0.0ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`login` = BINARY '') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+
+NoMethodError (undefined method `name' for #<User:0x47a8b3c>):
+  app/controllers/companies_controller.rb:50:in `create'
+  app/controllers/companies_controller.rb:49:in `create'
+
+Rendered rescues/_trace (203.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#create (for 127.0.0.1 at 2009-07-26 00:02:52) [POST]
+  Parameters: {"company"=>{"address1"=>"", "name"=>"", "address2"=>"", "new_users"=>[{"login"=>""}, {"login"=>""}], "postcode"=>"", "abn"=>"", "town"=>"", "phone"=>"", "state"=>""}, "commit"=>"Create", "authenticity_token"=>"ha/Pq3kduPe86gdiyBhThGhdCjsCADpL1QrVN9DpUKU="}
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+
+***** Debugger requested, but was not available: Start server with --debugger to enable *****
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+WARNING: Can't mass-assign these protected attributes: company
+WARNING: Can't mass-assign these protected attributes: company
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Exists (0.0ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`login` = BINARY '') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+
+NoMethodError (undefined method `name' for #<User:0x478f308>):
+  app/controllers/companies_controller.rb:50:in `create'
+  app/controllers/companies_controller.rb:49:in `create'
+
+Rendered rescues/_trace (218.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#create (for 127.0.0.1 at 2009-07-26 00:03:03) [POST]
+  Parameters: {"company"=>{"address1"=>"", "name"=>"", "address2"=>"", "new_users"=>[{"login"=>""}, {"login"=>""}], "postcode"=>"", "abn"=>"", "town"=>"", "phone"=>"", "state"=>""}, "commit"=>"Create", "authenticity_token"=>"ha/Pq3kduPe86gdiyBhThGhdCjsCADpL1QrVN9DpUKU="}
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+
+***** Debugger requested, but was not available: Start server with --debugger to enable *****
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+WARNING: Can't mass-assign these protected attributes: company
+WARNING: Can't mass-assign these protected attributes: company
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Exists (0.0ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`login` = BINARY '') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+
+NoMethodError (undefined method `name' for #<User:0x476dcd0>):
+  app/controllers/companies_controller.rb:50:in `create'
+  app/controllers/companies_controller.rb:49:in `create'
+
+Rendered rescues/_trace (203.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-26 00:04:18) [GET]
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mUser Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered companies/_company_form (16.0ms)
+Rendered shared/_user_bar (0.0ms)
+Completed in 531ms (View: 406, DB: 16) | 200 OK [http://localhost/companies/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#create (for 127.0.0.1 at 2009-07-26 00:04:22) [POST]
+  Parameters: {"company"=>{"address1"=>"", "name"=>"", "address2"=>"", "new_users"=>[{"login"=>""}, {"login"=>""}], "postcode"=>"", "abn"=>"", "town"=>"", "phone"=>"", "state"=>""}, "commit"=>"Create", "authenticity_token"=>"ha/Pq3kduPe86gdiyBhThGhdCjsCADpL1QrVN9DpUKU="}
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+
+***** Debugger requested, but was not available: Start server with --debugger to enable *****
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+WARNING: Can't mass-assign these protected attributes: company
+WARNING: Can't mass-assign these protected attributes: company
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Exists (0.0ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`login` = BINARY '') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+
+NoMethodError (undefined method `name' for #<User:0x48148a0>):
+  app/controllers/companies_controller.rb:50:in `create'
+  app/controllers/companies_controller.rb:49:in `create'
+
+Rendered rescues/_trace (250.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#create (for 127.0.0.1 at 2009-07-26 00:06:02) [POST]
+  Parameters: {"company"=>{"address1"=>"", "name"=>"", "address2"=>"", "new_users"=>[{"login"=>""}, {"login"=>""}], "postcode"=>"", "abn"=>"", "town"=>"", "phone"=>"", "state"=>""}, "commit"=>"Create", "authenticity_token"=>"ha/Pq3kduPe86gdiyBhThGhdCjsCADpL1QrVN9DpUKU="}
+  [4;36;1mCompany Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+
+***** Debugger requested, but was not available: Start server with --debugger to enable *****
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+WARNING: Can't mass-assign these protected attributes: company
+WARNING: Can't mass-assign these protected attributes: company
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+
+NoMethodError (undefined method `email' for #<User:0x47dd92c>):
+  app/controllers/companies_controller.rb:50:in `create'
+  app/controllers/companies_controller.rb:49:in `create'
+
+Rendered rescues/_trace (391.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CompaniesController#create (for 127.0.0.1 at 2009-07-26 00:06:27) [POST]
+  Parameters: {"company"=>{"address1"=>"", "name"=>"", "address2"=>"", "new_users"=>[{"login"=>""}, {"login"=>""}], "postcode"=>"", "abn"=>"", "town"=>"", "phone"=>"", "state"=>""}, "commit"=>"Create", "authenticity_token"=>"ha/Pq3kduPe86gdiyBhThGhdCjsCADpL1QrVN9DpUKU="}
+  [4;35;1mCompany Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+
+***** Debugger requested, but was not available: Start server with --debugger to enable *****
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+WARNING: Can't mass-assign these protected attributes: company
+WARNING: Can't mass-assign these protected attributes: company
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Exists (0.0ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`login` = BINARY '') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`login` = BINARY '') LIMIT 1[0m
+  [4;36;1mCompany Exists (0.0ms)[0m   [0;1mSELECT `companies`.id FROM `companies` WHERE (`companies`.`name` = BINARY '') LIMIT 1[0m
+  [4;35;1mCompany Exists (0.0ms)[0m   [0mSELECT `companies`.id FROM `companies` WHERE (`companies`.`abn` = BINARY '') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered companies/_company_form (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Completed in 78ms (View: 0, DB: 16) | 200 OK [http://localhost/companies]

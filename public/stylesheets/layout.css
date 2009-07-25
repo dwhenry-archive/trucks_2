@@ -1,12 +1,20 @@
 /* color scheme
- * 1: #4B72A6
- * 2: #8fADBF
- * 3: #3F3F1B
- * 4: #8C7735
- * 5: #D9BA82
+ * 1: #4B72A6 - dark blue
+ * 2: #8fADBF - light blue
+ * 3: #3F3F1B - dark green
+ * 4: #8C7735 - light green
+ * 5: #D9BA82 - cream
  * 
  * */
  
+.PageTitle {
+	color: #4B72A6;
+	width: 100%;
+	font-weight: bold;
+	font-size: 30px;
+	text-align: center;
+	padding: 0 0 0.5em 0;
+}
 
 body {
 	text-align:center;
@@ -76,10 +84,10 @@ body {
 
 a {
 	text-decoration: none;
-	color: #33f;
+	color: #4B72A6;
 }
 a:visited {
-	color: #33f;
+	color: #4B72A6;
 }
 a:hover {
 	background: transparent;

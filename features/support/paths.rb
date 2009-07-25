@@ -16,8 +16,10 @@ module NavigationHelpers
     
     when /the homepage/
       root_path
-    
+      
     # Add more page name => path mappings here
+    when "/dashboard/home"
+      dashboard_home_path
     
     else
       raise "Can't find mapping from \"#{page_name}\" to a path.\n" +

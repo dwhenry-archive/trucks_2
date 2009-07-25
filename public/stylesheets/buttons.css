@@ -1,0 +1,78 @@
+.button{
+	cursor:pointer;
+	border:outset 1px #ccc;
+	background:#999;
+/*	color:#666;*/
+	font-weight:bold;
+	text-align: center;
+	vertical-align: middle;
+	width: auto;
+	height: 30px;
+}
+
+input.button{
+	padding: 1px 2px 1px 2px;
+	display: block;
+	width: 92px;
+	height: 30px;
+}
+
+input.wide{
+	width: auto;
+}
+
+span.button {
+	height: 22px;
+	width: 90px;
+	display: inline-block;
+	padding: 6px 0px 0px 0px;
+/*	display:inline;*/
+	/*padding: 7px 10px 5px 10px;
+	color:#666;*/
+}
+
+input.button {
+	text-decoration: none;
+	color: #555;
+}
+
+input.button:hover {
+/*	background-color: #33f;*/
+	color: red; /*#33f;*/
+}
+
+span.button a {
+	text-decoration: none;
+	color: #555;
+}
+
+span.button a:visited {
+	color: #555;
+}
+span.button a:hover {
+	background: transparent;
+	color: red; /* #33f;*/
+}
+
+span.wide {
+/*	height: 22px;*/
+	width: auto;
+/*	display: inline-block;*/
+	padding: 6px 10px 0px 10px;
+}
+
+.green {
+	background:url(/images/formbg_green.gif) repeat-x left top;
+}
+
+.red{
+	background:url(/images/formbg_red.gif) repeat-x left top;
+}
+
+.blue{
+	background:url(/images/formbg_blue.gif) repeat-x left top;
+}
+
+.lt_blue{
+	background:url(/images/formbg_lt_blue.gif) repeat-x left top;
+}
