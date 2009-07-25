@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Bulk Back Loads</title>
+  <%= stylesheet_link_tag 'scaffold','layout','custom' %>
+</head>
+<body>
+<div id="body_container">
+	<% if current_user %>
+		<div id="filter_box" style="display:none;">
+			&nbsp;
+		</div>
+		<div id="filter_shadow" style="display:none;">
+			&nbsp;
+		</div>
+		<div id="filter_options" style="display:none;">
+			<%= render :partial => '/shared/filter_options' %>
+		</div>
+	<% end %>
+	
+	<div id="hd"><!-- header -->
+    	<div class="row_group"> <!-- the "special grid" --> 
+    		<div class="left_elem">
+    			&nbsp;
+			</div> 
+    		<div class="mid_elem">
+    			<%= image_tag("/images/bulk_back_loads.jpg" , :size => "300x60", :style => 'padding: 5px;' ) %>
+			</div> 
+    		<div class="right_elem">
+    			<div id="user_bar">
+					<%= render :partial => "/shared/user_bar" %>
+				</div>
+			</div> 
+    	</div> 
+		<div id="navigation_container">
+			
+			<%= render :partial => 'shared/navigation' %>
+		</div>
+
+	</div>
+
+	<div id="bd"><!-- body -->
+		<p style="color: green"><%= flash[:notice] %></p>
+		
+		<%= yield %>
+	</div>
+	  
+	<div id="ft"><!-- footer -->
+		<!-- %=hTime.zone.now.advance(:hours => 3).strftime("%a, %d %b %Y %I:%M%p") % -->
+		<div class="left"><%=h Time.zone.now.advance(:hours => 3).strftime("%a, %d %b %Y %I:%M:%S%p") %></div>
+		<div class="copyright">Copyright &copy; 2009</div>
+	</div>
+</div>
+
+</body>
+</html>
