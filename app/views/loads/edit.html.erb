@@ -1,0 +1,12 @@
+<h1>Editing loads</h1>
+
+<% form_for(@loads) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @loads %> |
+<%= link_to 'Back', loads_path %>

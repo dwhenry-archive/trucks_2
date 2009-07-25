@@ -1,0 +1,18 @@
+<h1>Listing loads</h1>
+
+<table>
+  <tr>
+  </tr>
+
+<% @loads.each do |loads| %>
+  <tr>
+    <td><%= link_to 'Show', loads %></td>
+    <td><%= link_to 'Edit', edit_loads_path(loads) %></td>
+    <td><%= link_to 'Destroy', loads, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New loads', new_loads_path %>
