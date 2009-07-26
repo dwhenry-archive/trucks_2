@@ -10,7 +10,7 @@ function showLoginScript(url) {
     });
 }
 
-function processAddress(el) {
+function processAddress(el,authenticityToken) {
 	valid = true;
 	if(el.value == '')
 		valid = false;
@@ -22,16 +22,27 @@ function processAddress(el) {
 			}).toQueryString(),
 	        method: 'get',
 			onSuccess: function(request) {
-				$('user_bar').innerHTML = request.responseText;
+				resp = eval( "(" + request.responseText + ")" );
+				if(resp.status != 'success') 
+					valid = false;
+				else {
+					el.value = resp.address;
+					getElemByType(el,'lat').value = resp.lat;
+					getElemByType(el,'lng').value = resp.lng;
+				}
 			},
 			onComplete: function(request) {
 				// update the google found status image	
 				if(valid == false) {
 					// set the appropriate error code
-					getElemByType(el,"status").classname = 'google_error';
+					getElemByType(el,"status").className = 'google_error';
+					getElemByType(el,'lat') = '';
+					getElemByType(el,'lng') = '';
 				} else {
 					// set the appropriate success code
-					getElemByType(el,"status").classname = 'google_found';
+					getElemByType(el,"status").className = 'google_found';
+					if($('load_start_lng').value != '' && $('load_end_lng').value != '')
+						setpoints('load_start','load_end');
 				}
 			}
 	    });
@@ -41,7 +52,16 @@ function processAddress(el) {
 
 function getElemByType(el, stype) {
 	if(stype == 'status') {
-		if(el.id == 'load_start_loc') return 'load_from';
-		if(el.id == 'load_end_loc') return 'load_to';
+		if(el.id == 'load_start_loc') return $('load_from');
+		if(el.id == 'load_end_loc') return $('load_to');
 	}
+	if(stype == 'lng') {
+		if(el.id == 'load_start_loc') return $('load_start_lng');
+		if(el.id == 'load_end_loc') return $('load_end_lng');
+	}
+	if(stype == 'lat') {
+		if(el.id == 'load_start_loc') return $('load_start_lat');
+		if(el.id == 'load_end_loc') return $('load_end_lat');
+	}
+
 }

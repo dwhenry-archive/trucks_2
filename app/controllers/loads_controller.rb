@@ -1,6 +1,17 @@
 class LoadsController < ApplicationController
   # GET /loads
   # GET /loads.xml
+  def your
+    @loads = current_user.company.loads
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.xml  { render :xml => @loads }
+    end
+  end
+
+  # GET /loads
+  # GET /loads.xml
   def index
     @loads = Load.all
 
@@ -41,11 +52,12 @@ class LoadsController < ApplicationController
   # POST /loads.xml
   def create
     @load = Load.new(params[:loads])
+    @load.company = current_user.company
 
     respond_to do |format|
       if @load.save
         flash[:notice] = 'Loads was successfully created.'
-        format.html { redirect_to(@loads) }
+        format.html { redirect_to(@load) }
         format.xml  { render :xml => @load, :status => :created, :location => @load }
       else
         format.html { render :action => "new" }

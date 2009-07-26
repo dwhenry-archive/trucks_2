@@ -1,7 +1,17 @@
+ <!-- This includes the google maps API code. 
+	 You need to put your own key here -->
+<script src="http://maps.google.com/maps?file=api&v=2&key=ABQIAAAAbMoeqif6WesTuyyV7KfMphT5EG_nRGozuZeboEWjUCrU_tMJGxTdBe0yEKO9HBgw3R_U96Vnp8WjDQ" 
+	type="text/javascript">
+</script>
+<script type="text/javascript">
+	var homeLat=<%= session[:geo_location] || '""' %>;
+	var homeLng=<%= session[:geo_location] || '""' %>;
+</script>
+<%= javascript_include_tag 'google_new' %>
 <div class="PageTitle">
 	New Journey
 </div>
-
+<b>NOTE: </b>session[:geo_location] value  is <%= session[:geo_location] %>
 <div class="container">
 	<div class="left_container">
 		<% form_for(@load) do |f| %>
@@ -21,7 +31,7 @@
 				From
 			</div>
 			<div class="data_input_data">
-				<%=f.text_field :start_loc, :onchange => "processAddresss(this);" %> <div id="load_from" class="google_error">&nbsp;&nbsp;&nbsp;&nbsp;</div>
+				<%=f.text_field :start_loc, :onchange => "processAddress(this,'#{form_authenticity_token}');" %> <div id="load_from" class="google_error">&nbsp;&nbsp;&nbsp;&nbsp;</div>
 				<%=f.hidden_field :start_lat %>
 				<%=f.hidden_field :start_lng %>
 			</div>
@@ -31,7 +41,7 @@
 				To
 			</div>
 			<div class="data_input_data">
-				<%=f.text_field :end_loc, :onchange => "processAddresss(this);" %> <div id="load_to" class="google_found">&nbsp;&nbsp;&nbsp;&nbsp;</div>
+				<%=f.text_field :end_loc, :onchange => "processAddress(this,'#{form_authenticity_token}');" %> <div id="load_to" class="google_error">&nbsp;&nbsp;&nbsp;&nbsp;</div>
 				<%=f.hidden_field :end_lat %>
 				<%=f.hidden_field :end_lng %>
 			</div>
@@ -53,7 +63,8 @@
 
 		<% end %>
 	</div>
-	<div class="right_container">
-		Google maps???
+	<div class="right_container" style="position:relative;height:370px">
+		<div id="map_shadow"> </div>
+		<div id="map" style=""> </div>
 	</div>
 </div>

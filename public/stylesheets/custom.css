@@ -92,3 +92,19 @@ a.del_user,a:visited.del_user,a:hover.del_user {
 	background:url(/images/tick.gif);
 	background-repeat: no-repeat;
 }
+
+#map {
+	border: black solid 2px;
+	width: 450px;height: 350px;
+}
+#map_shadow {
+	position: absolute; 
+	left: 20px; 
+	top: 20px;
+    width: 450px; 
+	height: 350px; 
+	background-color: black;
+    -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=25)';
+	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=25);
+    -moz-opacity:0.25; 
+	opacity: 0.25; "}

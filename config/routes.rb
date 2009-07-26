@@ -10,8 +10,10 @@ ActionController::Routing::Routes.draw do |map|
   map.dashboard_login '/dashboard/login', :controller => 'dashboard', :action => 'login'
   map.dashboard_status '/dashboard/status', :controller => 'dashboard', :action => 'status'
   map.dashboard_about '/dashboard/about', :controller => 'dashboard', :action => 'about'
+  map.dashboard_geolookup '/dashboard/geolookup', :controller => 'dashboard', :action => 'geolookup'
 
   map.resources :companies
+  map.your_loads '/loads/your', :controller => 'loads', :action => 'your'
   map.resources :loads
 
   map.resources :users
