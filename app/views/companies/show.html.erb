@@ -1,3 +1,117 @@
+<div class="PageTitle">
+	Company Account
+</div>
 
-<%= link_to 'Edit', edit_company_path(@company) %> |
-<%= link_to 'Back', companies_path %>
+<% unless current_user %>
+<div class="user_notice">
+	An Email vertifying your Account creation has just been sent.<br>
+	Please Click on the Activation Code to Access this site.
+</div>
+<br>
+<% end %>
+<div class="data_imput_row">
+	<div class="data_input_header">
+		Company Details
+	</div>
+</div>
+<div class="data_imput_row">
+	<div class="data_input_field">
+		Company Name
+	</div>
+	<div class="data_input_data">
+		<%=h @company.name %>
+	</div>
+</div>
+<div class="data_imput_row">
+	<div class="data_input_field">
+		ABN
+	</div>
+	<div class="data_input_data">
+		<%=h @company.abn %>
+	</div>
+</div>
+<div class="data_imput_row">
+	<div class="data_input_field">
+		Primary Company Type
+	</div>
+	<div class="data_input_data">
+		<%=h @company.pref_type %>
+	</div>
+</div>
+<div class="data_imput_row">
+	<div class="data_input_field">
+		Phone
+	</div>
+	<div class="data_input_data">
+		<%=h @company.phone %> 
+	</div>
+</div>
+<div class="data_imput_row">
+	<div class="data_input_field">
+		Address Line 1
+	</div>
+	<div class="data_input_data">
+		<%=h @company.address1 %>
+	</div>
+</div>
+<div class="data_imput_row">
+	<div class="data_input_field">
+		Address Line 2
+	</div>
+	<div class="data_input_data">
+		<%=h @company.address2 %>
+	</div>
+</div>
+<div class="data_imput_row">
+	<div class="data_input_field">
+		Town
+	</div>
+	<div class="data_input_data">
+		<%=h @company.town %>
+	</div>
+</div>
+<div class="data_imput_row">
+	<div class="data_input_field">
+		State
+	</div>
+	<div class="data_input_data">
+		<%=h @company.state %>
+	</div>
+</div>
+<div class="data_imput_row">
+	<div class="data_input_field">
+		Postcode
+	</div>
+	<div class="data_input_data">
+		<%=h @company.postcode %>
+	</div>
+</div>
+
+<div class="data_imput_row">
+	<div class="data_input_header">
+		User(s)
+	</div>
+</div>
+<hr>
+
+<% @company.users.each do |user| %>
+<div id="users">
+	<div class="user">
+		<div class="data_imput_row">
+			<div class="data_input_field">
+				Email Address
+			</div>
+			<div class="data_input_data">
+				<%=h user.login %>
+			</div>
+		</div>
+		<hr>
+	</div>
+</div>
+<% end %>
+
+<% if current_user %>
+	<span class="button lt_blue"><%= link_to 'Edit', edit_company_path(@company) %></span>&nbsp;
+<% else %>
+	<span class="button lt_blue"><%= link_to 'Home', dashboard_home_path %></span>&nbsp;
+<% end %>

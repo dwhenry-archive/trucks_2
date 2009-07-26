@@ -1,0 +1,86 @@
+#smart_menu .submenu, #smart_menu .submenu ul, #smart_menu .menu, #smart_menu .menu ul {
+	padding:  0 5px 0 5px;
+	margin: 0;
+	list-style: none;
+	text-align: center;
+}
+
+#smart_menu a {
+	padding: 12px 20px 0 20px;
+	display: block;
+	height: 28px;
+	margin: 0 1px 0 1px;
+
+/*	width: 10em;*/
+}
+
+#smart_menu .menu li.selected a {
+	padding: 11px 20px 0 20px;
+	height: 28px;
+/*	width: 10em;*/
+}
+
+#smart_menu div {
+	height: 41px;
+}
+
+#smart_menu  li {
+	float: left;
+/*	width: 10em;*/
+	height: 39px;
+	margin: 1px 0 0px 0;
+}
+
+#smart_menu  li#li_filter {
+	float: right;
+}
+
+#smart_menu .menu {
+	border-top: black solid 1px;
+	background-color: #ffc68c;
+	/*padding: 2px 0 2px 0;*/
+	border-bottom: black solid 2px;
+	background:url(/images/top_menu.gif) repeat-x left top;
+}
+
+#smart_menu .menu li.selected {
+	border: black solid 2px;
+	border-bottom: transparent none 0px;
+	background-color: #ffdcb9;
+	background:url(/images/bot_menu_top.gif) repeat-x left top;
+}
+
+#smart_menu .submenu {
+	background-color: #ffdcb9;
+	background:url(/images/bot_menu_bot2.gif) repeat-x left top;
+}
+
+#smart_menu {
+	border-bottom: black solid 1px;
+	height:42px;
+	/*font-weight: bold;*/
+	font-family: "Arial Black";
+	padding: 0;
+	margin: 0;
+	background-color: #ffc68c;
+}
+
+#smart_menu A {text-decoration: none; color: black;}
+#smart_menu li.selected A {text-decoration: none; color: #0080c0;}
+#smart_menu li.selected A:hover {
+	color: #000080; 
+	background-color: #ffdcb9;
+	}
+#smart_menu li.unselected A:hover {
+	color: red; 
+	background: #ffdcb9;
+	border: red solid 2px;
+	}
+#smart_menu .submenu A:hover {
+	color: #000080; 
+	background-color: #ffdcb9;
+	background:url(/images/bot_menu_bot2.gif) repeat-x left top;
+	}
+
+/*******************************************************************************/
+

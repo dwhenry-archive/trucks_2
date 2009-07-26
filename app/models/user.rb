@@ -11,7 +11,8 @@ class User < ActiveRecord::Base
   validates_uniqueness_of   :login
   validates_format_of       :login,    :with => Authentication.email_regex, :message => Authentication.bad_email_message
 
-  before_create :make_activation_code 
+  before_create :make_activation_code
+  before_validation :make_temp_password
 
   # HACK HACK HACK -- how to do attr_accessible from here?
   # prevents a user from submitting a crafted form that bypasses activation
@@ -59,5 +60,14 @@ class User < ActiveRecord::Base
       self.activation_code = self.class.make_token
   end
 
+  def make_temp_password
+      self.password = random_password
+      self.password_confirmation = self.password
+  end
+
+  def random_password(size = 8)
+    chars = (('a'..'z').to_a + ('0'..'9').to_a) - %w(i o 0 1 l 0)
+    (1..size).collect{|a| chars[rand(chars.size)] }.join
+  end
 
 end

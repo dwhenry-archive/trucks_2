@@ -1,9 +1,18 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-		<title>Untitled Document</title>
-	</head>
-	<body>
-	</body>
-</html>
+<script language="javascript">
+	prevSelected='<%= @menu_lev_1 || "advices" %>';
+</script>
+<div id="smart_menu" >
+	<div class="menu">
+		<ul id="nav">
+			<li id="li_menu_available" <%= get_menu_class("menu_available",@menu_lev_1) %>><%= link_to 'AVAILABLE', loads_path %></li>
+			<% if current_user %>
+				<li id="li_menu_manage" <%= get_menu_class("menu_manage",@menu_lev_1) %>><%= link_to 'MANAGE', loads_path %></li>
+				<li id="li_menu_notices" <%= get_menu_class("menu_notices",@menu_lev_1) %>><%= link_to 'NOTICES', loads_path %></li>
+				<li id="li_menu_preference" <%= get_menu_class("menu_preference",@menu_lev_1) %>><%= link_to 'PREFERENCES', loads_path %></li>
+			<% end %>
+			<li id="li_menu_about" <%= get_menu_class("menu_about",@menu_lev_1) %>><%= link_to 'ABOUT', loads_path %></li>
+		</ul>
+	</div>
+
+</div>
+

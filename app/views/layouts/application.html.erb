@@ -5,7 +5,8 @@
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
   <title>Bulk Back Loads</title>
-  <%= stylesheet_link_tag 'scaffold','layout','custom','fonts','buttons' %>
+  <%= stylesheet_link_tag 'scaffold','layout','custom','fonts','buttons','menu_bar' %>
+  <%= javascript_include_tag :defaults, 'AJAX' %>
 </head>
 <body>
 <div id="body_container">
@@ -36,9 +37,7 @@
 			</div> 
     	</div> 
 		<div id="navigation_container">
-			<% if current_user %>
-				<%= render :partial => 'shared/navigation' %>
-			<% end %>
+			<%= render :partial => 'shared/navigation' %>
 		</div>
 
 	</div>

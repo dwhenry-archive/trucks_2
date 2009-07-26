@@ -8,7 +8,8 @@
 		<%= hidden_field_tag 'h_filter_options', filter_vals.join(',') %>
 	</div>	
 <% else -%>
-  Not Logged In<br>
-  <%= link_to 'Create New Account', new_company_path() %>
+  Not Logged In<br><br>
+  <%= link_to 'Create New Account', new_company_path() %> |
+  <%= link_to_function 'Login', 'showLoginScript("/dashboard/login");' %>
 <% end -%>
 <br>

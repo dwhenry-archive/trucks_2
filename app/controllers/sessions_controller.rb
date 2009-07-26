@@ -1,5 +1,7 @@
 # This controller handles the login/logout function of the site.  
 class SessionsController < ApplicationController
+  skip_before_filter :login_required, :only => [:new, :create]
+
   # Be sure to include AuthenticationSystem in Application Controller instead
   include AuthenticatedSystem
 
@@ -24,7 +26,7 @@ class SessionsController < ApplicationController
       note_failed_signin
       @login       = params[:login]
       @remember_me = params[:remember_me]
-      render :action => 'new'
+      redirect_back_or_default('/')
     end
   end
 

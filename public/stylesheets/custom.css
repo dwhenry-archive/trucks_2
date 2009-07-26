@@ -39,6 +39,17 @@
 	font-size: 18px;
 }
 
+.user_notice {
+	width: 800px;
+	border: #3F3F1B solid 2px;
+	padding: 5px;
+	background: #8fADBF;
+	margin: auto;
+	text-align: center;
+	font-size: 14px;
+	font-weight: bold;
+}
+
 /* special case stuff
  */
 

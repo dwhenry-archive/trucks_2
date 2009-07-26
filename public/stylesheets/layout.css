@@ -68,7 +68,14 @@ body {
 #user_bar .has_filter {
 	background: #cecece;
 	border: 1px solid black;
-}	 
+}
+
+#user_bar input[type=text],#user_bar input[type=password] {
+	font-size: 10px;
+	height: 0.9em;
+	width:180px;
+}
+
 #ft {
 	padding: 0em 0.5em 1em 0.5em;
 	margin-top: 1em;

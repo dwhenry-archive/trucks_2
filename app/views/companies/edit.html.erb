@@ -1,12 +1,5 @@
-<h1>Editing companies</h1>
+<div class="PageTitle">
+	Edit Company Account
+</div>
+<%= render :partial => 'company_form', :locals => {:company => @company} %>
 
-<% form_for(@company) do |f| %>
-  <%= f.error_messages %>
-
-  <p>
-    <%= f.submit 'Update' %>
-  </p>
-<% end %>
-
-<%= link_to 'Show', @company %> |
-<%= link_to 'Back', companies_path %>

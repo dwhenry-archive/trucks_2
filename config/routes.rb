@@ -6,6 +6,8 @@ ActionController::Routing::Routes.draw do |map|
   map.signup '/signup', :controller => 'users', :action => 'new'
 
   map.dashboard_home '/dashboard/home', :controller => 'dashboard', :action => 'home'
+  map.dashboard_login '/dashboard/login', :controller => 'dashboard', :action => 'login'
+  map.dashboard_status '/dashboard/status', :controller => 'dashboard', :action => 'status'
 
   map.resources :companies
 
