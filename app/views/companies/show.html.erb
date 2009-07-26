@@ -109,9 +109,12 @@
 	</div>
 </div>
 <% end %>
-
-<% if current_user %>
-	<span class="button lt_blue"><%= link_to 'Edit', edit_company_path(@company) %></span>&nbsp;
-<% else %>
-	<span class="button lt_blue"><%= link_to 'Home', dashboard_home_path %></span>&nbsp;
-<% end %>
+<div class="data_imput_row">
+	<div class="data_input_buttons">
+		<% if current_user %>
+			<span class="button lt_blue"><%= link_to 'Edit', edit_company_path(@company) %></span>&nbsp;
+		<% else %>
+			<span class="button lt_blue"><%= link_to 'Home', dashboard_home_path %></span>&nbsp;
+		<% end %>
+	</div>
+</div>

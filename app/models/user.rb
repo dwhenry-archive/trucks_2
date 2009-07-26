@@ -54,6 +54,17 @@ class User < ActiveRecord::Base
     write_attribute :login, (value ? value.downcase : nil)
   end
 
+  def change_password!(old_password, new_password, new_confirmation)
+    errors.add_to_base("New password does not match the password confirmation.") and
+      return false if (new_password != new_confirmation)
+    errors.add_to_base("New password cannot be blank.") and
+      return false if new_password.blank? 
+    errors.add_to_base("You password was not changed, your old password is incorrect.") and
+      return false unless self.authenticated?(old_password) 
+    self.password, self.password_confirmation = new_password, new_confirmation
+    save
+  end
+  
   protected
     
   def make_activation_code
@@ -61,8 +72,11 @@ class User < ActiveRecord::Base
   end
 
   def make_temp_password
-      self.password = random_password
-      self.password_confirmation = self.password
+    return unless crypted_password.blank?
+    pwd = random_password
+    self.password = pwd
+    self.password_confirmation = pwd
+    logger.info 'Creating new user: "' + login + '" with password: "' + pwd + '"'
   end
 
   def random_password(size = 8)

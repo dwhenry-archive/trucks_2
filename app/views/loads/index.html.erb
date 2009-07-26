@@ -4,15 +4,15 @@
   <tr>
   </tr>
 
-<% @loads.each do |loads| %>
+<% @loads.each do |load| %>
   <tr>
-    <td><%= link_to 'Show', loads %></td>
-    <td><%= link_to 'Edit', edit_loads_path(loads) %></td>
-    <td><%= link_to 'Destroy', loads, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Show', load %></td>
+    <td><%= link_to 'Edit', edit_load_path(load) %></td>
+    <td><%= link_to 'Destroy', load, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New loads', new_loads_path %>
+<%= link_to 'New loads', new_load_path %>

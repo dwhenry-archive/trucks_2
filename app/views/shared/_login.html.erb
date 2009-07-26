@@ -1,7 +1,7 @@
 <% form_tag session_path do %>
+  <%= link_to_function 'Cancel','showLoginScript("/dashboard/status");' %> |
+  <%= submit_tag 'Login', {:class => 'login_button'} %><br>
 	Email: <%= text_field_tag 'login' %><br>
 	Password: <%= password_field_tag 'password' %><br>
-  <%= link_to_function 'Cancel','showLoginScript("/dashboard/status");' %> |
-  <%= submit_tag 'Login', {:class => 'login_button'} %>
 <% end %>
 <br>

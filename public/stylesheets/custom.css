@@ -1,4 +1,5 @@
 .data_imput_row {
+	width: 600px;
 	overflow: hidden;
 	padding: 0.2em;
 	min-height:1.7em;
@@ -19,7 +20,7 @@
 
 .data_input_data {
 	float: left;
-	width: 340px;
+	width: 330px;
 	color: #3F3F1B;
 	font-weight: bold;
 	font-size: 14px;
@@ -27,7 +28,7 @@
 
 .data_input_header, .data_input_buttons {
 	float: left;
-	width: 340px;
+	width: 330px;
 	padding: 0 0 0 270px;
 }
 
@@ -50,6 +51,20 @@
 	font-weight: bold;
 }
 
+.container {
+	overflow:hidden;
+}
+
+.left_container {
+	float: left;
+	width: 600px;
+}
+
+.right_container {
+	float: right;
+	width: 600px;
+}
+
 /* special case stuff
  */
 
@@ -61,4 +76,19 @@ a.del_user,a:visited.del_user,a:hover.del_user {
 	text-align: right;
  }
 
-  
+/* *
+ * Google serach result stuff
+ */
+.google_error {
+	display: inline;
+	height: 30px;
+	background:url(/images/cross.gif);
+	background-repeat: no-repeat;
+}
+
+.google_found {
+	display: inline;
+	height: 30px;
+	background:url(/images/tick.gif);
+	background-repeat: no-repeat;
+}

@@ -4,17 +4,21 @@ class CreateLoads < ActiveRecord::Migration
       t.string :load_type
       
       t.string :start_loc
-      t.string :start_pos # used to store radian location
+      t.float :start_lat # used to store radian location
+      t.float :start_lng # used to store radian location
       t.string :end_loc
-      t.string :end_pos # used to store radian location
-      t.date :start_date
-      t.date :end_date
-      t.integer :am_load, :default => 0
+      t.float :end_lat # used to store radian location
+      t.float :end_lng # used to store radian location
+      t.float :distance 
+
+      t.date :load_date
+
       t.references :company
+
+      t.text :details # serialised representation
+
       t.boolean :filled, :default => 0
       t.boolean :deleted, :default => 0
-
-      t.string :comment
 
       t.timestamps
     end

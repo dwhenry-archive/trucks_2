@@ -1,0 +1,27 @@
+<div class="PageTitle">
+	User Profile - Edit
+</div>
+
+<%= error_messages_for :user %>
+  
+<% form_for :user, :url => profile_url(@user), :html => { :method => :put } do |f| %> 
+
+	<div class="data_imput_row">
+		<div class="data_input_field">
+			Login
+		</div>
+		<div class="data_input_data">
+			<%=f.text_field :login %>
+		</div>
+	</div>
+
+	<div class="data_imput_row">
+		<div class="data_input_buttons">
+	        <span class="button lt_blue"><%= link_to 'Cancel', profile_path(@user) %></span>
+	        <%= f.submit "Update", {:class => 'button lt_blue', :style => "display:inline"} %>
+		</div>
+	</div>
+	
+<% end %>
+
+

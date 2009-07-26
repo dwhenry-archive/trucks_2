@@ -2,7 +2,7 @@ class LoadsController < ApplicationController
   # GET /loads
   # GET /loads.xml
   def index
-    @loads = Loads.all
+    @loads = Load.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -13,43 +13,43 @@ class LoadsController < ApplicationController
   # GET /loads/1
   # GET /loads/1.xml
   def show
-    @loads = Loads.find(params[:id])
+    @load = Load.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
-      format.xml  { render :xml => @loads }
+      format.xml  { render :xml => @load }
     end
   end
 
   # GET /loads/new
   # GET /loads/new.xml
   def new
-    @loads = Loads.new
+    @load = Load.new
 
     respond_to do |format|
       format.html # new.html.erb
-      format.xml  { render :xml => @loads }
+      format.xml  { render :xml => @load }
     end
   end
 
   # GET /loads/1/edit
   def edit
-    @loads = Loads.find(params[:id])
+    @load = Load.find(params[:id])
   end
 
   # POST /loads
   # POST /loads.xml
   def create
-    @loads = Loads.new(params[:loads])
+    @load = Load.new(params[:loads])
 
     respond_to do |format|
-      if @loads.save
+      if @load.save
         flash[:notice] = 'Loads was successfully created.'
         format.html { redirect_to(@loads) }
-        format.xml  { render :xml => @loads, :status => :created, :location => @loads }
+        format.xml  { render :xml => @load, :status => :created, :location => @load }
       else
         format.html { render :action => "new" }
-        format.xml  { render :xml => @loads.errors, :status => :unprocessable_entity }
+        format.xml  { render :xml => @load.errors, :status => :unprocessable_entity }
       end
     end
   end
@@ -57,16 +57,16 @@ class LoadsController < ApplicationController
   # PUT /loads/1
   # PUT /loads/1.xml
   def update
-    @loads = Loads.find(params[:id])
+    @load = Load.find(params[:id])
 
     respond_to do |format|
-      if @loads.update_attributes(params[:loads])
-        flash[:notice] = 'Loads was successfully updated.'
-        format.html { redirect_to(@loads) }
+      if @load.update_attributes(params[:loads])
+        flash[:notice] = 'Load was successfully updated.'
+        format.html { redirect_to(@load) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
-        format.xml  { render :xml => @loads.errors, :status => :unprocessable_entity }
+        format.xml  { render :xml => @load.errors, :status => :unprocessable_entity }
       end
     end
   end
@@ -74,8 +74,8 @@ class LoadsController < ApplicationController
   # DELETE /loads/1
   # DELETE /loads/1.xml
   def destroy
-    @loads = Loads.find(params[:id])
-    @loads.destroy
+    @load = Load.find(params[:id])
+    @load.destroy
 
     respond_to do |format|
       format.html { redirect_to(loads_url) }

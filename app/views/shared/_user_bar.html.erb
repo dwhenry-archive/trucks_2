@@ -1,15 +1,15 @@
 <% if logged_in? -%>
-  <%=h current_user.email.titleize %> | 
+  <%=h current_user.login %> | 
 		<%= link_to "Profile", profile_path(current_user) %> |
 		<%= link_to "Log Out", logout_path %>
-	<div class="holder <%= 'has_filter' if has_filter? %>">
+	<!--div class="holder < %= 'has_filter' if has_filter? %>">
 		<div style="float:right;"><%= link_to_function(image_tag("filter.gif", :size => "20x20"), "show_filter_menu()") %></div>
-		<div style="padding:0 10px 0 10px;float:left;text-align:left;"><b style="color:#5353ff;">FILTER:</b> <b style="color:blue;"><%= filter_text('title') %></b> <br><%= filter_text %></div>
-		<%= hidden_field_tag 'h_filter_options', filter_vals.join(',') %>
-	</div>	
+		<div style="padding:0 10px 0 10px;float:left;text-align:left;"><b style="color:#5353ff;">FILTER:</b> <b style="color:blue;">< %= filter_text('title') %></b> <br>< %= filter_text %></div>
+		< %= hidden_field_tag 'h_filter_options', filter_vals.join(',') %>
+	</div-->	
 <% else -%>
-  Not Logged In<br><br>
   <%= link_to 'Create New Account', new_company_path() %> |
-  <%= link_to_function 'Login', 'showLoginScript("/dashboard/login");' %>
+  <%= link_to_function 'Login', 'showLoginScript("/dashboard/login");' %><br><br>
+  Not Logged In
 <% end -%>
 <br>

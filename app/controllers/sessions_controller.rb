@@ -3,13 +3,14 @@ class SessionsController < ApplicationController
   skip_before_filter :login_required, :only => [:new, :create]
 
   # Be sure to include AuthenticationSystem in Application Controller instead
-  include AuthenticatedSystem
+  #include AuthenticatedSystem
 
   # render new.rhtml
   def new
   end
 
   def create
+    debugger
     logout_keeping_session!
     user = User.authenticate(params[:login], params[:password])
     if user

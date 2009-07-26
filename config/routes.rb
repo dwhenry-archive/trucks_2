@@ -4,19 +4,21 @@ ActionController::Routing::Routes.draw do |map|
   map.login '/login', :controller => 'sessions', :action => 'new'
   map.register '/register', :controller => 'users', :action => 'create'
   map.signup '/signup', :controller => 'users', :action => 'new'
+  map.activate '/activate/:activation_code', :controller => 'users', :action => 'activate'
 
   map.dashboard_home '/dashboard/home', :controller => 'dashboard', :action => 'home'
   map.dashboard_login '/dashboard/login', :controller => 'dashboard', :action => 'login'
   map.dashboard_status '/dashboard/status', :controller => 'dashboard', :action => 'status'
+  map.dashboard_about '/dashboard/about', :controller => 'dashboard', :action => 'about'
 
   map.resources :companies
-
   map.resources :loads
 
   map.resources :users
-
   map.resource :session
-
+  map.resources :profile
+  map.resources :password_settings
+  
   map.root :controller => 'dashboard', :action => 'home'
 
   # The priority is based upon order of creation: first created -> highest priority.

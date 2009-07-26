@@ -1,0 +1,45 @@
+	<div class="add_fields_container">
+	    <div class="fields">
+	        &nbsp;
+	    </div>
+	    <div class="wide">
+	        <h3>Change password for: <%=h @user.login  %></h3>
+	    </div>
+	</div>
+
+<% form_tag url_for(:action => 'create') do %>
+
+	<!-- <%= hidden_field_tag :user_id, @user.id %> -->
+	<%= hidden_field_tag :id, params[:id] || @user.id %>
+	<div class="add_fields_container">
+	    <div class="fields">
+	        New Password
+	    </div>
+	    <div class="wide">
+	        <%= password_field_tag 'password', {}, :size => 45 %>
+  	<span class="description">Between 6 and 40 characters</span>
+	    </div>
+	</div>
+	
+	<div class="add_fields_container">
+	    <div class="fields">
+	        Confirm New  Password
+	    </div>
+	    <div class="data">
+	        <%= password_field_tag 'password_confirmation', {}, :size => 45 %>
+	    </div>
+	</div>	
+	<br />
+	<div class="add_fields_container">
+	    <div class="fields">
+	        &nbsp;
+	    </div>
+	    <div class="data">
+	        <span class="button lt_blue"><%= link_to 'Cancel', users_path %></span>
+	        <%= submit_tag "Reset", {:class => 'button lt_blue', :style => "display:inline"} %>
+	    </div>
+	</div>	
+
+<% end %>
+
+

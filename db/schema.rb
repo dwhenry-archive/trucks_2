@@ -28,16 +28,17 @@ ActiveRecord::Schema.define(:version => 20090725142030) do
   create_table "loads", :force => true do |t|
     t.string   "load_type"
     t.string   "start_loc"
-    t.string   "start_pos"
+    t.float    "start_lat"
+    t.float    "start_lng"
     t.string   "end_loc"
-    t.string   "end_pos"
-    t.date     "start_date"
-    t.date     "end_date"
-    t.integer  "am_load",    :default => 0
+    t.float    "end_lat"
+    t.float    "end_lng"
+    t.float    "distance"
+    t.date     "load_date"
     t.integer  "company_id"
+    t.text     "details"
     t.boolean  "filled",     :default => false
     t.boolean  "deleted",    :default => false
-    t.string   "comment"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
