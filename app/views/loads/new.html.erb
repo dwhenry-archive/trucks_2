@@ -15,11 +15,10 @@
 <div class="container">
 	<div class="left_container">
 		<% form_for(@load) do |f| %>
-		  <%= f.error_messages %>
 		
 		<div class="data_imput_row">
 			<div class="data_input_field">
-				Type
+				<%=f.label :load_type, 'Type' %>
 			</div>
 			<div class="data_input_data">
 				<%=f.radio_button :load_type, :truck %> Truck
@@ -28,32 +27,49 @@
 		</div>
 		<div class="data_imput_row">
 			<div class="data_input_field">
-				From
+				<%=f.label :start_loc, 'From' %>
 			</div>
 			<div class="data_input_data">
-				<%=f.text_field :start_loc, :onchange => "processAddress(this,'#{form_authenticity_token}');" %> <div id="load_from" class="google_error">&nbsp;&nbsp;&nbsp;&nbsp;</div>
+				<%=f.text_field :start_loc, :onchange => "processAddress(this,'#{form_authenticity_token}');" %>
+				<div id="load_from" class="google_<%= @load.start_lat.blank? ? 'error' : 'found'%>">&nbsp;&nbsp;&nbsp;&nbsp;</div>
 				<%=f.hidden_field :start_lat %>
 				<%=f.hidden_field :start_lng %>
 			</div>
 		</div>
 		<div class="data_imput_row">
 			<div class="data_input_field">
-				To
+				<%=f.label :end_loc, 'To' %>
 			</div>
 			<div class="data_input_data">
-				<%=f.text_field :end_loc, :onchange => "processAddress(this,'#{form_authenticity_token}');" %> <div id="load_to" class="google_error">&nbsp;&nbsp;&nbsp;&nbsp;</div>
+				<%=f.text_field :end_loc, :onchange => "processAddress(this,'#{form_authenticity_token}');" %> 
+				<div id="load_to" class="google_<%= @load.end_lat.blank? ? 'error' : 'found'%>">&nbsp;&nbsp;&nbsp;&nbsp;</div>
 				<%=f.hidden_field :end_lat %>
 				<%=f.hidden_field :end_lng %>
 			</div>
 		</div>
 		<div class="data_imput_row">
 			<div class="data_input_field">
-				Date
+				<%=f.label :load_date, 'Load date' %>
 			</div>
 			<div class="data_input_data">
 				<%=f.text_field :load_date %>
 			</div>
 		</div>
+<% unless @load.errors.empty? %> 
+<br>
+	<!-- just put an error message rather than the full list of errors -->
+	<div id="errorContainer">
+		<div id="errorExplanation">
+			<h2>Error During Load Creation</h2>
+			<p>Please fix the highlighted fields and try again.</p>
+			<% unless  @load.errors['Distance'].blank? %>
+				<ul>
+					<li>From and To Location must be greater than 50 km apart</li>
+				</ul>
+			<% end %>
+		</div>
+	</div>
+<% end %>
 		<div class="data_imput_row">
 			<div class="data_input_buttons">
 				<span class="button lt_blue"><%= link_to 'Cancel', dashboard_home_path %></span>&nbsp;

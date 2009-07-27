@@ -51,7 +51,7 @@ class LoadsController < ApplicationController
   # POST /loads
   # POST /loads.xml
   def create
-    @load = Load.new(params[:loads])
+    @load = Load.new(params[:load])
     @load.company = current_user.company
 
     respond_to do |format|

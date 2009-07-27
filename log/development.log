@@ -12006,3 +12006,2547 @@ Rendered shared/_filter_options (0.0ms)
 Rendered shared/_user_bar (0.0ms)
 Rendered shared/_navigation (0.0ms)
 Completed in 875ms (View: 16, DB: 0) | 200 OK [http://localhost/loads/your]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-07-26 23:54:47) [GET]
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;36;1mLoad Load (0.0ms)[0m   [0;1mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) [0m
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 859ms (View: 16, DB: 0) | 200 OK [http://localhost/loads/your]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-07-26 23:56:22) [GET]
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;36;1mLoad Load (0.0ms)[0m   [0;1mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) [0m
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 860ms (View: 16, DB: 0) | 200 OK [http://localhost/loads/your]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-07-27 00:00:19) [GET]
+  [4;36;1mUser Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mCompany Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;36;1mLoad Load (0.0ms)[0m   [0;1mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) [0m
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 875ms (View: 16, DB: 31) | 200 OK [http://localhost/loads/your]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-07-27 00:02:26) [GET]
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;36;1mLoad Load (0.0ms)[0m   [0;1mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) [0m
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 828ms (View: 31, DB: 0) | 200 OK [http://localhost/loads/your]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-07-27 00:02:38) [GET]
+  [4;36;1mUser Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mCompany Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;36;1mLoad Load (0.0ms)[0m   [0;1mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) [0m
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 844ms (View: 15, DB: 32) | 200 OK [http://localhost/loads/your]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-07-27 00:03:29) [GET]
+  [4;36;1mUser Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mCompany Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;36;1mLoad Load (0.0ms)[0m   [0;1mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) [0m
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 813ms (View: 16, DB: 32) | 200 OK [http://localhost/loads/your]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-07-27 00:04:19) [GET]
+  [4;36;1mUser Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mCompany Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;36;1mLoad Load (0.0ms)[0m   [0;1mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) [0m
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 828ms (View: 15, DB: 32) | 200 OK [http://localhost/loads/your]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#new (for 127.0.0.1 at 2009-07-27 00:05:11) [GET]
+  [4;36;1mUser Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mLoad Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `loads`[0m
+Rendering template within layouts/application
+Rendering loads/new
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 828ms (View: 16, DB: 15) | 200 OK [http://localhost/loads/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DashboardController#geolookup (for 127.0.0.1 at 2009-07-27 00:05:17) [GET]
+  Parameters: {"authenticity_token"=>"W39+qUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg=", "location"=>"Brisbane"}
+Google geocoding. Address: Brisbane,Australia. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>Brisbane,Australia</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Brisbane Queensland, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>Queensland</AdministrativeAreaName><Locality><LocalityName>Brisbane</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-27.4576794" south="-27.4774797" east="153.0438994" west="153.0118846" />
+    </ExtendedData>
+    <Point><coordinates>153.0278920,-27.4675800,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+Completed in 1000ms (View: 15, DB: 0) | 200 OK [http://localhost/dashboard/geolookup?authenticity_token=W39%2BqUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg%3D&location=Brisbane]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DashboardController#geolookup (for 127.0.0.1 at 2009-07-27 00:05:18) [GET]
+  Parameters: {"authenticity_token"=>"W39+qUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg=", "location"=>"Miles"}
+Google geocoding. Address: Miles,Australia. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>Miles,Australia</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Miles Queensland 4415, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>Queensland</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.3385165" south="-26.9767153" east="150.6968526" west="149.6723774" />
+    </ExtendedData>
+    <Point><coordinates>150.1846150,-26.6580620,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+Completed in 906ms (View: 0, DB: 0) | 200 OK [http://localhost/dashboard/geolookup?authenticity_token=W39%2BqUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg%3D&location=Miles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#create (for 127.0.0.1 at 2009-07-27 00:05:27) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"W39+qUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg=", "load"=>{"end_lng"=>"150.184615", "start_lng"=>"153.027892", "end_lat"=>"-26.658062", "end_loc"=>"Miles Queensland 4415, Australia", "start_lat"=>"-27.46758", "load_date"=>"12 jan 2008", "start_loc"=>"Brisbane Queensland, Australia", "load_type"=>"contract"}}
+  [4;36;1mUser Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mLoad Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `loads`[0m
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mLoad Create (0.0ms)[0m   [0;1mINSERT INTO `loads` (`start_lng`, `end_lng`, `updated_at`, `details`, `end_lat`, `start_lat`, `end_loc`, `filled`, `start_loc`, `load_date`, `company_id`, `deleted`, `load_type`, `distance`, `created_at`) VALUES(NULL, NULL, '2009-07-26 23:05:29', NULL, NULL, NULL, NULL, 0, NULL, NULL, 10, 0, NULL, NULL, '2009-07-26 23:05:29')[0m
+  [4;35;1mSQL (47.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/loads/5
+Completed in 1187ms (DB: 77) | 302 Found [http://localhost/loads]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#show (for 127.0.0.1 at 2009-07-27 00:05:29) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;35;1mLoad Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `loads`[0m
+  [4;36;1mLoad Load (0.0ms)[0m   [0;1mSELECT * FROM `loads` WHERE (`loads`.`id` = 5) [0m
+Rendering template within layouts/application
+Rendering loads/show
+
+ActionView::TemplateError (undefined method `edit_loads_path' for #<ActionView::Base:0x460b7e8>) on line #2 of app/views/loads/show.html.erb:
+1: 
+2: <%= link_to 'Edit', edit_loads_path(@loads) %> |
+3: <%= link_to 'Back', loads_path %>
+
+    app/views/loads/show.html.erb:2
+    app/controllers/loads_controller.rb:29:in `show'
+
+Rendered rescues/_trace (94.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#index (for 127.0.0.1 at 2009-07-27 00:05:53) [GET]
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mLoad Load (0.0ms)[0m   [0;1mSELECT * FROM `loads` [0m
+Rendering template within layouts/application
+Rendering loads/index
+  [4;35;1mLoad Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `loads`[0m
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 750ms (View: 16, DB: 0) | 200 OK [http://localhost/loads]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-07-27 00:05:55) [GET]
+  [4;35;1mUser Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;35;1mLoad Load (0.0ms)[0m   [0mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) [0m
+  [4;36;1mLoad Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `loads`[0m
+
+ActionView::TemplateError (undefined local variable or method `laod' for #<ActionView::Base:0x487c6e4>) on line #28 of app/views/loads/your.html.erb:
+25: 		</div>
+26: 		<hr>
+27: 		<% @loads.each do |load| %>
+28: 			<div id="load_<%= load.id %>" class=<%= @loads.first == laod ? "data_input_table_selected" : "data_input_table_row" %>>
+29: 				<div class="data_col_journey">
+30: 					<%=h load.start_pos %><br>
+31: 					<%=h load.end_pos %><br>
+
+    app/views/loads/your.html.erb:28
+    app/views/loads/your.html.erb:27
+    app/controllers/loads_controller.rb:7:in `your'
+
+Rendered rescues/_trace (157.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-07-27 00:06:24) [GET]
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mCompany Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;36;1mLoad Load (0.0ms)[0m   [0;1mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) [0m
+  [4;35;1mLoad Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `loads`[0m
+
+ActionView::TemplateError (undefined method `start_pos' for #<Load:0x46c565c>) on line #30 of app/views/loads/your.html.erb:
+27: 		<% @loads.each do |load| %>
+28: 			<div id="load_<%= load.id %>" class=<%= @loads.first == load ? "data_input_table_selected" : "data_input_table_row" %>>
+29: 				<div class="data_col_journey">
+30: 					<%=h load.start_pos %><br>
+31: 					<%=h load.end_pos %><br>
+32: 				</div>
+33: 				<div class="data_col_date">
+
+    app/views/loads/your.html.erb:30
+    app/views/loads/your.html.erb:27
+    app/controllers/loads_controller.rb:7:in `your'
+
+Rendered rescues/_trace (94.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-07-27 00:07:29) [GET]
+  [4;35;1mUser Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;35;1mCompany Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;35;1mLoad Load (0.0ms)[0m   [0mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) [0m
+  [4;36;1mLoad Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `loads`[0m
+
+ActionView::TemplateError (undefined method `journey_date' for #<Load:0x461dd44>) on line #34 of app/views/loads/your.html.erb:
+31: 					<%=h load.end_loc %><br>
+32: 				</div>
+33: 				<div class="data_col_date">
+34: 					<%=h load.journey_date.strftime("%d %b %Y") %><br>
+35: 				</div>
+36: 				<div class="data_col_details">
+37: 					<%=h load.description %><br>
+
+    app/views/loads/your.html.erb:34
+    app/views/loads/your.html.erb:27
+    app/controllers/loads_controller.rb:7:in `your'
+
+Rendered rescues/_trace (93.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-07-27 00:07:52) [GET]
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;36;1mLoad Load (0.0ms)[0m   [0;1mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) [0m
+  [4;35;1mLoad Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `loads`[0m
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.strftime) on line #34 of app/views/loads/your.html.erb:
+31: 					<%=h load.end_loc %><br>
+32: 				</div>
+33: 				<div class="data_col_date">
+34: 					<%=h load.load_date.strftime("%d %b %Y") %><br>
+35: 				</div>
+36: 				<div class="data_col_details">
+37: 					<%=h load.description %><br>
+
+    app/views/loads/your.html.erb:34
+    app/views/loads/your.html.erb:27
+    app/controllers/loads_controller.rb:7:in `your'
+
+Rendered rescues/_trace (156.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-07-27 00:08:19) [GET]
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (15.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;35;1mLoad Load (0.0ms)[0m   [0mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) [0m
+  [4;36;1mLoad Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `loads`[0m
+
+ActionView::TemplateError (undefined method `description' for #<Load:0x47f1314>) on line #37 of app/views/loads/your.html.erb:
+34: 					<%=h load.load_date.strftime("%d %b %Y") if load.load_date %><br>
+35: 				</div>
+36: 				<div class="data_col_details">
+37: 					<%=h load.description %><br>
+38: 				</div>
+39: 			</div>
+40: 		<% end %>
+
+    app/views/loads/your.html.erb:37
+    app/views/loads/your.html.erb:27
+    app/controllers/loads_controller.rb:7:in `your'
+
+Rendered rescues/_trace (172.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-07-27 00:08:40) [GET]
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mCompany Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;36;1mLoad Load (0.0ms)[0m   [0;1mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) [0m
+  [4;35;1mLoad Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `loads`[0m
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 813ms (View: 32, DB: 15) | 200 OK [http://localhost/loads/your]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#new (for 127.0.0.1 at 2009-07-27 00:09:34) [GET]
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;35;1mLoad Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `loads`[0m
+Rendering template within layouts/application
+Rendering loads/new
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 844ms (View: 16, DB: 0) | 200 OK [http://localhost/loads/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DashboardController#geolookup (for 127.0.0.1 at 2009-07-27 00:09:39) [GET]
+  Parameters: {"authenticity_token"=>"W39+qUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg=", "location"=>"miles"}
+Google geocoding. Address: miles,Australia. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>miles,Australia</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Miles Queensland 4415, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>Queensland</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.3385165" south="-26.9767153" east="150.6968526" west="149.6723774" />
+    </ExtendedData>
+    <Point><coordinates>150.1846150,-26.6580620,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+Completed in 860ms (View: 0, DB: 0) | 200 OK [http://localhost/dashboard/geolookup?authenticity_token=W39%2BqUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg%3D&location=miles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DashboardController#geolookup (for 127.0.0.1 at 2009-07-27 00:09:40) [GET]
+  Parameters: {"authenticity_token"=>"W39+qUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg=", "location"=>"roma"}
+Google geocoding. Address: roma,Australia. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>roma,Australia</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Roma Queensland 4455, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>Queensland</AdministrativeAreaName><Locality><LocalityName>Roma</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.5339831" south="-26.6138170" east="148.8546217" west="148.7265623" />
+    </ExtendedData>
+    <Point><coordinates>148.7905920,-26.5739070,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+Completed in 1109ms (View: 16, DB: 0) | 200 OK [http://localhost/dashboard/geolookup?authenticity_token=W39%2BqUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg%3D&location=roma]
+  [4;36;1mSQL (15.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#create (for 127.0.0.1 at 2009-07-27 00:09:46) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"W39+qUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg=", "load"=>{"end_lng"=>"148.790592", "start_lng"=>"150.184615", "end_lat"=>"-26.573907", "end_loc"=>"Roma Queensland 4455, Australia", "start_lat"=>"-26.658062", "load_date"=>"14 jan 2009", "start_loc"=>"Miles Queensland 4415, Australia", "load_type"=>"contract"}}
+  [4;35;1mUser Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;35;1mLoad Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `loads`[0m
+  [4;36;1mCompany Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mLoad Create (297.0ms)[0m   [0mINSERT INTO `loads` (`start_lng`, `end_lng`, `updated_at`, `details`, `end_lat`, `start_lat`, `end_loc`, `filled`, `start_loc`, `load_date`, `company_id`, `deleted`, `load_type`, `distance`, `created_at`) VALUES(150.184615, 148.790592, '2009-07-26 23:09:47', NULL, -26.573907, -26.658062, 'Roma Queensland 4455, Australia', 0, 'Miles Queensland 4415, Australia', '2009-01-14', 10, 0, 'contract', NULL, '2009-07-26 23:09:47')[0m
+  [4;36;1mSQL (47.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/loads/6
+Completed in 1235ms (DB: 407) | 302 Found [http://localhost/loads]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#show (for 127.0.0.1 at 2009-07-27 00:09:47) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mLoad Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `loads`[0m
+  [4;35;1mLoad Load (15.0ms)[0m   [0mSELECT * FROM `loads` WHERE (`loads`.`id` = 6) [0m
+Rendering template within layouts/application
+Rendering loads/show
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (16.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 875ms (View: 16, DB: 15) | 200 OK [http://localhost/loads/6]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-07-27 00:09:50) [GET]
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (16.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mCompany Load (16.0ms)[0m   [0;1mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;35;1mLoad Load (0.0ms)[0m   [0mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) [0m
+  [4;36;1mLoad Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `loads`[0m
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 844ms (View: 0, DB: 47) | 200 OK [http://localhost/loads/your]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-07-27 00:10:46) [GET]
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;36;1mLoad Load (0.0ms)[0m   [0;1mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) [0m
+  [4;35;1mLoad Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `loads`[0m
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 828ms (View: 0, DB: 15) | 200 OK [http://localhost/loads/your]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-07-27 00:11:27) [GET]
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;35;1mLoad Load (0.0ms)[0m   [0mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) [0m
+  [4;36;1mLoad Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `loads`[0m
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (15.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 953ms (View: 31, DB: 0) | 200 OK [http://localhost/loads/your]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-07-27 00:13:36) [GET]
+  [4;36;1mUser Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mCompany Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;36;1mLoad Load (0.0ms)[0m   [0;1mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) [0m
+  [4;35;1mLoad Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `loads`[0m
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (16.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 984ms (View: 31, DB: 32) | 200 OK [http://localhost/loads/your]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-07-27 00:14:01) [GET]
+  [4;35;1mUser Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;35;1mLoad Load (0.0ms)[0m   [0mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) [0m
+  [4;36;1mLoad Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `loads`[0m
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 844ms (View: 32, DB: 15) | 200 OK [http://localhost/loads/your]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-07-27 00:14:17) [GET]
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mCompany Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;36;1mLoad Load (0.0ms)[0m   [0;1mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) [0m
+  [4;35;1mLoad Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `loads`[0m
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 843ms (View: 31, DB: 15) | 200 OK [http://localhost/loads/your]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-07-27 00:14:58) [GET]
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;35;1mCompany Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;35;1mLoad Load (0.0ms)[0m   [0mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) [0m
+  [4;36;1mLoad Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `loads`[0m
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 922ms (View: 31, DB: 16) | 200 OK [http://localhost/loads/your]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#new (for 127.0.0.1 at 2009-07-27 00:20:41) [GET]
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mLoad Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `loads`[0m
+Rendering template within layouts/application
+Rendering loads/new
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 843ms (View: 15, DB: 0) | 200 OK [http://localhost/loads/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DashboardController#geolookup (for 127.0.0.1 at 2009-07-27 00:20:47) [GET]
+  Parameters: {"authenticity_token"=>"W39+qUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg=", "location"=>"miles"}
+Google geocoding. Address: miles,Australia. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>miles,Australia</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Miles Queensland 4415, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>Queensland</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.3385165" south="-26.9767153" east="150.6968526" west="149.6723774" />
+    </ExtendedData>
+    <Point><coordinates>150.1846150,-26.6580620,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+Completed in 969ms (View: 0, DB: 0) | 200 OK [http://localhost/dashboard/geolookup?authenticity_token=W39%2BqUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg%3D&location=miles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#create (for 127.0.0.1 at 2009-07-27 00:20:55) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"W39+qUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg=", "load"=>{"end_lng"=>"150.184615", "start_lng"=>"150.184615", "end_lat"=>"-26.658062", "end_loc"=>"Miles Queensland 4415, Australia", "start_lat"=>"-26.658062", "load_date"=>"12 Jan 2008", "start_loc"=>"Miles Queensland 4415, Australia", "load_type"=>"truck"}}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;35;1mLoad Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `loads`[0m
+  [4;36;1mCompany Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+Google geocoding. Address: Miles Queensland 4415, Australia. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>Miles Queensland 4415, Australia</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Miles Queensland, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>Queensland</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.3385165" south="-26.9767153" east="150.6968526" west="149.6723774" />
+    </ExtendedData>
+    <Point><coordinates>150.1846150,-26.6580620,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+Google geocoding. Address: Miles Queensland 4415, Australia. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>Miles Queensland 4415, Australia</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Miles Queensland, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>Queensland</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.3385165" south="-26.9767153" east="150.6968526" west="149.6723774" />
+    </ExtendedData>
+    <Point><coordinates>150.1846150,-26.6580620,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/application
+Rendering loads/new
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 1234ms (View: 15, DB: 31) | 200 OK [http://localhost/loads]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#create (for 127.0.0.1 at 2009-07-27 00:25:17) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"W39+qUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg=", "load"=>{"end_lng"=>"150.184615", "start_lng"=>"150.184615", "end_lat"=>"-26.658062", "end_loc"=>"Miles Queensland 4415, Australia", "start_lat"=>"-26.658062", "load_date"=>"12 Jan 2008", "start_loc"=>"Miles Queensland 4415, Australia", "load_type"=>"truck"}}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;35;1mLoad Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `loads`[0m
+  [4;36;1mCompany Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+Google geocoding. Address: Miles Queensland 4415, Australia. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>Miles Queensland 4415, Australia</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Miles Queensland, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>Queensland</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.3385165" south="-26.9767153" east="150.6968526" west="149.6723774" />
+    </ExtendedData>
+    <Point><coordinates>150.1846150,-26.6580620,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+Google geocoding. Address: Miles Queensland 4415, Australia. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>Miles Queensland 4415, Australia</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Miles Queensland, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>Queensland</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.3385165" south="-26.9767153" east="150.6968526" west="149.6723774" />
+    </ExtendedData>
+    <Point><coordinates>150.1846150,-26.6580620,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/application
+Rendering loads/new
+
+ActionView::TemplateError (wrong number of arguments (0 for 1)) on line #56 of app/views/loads/new.html.erb:
+53: 				<%=f.text_field :load_date %>
+54: 			</div>
+55: 		</div>
+56: <% unless load.errors.empty? %> 
+57: 	<!-- just put an error message rather than the full list of errors -->
+58: 	<div id="errorContainer">
+59: 		<div id="errorExplanation">
+
+    app/views/loads/new.html.erb:56:in `load'
+    app/views/loads/new.html.erb:56
+    app/views/loads/new.html.erb:17
+    app/controllers/loads_controller.rb:63:in `create'
+    app/controllers/loads_controller.rb:57:in `create'
+
+Rendered rescues/_trace (78.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#index (for 127.0.0.1 at 2009-07-27 00:25:55) [GET]
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;35;1mLoad Load (0.0ms)[0m   [0mSELECT * FROM `loads` [0m
+Rendering template within layouts/application
+Rendering loads/index
+  [4;36;1mLoad Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `loads`[0m
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 782ms (View: 0, DB: 16) | 200 OK [http://localhost/loads]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-07-27 00:25:59) [GET]
+  [4;36;1mUser Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mCompany Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;36;1mLoad Load (0.0ms)[0m   [0;1mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) [0m
+  [4;35;1mLoad Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `loads`[0m
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 813ms (View: 16, DB: 32) | 200 OK [http://localhost/loads/your]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#new (for 127.0.0.1 at 2009-07-27 00:26:02) [GET]
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;35;1mLoad Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `loads`[0m
+Rendering template within layouts/application
+Rendering loads/new
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 781ms (View: 16, DB: 0) | 200 OK [http://localhost/loads/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DashboardController#geolookup (for 127.0.0.1 at 2009-07-27 00:26:06) [GET]
+  Parameters: {"authenticity_token"=>"W39+qUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg=", "location"=>"Miles"}
+Google geocoding. Address: Miles,Australia. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>Miles,Australia</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Miles Queensland 4415, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>Queensland</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.3385165" south="-26.9767153" east="150.6968526" west="149.6723774" />
+    </ExtendedData>
+    <Point><coordinates>150.1846150,-26.6580620,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+Completed in 922ms (View: 0, DB: 0) | 200 OK [http://localhost/dashboard/geolookup?authenticity_token=W39%2BqUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg%3D&location=Miles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#create (for 127.0.0.1 at 2009-07-27 00:26:10) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"W39+qUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg=", "load"=>{"end_lng"=>"150.184615", "start_lng"=>"150.184615", "end_lat"=>"-26.658062", "end_loc"=>"Miles Queensland 4415, Australia", "start_lat"=>"-26.658062", "load_date"=>"", "start_loc"=>"Miles Queensland 4415, Australia"}}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mLoad Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `loads`[0m
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+Google geocoding. Address: Miles Queensland 4415, Australia. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>Miles Queensland 4415, Australia</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Miles Queensland, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>Queensland</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.3385165" south="-26.9767153" east="150.6968526" west="149.6723774" />
+    </ExtendedData>
+    <Point><coordinates>150.1846150,-26.6580620,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+Google geocoding. Address: Miles Queensland 4415, Australia. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>Miles Queensland 4415, Australia</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Miles Queensland, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>Queensland</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.3385165" south="-26.9767153" east="150.6968526" west="149.6723774" />
+    </ExtendedData>
+    <Point><coordinates>150.1846150,-26.6580620,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/application
+Rendering loads/new
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (16.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 1188ms (View: 16, DB: 0) | 200 OK [http://localhost/loads]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#create (for 127.0.0.1 at 2009-07-27 00:27:14) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"W39+qUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg=", "load"=>{"end_lng"=>"150.184615", "start_lng"=>"150.184615", "end_lat"=>"-26.658062", "end_loc"=>"Miles Queensland 4415, Australia", "start_lat"=>"-26.658062", "load_date"=>"", "start_loc"=>"Miles Queensland 4415, Australia"}}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mLoad Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `loads`[0m
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+Google geocoding. Address: Miles Queensland 4415, Australia. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>Miles Queensland 4415, Australia</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Miles Queensland, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>Queensland</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.3385165" south="-26.9767153" east="150.6968526" west="149.6723774" />
+    </ExtendedData>
+    <Point><coordinates>150.1846150,-26.6580620,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+Google geocoding. Address: Miles Queensland 4415, Australia. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>Miles Queensland 4415, Australia</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Miles Queensland, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>Queensland</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.3385165" south="-26.9767153" east="150.6968526" west="149.6723774" />
+    </ExtendedData>
+    <Point><coordinates>150.1846150,-26.6580620,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/application
+Rendering loads/new
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (15.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 1187ms (View: 31, DB: 0) | 200 OK [http://localhost/loads]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#create (for 127.0.0.1 at 2009-07-27 00:27:36) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"W39+qUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg=", "load"=>{"end_lng"=>"150.184615", "start_lng"=>"150.184615", "end_lat"=>"-26.658062", "end_loc"=>"Miles Queensland 4415, Australia", "start_lat"=>"-26.658062", "load_date"=>"", "start_loc"=>"Miles Queensland 4415, Australia"}}
+  [4;36;1mUser Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mLoad Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `loads`[0m
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+Google geocoding. Address: Miles Queensland 4415, Australia. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>Miles Queensland 4415, Australia</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Miles Queensland, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>Queensland</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.3385165" south="-26.9767153" east="150.6968526" west="149.6723774" />
+    </ExtendedData>
+    <Point><coordinates>150.1846150,-26.6580620,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+Google geocoding. Address: Miles Queensland 4415, Australia. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>Miles Queensland 4415, Australia</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Miles Queensland, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>Queensland</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.3385165" south="-26.9767153" east="150.6968526" west="149.6723774" />
+    </ExtendedData>
+    <Point><coordinates>150.1846150,-26.6580620,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/application
+Rendering loads/new
+
+***** Debugger requested, but was not available: Start server with --debugger to enable *****
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (16.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 1219ms (View: 32, DB: 30) | 200 OK [http://localhost/loads]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#create (for 127.0.0.1 at 2009-07-27 00:28:08) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"W39+qUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg=", "load"=>{"end_lng"=>"150.184615", "start_lng"=>"150.184615", "end_lat"=>"-26.658062", "end_loc"=>"Miles Queensland 4415, Australia", "start_lat"=>"-26.658062", "load_date"=>"", "start_loc"=>"Miles Queensland 4415, Australia"}}
+  [4;35;1mUser Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;35;1mLoad Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `loads`[0m
+  [4;36;1mCompany Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+Google geocoding. Address: Miles Queensland 4415, Australia. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>Miles Queensland 4415, Australia</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Miles Queensland, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>Queensland</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.3385165" south="-26.9767153" east="150.6968526" west="149.6723774" />
+    </ExtendedData>
+    <Point><coordinates>150.1846150,-26.6580620,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+Google geocoding. Address: Miles Queensland 4415, Australia. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>Miles Queensland 4415, Australia</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Miles Queensland, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>Queensland</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.3385165" south="-26.9767153" east="150.6968526" west="149.6723774" />
+    </ExtendedData>
+    <Point><coordinates>150.1846150,-26.6580620,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/application
+Rendering loads/new
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#index (for 127.0.0.1 at 2009-07-27 00:29:35) [GET]
+  [4;35;1mUser Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;35;1mLoad Load (0.0ms)[0m   [0mSELECT * FROM `loads` [0m
+Rendering template within layouts/application
+Rendering loads/index
+  [4;36;1mLoad Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `loads`[0m
+Rendered shared/_filter_options (31.0ms)
+Rendered shared/_user_bar (47.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 1719ms (View: 844, DB: 31) | 200 OK [http://localhost/loads]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-07-27 00:29:38) [GET]
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;36;1mLoad Load (0.0ms)[0m   [0;1mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) [0m
+  [4;35;1mLoad Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `loads`[0m
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (16.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 875ms (View: 47, DB: 0) | 200 OK [http://localhost/loads/your]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#new (for 127.0.0.1 at 2009-07-27 00:29:43) [GET]
+  [4;35;1mUser Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;35;1mLoad Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `loads`[0m
+Rendering template within layouts/application
+Rendering loads/new
+ERROR: compiling _run_erb_app47views47loads47new46html46erb RAISED compile error
+C:/Aptana/trucks2/app/views/loads/new.html.erb:85: syntax error, unexpected kENSURE, expecting kEND
+C:/Aptana/trucks2/app/views/loads/new.html.erb:87: syntax error, unexpected $end, expecting kEND
+Function body:           def _run_erb_app47views47loads47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat " <!-- This includes the google maps API code. \n"
+@output_buffer.concat "\t You need to put your own key here -->\n"
+@output_buffer.concat "<script src=\"http://maps.google.com/maps?file=api&v=2&key=ABQIAAAAbMoeqif6WesTuyyV7KfMphT5EG_nRGozuZeboEWjUCrU_tMJGxTdBe0yEKO9HBgw3R_U96Vnp8WjDQ\" \n"
+@output_buffer.concat "\ttype=\"text/javascript\">\n"
+@output_buffer.concat "</script>\n"
+@output_buffer.concat "<script type=\"text/javascript\">\n"
+@output_buffer.concat "\tvar homeLat="; @output_buffer.concat(( session[:geo_location] || '""' ).to_s); @output_buffer.concat ";\n"
+@output_buffer.concat "\tvar homeLng="; @output_buffer.concat(( session[:geo_location] || '""' ).to_s); @output_buffer.concat ";\n"
+@output_buffer.concat "</script>\n"
+@output_buffer.concat(( javascript_include_tag 'google_new' ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "<div class=\"PageTitle\">\n"
+@output_buffer.concat "\tNew Journey\n"
+@output_buffer.concat "</div>\n"
+@output_buffer.concat "<b>NOTE: </b>session[:geo_location] value  is "; @output_buffer.concat(( session[:geo_location] ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "<div class=\"container\">\n"
+@output_buffer.concat "\t<div class=\"left_container\">\n"
+@output_buffer.concat "\t\t";  form_for(@load) do |f| ; @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\n"
+@output_buffer.concat "\t\t<div class=\"data_imput_row\">\n"
+@output_buffer.concat "\t\t\t<div class=\"data_input_field\">\n"
+@output_buffer.concat "\t\t\t\t"; @output_buffer.concat((f.label :load_type, 'Type' ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t</div>\n"
+@output_buffer.concat "\t\t\t<div class=\"data_input_data\">\n"
+@output_buffer.concat "\t\t\t\t"; @output_buffer.concat((f.radio_button :load_type, :truck ).to_s); @output_buffer.concat " Truck\n"
+@output_buffer.concat "\t\t\t\t"; @output_buffer.concat((f.radio_button :load_type, :contract ).to_s); @output_buffer.concat " Contract\n"
+@output_buffer.concat "\t\t\t</div>\n"
+@output_buffer.concat "\t\t</div>\n"
+@output_buffer.concat "\t\t<div class=\"data_imput_row\">\n"
+@output_buffer.concat "\t\t\t<div class=\"data_input_field\">\n"
+@output_buffer.concat "\t\t\t\t"; @output_buffer.concat((f.label :start_loc, 'From' ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t</div>\n"
+@output_buffer.concat "\t\t\t<div class=\"data_input_data\">\n"
+@output_buffer.concat "\t\t\t\t"; @output_buffer.concat((f.text_field :start_loc, :onchange => "processAddress(this,'#{form_authenticity_token}');" ).to_s); @output_buffer.concat " <div id=\"load_from\" class=\"google_error\">&nbsp;&nbsp;&nbsp;&nbsp;</div>\n"
+@output_buffer.concat "\t\t\t\t"; @output_buffer.concat((f.hidden_field :start_lat ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t\t"; @output_buffer.concat((f.hidden_field :start_lng ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t</div>\n"
+@output_buffer.concat "\t\t</div>\n"
+@output_buffer.concat "\t\t<div class=\"data_imput_row\">\n"
+@output_buffer.concat "\t\t\t<div class=\"data_input_field\">\n"
+@output_buffer.concat "\t\t\t\t"; @output_buffer.concat((f.label :end_loc, 'To' ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t</div>\n"
+@output_buffer.concat "\t\t\t<div class=\"data_input_data\">\n"
+@output_buffer.concat "\t\t\t\t"; @output_buffer.concat((f.text_field :end_loc, :onchange => "processAddress(this,'#{form_authenticity_token}');" ).to_s); @output_buffer.concat " <div id=\"load_to\" class=\"google_error\">&nbsp;&nbsp;&nbsp;&nbsp;</div>\n"
+@output_buffer.concat "\t\t\t\t"; @output_buffer.concat((f.hidden_field :end_lat ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t\t"; @output_buffer.concat((f.hidden_field :end_lng ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t</div>\n"
+@output_buffer.concat "\t\t</div>\n"
+@output_buffer.concat "\t\t<div class=\"data_imput_row\">\n"
+@output_buffer.concat "\t\t\t<div class=\"data_input_field\">\n"
+@output_buffer.concat "\t\t\t\t"; @output_buffer.concat((f.label :load_date, 'Load date' ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t</div>\n"
+@output_buffer.concat "\t\t\t<div class=\"data_input_data\">\n"
+@output_buffer.concat "\t\t\t\t"; @output_buffer.concat((f.text_field :load_date ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t</div>\n"
+@output_buffer.concat "\t\t</div>\n"
+ debugger; unless @load.errors.empty? ; @output_buffer.concat " \n"
+@output_buffer.concat "\t<!-- just put an error message rather than the full list of errors -->\n"
+@output_buffer.concat "\t<div id=\"errorContainer\">\n"
+@output_buffer.concat "\t\t<div id=\"errorExplanation\">\n"
+@output_buffer.concat "\t\t\t<h2>Error During Load Creation</h2>\n"
+@output_buffer.concat "\t\t\t<p>Please fix the highlighted fields and try again.</p>\n"
+@output_buffer.concat "\t\t\t";  unless  @load.errors['Distance'].blank? ; @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<ul>\n"
+@output_buffer.concat "\t\t\t\t<li>From and To Location must be greater than 50 km apart</li>\n"
+@output_buffer.concat "\t\t\t</ul>\n"
+@output_buffer.concat "\t\t</div>\n"
+@output_buffer.concat "\t</div>\n"
+@output_buffer.concat "\t<br>\n"
+ end ; @output_buffer.concat "\n"
+@output_buffer.concat "\t\t<div class=\"data_imput_row\">\n"
+@output_buffer.concat "\t\t\t<div class=\"data_input_buttons\">\n"
+@output_buffer.concat "\t\t\t\t<span class=\"button lt_blue\">"; @output_buffer.concat(( link_to 'Cancel', dashboard_home_path ).to_s); @output_buffer.concat "</span>&nbsp;\n"
+@output_buffer.concat "\t\t\t\t"; @output_buffer.concat(( f.submit "Create", {:class => 'button lt_blue', :style => "display:inline"} ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t</div>\n"
+@output_buffer.concat "\t\t</div>\t\t\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\t\t";  end ; @output_buffer.concat "\n"
+@output_buffer.concat "\t</div>\n"
+@output_buffer.concat "\t<div class=\"right_container\" style=\"position:relative;height:370px\">\n"
+@output_buffer.concat "\t\t<div id=\"map_shadow\"> </div>\n"
+@output_buffer.concat "\t\t<div id=\"map\" style=\"\"> </div>\n"
+@output_buffer.concat "\t</div>\n"
+@output_buffer.concat "</div>\n"
+@output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/Aptana/trucks2/app/views/loads/new.html.erb:87:in `compile!'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:61:in `compile'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:260:in `render'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:343:in `_render_with_layout'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:257:in `render'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1241:in `render_for_file'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:943:in `render_without_benchmark'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:135:in `send'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:135:in `custom'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:175:in `call'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:175:in `respond'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:173:in `each'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:173:in `respond'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:107:in `respond_to'
+C:/Aptana/trucks2/app/controllers/loads_controller.rb:40:in `new'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1322:in `send'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1322:in `perform_action_without_filters'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `process'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/debugger.rb:17:in `call'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/chunked.rb:15:in `call'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:61:in `process'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:159:in `process_client'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `each'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `process_client'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `initialize'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `new'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `initialize'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `new'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `run'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:34:in `run'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+C:/Aptana/trucks2/app/views/loads/new.html.erb:85: syntax error, unexpected kENSURE, expecting kEND
+C:/Aptana/trucks2/app/views/loads/new.html.erb:87: syntax error, unexpected $end, expecting kEND) on line #85 of app/views/loads/new.html.erb:
+82: 	</div>
+83: </div>
+
+    app/views/loads/new.html.erb:87:in `compile!'
+    app/controllers/loads_controller.rb:40:in `new'
+
+Rendered rescues/_trace (93.0ms)
+Rendered rescues/_request_and_response (16.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#new (for 127.0.0.1 at 2009-07-27 00:29:59) [GET]
+  [4;35;1mUser Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;35;1mLoad Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `loads`[0m
+Rendering template within layouts/application
+Rendering loads/new
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#new (for 127.0.0.1 at 2009-07-27 00:30:16) [GET]
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;35;1mLoad Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `loads`[0m
+Rendering template within layouts/application
+Rendering loads/new
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (16.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 1250ms (View: 421, DB: 0) | 200 OK [http://localhost/loads/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DashboardController#geolookup (for 127.0.0.1 at 2009-07-27 00:30:22) [GET]
+  Parameters: {"authenticity_token"=>"W39+qUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg=", "location"=>"miles"}
+Google geocoding. Address: miles,Australia. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>miles,Australia</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Miles Queensland 4415, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>Queensland</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.3385165" south="-26.9767153" east="150.6968526" west="149.6723774" />
+    </ExtendedData>
+    <Point><coordinates>150.1846150,-26.6580620,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+Completed in 922ms (View: 16, DB: 0) | 200 OK [http://localhost/dashboard/geolookup?authenticity_token=W39%2BqUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg%3D&location=miles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#create (for 127.0.0.1 at 2009-07-27 00:30:26) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"W39+qUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg=", "load"=>{"end_lng"=>"150.184615", "start_lng"=>"150.184615", "end_lat"=>"-26.658062", "end_loc"=>"Miles Queensland 4415, Australia", "start_lat"=>"-26.658062", "load_date"=>"", "start_loc"=>"Miles Queensland 4415, Australia", "load_type"=>"contract"}}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mLoad Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `loads`[0m
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+Google geocoding. Address: Miles Queensland 4415, Australia. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>Miles Queensland 4415, Australia</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Miles Queensland, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>Queensland</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.3385165" south="-26.9767153" east="150.6968526" west="149.6723774" />
+    </ExtendedData>
+    <Point><coordinates>150.1846150,-26.6580620,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+Google geocoding. Address: Miles Queensland 4415, Australia. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>Miles Queensland 4415, Australia</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Miles Queensland, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>Queensland</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.3385165" south="-26.9767153" east="150.6968526" west="149.6723774" />
+    </ExtendedData>
+    <Point><coordinates>150.1846150,-26.6580620,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/application
+Rendering loads/new
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 1219ms (View: 16, DB: 0) | 200 OK [http://localhost/loads]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#create (for 127.0.0.1 at 2009-07-27 00:30:34) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"W39+qUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg=", "load"=>{"end_lng"=>"150.184615", "start_lng"=>"150.184615", "end_lat"=>"-26.658062", "end_loc"=>"Miles Queensland 4415, Australia", "start_lat"=>"-26.658062", "load_date"=>"12 Jna 2008", "start_loc"=>"Miles Queensland 4415, Australia", "load_type"=>"contract"}}
+  [4;36;1mUser Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mLoad Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `loads`[0m
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+Google geocoding. Address: Miles Queensland 4415, Australia. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>Miles Queensland 4415, Australia</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Miles Queensland, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>Queensland</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.3385165" south="-26.9767153" east="150.6968526" west="149.6723774" />
+    </ExtendedData>
+    <Point><coordinates>150.1846150,-26.6580620,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+Google geocoding. Address: Miles Queensland 4415, Australia. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>Miles Queensland 4415, Australia</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Miles Queensland, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>Queensland</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.3385165" south="-26.9767153" east="150.6968526" west="149.6723774" />
+    </ExtendedData>
+    <Point><coordinates>150.1846150,-26.6580620,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/application
+Rendering loads/new
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 1157ms (View: 0, DB: 16) | 200 OK [http://localhost/loads]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#create (for 127.0.0.1 at 2009-07-27 00:30:41) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"W39+qUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg=", "load"=>{"end_lng"=>"150.184615", "start_lng"=>"150.184615", "end_lat"=>"-26.658062", "end_loc"=>"Miles Queensland 4415, Australia", "start_lat"=>"-26.658062", "load_date"=>"12 Jan 2008", "start_loc"=>"Miles Queensland 4415, Australia", "load_type"=>"contract"}}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mLoad Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `loads`[0m
+  [4;35;1mCompany Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+Google geocoding. Address: Miles Queensland 4415, Australia. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>Miles Queensland 4415, Australia</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Miles Queensland, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>Queensland</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.3385165" south="-26.9767153" east="150.6968526" west="149.6723774" />
+    </ExtendedData>
+    <Point><coordinates>150.1846150,-26.6580620,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+Google geocoding. Address: Miles Queensland 4415, Australia. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>Miles Queensland 4415, Australia</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Miles Queensland, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>Queensland</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.3385165" south="-26.9767153" east="150.6968526" west="149.6723774" />
+    </ExtendedData>
+    <Point><coordinates>150.1846150,-26.6580620,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/application
+Rendering loads/new
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 1172ms (View: 31, DB: 32) | 200 OK [http://localhost/loads]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#create (for 127.0.0.1 at 2009-07-27 00:32:46) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"W39+qUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg=", "load"=>{"end_lng"=>"150.184615", "start_lng"=>"150.184615", "end_lat"=>"-26.658062", "end_loc"=>"Miles Queensland 4415, Australia", "start_lat"=>"-26.658062", "load_date"=>"12 Jan 2008", "start_loc"=>"Miles Queensland 4415, Australia", "load_type"=>"contract"}}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mLoad Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `loads`[0m
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+Google geocoding. Address: Miles Queensland 4415, Australia. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>Miles Queensland 4415, Australia</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Miles Queensland, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>Queensland</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.3385165" south="-26.9767153" east="150.6968526" west="149.6723774" />
+    </ExtendedData>
+    <Point><coordinates>150.1846150,-26.6580620,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+Google geocoding. Address: Miles Queensland 4415, Australia. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>Miles Queensland 4415, Australia</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Miles Queensland, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>Queensland</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.3385165" south="-26.9767153" east="150.6968526" west="149.6723774" />
+    </ExtendedData>
+    <Point><coordinates>150.1846150,-26.6580620,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/application
+Rendering loads/new
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (15.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 1094ms (View: 31, DB: 0) | 200 OK [http://localhost/loads]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#create (for 127.0.0.1 at 2009-07-27 00:33:12) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"W39+qUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg=", "load"=>{"end_lng"=>"150.184615", "start_lng"=>"150.184615", "end_lat"=>"-26.658062", "end_loc"=>"Miles Queensland 4415, Australia", "start_lat"=>"-26.658062", "load_date"=>"12 Jan 2008", "start_loc"=>"Miles Queensland 4415, Australia", "load_type"=>"contract"}}
+  [4;36;1mUser Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mLoad Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `loads`[0m
+  [4;35;1mCompany Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+Google geocoding. Address: Miles Queensland 4415, Australia. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>Miles Queensland 4415, Australia</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Miles Queensland, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>Queensland</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.3385165" south="-26.9767153" east="150.6968526" west="149.6723774" />
+    </ExtendedData>
+    <Point><coordinates>150.1846150,-26.6580620,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+Google geocoding. Address: Miles Queensland 4415, Australia. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>Miles Queensland 4415, Australia</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Miles Queensland, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>Queensland</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.3385165" south="-26.9767153" east="150.6968526" west="149.6723774" />
+    </ExtendedData>
+    <Point><coordinates>150.1846150,-26.6580620,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/application
+Rendering loads/new
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 1031ms (View: 31, DB: 47) | 200 OK [http://localhost/loads]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#create (for 127.0.0.1 at 2009-07-27 00:33:23) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"W39+qUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg=", "load"=>{"end_lng"=>"150.184615", "start_lng"=>"150.184615", "end_lat"=>"-26.658062", "end_loc"=>"Miles Queensland 4415, Australia", "start_lat"=>"-26.658062", "load_date"=>"12 Jan 2008", "start_loc"=>"Miles Queensland 4415, Australia", "load_type"=>"contract"}}
+  [4;36;1mUser Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mLoad Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `loads`[0m
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+Google geocoding. Address: Miles Queensland 4415, Australia. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>Miles Queensland 4415, Australia</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Miles Queensland, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>Queensland</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.3385165" south="-26.9767153" east="150.6968526" west="149.6723774" />
+    </ExtendedData>
+    <Point><coordinates>150.1846150,-26.6580620,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+Google geocoding. Address: Miles Queensland 4415, Australia. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>Miles Queensland 4415, Australia</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Miles Queensland, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>Queensland</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.3385165" south="-26.9767153" east="150.6968526" west="149.6723774" />
+    </ExtendedData>
+    <Point><coordinates>150.1846150,-26.6580620,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/application
+Rendering loads/new
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 1204ms (View: 32, DB: 16) | 200 OK [http://localhost/loads]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DashboardController#geolookup (for 127.0.0.1 at 2009-07-27 00:33:27) [GET]
+  Parameters: {"authenticity_token"=>"W39+qUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg=", "location"=>"roam"}
+Google geocoding. Address: roam,Australia. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>roam,Australia</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Roma Queensland 4455, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>Queensland</AdministrativeAreaName><Locality><LocalityName>Roma</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.5339831" south="-26.6138170" east="148.8546217" west="148.7265623" />
+    </ExtendedData>
+    <Point><coordinates>148.7905920,-26.5739070,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+Completed in 922ms (View: 0, DB: 0) | 200 OK [http://localhost/dashboard/geolookup?authenticity_token=W39%2BqUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg%3D&location=roam]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DashboardController#geolookup (for 127.0.0.1 at 2009-07-27 00:33:31) [GET]
+  Parameters: {"authenticity_token"=>"W39+qUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg=", "location"=>"brisRoma Queensland 4455, Australia"}
+Google geocoding. Address: brisRoma Queensland 4455, Australia. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>brisRoma Queensland 4455, Australia</name>
+  <Status>
+    <code>602</code>
+    <request>geocode</request>
+  </Status>
+</Response></kml>
+Google was unable to geocode address: brisRoma Queensland 4455, Australia
+Yahoo geocoding. Address: brisRoma Queensland 4455, Australia. Result: <?xml version="1.0"?>
+<ResultSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:yahoo:maps" xsi:schemaLocation="urn:yahoo:maps http://api.local.yahoo.com/MapsService/V1/GeocodeResponse.xsd"><Result precision="city" warning="The exact location could not be found. Here is the center of the ZIP code."><Latitude>-26.802059</Latitude><Longitude>148.675858</Longitude><Address></Address><City>BLYTHDALE  QLD  4455</City><State>Australia</State><Zip></Zip><Country>AU</Country></Result></ResultSet>
+<!-- ws04.ydn.re2.yahoo.com uncompressed/chunked Sun Jul 26 16:33:32 PDT 2009 -->
+Completed in 1422ms (View: 0, DB: 0) | 200 OK [http://localhost/dashboard/geolookup?authenticity_token=W39%2BqUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg%3D&location=brisRoma%20Queensland%204455%2C%20Australia]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DashboardController#geolookup (for 127.0.0.1 at 2009-07-27 00:33:34) [GET]
+  Parameters: {"authenticity_token"=>"W39+qUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg=", "location"=>"Blythdale  Qld  4455, Australia, AUm"}
+Google geocoding. Address: Blythdale  Qld  4455, Australia, AUm,Australia. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>Blythdale  Qld  4455, Australia, AUm,Australia</name>
+  <Status>
+    <code>602</code>
+    <request>geocode</request>
+  </Status>
+</Response></kml>
+Google was unable to geocode address: Blythdale  Qld  4455, Australia, AUm,Australia
+Yahoo geocoding. Address: Blythdale  Qld  4455, Australia, AUm,Australia. Result: <?xml version="1.0"?>
+<ResultSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:yahoo:maps" xsi:schemaLocation="urn:yahoo:maps http://api.local.yahoo.com/MapsService/V1/GeocodeResponse.xsd"><Result precision="zip"><Latitude>-26.579550</Latitude><Longitude>148.954788</Longitude><Address></Address><City>BLYTHDALE  QLD  4455</City><State>Australia</State><Zip></Zip><Country>AU</Country></Result></ResultSet>
+<!-- ws02.ydn.re2.yahoo.com uncompressed/chunked Sun Jul 26 16:33:35 PDT 2009 -->
+Completed in 1391ms (View: 0, DB: 0) | 200 OK [http://localhost/dashboard/geolookup?authenticity_token=W39%2BqUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg%3D&location=Blythdale%20%20Qld%20%204455%2C%20Australia%2C%20AUm]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DashboardController#geolookup (for 127.0.0.1 at 2009-07-27 00:33:37) [GET]
+  Parameters: {"authenticity_token"=>"W39+qUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg=", "location"=>"Blythdale  Qld  4455, Australia, AUmao"}
+Google geocoding. Address: Blythdale  Qld  4455, Australia, AUmao,Australia. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>Blythdale  Qld  4455, Australia, AUmao,Australia</name>
+  <Status>
+    <code>602</code>
+    <request>geocode</request>
+  </Status>
+</Response></kml>
+Google was unable to geocode address: Blythdale  Qld  4455, Australia, AUmao,Australia
+Yahoo geocoding. Address: Blythdale  Qld  4455, Australia, AUmao,Australia. Result: <?xml version="1.0"?>
+<ResultSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:yahoo:maps" xsi:schemaLocation="urn:yahoo:maps http://api.local.yahoo.com/MapsService/V1/GeocodeResponse.xsd"><Result precision="zip"><Latitude>-26.579550</Latitude><Longitude>148.954788</Longitude><Address></Address><City>BLYTHDALE  QLD  4455</City><State>Australia</State><Zip></Zip><Country>AU</Country></Result></ResultSet>
+<!-- ws01.ydn.re2.yahoo.com uncompressed/chunked Sun Jul 26 16:33:38 PDT 2009 -->
+Completed in 1250ms (View: 0, DB: 0) | 200 OK [http://localhost/dashboard/geolookup?authenticity_token=W39%2BqUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg%3D&location=Blythdale%20%20Qld%20%204455%2C%20Australia%2C%20AUmao]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DashboardController#geolookup (for 127.0.0.1 at 2009-07-27 00:33:44) [GET]
+  Parameters: {"authenticity_token"=>"W39+qUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg=", "location"=>"ramo"}
+Google geocoding. Address: ramo,Australia. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>ramo,Australia</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Mé Ramo, New Caledonia</address>
+    <AddressDetails Accuracy="0" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><AddressLine>Mé Ramo</AddressLine></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-16.3180597" south="-26.9201380" east="173.8624677" west="157.4708657" />
+    </ExtendedData>
+    <Point><coordinates>165.6666667,-21.7166667,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+Completed in 922ms (View: 15, DB: 0) | 200 OK [http://localhost/dashboard/geolookup?authenticity_token=W39%2BqUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg%3D&location=ramo]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DashboardController#geolookup (for 127.0.0.1 at 2009-07-27 00:33:51) [GET]
+  Parameters: {"authenticity_token"=>"W39+qUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg=", "location"=>"brisbane"}
+Google geocoding. Address: brisbane,Australia. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>brisbane,Australia</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Brisbane Queensland, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>Queensland</AdministrativeAreaName><Locality><LocalityName>Brisbane</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-27.4576794" south="-27.4774797" east="153.0438994" west="153.0118846" />
+    </ExtendedData>
+    <Point><coordinates>153.0278920,-27.4675800,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+Completed in 984ms (View: 0, DB: 0) | 200 OK [http://localhost/dashboard/geolookup?authenticity_token=W39%2BqUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg%3D&location=brisbane]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#create (for 127.0.0.1 at 2009-07-27 00:33:56) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"W39+qUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg=", "load"=>{"end_lng"=>"153.027892", "start_lng"=>"150.184615", "end_lat"=>"-27.46758", "end_loc"=>"Brisbane Queensland, Australia", "start_lat"=>"-26.658062", "load_date"=>"12 Jan 2008", "start_loc"=>"Miles Queensland 4415, Australia", "load_type"=>"contract"}}
+  [4;36;1mUser Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mLoad Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `loads`[0m
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+Google geocoding. Address: Miles Queensland 4415, Australia. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>Miles Queensland 4415, Australia</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Miles Queensland, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>Queensland</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.3385165" south="-26.9767153" east="150.6968526" west="149.6723774" />
+    </ExtendedData>
+    <Point><coordinates>150.1846150,-26.6580620,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+Google geocoding. Address: Brisbane Queensland, Australia. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>Brisbane Queensland, Australia</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Brisbane Queensland, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>Queensland</AdministrativeAreaName><Locality><LocalityName>Brisbane</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-27.4576794" south="-27.4774797" east="153.0438994" west="153.0118846" />
+    </ExtendedData>
+    <Point><coordinates>153.0278920,-27.4675800,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;36;1mLoad Create (0.0ms)[0m   [0;1mINSERT INTO `loads` (`start_lng`, `end_lng`, `updated_at`, `details`, `end_lat`, `start_lat`, `end_loc`, `filled`, `start_loc`, `load_date`, `company_id`, `deleted`, `load_type`, `distance`, `created_at`) VALUES(150.184615, 153.027892, '2009-07-26 23:33:57', NULL, -27.46758, -26.658062, 'Brisbane Queensland, Australia', 0, 'Miles Queensland 4415, Australia', '2008-01-12', 10, 0, 'contract', 183.865154027595, '2009-07-26 23:33:57')[0m
+  [4;35;1mSQL (344.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/loads/7
+Completed in 1422ms (DB: 359) | 302 Found [http://localhost/loads]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#show (for 127.0.0.1 at 2009-07-27 00:33:58) [GET]
+  Parameters: {"id"=>"7"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;35;1mLoad Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `loads`[0m
+  [4;36;1mLoad Load (0.0ms)[0m   [0;1mSELECT * FROM `loads` WHERE (`loads`.`id` = 7) [0m
+Rendering template within layouts/application
+Rendering loads/show
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 797ms (View: 16, DB: 15) | 200 OK [http://localhost/loads/7]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-07-27 00:34:01) [GET]
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mCompany Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;36;1mLoad Load (0.0ms)[0m   [0;1mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) [0m
+  [4;35;1mLoad Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `loads`[0m
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 828ms (View: 31, DB: 16) | 200 OK [http://localhost/loads/your]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-07-27 00:35:01) [GET]
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mCompany Load (16.0ms)[0m   [0;1mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;35;1mLoad Load (0.0ms)[0m   [0mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) [0m
+  [4;36;1mLoad Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `loads`[0m
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 719ms (View: 0, DB: 31) | 200 OK [http://localhost/loads/your]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-07-27 00:35:17) [GET]
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;36;1mLoad Load (0.0ms)[0m   [0;1mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) [0m
+  [4;35;1mLoad Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `loads`[0m
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (15.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 969ms (View: 31, DB: 0) | 200 OK [http://localhost/loads/your]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-07-27 00:36:00) [GET]
+  [4;35;1mUser Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;35;1mCompany Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;35;1mLoad Load (0.0ms)[0m   [0mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) [0m
+  [4;36;1mLoad Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `loads`[0m
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 860ms (View: 31, DB: 32) | 200 OK [http://localhost/loads/your]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-07-27 00:36:34) [GET]
+  [4;36;1mUser Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;36;1mLoad Load (0.0ms)[0m   [0;1mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) [0m
+  [4;35;1mLoad Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `loads`[0m
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 891ms (View: 16, DB: 16) | 200 OK [http://localhost/loads/your]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#new (for 127.0.0.1 at 2009-07-27 00:41:14) [GET]
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;35;1mLoad Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `loads`[0m
+Rendering template within layouts/application
+Rendering loads/new
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 844ms (View: 16, DB: 0) | 200 OK [http://localhost/loads/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DashboardController#geolookup (for 127.0.0.1 at 2009-07-27 00:41:18) [GET]
+  Parameters: {"authenticity_token"=>"W39+qUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg=", "location"=>"miles"}
+Google geocoding. Address: miles,Australia. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>miles,Australia</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Miles Queensland 4415, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>Queensland</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.3385165" south="-26.9767153" east="150.6968526" west="149.6723774" />
+    </ExtendedData>
+    <Point><coordinates>150.1846150,-26.6580620,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+
+IndexError (string not matched):
+  app/controllers/dashboard_controller.rb:28:in `[]='
+  app/controllers/dashboard_controller.rb:28:in `geolookup'
+
+Rendered rescues/_trace (78.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DashboardController#geolookup (for 127.0.0.1 at 2009-07-27 00:41:19) [GET]
+  Parameters: {"authenticity_token"=>"W39+qUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg=", "location"=>"roma"}
+Google geocoding. Address: roma,Australia. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>roma,Australia</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Roma Queensland 4455, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>Queensland</AdministrativeAreaName><Locality><LocalityName>Roma</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.5339831" south="-26.6138170" east="148.8546217" west="148.7265623" />
+    </ExtendedData>
+    <Point><coordinates>148.7905920,-26.5739070,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+
+IndexError (string not matched):
+  app/controllers/dashboard_controller.rb:28:in `[]='
+  app/controllers/dashboard_controller.rb:28:in `geolookup'
+
+Rendered rescues/_trace (156.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#create (for 127.0.0.1 at 2009-07-27 00:41:26) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"W39+qUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg=", "load"=>{"end_lng"=>"", "start_lng"=>"", "end_lat"=>"", "end_loc"=>"roma", "start_lat"=>"", "load_date"=>"12 Jan 2009", "start_loc"=>"miles", "load_type"=>"truck"}}
+  [4;35;1mUser Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;35;1mLoad Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `loads`[0m
+  [4;36;1mCompany Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+Google geocoding. Address: miles. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>miles</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Miles City, Mt, USA</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>Mt</AdministrativeAreaName><Locality><LocalityName>Miles City</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="46.4237630" south="46.3929887" east="-105.8087692" west="-105.8727988" />
+    </ExtendedData>
+    <Point><coordinates>-105.8407840,46.4083780,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p2">
+    <address>Miles, WV 26838, USA</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>WV</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="38.7600256" south="38.7537304" east="-79.1241714" west="-79.1304666" />
+    </ExtendedData>
+    <Point><coordinates>-79.1273190,38.7568780,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p3">
+    <address>Miles, WI 54159, USA</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>WI</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="45.2303676" south="45.2240724" east="-87.7257424" west="-87.7320376" />
+    </ExtendedData>
+    <Point><coordinates>-87.7288900,45.2272200,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p4">
+    <address>Miles, TX, USA</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>TX</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="31.6110510" south="31.5888300" east="-100.1739740" west="-100.1938270" />
+    </ExtendedData>
+    <Point><coordinates>-100.1837020,31.6000170,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p5">
+    <address>Miles, IA, USA</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>IA</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="42.0561010" south="42.0406230" east="-90.3044350" west="-90.3268330" />
+    </ExtendedData>
+    <Point><coordinates>-90.3157090,42.0494330,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p6">
+    <address>Miles City, Florida 34142, USA</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>FL</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Collier</SubAdministrativeAreaName><DependentLocality><DependentLocalityName>Miles City</DependentLocalityName></DependentLocality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="26.1593351" south="26.1530399" east="-81.3451070" west="-81.3574830" />
+    </ExtendedData>
+    <Point><coordinates>-81.3451070,26.1545340,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p7">
+    <address>Miles, Donaldsonville, LA, USA</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>LA</AdministrativeAreaName><Locality><LocalityName>Donaldsonville</LocalityName><AddressLine>Miles</AddressLine></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="30.1259126" south="30.1196174" east="-90.9047734" west="-90.9110686" />
+    </ExtendedData>
+    <Point><coordinates>-90.9079210,30.1227650,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p8">
+    <address>Miles, California 93405, USA</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>CA</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>San Luis Obispo</SubAdministrativeAreaName><DependentLocality><DependentLocalityName>Miles</DependentLocalityName></DependentLocality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="35.1885186" south="35.1822234" east="-120.6983064" west="-120.7046016" />
+    </ExtendedData>
+    <Point><coordinates>-120.7014540,35.1853710,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p9">
+    <address>Miles, North Carolina 27302, USA</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>NC</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Orange</SubAdministrativeAreaName><DependentLocality><DependentLocalityName>Miles</DependentLocalityName></DependentLocality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="36.0879111" south="36.0816159" east="-79.2222614" west="-79.2285566" />
+    </ExtendedData>
+    <Point><coordinates>-79.2262620,36.0862520,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p10">
+    <address>Miles, Washington 99122, USA</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>WA</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Lincoln</SubAdministrativeAreaName><DependentLocality><DependentLocalityName>Miles</DependentLocalityName></DependentLocality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="47.9108330" south="47.9030300" east="-118.2896299" west="-118.2959251" />
+    </ExtendedData>
+    <Point><coordinates>-118.2941660,47.9030300,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+Google geocoding. Address: roma. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>roma</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Rome, Italy</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>IT</CountryNameCode><CountryName>Italy</CountryName><AdministrativeArea><AdministrativeAreaName>Lazio</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Rome</SubAdministrativeAreaName><Locality><LocalityName>Rome</LocalityName></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="42.1606919" south="41.6291333" east="12.9945619" west="11.9700867" />
+    </ExtendedData>
+    <Point><coordinates>12.4823243,41.8954656,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;35;1mSQL (15.0ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/application
+Rendering loads/new
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (32.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 1969ms (View: 32, DB: 61) | 200 OK [http://localhost/loads]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DashboardController#geolookup (for 127.0.0.1 at 2009-07-27 00:43:29) [GET]
+  Parameters: {"authenticity_token"=>"W39+qUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg=", "location"=>"miles"}
+Google geocoding. Address: miles,Australia. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>miles,Australia</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Miles Queensland 4415, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>Queensland</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.3385165" south="-26.9767153" east="150.6968526" west="149.6723774" />
+    </ExtendedData>
+    <Point><coordinates>150.1846150,-26.6580620,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DashboardController#geolookup (for 127.0.0.1 at 2009-07-27 00:44:25) [GET]
+  Parameters: {"authenticity_token"=>"W39+qUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg=", "location"=>"roma"}
+Google geocoding. Address: roma,Australia. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>roma,Australia</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Roma Queensland 4455, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>Queensland</AdministrativeAreaName><Locality><LocalityName>Roma</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.5339831" south="-26.6138170" east="148.8546217" west="148.7265623" />
+    </ExtendedData>
+    <Point><coordinates>148.7905920,-26.5739070,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+
+IndexError (string not matched):
+  app/controllers/dashboard_controller.rb:28:in `[]='
+  app/controllers/dashboard_controller.rb:28:in `geolookup'
+
+Rendered rescues/_trace (78.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DashboardController#geolookup (for 127.0.0.1 at 2009-07-27 00:45:13) [GET]
+  Parameters: {"authenticity_token"=>"W39+qUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg=", "location"=>"miles"}
+Google geocoding. Address: miles,Australia. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>miles,Australia</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Miles Queensland 4415, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>Queensland</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.3385165" south="-26.9767153" east="150.6968526" west="149.6723774" />
+    </ExtendedData>
+    <Point><coordinates>150.1846150,-26.6580620,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+
+NoMethodError (undefined method `address' for #<Geokit::GeoLoc:0x47ea514>):
+  app/controllers/dashboard_controller.rb:25:in `geolookup'
+
+Rendered rescues/_trace (140.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DashboardController#geolookup (for 127.0.0.1 at 2009-07-27 00:45:19) [GET]
+  Parameters: {"authenticity_token"=>"W39+qUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg=", "location"=>"roma"}
+Google geocoding. Address: roma,Australia. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>roma,Australia</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Roma Queensland 4455, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>Queensland</AdministrativeAreaName><Locality><LocalityName>Roma</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.5339831" south="-26.6138170" east="148.8546217" west="148.7265623" />
+    </ExtendedData>
+    <Point><coordinates>148.7905920,-26.5739070,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+
+NoMethodError (undefined method `address' for #<Geokit::GeoLoc:0x4564c54>):
+  app/controllers/dashboard_controller.rb:25:in `geolookup'
+
+Rendered rescues/_trace (79.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DashboardController#geolookup (for 127.0.0.1 at 2009-07-27 00:45:49) [GET]
+  Parameters: {"authenticity_token"=>"W39+qUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg=", "location"=>"roma"}
+Google geocoding. Address: roma,Australia. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>roma,Australia</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Roma Queensland 4455, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>Queensland</AdministrativeAreaName><Locality><LocalityName>Roma</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.5339831" south="-26.6138170" east="148.8546217" west="148.7265623" />
+    </ExtendedData>
+    <Point><coordinates>148.7905920,-26.5739070,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+
+IndexError (string not matched):
+  app/controllers/dashboard_controller.rb:28:in `[]='
+  app/controllers/dashboard_controller.rb:28:in `geolookup'
+
+Rendered rescues/_trace (281.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DashboardController#geolookup (for 127.0.0.1 at 2009-07-27 00:48:29) [GET]
+  Parameters: {"authenticity_token"=>"W39+qUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg=", "location"=>"miles"}
+Google geocoding. Address: miles,Australia. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>miles,Australia</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Miles Queensland 4415, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>Queensland</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.3385165" south="-26.9767153" east="150.6968526" west="149.6723774" />
+    </ExtendedData>
+    <Point><coordinates>150.1846150,-26.6580620,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+Completed in 1000ms (View: 15, DB: 0) | 200 OK [http://localhost/dashboard/geolookup?authenticity_token=W39%2BqUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg%3D&location=miles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DashboardController#geolookup (for 127.0.0.1 at 2009-07-27 00:48:46) [GET]
+  Parameters: {"authenticity_token"=>"W39+qUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg=", "location"=>"miles"}
+Google geocoding. Address: miles,Australia. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>miles,Australia</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Miles Queensland 4415, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>Queensland</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.3385165" south="-26.9767153" east="150.6968526" west="149.6723774" />
+    </ExtendedData>
+    <Point><coordinates>150.1846150,-26.6580620,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+Completed in 922ms (View: 0, DB: 0) | 200 OK [http://localhost/dashboard/geolookup?authenticity_token=W39%2BqUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg%3D&location=miles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DashboardController#geolookup (for 127.0.0.1 at 2009-07-27 00:49:24) [GET]
+  Parameters: {"authenticity_token"=>"W39+qUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg=", "location"=>"miles"}
+Google geocoding. Address: miles,Australia. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>miles,Australia</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Miles Queensland 4415, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>Queensland</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.3385165" south="-26.9767153" east="150.6968526" west="149.6723774" />
+    </ExtendedData>
+    <Point><coordinates>150.1846150,-26.6580620,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+Completed in 922ms (View: 0, DB: 0) | 200 OK [http://localhost/dashboard/geolookup?authenticity_token=W39%2BqUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg%3D&location=miles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DashboardController#geolookup (for 127.0.0.1 at 2009-07-27 00:50:27) [GET]
+  Parameters: {"authenticity_token"=>"W39+qUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg=", "location"=>"miles"}
+Google geocoding. Address: miles,Australia. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>miles,Australia</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Miles Queensland 4415, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>Queensland</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.3385165" south="-26.9767153" east="150.6968526" west="149.6723774" />
+    </ExtendedData>
+    <Point><coordinates>150.1846150,-26.6580620,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+Completed in 922ms (View: 0, DB: 0) | 200 OK [http://localhost/dashboard/geolookup?authenticity_token=W39%2BqUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg%3D&location=miles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DashboardController#geolookup (for 127.0.0.1 at 2009-07-27 00:51:56) [GET]
+  Parameters: {"authenticity_token"=>"W39+qUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg=", "location"=>"miles"}
+Google geocoding. Address: miles,Australia. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>miles,Australia</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Miles Queensland 4415, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>Queensland</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.3385165" south="-26.9767153" east="150.6968526" west="149.6723774" />
+    </ExtendedData>
+    <Point><coordinates>150.1846150,-26.6580620,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+Completed in 953ms (View: 15, DB: 0) | 200 OK [http://localhost/dashboard/geolookup?authenticity_token=W39%2BqUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg%3D&location=miles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DashboardController#geolookup (for 127.0.0.1 at 2009-07-27 00:52:03) [GET]
+  Parameters: {"authenticity_token"=>"W39+qUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg=", "location"=>"brisbane"}
+Google geocoding. Address: brisbane,Australia. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>brisbane,Australia</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Brisbane Queensland, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>Queensland</AdministrativeAreaName><Locality><LocalityName>Brisbane</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-27.4576794" south="-27.4774797" east="153.0438994" west="153.0118846" />
+    </ExtendedData>
+    <Point><coordinates>153.0278920,-27.4675800,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+Completed in 953ms (View: 15, DB: 0) | 200 OK [http://localhost/dashboard/geolookup?authenticity_token=W39%2BqUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg%3D&location=brisbane]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#create (for 127.0.0.1 at 2009-07-27 00:52:06) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"W39+qUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg=", "load"=>{"end_lng"=>"150.184615", "start_lng"=>"153.027892", "end_lat"=>"-26.658062", "end_loc"=>"Miles QLD 4415, AU", "start_lat"=>"-27.46758", "load_date"=>"12 Jan 2009", "start_loc"=>"Brisbane QLD, AU", "load_type"=>"truck"}}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;35;1mLoad Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `loads`[0m
+  [4;36;1mCompany Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+Google geocoding. Address: Brisbane QLD, AU. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>Brisbane QLD, AU</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Brisbane Queensland, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>Queensland</AdministrativeAreaName><Locality><LocalityName>Brisbane</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-27.4576794" south="-27.4774797" east="153.0438994" west="153.0118846" />
+    </ExtendedData>
+    <Point><coordinates>153.0278920,-27.4675800,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+Google geocoding. Address: Miles QLD 4415, AU. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>Miles QLD 4415, AU</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Miles Queensland, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>Queensland</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.3385165" south="-26.9767153" east="150.6968526" west="149.6723774" />
+    </ExtendedData>
+    <Point><coordinates>150.1846150,-26.6580620,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;35;1mLoad Create (0.0ms)[0m   [0mINSERT INTO `loads` (`start_lng`, `end_lng`, `updated_at`, `details`, `end_lat`, `start_lat`, `end_loc`, `filled`, `start_loc`, `load_date`, `company_id`, `deleted`, `load_type`, `distance`, `created_at`) VALUES(153.027892, 150.184615, '2009-07-26 23:52:08', NULL, -26.658062, -27.46758, 'Miles QLD 4415, AU', 0, 'Brisbane QLD, AU', '2009-01-12', 10, 0, 'truck', 183.865154027595, '2009-07-26 23:52:08')[0m
+  [4;36;1mSQL (328.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/loads/8
+Completed in 1813ms (DB: 344) | 302 Found [http://localhost/loads]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#show (for 127.0.0.1 at 2009-07-27 00:52:08) [GET]
+  Parameters: {"id"=>"8"}
+  [4;36;1mUser Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mLoad Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `loads`[0m
+  [4;35;1mLoad Load (0.0ms)[0m   [0mSELECT * FROM `loads` WHERE (`loads`.`id` = 8) [0m
+Rendering template within layouts/application
+Rendering loads/show
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (16.0ms)
+Completed in 1360ms (View: 500, DB: 32) | 200 OK [http://localhost/loads/8]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-07-27 00:52:11) [GET]
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;35;1mCompany Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;35;1mLoad Load (0.0ms)[0m   [0mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) [0m
+  [4;36;1mLoad Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `loads`[0m
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 813ms (View: 32, DB: 15) | 200 OK [http://localhost/loads/your]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-07-27 00:53:55) [GET]
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (16.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mCompany Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;36;1mLoad Load (0.0ms)[0m   [0;1mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) [0m
+  [4;35;1mLoad Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `loads`[0m
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 906ms (View: 78, DB: 32) | 200 OK [http://localhost/loads/your]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-07-27 00:54:12) [GET]
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;35;1mCompany Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;35;1mLoad Load (0.0ms)[0m   [0mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) [0m
+  [4;36;1mLoad Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `loads`[0m
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (15.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 828ms (View: 31, DB: 16) | 200 OK [http://localhost/loads/your]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-07-27 00:54:21) [GET]
+  [4;36;1mUser Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;36;1mLoad Load (0.0ms)[0m   [0;1mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) [0m
+  [4;35;1mLoad Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `loads`[0m
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 859ms (View: 16, DB: 16) | 200 OK [http://localhost/loads/your]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-07-27 00:55:13) [GET]
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+  [4;35;1mLoad Load (0.0ms)[0m   [0mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;36;1mLoad Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `loads`[0m
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 828ms (View: 15, DB: 0) | 200 OK [http://localhost/loads/your]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-07-27 00:56:52) [GET]
+  [4;36;1mUser Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+
+ArgumentError (Unknown key(s): order):
+  (eval):3:in `belongs_to'
+  app/models/load.rb:4
+  app/controllers/loads_controller.rb:5:in `your'
+
+Rendered rescues/_trace (172.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-07-27 00:57:13) [GET]
+  [4;35;1mUser Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;35;1mCompany Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;35;1mLoad Load (0.0ms)[0m   [0mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC[0m
+  [4;36;1mLoad Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `loads`[0m
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 843ms (View: 31, DB: 30) | 200 OK [http://localhost/loads/your]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#new (for 127.0.0.1 at 2009-07-27 01:07:42) [GET]
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mLoad Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `loads`[0m
+Rendering template within layouts/application
+Rendering loads/new
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (15.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 797ms (View: 31, DB: 0) | 200 OK [http://localhost/loads/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DashboardController#geolookup (for 127.0.0.1 at 2009-07-27 01:07:47) [GET]
+  Parameters: {"authenticity_token"=>"W39+qUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg=", "location"=>"ttttttt"}
+Google geocoding. Address: ttttttt,Australia. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>ttttttt,Australia</name>
+  <Status>
+    <code>602</code>
+    <request>geocode</request>
+  </Status>
+</Response></kml>
+Google was unable to geocode address: ttttttt,Australia
+Yahoo geocoding. Address: ttttttt,Australia. Result: <?xml version="1.0"?>
+<ResultSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:yahoo:maps" xsi:schemaLocation="urn:yahoo:maps http://api.local.yahoo.com/MapsService/V1/GeocodeResponse.xsd"><Result precision=""><Latitude>-24.916201</Latitude><Longitude>133.393112</Longitude><Address></Address><City></City><State>Australia</State><Zip></Zip><Country>AU</Country></Result></ResultSet>
+<!-- ws01.search.re2.yahoo.com uncompressed/chunked Sun Jul 26 17:07:57 PDT 2009 -->
+Completed in 1344ms (View: 0, DB: 0) | 200 OK [http://localhost/dashboard/geolookup?authenticity_token=W39%2BqUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg%3D&location=ttttttt]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DashboardController#geolookup (for 127.0.0.1 at 2009-07-27 01:07:50) [GET]
+  Parameters: {"authenticity_token"=>"W39+qUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg=", "location"=>"miles"}
+Google geocoding. Address: miles,Australia. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>miles,Australia</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Miles Queensland 4415, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>Queensland</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.3385165" south="-26.9767153" east="150.6968526" west="149.6723774" />
+    </ExtendedData>
+    <Point><coordinates>150.1846150,-26.6580620,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+Completed in 984ms (View: 0, DB: 0) | 200 OK [http://localhost/dashboard/geolookup?authenticity_token=W39%2BqUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg%3D&location=miles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#create (for 127.0.0.1 at 2009-07-27 01:07:57) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"W39+qUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg=", "load"=>{"end_lng"=>"150.184615", "start_lng"=>"", "end_lat"=>"-26.658062", "end_loc"=>"Miles QLD 4415, AU", "start_lat"=>"", "load_date"=>"12 Jan 2009", "start_loc"=>"ttttttt"}}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mLoad Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `loads`[0m
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/application
+Rendering loads/new
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 922ms (View: 15, DB: 0) | 200 OK [http://localhost/loads]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#create (for 127.0.0.1 at 2009-07-27 01:08:28) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"W39+qUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg=", "load"=>{"end_lng"=>"150.184615", "start_lng"=>"", "end_lat"=>"-26.658062", "end_loc"=>"Miles QLD 4415, AU", "start_lat"=>"", "load_date"=>"12 Jan 2009", "start_loc"=>"ttttttt"}}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mLoad Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `loads`[0m
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/application
+Rendering loads/new
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 829ms (View: 16, DB: 0) | 200 OK [http://localhost/loads]

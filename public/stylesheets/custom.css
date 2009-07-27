@@ -21,7 +21,6 @@
 .data_input_data {
 	float: left;
 	width: 330px;
-	color: #3F3F1B;
 	font-weight: bold;
 	font-size: 14px;
 }
@@ -38,6 +37,58 @@
 	font-style: italic;
 	font-weight: bold;
 	font-size: 18px;
+}
+
+.data_input_table_header {
+	width: 600px;
+	overflow: hidden;
+	min-height:1.4em;
+	height:auto !important;
+	height:1.4em;
+
+	text-align: center;
+	color: #3F3F1B;
+	/*font-style: italic;*/
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.data_input_table_row, .data_input_table_selected {
+	width: 600px;
+	overflow: hidden;
+	min-height:1.7em;
+	height:auto !important;
+	height:1.7em;
+
+	font-size: 12px;
+}
+
+.data_input_table_selected {
+	background: #8fADBF;
+}
+
+.data_input_table_row:hover {
+	background: #8C7735;
+}
+
+.data_col_journey {
+	float: left;
+	width: 200px;
+	padding: 1px 1px 1px 2px;
+}
+
+.data_col_date {
+	float: left;
+	width: 100px;
+	text-align: center;
+	padding: 1px;
+}
+
+.data_col_details {
+	float: left;
+	width: 290px;
+	text-align: left;
+	padding: 1px 2px 1px 1px;
 }
 
 .user_notice {

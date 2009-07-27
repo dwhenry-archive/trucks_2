@@ -22,7 +22,7 @@ function initialize_maps() {
 	if (homeLat != '' && false) 
 	    map.centerAndZoom(new GPoint(homeLat, homeLng), 6);
 	else 
-	    map.centerAndZoom(new GPoint(133.53, -23.48), 14);
+	    map.centerAndZoom(new GPoint(133.53, -23.48), 13);
 }    
 
 function setpoints(start, stop) {

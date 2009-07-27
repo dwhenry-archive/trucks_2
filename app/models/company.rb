@@ -1,6 +1,7 @@
 class Company < ActiveRecord::Base
   has_many :users
-  has_many :loads
+  has_many :loads,
+      :order => 'created_at DESC'
   
 #### Validation ####
   
