@@ -64,11 +64,19 @@
 		</div>		
 	</div>
 	<div class="right_container" style="position:relative;height:410px">
-		<div id="map_select"> </div>
+		<div id="map_select">&nbsp;</div>
+		<div id="map_col">
+			<span class="button lt_blue"><%= link_to 'Matches', new_load_path %></span>
+			<br>
+			<br>
+			<div id="map_col_info">
+				<b>Matches:</b>
+			</div>
+		</div>
 		<% if @loads.size > 0 %>
-			<div id="map_shadow"> </div>
+			<div id="map_shadow">&nbsp;</div>
 		<% end %>
-		<div id="map" style=""> </div>
+		<div id="map" style="">&nbsp;</div>
 	</div>
 </div>
 <br>
