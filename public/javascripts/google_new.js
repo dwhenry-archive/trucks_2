@@ -2,6 +2,7 @@
  * @author Dave
  */
 var map;
+var loaded=false;
 var bounds = new GLatLngBounds();
 
 // helper function to create markers
@@ -17,6 +18,8 @@ function createMarker(point,description,icon) {
 // this is called when the page loads. 
 // it initializes the map, and creates each marker
 function initialize_maps() {
+	if(loaded)
+		return;
     map = new GMap(document.getElementById("map"));
     map.addControl(new GSmallMapControl());
 	if (homeLat != '' && false) 
@@ -24,6 +27,15 @@ function initialize_maps() {
 	else 
 	    map.centerAndZoom(new GPoint(133.53, -23.48), 13);
 }    
+
+function initialize_maps_with_trip(el_name) {
+    map = new GMap(document.getElementById("map"));
+    map.addControl(new GSmallMapControl());
+	if($(el_name))
+		$(el_name).className = 'data_input_table_selected';
+	setpoints(el_name + '_start',el_name + '_end');
+	loaded=true;
+}
 
 function setpoints(start, stop) {
 	point1 = setpoint($(start + '_lng').value, 
@@ -54,8 +66,9 @@ function setpoint(lng, lat,desc,icon) {
     map.addOverlay(marker);
 	return point;
 }
-
+/*
 // Add this to the bottom of application.js
 document.observe('dom:loaded', function(){
 	initialize_maps();
 });
+*/

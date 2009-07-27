@@ -9,6 +9,14 @@ class Load < ActiveRecord::Base
 
   validate           :check_position_stats
 
+  def load_date_str
+    return self.load_date.strftime("%d %b %Y") unless load_date.blank?
+    return Date.today.strftime("%d %b %Y") 
+  end
+  def load_date_str=(val)
+    self.load_date = val
+  end
+
 protected
   def check_position_stats
     errors.add('start_loc','Missing GeoCode') if self.start_lat.blank? or self.start_lng.blank?

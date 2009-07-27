@@ -57,7 +57,7 @@ class LoadsController < ApplicationController
     respond_to do |format|
       if @load.save
         flash[:notice] = 'Loads was successfully created.'
-        format.html { redirect_to(@load) }
+        format.html { redirect_to(your_loads_path) }
         format.xml  { render :xml => @load, :status => :created, :location => @load }
       else
         format.html { render :action => "new" }

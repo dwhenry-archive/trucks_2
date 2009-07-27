@@ -3,7 +3,19 @@
 <script src="http://maps.google.com/maps?file=api&v=2&key=ABQIAAAAbMoeqif6WesTuyyV7KfMphT5EG_nRGozuZeboEWjUCrU_tMJGxTdBe0yEKO9HBgw3R_U96Vnp8WjDQ" 
 	type="text/javascript">
 </script>
+<%= javascript_include_tag 'rich_calendar', 'calendar', 'rc_lang_en','domready' %>
+<link href="/stylesheets/rich_calendar.css" media="screen" rel="stylesheet" type="text/css" />
+<% stylesheet_link_tag 'rich_calendar' %>
 <script type="text/javascript">
+	// Add this to the bottom of application.js
+	document.observe('dom:loaded', function(){
+		// this is needed here as call in google_new is overwritten 
+		<% if @load.start_lat.blank? or @load.end_lat.blank? %>
+			initialize_maps();
+		<% else %>
+			initialize_maps_with_trip("load");
+		<% end %>
+	});
 	var homeLat=<%= session[:geo_location] || '""' %>;
 	var homeLng=<%= session[:geo_location] || '""' %>;
 </script>
@@ -52,7 +64,7 @@
 				<%=f.label :load_date, 'Load date' %>
 			</div>
 			<div class="data_input_data">
-				<%=f.text_field :load_date %>
+		    	<%= f.text_field :load_date_str , :size => 12, :style => "text-align:right", :onfocus => "show_cal(this,'en','after');" %>
 			</div>
 		</div>
 <% unless @load.errors.empty? %> 

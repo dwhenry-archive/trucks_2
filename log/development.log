@@ -14550,3 +14550,1603 @@ Rendered shared/_filter_options (0.0ms)
 Rendered shared/_user_bar (0.0ms)
 Rendered shared/_navigation (0.0ms)
 Completed in 829ms (View: 16, DB: 0) | 200 OK [http://localhost/loads]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#new (for 127.0.0.1 at 2009-07-27 09:13:02) [GET]
+Caught an error during GeoPluginGeocoder geocoding call: getaddrinfo: no address associated with hostname.
+Caught an error during HostIp geocoding call: getaddrinfo: no address associated with hostname.
+  [4;36;1mUser Columns (47.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mLoad Columns (31.0ms)[0m   [0;1mSHOW FIELDS FROM `loads`[0m
+Rendering template within layouts/application
+Rendering loads/new
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (16.0ms)
+Completed in 2828ms (View: 141, DB: 78) | 200 OK [http://localhost/loads/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DashboardController#geolookup (for 127.0.0.1 at 2009-07-27 09:13:16) [GET]
+  Parameters: {"authenticity_token"=>"W39+qUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg=", "location"=>"miles"}
+Caught an error during GeoPluginGeocoder geocoding call: getaddrinfo: no address associated with hostname.
+Caught an error during HostIp geocoding call: getaddrinfo: no address associated with hostname.
+Something has gone very wrong during geocoding, OR you have configured an invalid class name in Geokit::Geocoders::provider_order. Address: miles,Australia. Provider: google
+Caught an error during Yahoo geocoding call: getaddrinfo: no address associated with hostname.
+Completed in 4594ms (View: 31, DB: 0) | 200 OK [http://localhost/dashboard/geolookup?authenticity_token=W39%2BqUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg%3D&location=miles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#create (for 127.0.0.1 at 2009-07-27 09:13:22) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"W39+qUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg=", "load"=>{"end_lng"=>"150.184615", "start_lng"=>"", "end_lat"=>"-26.658062", "end_loc"=>"Miles QLD 4415, AU", "start_lat"=>"", "load_date"=>"12 Jan 2009", "start_loc"=>"ttttttt"}}
+Caught an error during GeoPluginGeocoder geocoding call: getaddrinfo: no address associated with hostname.
+Caught an error during HostIp geocoding call: getaddrinfo: no address associated with hostname.
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;35;1mLoad Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `loads`[0m
+  [4;36;1mCompany Columns (94.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/application
+Rendering loads/new
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 2656ms (View: 15, DB: 94) | 200 OK [http://localhost/loads]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DashboardController#home (for 127.0.0.1 at 2009-07-27 19:04:09) [GET]
+Rendering template within layouts/application
+Rendering dashboard/home
+  [4;35;1mUser Columns (62.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 1734ms (View: 875, DB: 62) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-07-27 19:04:19) [GET]
+  [4;36;1mUser Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mCompany Columns (79.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;36;1mLoad Load (31.0ms)[0m   [0;1mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC[0m
+  [4;35;1mLoad Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `loads`[0m
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 1140ms (View: 141, DB: 125) | 200 OK [http://localhost/loads/your]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-07-27 19:08:15) [GET]
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (15.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;35;1mLoad Load (0.0ms)[0m   [0mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC[0m
+  [4;36;1mLoad Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `loads`[0m
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 875ms (View: 31, DB: 15) | 200 OK [http://localhost/loads/your]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-07-27 19:08:40) [GET]
+  [4;36;1mUser Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mCompany Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;36;1mLoad Load (0.0ms)[0m   [0;1mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC[0m
+  [4;35;1mLoad Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `loads`[0m
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (15.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 1140ms (View: 62, DB: 30) | 200 OK [http://localhost/loads/your]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-07-27 19:15:12) [GET]
+  [4;35;1mUser Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;35;1mCompany Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;35;1mLoad Load (0.0ms)[0m   [0mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC[0m
+  [4;36;1mLoad Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `loads`[0m
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (15.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 875ms (View: 31, DB: 31) | 200 OK [http://localhost/loads/your]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-07-27 19:15:52) [GET]
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;36;1mLoad Load (0.0ms)[0m   [0;1mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC[0m
+  [4;35;1mLoad Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `loads`[0m
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (16.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 937ms (View: 94, DB: 0) | 200 OK [http://localhost/loads/your]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-07-27 19:16:45) [GET]
+  [4;35;1mUser Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;35;1mCompany Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;35;1mLoad Load (0.0ms)[0m   [0mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC[0m
+  [4;36;1mLoad Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `loads`[0m
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 859ms (View: 16, DB: 32) | 200 OK [http://localhost/loads/your]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-07-27 19:17:16) [GET]
+  [4;36;1mUser Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mCompany Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;36;1mLoad Load (0.0ms)[0m   [0;1mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC[0m
+  [4;35;1mLoad Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `loads`[0m
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 1156ms (View: 78, DB: 30) | 200 OK [http://localhost/loads/your]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-07-27 19:18:44) [GET]
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mCompany Load (16.0ms)[0m   [0;1mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;35;1mLoad Load (0.0ms)[0m   [0mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC[0m
+  [4;36;1mLoad Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `loads`[0m
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 875ms (View: 16, DB: 16) | 200 OK [http://localhost/loads/your]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-07-27 19:20:20) [GET]
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;36;1mLoad Load (0.0ms)[0m   [0;1mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC[0m
+  [4;35;1mLoad Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `loads`[0m
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 907ms (View: 16, DB: 0) | 200 OK [http://localhost/loads/your]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-07-27 19:20:35) [GET]
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;35;1mCompany Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;35;1mLoad Load (0.0ms)[0m   [0mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC[0m
+  [4;36;1mLoad Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `loads`[0m
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 1125ms (View: 31, DB: 32) | 200 OK [http://localhost/loads/your]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-07-27 19:20:53) [GET]
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;36;1mLoad Load (0.0ms)[0m   [0;1mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC[0m
+  [4;35;1mLoad Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `loads`[0m
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 859ms (View: 16, DB: 0) | 200 OK [http://localhost/loads/your]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-07-27 19:26:04) [GET]
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;35;1mLoad Load (0.0ms)[0m   [0mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC[0m
+  [4;36;1mLoad Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `loads`[0m
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (15.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 1531ms (View: 31, DB: 0) | 200 OK [http://localhost/loads/your]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-07-27 19:27:47) [GET]
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;36;1mLoad Load (0.0ms)[0m   [0;1mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC[0m
+  [4;35;1mLoad Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `loads`[0m
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 1234ms (View: 140, DB: 0) | 200 OK [http://localhost/loads/your]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-07-27 19:59:42) [GET]
+  [4;35;1mUser Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering loads/your
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.first) on line #8 of app/views/loads/your.html.erb:
+5: <script type="text/javascript">
+6: 	// Add this to the bottom of application.js
+7: 	document.observe('dom:loaded', function(){
+8: 		selectLoadRow($(<%= "load_#{@load.first.id}" %>));
+9: 	});
+10: </script>
+11: <div class="PageTitle">
+
+    app/views/loads/your.html.erb:8
+    app/controllers/loads_controller.rb:7:in `your'
+
+Rendered rescues/_trace (266.0ms)
+Rendered rescues/_request_and_response (16.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-07-27 20:02:18) [GET]
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;36;1mLoad Load (0.0ms)[0m   [0;1mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mLoad Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `loads`[0m
+  [4;35;1mLoad Load (0.0ms)[0m   [0mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC[0m
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (16.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 875ms (View: 16, DB: 15) | 200 OK [http://localhost/loads/your]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-07-27 20:03:49) [GET]
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;35;1mCompany Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;35;1mLoad Load (0.0ms)[0m   [0mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mLoad Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `loads`[0m
+  [4;36;1mLoad Load (0.0ms)[0m   [0;1mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC[0m
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 1016ms (View: 31, DB: 16) | 200 OK [http://localhost/loads/your]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-07-27 20:05:32) [GET]
+  [4;36;1mUser Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mCompany Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;36;1mLoad Load (0.0ms)[0m   [0;1mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mLoad Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `loads`[0m
+  [4;35;1mLoad Load (0.0ms)[0m   [0mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC[0m
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 1313ms (View: 16, DB: 46) | 200 OK [http://localhost/loads/your]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-07-27 20:06:03) [GET]
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;35;1mLoad Load (0.0ms)[0m   [0mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mLoad Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `loads`[0m
+  [4;36;1mLoad Load (0.0ms)[0m   [0;1mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC[0m
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 875ms (View: 15, DB: 0) | 200 OK [http://localhost/loads/your]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-07-27 20:06:23) [GET]
+  [4;36;1mUser Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mCompany Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;36;1mLoad Load (0.0ms)[0m   [0;1mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mLoad Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `loads`[0m
+  [4;35;1mLoad Load (0.0ms)[0m   [0mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC[0m
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (16.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 891ms (View: 63, DB: 46) | 200 OK [http://localhost/loads/your]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-07-27 20:12:10) [GET]
+  [4;35;1mUser Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;35;1mLoad Load (0.0ms)[0m   [0mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mLoad Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `loads`[0m
+  [4;36;1mLoad Load (0.0ms)[0m   [0;1mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC[0m
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 1172ms (View: 31, DB: 15) | 200 OK [http://localhost/loads/your]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-07-27 20:13:59) [GET]
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (15.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;36;1mLoad Load (0.0ms)[0m   [0;1mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mLoad Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `loads`[0m
+  [4;35;1mLoad Load (0.0ms)[0m   [0mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC[0m
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (15.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 843ms (View: 31, DB: 15) | 200 OK [http://localhost/loads/your]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-07-27 20:14:34) [GET]
+  [4;35;1mUser Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;35;1mCompany Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;35;1mLoad Load (0.0ms)[0m   [0mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mLoad Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `loads`[0m
+  [4;36;1mLoad Load (0.0ms)[0m   [0;1mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC[0m
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 1063ms (View: 32, DB: 32) | 200 OK [http://localhost/loads/your]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-07-27 20:14:58) [GET]
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;36;1mLoad Load (0.0ms)[0m   [0;1mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mLoad Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `loads`[0m
+  [4;35;1mLoad Load (0.0ms)[0m   [0mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC[0m
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 891ms (View: 16, DB: 0) | 200 OK [http://localhost/loads/your]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-07-27 20:16:40) [GET]
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;35;1mLoad Load (0.0ms)[0m   [0mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mLoad Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `loads`[0m
+  [4;36;1mLoad Load (0.0ms)[0m   [0;1mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC[0m
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 1187ms (View: 78, DB: 0) | 200 OK [http://localhost/loads/your]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-07-27 20:16:56) [GET]
+  [4;36;1mUser Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;36;1mLoad Load (0.0ms)[0m   [0;1mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mLoad Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `loads`[0m
+  [4;35;1mLoad Load (0.0ms)[0m   [0mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC[0m
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 813ms (View: 16, DB: 31) | 200 OK [http://localhost/loads/your]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-07-27 20:27:10) [GET]
+  [4;35;1mUser Columns (63.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;35;1mCompany Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;35;1mLoad Load (15.0ms)[0m   [0mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mLoad Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `loads`[0m
+  [4;36;1mLoad Load (0.0ms)[0m   [0;1mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC[0m
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 2031ms (View: 63, DB: 94) | 200 OK [http://localhost/loads/your]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-07-27 20:27:59) [GET]
+  [4;36;1mUser Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mCompany Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;36;1mLoad Load (0.0ms)[0m   [0;1mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mLoad Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `loads`[0m
+  [4;35;1mLoad Load (0.0ms)[0m   [0mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC[0m
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 859ms (View: 16, DB: 32) | 200 OK [http://localhost/loads/your]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-07-27 20:28:21) [GET]
+  [4;35;1mUser Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;35;1mCompany Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;35;1mLoad Load (0.0ms)[0m   [0mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mLoad Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `loads`[0m
+  [4;36;1mLoad Load (0.0ms)[0m   [0;1mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC[0m
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 891ms (View: 16, DB: 32) | 200 OK [http://localhost/loads/your]
+  [4;35;1mSQL (15.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-07-27 20:29:06) [GET]
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mCompany Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;36;1mLoad Load (0.0ms)[0m   [0;1mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mLoad Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `loads`[0m
+  [4;35;1mLoad Load (0.0ms)[0m   [0mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC[0m
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 875ms (View: 31, DB: 31) | 200 OK [http://localhost/loads/your]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-07-27 20:30:37) [GET]
+  [4;35;1mUser Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;35;1mCompany Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;35;1mLoad Load (0.0ms)[0m   [0mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mLoad Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `loads`[0m
+  [4;36;1mLoad Load (0.0ms)[0m   [0;1mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC[0m
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (15.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 1156ms (View: 15, DB: 47) | 200 OK [http://localhost/loads/your]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-07-27 20:30:49) [GET]
+  [4;36;1mUser Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mCompany Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;36;1mLoad Load (0.0ms)[0m   [0;1mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mLoad Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `loads`[0m
+  [4;35;1mLoad Load (0.0ms)[0m   [0mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC[0m
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 906ms (View: 15, DB: 32) | 200 OK [http://localhost/loads/your]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-07-27 20:31:49) [GET]
+  [4;35;1mUser Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;35;1mCompany Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;35;1mLoad Load (0.0ms)[0m   [0mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mLoad Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `loads`[0m
+  [4;36;1mLoad Load (16.0ms)[0m   [0;1mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC[0m
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 860ms (View: 0, DB: 48) | 200 OK [http://localhost/loads/your]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#new (for 127.0.0.1 at 2009-07-27 20:34:36) [GET]
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mLoad Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `loads`[0m
+Rendering template within layouts/application
+Rendering loads/new
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (16.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 907ms (View: 47, DB: 0) | 200 OK [http://localhost/loads/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DashboardController#geolookup (for 127.0.0.1 at 2009-07-27 20:34:40) [GET]
+  Parameters: {"authenticity_token"=>"W39+qUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg=", "location"=>"miles"}
+Google geocoding. Address: miles,Australia. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>miles,Australia</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Miles Queensland 4415, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>Queensland</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.3385165" south="-26.9767153" east="150.6968526" west="149.6723774" />
+    </ExtendedData>
+    <Point><coordinates>150.1846150,-26.6580620,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+Completed in 1000ms (View: 0, DB: 0) | 200 OK [http://localhost/dashboard/geolookup?authenticity_token=W39%2BqUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg%3D&location=miles]
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DashboardController#geolookup (for 127.0.0.1 at 2009-07-27 20:34:41) [GET]
+  Parameters: {"authenticity_token"=>"W39+qUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg=", "location"=>"roma"}
+Google geocoding. Address: roma,Australia. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>roma,Australia</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Roma Queensland 4455, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>Queensland</AdministrativeAreaName><Locality><LocalityName>Roma</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.5339831" south="-26.6138170" east="148.8546217" west="148.7265623" />
+    </ExtendedData>
+    <Point><coordinates>148.7905920,-26.5739070,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+Completed in 1109ms (View: 15, DB: 16) | 200 OK [http://localhost/dashboard/geolookup?authenticity_token=W39%2BqUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg%3D&location=roma]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#create (for 127.0.0.1 at 2009-07-27 20:34:44) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"W39+qUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg=", "load"=>{"end_lng"=>"148.790592", "start_lng"=>"150.184615", "end_lat"=>"-26.573907", "end_loc"=>"Roma QLD 4455, AU", "start_lat"=>"-26.658062", "load_date"=>"", "start_loc"=>"Miles QLD 4415, AU"}}
+  [4;36;1mUser Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mLoad Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `loads`[0m
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+Google geocoding. Address: Miles QLD 4415, AU. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>Miles QLD 4415, AU</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Miles Queensland, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>Queensland</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.3385165" south="-26.9767153" east="150.6968526" west="149.6723774" />
+    </ExtendedData>
+    <Point><coordinates>150.1846150,-26.6580620,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/application
+Rendering loads/new
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.first) on line #11 of app/views/loads/new.html.erb:
+8: 	<% unless @load.start_lat.blank? or @load.end_lat.blank? %>
+9: 		document.observe('dom:loaded', function(){
+10: 			// this is needed here as call in google_new is overwritten 
+11: 			initialize_maps_with_trip($(<%= "load_#{@loads.first.id if @loads.first}" %>));
+12: 		});
+13: 	<% end %>
+14: 	var homeLat=<%= session[:geo_location] || '""' %>;
+
+    app/views/loads/new.html.erb:11
+    app/controllers/loads_controller.rb:63:in `create'
+    app/controllers/loads_controller.rb:57:in `create'
+
+Rendered rescues/_trace (235.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#index (for 127.0.0.1 at 2009-07-27 20:35:28) [GET]
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mLoad Load (0.0ms)[0m   [0;1mSELECT * FROM `loads` [0m
+Rendering template within layouts/application
+Rendering loads/index
+  [4;35;1mLoad Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `loads`[0m
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 859ms (View: 15, DB: 16) | 200 OK [http://localhost/loads]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-07-27 20:35:31) [GET]
+  [4;35;1mUser Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;35;1mCompany Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;35;1mLoad Load (0.0ms)[0m   [0mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mLoad Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `loads`[0m
+  [4;36;1mLoad Load (16.0ms)[0m   [0;1mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC[0m
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 3875ms (View: 0, DB: 46) | 200 OK [http://localhost/loads/your]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-07-27 20:35:35) [GET]
+  [4;36;1mUser Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;36;1mLoad Load (0.0ms)[0m   [0;1mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mLoad Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `loads`[0m
+  [4;35;1mLoad Load (0.0ms)[0m   [0mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC[0m
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 891ms (View: 16, DB: 16) | 200 OK [http://localhost/loads/your]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#new (for 127.0.0.1 at 2009-07-27 20:35:38) [GET]
+  [4;35;1mUser Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;35;1mLoad Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `loads`[0m
+Rendering template within layouts/application
+Rendering loads/new
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 3563ms (View: 16, DB: 16) | 200 OK [http://localhost/loads/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DashboardController#geolookup (for 127.0.0.1 at 2009-07-27 20:35:45) [GET]
+  Parameters: {"authenticity_token"=>"W39+qUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg=", "location"=>"miles"}
+Google geocoding. Address: miles,Australia. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>miles,Australia</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Miles Queensland 4415, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>Queensland</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.3385165" south="-26.9767153" east="150.6968526" west="149.6723774" />
+    </ExtendedData>
+    <Point><coordinates>150.1846150,-26.6580620,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+Completed in 1031ms (View: 0, DB: 0) | 200 OK [http://localhost/dashboard/geolookup?authenticity_token=W39%2BqUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg%3D&location=miles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DashboardController#geolookup (for 127.0.0.1 at 2009-07-27 20:35:46) [GET]
+  Parameters: {"authenticity_token"=>"W39+qUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg=", "location"=>"roma"}
+Google geocoding. Address: roma,Australia. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>roma,Australia</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Roma Queensland 4455, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>Queensland</AdministrativeAreaName><Locality><LocalityName>Roma</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.5339831" south="-26.6138170" east="148.8546217" west="148.7265623" />
+    </ExtendedData>
+    <Point><coordinates>148.7905920,-26.5739070,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+Completed in 1563ms (View: 0, DB: 0) | 200 OK [http://localhost/dashboard/geolookup?authenticity_token=W39%2BqUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg%3D&location=roma]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#create (for 127.0.0.1 at 2009-07-27 20:35:49) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"W39+qUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg=", "load"=>{"end_lng"=>"148.790592", "start_lng"=>"150.184615", "end_lat"=>"-26.573907", "end_loc"=>"Roma QLD 4455, AU", "start_lat"=>"-26.658062", "load_date"=>"", "start_loc"=>"Miles QLD 4415, AU"}}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;35;1mLoad Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `loads`[0m
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+Google geocoding. Address: Miles QLD 4415, AU. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>Miles QLD 4415, AU</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Miles Queensland, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>Queensland</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.3385165" south="-26.9767153" east="150.6968526" west="149.6723774" />
+    </ExtendedData>
+    <Point><coordinates>150.1846150,-26.6580620,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/application
+Rendering loads/new
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (16.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 1125ms (View: 16, DB: 0) | 200 OK [http://localhost/loads]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#create (for 127.0.0.1 at 2009-07-27 20:37:34) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"W39+qUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg=", "load"=>{"end_lng"=>"148.790592", "start_lng"=>"150.184615", "end_lat"=>"-26.573907", "end_loc"=>"Roma QLD 4455, AU", "start_lat"=>"-26.658062", "load_date"=>"", "start_loc"=>"Miles QLD 4415, AU"}}
+  [4;35;1mUser Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;35;1mLoad Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `loads`[0m
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+Google geocoding. Address: Miles QLD 4415, AU. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>Miles QLD 4415, AU</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Miles Queensland, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>Queensland</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.3385165" south="-26.9767153" east="150.6968526" west="149.6723774" />
+    </ExtendedData>
+    <Point><coordinates>150.1846150,-26.6580620,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/application
+Rendering loads/new
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (16.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 1484ms (View: 31, DB: 31) | 200 OK [http://localhost/loads]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#create (for 127.0.0.1 at 2009-07-27 20:37:55) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"W39+qUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg=", "load"=>{"end_lng"=>"148.790592", "start_lng"=>"150.184615", "end_lat"=>"-26.573907", "end_loc"=>"Roma QLD 4455, AU", "start_lat"=>"-26.658062", "load_date"=>"", "start_loc"=>"Miles QLD 4415, AU"}}
+  [4;35;1mUser Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;35;1mLoad Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `loads`[0m
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+Google geocoding. Address: Miles QLD 4415, AU. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>Miles QLD 4415, AU</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Miles Queensland, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>Queensland</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.3385165" south="-26.9767153" east="150.6968526" west="149.6723774" />
+    </ExtendedData>
+    <Point><coordinates>150.1846150,-26.6580620,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/application
+Rendering loads/new
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 1109ms (View: 15, DB: 32) | 200 OK [http://localhost/loads]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#create (for 127.0.0.1 at 2009-07-27 20:38:04) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"W39+qUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg=", "load"=>{"end_lng"=>"148.790592", "start_lng"=>"150.184615", "end_lat"=>"-26.573907", "end_loc"=>"Roma QLD 4455, AU", "start_lat"=>"-26.658062", "load_date"=>"", "start_loc"=>"Miles QLD 4415, AU"}}
+  [4;35;1mUser Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;35;1mLoad Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `loads`[0m
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+Google geocoding. Address: Miles QLD 4415, AU. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>Miles QLD 4415, AU</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Miles Queensland, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>Queensland</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.3385165" south="-26.9767153" east="150.6968526" west="149.6723774" />
+    </ExtendedData>
+    <Point><coordinates>150.1846150,-26.6580620,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/application
+Rendering loads/new
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (16.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 1094ms (View: 16, DB: 16) | 200 OK [http://localhost/loads]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-27 20:38:52) [GET]
+
+ActionController::RoutingError (No route matches "/x=NaN&y=NaN&z=0&s=" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-27 20:39:00) [GET]
+
+ActionController::RoutingError (No route matches "/x=NaN&y=NaN&z=0&s=&tretry=1" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#create (for 127.0.0.1 at 2009-07-27 20:39:38) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"W39+qUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg=", "load"=>{"end_lng"=>"148.790592", "start_lng"=>"150.184615", "end_lat"=>"-26.573907", "end_loc"=>"Roma QLD 4455, AU", "start_lat"=>"-26.658062", "load_date"=>"", "start_loc"=>"Miles QLD 4415, AU"}}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;35;1mLoad Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `loads`[0m
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+Google geocoding. Address: Miles QLD 4415, AU. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>Miles QLD 4415, AU</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Miles Queensland, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>Queensland</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.3385165" south="-26.9767153" east="150.6968526" west="149.6723774" />
+    </ExtendedData>
+    <Point><coordinates>150.1846150,-26.6580620,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/application
+Rendering loads/new
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 1000ms (View: 0, DB: 0) | 200 OK [http://localhost/loads]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#create (for 127.0.0.1 at 2009-07-27 20:40:38) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"W39+qUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg=", "load"=>{"end_lng"=>"148.790592", "start_lng"=>"150.184615", "end_lat"=>"-26.573907", "end_loc"=>"Roma QLD 4455, AU", "start_lat"=>"-26.658062", "load_date"=>"", "start_loc"=>"Miles QLD 4415, AU"}}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;35;1mLoad Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `loads`[0m
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+Google geocoding. Address: Miles QLD 4415, AU. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>Miles QLD 4415, AU</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Miles Queensland, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>Queensland</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.3385165" south="-26.9767153" east="150.6968526" west="149.6723774" />
+    </ExtendedData>
+    <Point><coordinates>150.1846150,-26.6580620,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/application
+Rendering loads/new
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 1047ms (View: 16, DB: 0) | 200 OK [http://localhost/loads]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#create (for 127.0.0.1 at 2009-07-27 20:41:23) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"W39+qUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg=", "load"=>{"end_lng"=>"148.790592", "start_lng"=>"150.184615", "end_lat"=>"-26.573907", "end_loc"=>"Roma QLD 4455, AU", "start_lat"=>"-26.658062", "load_date"=>"", "start_loc"=>"Miles QLD 4415, AU"}}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;35;1mLoad Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `loads`[0m
+  [4;36;1mCompany Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+Google geocoding. Address: Miles QLD 4415, AU. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>Miles QLD 4415, AU</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Miles Queensland, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>Queensland</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.3385165" south="-26.9767153" east="150.6968526" west="149.6723774" />
+    </ExtendedData>
+    <Point><coordinates>150.1846150,-26.6580620,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/application
+Rendering loads/new
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 1110ms (View: 16, DB: 16) | 200 OK [http://localhost/loads]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#create (for 127.0.0.1 at 2009-07-27 20:41:29) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"W39+qUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg=", "load"=>{"end_lng"=>"148.790592", "start_lng"=>"150.184615", "end_lat"=>"-26.573907", "end_loc"=>"Roma QLD 4455, AU", "start_lat"=>"-26.658062", "load_date"=>"", "start_loc"=>"Miles QLD 4415, AU"}}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (16.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;35;1mLoad Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `loads`[0m
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+Google geocoding. Address: Miles QLD 4415, AU. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>Miles QLD 4415, AU</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Miles Queensland, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>Queensland</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.3385165" south="-26.9767153" east="150.6968526" west="149.6723774" />
+    </ExtendedData>
+    <Point><coordinates>150.1846150,-26.6580620,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/application
+Rendering loads/new
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 1234ms (View: 15, DB: 16) | 200 OK [http://localhost/loads]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#create (for 127.0.0.1 at 2009-07-27 20:41:41) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"W39+qUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg=", "load"=>{"end_lng"=>"148.790592", "start_lng"=>"150.184615", "end_lat"=>"-26.573907", "end_loc"=>"Roma QLD 4455, AU", "start_lat"=>"-26.658062", "load_date"=>"", "start_loc"=>"Miles QLD 4415, AU"}}
+  [4;35;1mUser Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;35;1mLoad Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `loads`[0m
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+Google geocoding. Address: Miles QLD 4415, AU. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>Miles QLD 4415, AU</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Miles Queensland, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>Queensland</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.3385165" south="-26.9767153" east="150.6968526" west="149.6723774" />
+    </ExtendedData>
+    <Point><coordinates>150.1846150,-26.6580620,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/application
+Rendering loads/new
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (15.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 1203ms (View: 15, DB: 31) | 200 OK [http://localhost/loads]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#index (for 127.0.0.1 at 2009-07-27 20:44:16) [GET]
+  [4;35;1mUser Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;35;1mLoad Load (0.0ms)[0m   [0mSELECT * FROM `loads` [0m
+Rendering template within layouts/application
+Rendering loads/index
+  [4;36;1mLoad Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `loads`[0m
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 1234ms (View: 15, DB: 16) | 200 OK [http://localhost/loads]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-07-27 20:44:20) [GET]
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (16.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;36;1mLoad Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `loads`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `loads` WHERE (`loads`.company_id = 10) [0m
+  [4;36;1mLoad Load (0.0ms)[0m   [0;1mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mLoad Load (0.0ms)[0m   [0mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC[0m
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 937ms (View: 31, DB: 16) | 200 OK [http://localhost/loads/your]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-07-27 20:45:32) [GET]
+  [4;35;1mUser Columns (62.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;35;1mLoad Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `loads`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `loads` WHERE (`loads`.company_id = 10) [0m
+  [4;35;1mLoad Load (0.0ms)[0m   [0mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mLoad Load (0.0ms)[0m   [0;1mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC[0m
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (15.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 1015ms (View: 78, DB: 62) | 200 OK [http://localhost/loads/your]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#new (for 127.0.0.1 at 2009-07-27 20:45:38) [GET]
+  [4;36;1mUser Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mLoad Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `loads`[0m
+Rendering template within layouts/application
+Rendering loads/new
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 1063ms (View: 31, DB: 16) | 200 OK [http://localhost/loads/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DashboardController#geolookup (for 127.0.0.1 at 2009-07-27 20:45:42) [GET]
+  Parameters: {"authenticity_token"=>"W39+qUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg=", "location"=>"miles"}
+Google geocoding. Address: miles,Australia. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>miles,Australia</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Miles Queensland 4415, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>Queensland</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.3385165" south="-26.9767153" east="150.6968526" west="149.6723774" />
+    </ExtendedData>
+    <Point><coordinates>150.1846150,-26.6580620,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+Completed in 1172ms (View: 16, DB: 0) | 200 OK [http://localhost/dashboard/geolookup?authenticity_token=W39%2BqUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg%3D&location=miles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DashboardController#geolookup (for 127.0.0.1 at 2009-07-27 20:45:44) [GET]
+  Parameters: {"authenticity_token"=>"W39+qUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg=", "location"=>"roma"}
+Google geocoding. Address: roma,Australia. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>roma,Australia</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Roma Queensland 4455, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>Queensland</AdministrativeAreaName><Locality><LocalityName>Roma</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.5339831" south="-26.6138170" east="148.8546217" west="148.7265623" />
+    </ExtendedData>
+    <Point><coordinates>148.7905920,-26.5739070,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+Completed in 1015ms (View: 0, DB: 0) | 200 OK [http://localhost/dashboard/geolookup?authenticity_token=W39%2BqUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg%3D&location=roma]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#create (for 127.0.0.1 at 2009-07-27 20:45:46) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"W39+qUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg=", "load"=>{"end_lng"=>"148.790592", "start_lng"=>"150.184615", "end_lat"=>"-26.573907", "end_loc"=>"Roma QLD 4455, AU", "start_lat"=>"-26.658062", "load_date"=>"", "start_loc"=>"Miles QLD 4415, AU"}}
+  [4;36;1mUser Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mLoad Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `loads`[0m
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+Google geocoding. Address: Miles QLD 4415, AU. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>Miles QLD 4415, AU</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Miles Queensland, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>Queensland</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.3385165" south="-26.9767153" east="150.6968526" west="149.6723774" />
+    </ExtendedData>
+    <Point><coordinates>150.1846150,-26.6580620,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/application
+Rendering loads/new
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 1156ms (View: 0, DB: 31) | 200 OK [http://localhost/loads]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#create (for 127.0.0.1 at 2009-07-27 20:51:38) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"W39+qUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg=", "load"=>{"end_lng"=>"148.790592", "start_lng"=>"150.184615", "end_lat"=>"-26.573907", "end_loc"=>"Roma QLD 4455, AU", "start_lat"=>"-26.658062", "load_date"=>"12 Jan 2009", "start_loc"=>"Miles QLD 4415, AU", "load_type"=>"truck"}}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mLoad Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `loads`[0m
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+Google geocoding. Address: Miles QLD 4415, AU. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>Miles QLD 4415, AU</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Miles Queensland, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>Queensland</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.3385165" south="-26.9767153" east="150.6968526" west="149.6723774" />
+    </ExtendedData>
+    <Point><coordinates>150.1846150,-26.6580620,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;36;1mLoad Create (0.0ms)[0m   [0;1mINSERT INTO `loads` (`start_lng`, `end_lng`, `updated_at`, `details`, `end_lat`, `start_lat`, `end_loc`, `filled`, `start_loc`, `load_date`, `company_id`, `deleted`, `load_type`, `distance`, `created_at`) VALUES(150.184615, 148.790592, '2009-07-27 19:51:39', NULL, -26.573907, -26.658062, 'Roma QLD 4455, AU', 0, 'Miles QLD 4415, AU', '2009-01-12', 10, 0, 'truck', NULL, '2009-07-27 19:51:39')[0m
+  [4;35;1mSQL (328.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/loads/your
+Completed in 1656ms (DB: 344) | 302 Found [http://localhost/loads]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-07-27 20:51:40) [GET]
+  [4;35;1mUser Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;35;1mCompany Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;35;1mLoad Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `loads`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `loads` WHERE (`loads`.company_id = 10) [0m
+  [4;35;1mLoad Load (0.0ms)[0m   [0mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mLoad Load (0.0ms)[0m   [0;1mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC[0m
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 1125ms (View: 94, DB: 32) | 200 OK [http://localhost/loads/your]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#new (for 127.0.0.1 at 2009-07-27 20:53:38) [GET]
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mLoad Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `loads`[0m
+Rendering template within layouts/application
+Rendering loads/new
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 906ms (View: 16, DB: 0) | 200 OK [http://localhost/loads/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#new (for 127.0.0.1 at 2009-07-27 21:02:36) [GET]
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mLoad Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `loads`[0m
+Rendering template within layouts/application
+Rendering loads/new
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 1281ms (View: 31, DB: 0) | 200 OK [http://localhost/loads/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#new (for 127.0.0.1 at 2009-07-27 21:07:23) [GET]
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mLoad Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `loads`[0m
+Rendering template within layouts/application
+Rendering loads/new
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 890ms (View: 31, DB: 0) | 200 OK [http://localhost/loads/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#new (for 127.0.0.1 at 2009-07-27 21:07:30) [GET]
+  [4;36;1mUser Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mLoad Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `loads`[0m
+Rendering template within layouts/application
+Rendering loads/new
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 875ms (View: 16, DB: 15) | 200 OK [http://localhost/loads/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#new (for 127.0.0.1 at 2009-07-27 21:09:07) [GET]
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mLoad Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `loads`[0m
+Rendering template within layouts/application
+Rendering loads/new
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 907ms (View: 16, DB: 0) | 200 OK [http://localhost/loads/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#new (for 127.0.0.1 at 2009-07-27 21:09:49) [GET]
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mLoad Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `loads`[0m
+Rendering template within layouts/application
+Rendering loads/new
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 922ms (View: 31, DB: 0) | 200 OK [http://localhost/loads/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#new (for 127.0.0.1 at 2009-07-27 21:10:07) [GET]
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mLoad Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `loads`[0m
+Rendering template within layouts/application
+Rendering loads/new
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 953ms (View: 31, DB: 16) | 200 OK [http://localhost/loads/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#new (for 127.0.0.1 at 2009-07-27 21:10:32) [GET]
+  [4;36;1mUser Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mLoad Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `loads`[0m
+Rendering template within layouts/application
+Rendering loads/new
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 875ms (View: 47, DB: 16) | 200 OK [http://localhost/loads/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#new (for 127.0.0.1 at 2009-07-27 21:11:08) [GET]
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mLoad Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `loads`[0m
+Rendering template within layouts/application
+Rendering loads/new
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 1391ms (View: 32, DB: 15) | 200 OK [http://localhost/loads/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#new (for 127.0.0.1 at 2009-07-27 21:12:24) [GET]
+  [4;36;1mUser Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mLoad Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `loads`[0m
+Rendering template within layouts/application
+Rendering loads/new
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 844ms (View: 31, DB: 32) | 200 OK [http://localhost/loads/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#create (for 127.0.0.1 at 2009-07-27 22:54:23) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"W39+qUH9h6dcPCfLFE9x1iLF3diCeh4JGFKG2blU6mg=", "load"=>{"end_lng"=>"", "start_lng"=>"", "end_lat"=>"", "end_loc"=>"", "start_lat"=>"", "load_date_str"=>"27 Jul 2009", "start_loc"=>""}}
+  [4;36;1mUser Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mLoad Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `loads`[0m
+  [4;35;1mCompany Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/application
+Rendering loads/new
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 2266ms (View: 0, DB: 32) | 200 OK [http://localhost/loads]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-07-27 22:54:49) [GET]
+  [4;36;1mUser Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mCompany Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;36;1mLoad Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `loads`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `loads` WHERE (`loads`.company_id = 10) [0m
+  [4;36;1mLoad Load (0.0ms)[0m   [0;1mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mLoad Load (0.0ms)[0m   [0mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC[0m
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 906ms (View: 15, DB: 47) | 200 OK [http://localhost/loads/your]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-07-27 22:55:50) [GET]
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;35;1mLoad Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `loads`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `loads` WHERE (`loads`.company_id = 10) [0m
+  [4;35;1mLoad Load (0.0ms)[0m   [0mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mLoad Load (0.0ms)[0m   [0;1mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC[0m
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 891ms (View: 31, DB: 0) | 200 OK [http://localhost/loads/your]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-07-27 22:56:09) [GET]
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mCompany Load (16.0ms)[0m   [0mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;36;1mLoad Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `loads`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `loads` WHERE (`loads`.company_id = 10) [0m
+  [4;36;1mLoad Load (0.0ms)[0m   [0;1mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mLoad Load (0.0ms)[0m   [0mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC[0m
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 937ms (View: 31, DB: 16) | 200 OK [http://localhost/loads/your]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-07-27 22:59:32) [GET]
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mCompany Load (16.0ms)[0m   [0;1mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;35;1mLoad Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `loads`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `loads` WHERE (`loads`.company_id = 10) [0m
+  [4;35;1mLoad Load (0.0ms)[0m   [0mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mLoad Load (0.0ms)[0m   [0;1mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC[0m
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (16.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 906ms (View: 31, DB: 16) | 200 OK [http://localhost/loads/your]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-07-27 23:00:16) [GET]
+  [4;36;1mUser Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;36;1mCompany Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mCompany Load (0.0ms)[0m   [0mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;36;1mLoad Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `loads`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `loads` WHERE (`loads`.company_id = 10) [0m
+  [4;36;1mLoad Load (0.0ms)[0m   [0;1mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mLoad Load (0.0ms)[0m   [0mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC[0m
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 859ms (View: 31, DB: 15) | 200 OK [http://localhost/loads/your]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-07-27 23:07:12) [GET]
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [4;35;1mCompany Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `companies` WHERE (`companies`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;35;1mLoad Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `loads`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `loads` WHERE (`loads`.company_id = 10) [0m
+  [4;35;1mLoad Load (0.0ms)[0m   [0mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mLoad Load (0.0ms)[0m   [0;1mSELECT * FROM `loads` WHERE (`loads`.company_id = 10) ORDER BY created_at DESC[0m
+Rendered shared/_filter_options (0.0ms)
+Rendered shared/_user_bar (0.0ms)
+Rendered shared/_navigation (0.0ms)
+Completed in 1235ms (View: 31, DB: 0) | 200 OK [http://localhost/loads/your]

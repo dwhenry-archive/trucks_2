@@ -1,4 +1,4 @@
-.data_imput_row {
+.data_input_row {
 	width: 600px;
 	overflow: hidden;
 	padding: 0.2em;
@@ -74,21 +74,21 @@
 .data_col_journey {
 	float: left;
 	width: 200px;
-	padding: 1px 1px 1px 2px;
+	padding: 2px 2px 2px 4px;
 }
 
 .data_col_date {
 	float: left;
 	width: 100px;
 	text-align: center;
-	padding: 1px;
+	padding: 2px;
 }
 
 .data_col_details {
 	float: left;
-	width: 290px;
+	width: 284px;
 	text-align: left;
-	padding: 1px 2px 1px 1px;
+	padding: 2px 4px 2px 2px;
 }
 
 .user_notice {
@@ -145,17 +145,30 @@ a.del_user,a:visited.del_user,a:hover.del_user {
 }
 
 #map {
+	top: 20px;
 	border: black solid 2px;
-	width: 450px;height: 350px;
+	width: 450px;
+	height: 350px;
 }
+#map_select {
+	position: absolute; 
+	left: -20px; 
+	top: 0px;
+    width: 510px; 
+	height: 410px; 
+	background: #8fADBF;
+}
+
 #map_shadow {
 	position: absolute; 
 	left: 20px; 
-	top: 20px;
+	top: 40px;
     width: 450px; 
 	height: 350px; 
 	background-color: black;
     -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=25)';
 	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=25);
     -moz-opacity:0.25; 
-	opacity: 0.25; "}
+	opacity: 0.25;
+}
+
