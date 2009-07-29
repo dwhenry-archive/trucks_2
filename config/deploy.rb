@@ -1,4 +1,4 @@
-set :stages, %w(testing live)
+set :stages, %w(live)
 require 'capistrano/ext/multistage'
 load 'config/user_details'
 
