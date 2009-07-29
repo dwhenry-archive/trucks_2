@@ -35,10 +35,10 @@ ActiveRecord::Schema.define(:version => 20090725142030) do
     t.float    "end_lng"
     t.float    "distance"
     t.date     "load_date"
-    t.integer  "company_id"
+    t.integer  "company_id", :limit => 11
     t.text     "details"
-    t.boolean  "filled",     :default => false
-    t.boolean  "deleted",    :default => false
+    t.boolean  "filled",                   :default => false
+    t.boolean  "deleted",                  :default => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -55,7 +55,7 @@ ActiveRecord::Schema.define(:version => 20090725142030) do
     t.datetime "activated_at"
     t.datetime "last_action"
     t.string   "ip_address"
-    t.integer  "company_id"
+    t.integer  "company_id",                :limit => 11
   end
 
   add_index "users", ["login"], :name => "index_users_on_login", :unique => true
