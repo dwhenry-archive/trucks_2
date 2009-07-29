@@ -1,3 +1,14 @@
+File::SEPARATOR = '/'
+#############################################################
+#   Servers
+#############################################################
+
+set :user, "bbl"
+set :password, "act?viable+acid"
+set :domain,  "www.bulkbackloads.com.au"
+server domain, :app, :web
+role :db, domain, :primary => true
+
 #############################################################
 #   Application
 #############################################################
@@ -16,26 +27,23 @@ set :scm_verbose, true
 set :rails_env, "production" 
 
 #############################################################
-#   Servers
-#############################################################
-
-set :user, "bbl"
-set :password, "act?viable+acid"
-set :domain,  "www.bulkbackloads.com.au"
-server domain, :app, :web
-role :db, domain, :primary => true
-
-#############################################################
 #   Git
 #############################################################
 
+# need to edit the file
+# D:\Applications\InstantRails-2.0-win\ruby\lib\ruby\gems\1.8\gems\capistrano-2.5.8\lib\capistrano\recipes\deploy\strategy\base.rb
+# around line 54...
+# to gte the cap deploy to work on windows..
+
 set :scm, :git
+set :repository, "git@github.com:dwhenry/trucks_2.git"
+#set :repository, "."
+#set :scm, :none
 #set :branch, "phase_1.1_dh"
 #set :scm_user, 'daveh'
 #set :scm_password, "73hDYMq$$"
 #set :scm_passphrase, "----------"
-set :repository, "ssh@git://github.com/dwhenry/trucks_2.git"
-set :deploy_via, :remote_cache
+set :deploy_via, :copy # :remote_cache
 
 set :mongrel_port, "5001"                           # Mongrel port that was assigned to you
 set :mongrel_nodes, "1"                             # Number of Mongrel instances for those with multiple Mongrels
@@ -71,15 +79,15 @@ namespace :deploy do
 #
 #  end
 
-  # Restart passenger on deploy
-  desc "Restarting mod_rails with restart.txt"
-  task :restart, :roles => :app, :except => { :no_release => true } do
-    run "touch #{current_path}/tmp/restart.txt"
-  end
-
-  [:start, :stop].each do |t|
-    desc "#{t} task is a no-op with mod_rails"
-    task t, :roles => :app do ; end
-  end
+  ## Restart passenger on deploy
+  #desc "Restarting mod_rails with restart.txt"
+  #task :restart, :roles => :app, :except => { :no_release => true } do
+  #  run "touch #{current_path}/tmp/restart.txt"
+  #end
+  #
+  #[:start, :stop].each do |t|
+  #  desc "#{t} task is a no-op with mod_rails"
+  #  task t, :roles => :app do ; end
+  #end
 
 end

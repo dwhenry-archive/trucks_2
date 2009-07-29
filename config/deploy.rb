@@ -9,9 +9,10 @@ default_run_options[:pty] = true
 #set :repository, "#{scm_user}@git.edendevelopment.co.uk:/var/git/clients/pcm/tadpole.git"
 #set :scm_password, '73hDYMq$$'
 #set :repository,  "ssh://git.edendevelopment.co.uk/var/git/clients/pcm/tadpole.git"
+#set :repository, "git@github.com:dwhenry/trucks_2.git"
 
-set :scm, "git"
-set :deploy_via, :remote_cache
+#set :scm, "git"
+#set :deploy_via, :remote_cache
 
 set :use_sudo, false
 set :git_enable_submodules, 1
