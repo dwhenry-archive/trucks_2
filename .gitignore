@@ -9,3 +9,4 @@ doc/app
 .project
 tmp/webrat*
 config/user_details.rb
+.idea
