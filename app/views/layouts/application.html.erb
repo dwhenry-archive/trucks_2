@@ -43,7 +43,9 @@
 	</div>
 
 	<div id="bd"><!-- body -->
-		<p><%= flash[:notice] %></p>
+	    <% if flash[:notice] %>
+            <%= flash[:notice] %><br>
+        <% end %>  
 		<%= yield %>
 	</div>
 	  

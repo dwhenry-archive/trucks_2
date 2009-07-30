@@ -7,6 +7,8 @@ RAILS_GEM_VERSION = '2.1.0' unless defined? RAILS_GEM_VERSION
 # Bootstrap the Rails environment, frameworks, and default configuration
 require File.join(File.dirname(__FILE__), 'boot')
 
+
+
 Rails::Initializer.run do |config|
   
   config.load_paths += Dir["#{RAILS_ROOT}/vendor/gems/**"].map do |dir|
@@ -48,3 +50,15 @@ Rails::Initializer.run do |config|
   # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
   # config.i18n.default_locale = :de
 end
+
+ActionMailer::Base.raise_delivery_errors = true
+ActionMailer::Base.perform_deliveries = true
+ActionMailer::Base.delivery_method = :smtp
+ActionMailer::Base.smtp_settings = {
+  :address => "localhost",
+  :port => 25,
+  :domain => "bulkbackloads.com"#,
+#  :authentication => :login,
+#  :user_name => "noreply+thinkersplayground.com",
+#  :password => "password"
+}
