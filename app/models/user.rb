@@ -64,7 +64,11 @@ class User < ActiveRecord::Base
     self.password, self.password_confirmation = new_password, new_confirmation
     save
   end
-  
+
+  def temp_password
+    @pwd
+  end
+
   protected
     
   def make_activation_code
@@ -73,9 +77,9 @@ class User < ActiveRecord::Base
 
   def make_temp_password
     return unless crypted_password.blank?
-    pwd = random_password
-    self.password = pwd
-    self.password_confirmation = pwd
+    @pwd = random_password
+    self.password = @pwd
+    self.password_confirmation = @pwd
     logger.info 'Creating new user: "' + login + '" with password: "' + pwd + '"'
   end
 

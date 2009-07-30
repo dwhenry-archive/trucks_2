@@ -16958,3 +16958,39 @@ Rendering dashboard/home
 Rendered shared/_user_bar (0.01600)
 Rendered shared/_navigation (0.00000)
 Completed in 0.75000 (1 reqs/sec) | Rendering: 0.01600 (2%) | DB: 0.00000 (0%) | 200 OK [http://localhost/dashboard/home]
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-07-30 23:16:21) [GET]
+  Session ID: BAh7CDoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlMzQ0NDg1OTE1ZTAyNjI1
+ZmMwODg0YjZhZjQ1NGFmNDAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6
+OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--4dd23523e90d1da093216fbdae7ce2e2e027a79f
+  Parameters: {"action"=>"new", "controller"=>"companies"}
+  [4;36;1mSQL (0.000000)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mCompany Columns (0.094000)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mUser Columns (0.032000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered companies/buttons/_new (0.00000)
+Rendered companies/_company_form (0.01600)
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = '') LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = '') LIMIT 1[0m
+Rendered shared/_user_bar (0.01500)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = '') LIMIT 1[0m
+Rendered shared/_navigation (0.00000)
+Completed in 1.75000 (0 reqs/sec) | Rendering: 0.45300 (25%) | DB: 0.12600 (7%) | 200 OK [http://localhost/companies/new]
+
+
+Processing DashboardController#home (for 127.0.0.1 at 2009-07-30 23:16:29) [GET]
+  Session ID: BAh7CDoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlMzhhY2UzZjhmOTZiMGRi
+OTRlMWVlY2E4ZjEwNjQ0MmUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6
+OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--a73dd2b43cf4796d00d659b917e18c0b470fa621
+  Parameters: {"action"=>"home", "controller"=>"dashboard"}
+Rendering template within layouts/application
+Rendering dashboard/home
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = '') LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = '') LIMIT 1[0m
+Rendered shared/_user_bar (0.00000)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = '') LIMIT 1[0m
+Rendered shared/_navigation (0.01500)
+Completed in 0.79700 (1 reqs/sec) | Rendering: 0.06200 (7%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]

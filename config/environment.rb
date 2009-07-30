@@ -49,16 +49,27 @@ Rails::Initializer.run do |config|
   # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
   # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
   # config.i18n.default_locale = :de
+
+  # add email controller
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :address => "localhost",
+    :port => 25,
+    :domain => "bulkbackloads.com.au"
+#    :authentication => :plain | :login | :cram_md5,
+#    :user_name => "none",
+#    :password => "none"
+  }
 end
 
-ActionMailer::Base.raise_delivery_errors = true
-ActionMailer::Base.perform_deliveries = true
-ActionMailer::Base.delivery_method = :smtp
-ActionMailer::Base.smtp_settings = {
-  :address => "localhost",
-  :port => 25,
-  :domain => "bulkbackloads.com"#,
+#ActionMailer::Base.raise_delivery_errors = true
+#ActionMailer::Base.perform_deliveries = true
+#ActionMailer::Base.delivery_method = :smtp
+#ActionMailer::Base.smtp_settings = {
+#  :address => "localhost",
+#  :port => 25,
+#  :domain => "bulkbackloads.com"#,
 #  :authentication => :login,
 #  :user_name => "noreply+thinkersplayground.com",
 #  :password => "password"
-}
+#}
