@@ -48,7 +48,7 @@ class CompaniesController < ApplicationController
     respond_to do |format|
       if @company.save
         @company.users.each do |user|
-          TrucksEmail.deliver_registration_confirmation(user,user.pwd,user.activation_code)
+          TrucksEmail.deliver_registration_confirmation(user)
         end|
         format.html { render :action => "show" }
         format.xml  { render :xml => @company, :status => :created, :location => @company }

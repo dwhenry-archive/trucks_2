@@ -1,10 +1,10 @@
-Hello <%= user.login %>,
+Hello <%= @user.login %>,
 
 Welcome to Bulk Back Loads.
 
-You Activation code is <%= link_to "Activation Code", activate_path(activation_code) %>
+You Activation code is <%= link_to "Activation Code", activate_path(@user.activation_code) %>
 
-Your password is <%= password %>
+Your password is <%= @user.pwd %>
 
 We hope you like our service
 
