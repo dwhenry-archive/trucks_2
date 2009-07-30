@@ -1,6 +1,8 @@
 require 'digest/sha1'
 
 class User < ActiveRecord::Base
+  attr_accessor :pwd
+  
   belongs_to :company
   include Authentication
   include Authentication::ByPassword
@@ -77,9 +79,9 @@ class User < ActiveRecord::Base
 
   def make_temp_password
     return unless crypted_password.blank?
-    @pwd = random_password
-    self.password = @pwd
-    self.password_confirmation = @pwd
+    self.pwd = random_password
+    self.password = self.pwd
+    self.password_confirmation = self.pwd
     logger.info 'Creating new user: "' + login + '" with password: "' + pwd + '"'
   end
 
