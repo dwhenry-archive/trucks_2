@@ -1,4 +1,5 @@
 <% form_tag session_path do %>
+  <%= link_to "Forgotten Password", send_activation_code_path, { :title => "Resend Activation Code" } %> |
   <%= link_to_function 'Cancel','showLoginScript("/dashboard/status");' %> |
   <%= submit_tag 'Login', {:class => 'login_button'} %><br>
 	Email: <%= text_field_tag 'login' %><br>

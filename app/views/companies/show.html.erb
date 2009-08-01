@@ -97,19 +97,19 @@
     <hr>
 
     <% @company.users.each do |user| %>
-    <div id="users">
-        <div class="user">
-            <div class="data_imput_row">
-                <div class="data_input_field">
-                    Email Address
+        <div id="users">
+            <div class="user">
+                <div class="data_imput_row">
+                    <div class="data_input_field">
+                        Email Address
+                    </div>
+                    <div class="data_input_data">
+                        <%=h user.login %>
+                    </div>
                 </div>
-                <div class="data_input_data">
-                    <%=h user.login %>
-                </div>
+                <hr>
             </div>
-            <hr>
         </div>
-    </div>
     <% end %>
     <div class="data_imput_row">
         <div class="data_input_buttons">
@@ -120,5 +120,18 @@
             <% end %>
         </div>
     </div>
+
+    <% if @emails.size > 0 %>
+        <hr>
+        <h3>Email's Send</h3>
+        <hr>
+        <% @emails.each do |email| %>
+          <strong><%=h email[0] %></strong><br>
+          <pre style="padding:0 0 0 20px;">
+            <%=h email[1] %>
+          </pre>
+          <hr>
+        <% end %>
+    <% end %>
   </div>
 </div>

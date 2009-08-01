@@ -26,3 +26,15 @@ config.action_view.cache_template_loading            = true
 
 # Enable threaded mode
 # config.threadsafe!
+
+# add email controller
+config.action_mailer.delivery_method = :smtp
+config.action_mailer.smtp_settings = {
+  :address => "localhost",
+  :port => 25,
+  :domain => "bulkbackloads.com.au"
+#    :authentication => :plain | :login | :cram_md5,
+#    :user_name => "none",
+#    :password => "none"
+}
+config.action_mailer.default_url_options = { :host => “www.bulkbackloads.com.au” }

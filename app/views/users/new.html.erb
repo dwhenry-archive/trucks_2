@@ -1,19 +1,45 @@
-<h1>Sign up as a new user</h1>
-<% @user.password = @user.password_confirmation = nil %>
+	<div class="add_fields_container">
+	    <div class="fields">
+	        &nbsp;
+	    </div>
+	    <div class="wide">
+	        <h3>Change password for: <%=h @user.login  %></h3>
+	    </div>
+	</div>
 
-<%= error_messages_for :user %>
-<% form_for :user, :url => users_path do |f| -%>
-<p><%= label_tag 'login' %><br/>
-<%= f.text_field :login %></p>
+<% form_tag url_for(:action => 'create') do %>
 
-<p><%= label_tag 'email' %><br/>
-<%= f.text_field :email %></p>
+	<%= hidden_field_tag :activation_code, params[:activation_code] || @user.activation_code %>
+	<%= hidden_field_tag :id, params[:id] || @user.id %>
+	<div class="add_fields_container">
+	    <div class="fields">
+	        New Password
+	    </div>
+	    <div class="wide">
+	        <%= password_field_tag 'password', {}, :size => 45 %>
+  	<span class="description">Between 6 and 40 characters</span>
+	    </div>
+	</div>
+	
+	<div class="add_fields_container">
+	    <div class="fields">
+	        Confirm New  Password
+	    </div>
+	    <div class="data">
+	        <%= password_field_tag 'password_confirmation', {}, :size => 45 %>
+	    </div>
+	</div>	
+	<br />
+	<div class="add_fields_container">
+	    <div class="fields">
+	        &nbsp;
+	    </div>
+	    <div class="data">
+	        <span class="button lt_blue"><%= link_to 'Cancel', users_path %></span>
+	        <%= submit_tag "Reset", {:class => 'button lt_blue', :style => "display:inline"} %>
+	    </div>
+	</div>	
 
-<p><%= label_tag 'password' %><br/>
-<%= f.password_field :password %></p>
+<% end %>
 
-<p><%= label_tag 'password_confirmation', 'Confirm Password' %><br/>
-<%= f.password_field :password_confirmation %></p>
 
-<p><%= submit_tag 'Sign up' %></p>
-<% end -%>

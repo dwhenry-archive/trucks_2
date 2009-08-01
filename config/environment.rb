@@ -50,16 +50,7 @@ Rails::Initializer.run do |config|
   # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
   # config.i18n.default_locale = :de
 
-  # add email controller
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-    :address => "localhost",
-    :port => 25,
-    :domain => "bulkbackloads.com.au"
-#    :authentication => :plain | :login | :cram_md5,
-#    :user_name => "none",
-#    :password => "none"
-  }
+
 end
 
 #ActionMailer::Base.raise_delivery_errors = true

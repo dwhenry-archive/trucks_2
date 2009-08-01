@@ -23,11 +23,20 @@ class User < ActiveRecord::Base
 
 
   # Activates the user in the database.
-  def activate!
-    @activated = true
-    self.activated_at = Time.now.utc
-    self.activation_code = nil
-    save(false)
+  def activate!(act_code, new_password, new_confirmation)
+    errors.add_to_base("Invalid Activation Code.") and
+      return false if self.activation_code != act_code or act_code.blank?
+    errors.add_to_base("New password does not match the password confirmation.") and
+      return false if (new_password != new_confirmation)
+    errors.add_to_base("New password cannot be blank.") and
+      return false if new_password.blank?
+    self.password, self.password_confirmation = new_password, new_confirmation
+    if self.save
+      @activated = true
+      self.activated_at = Time.now.utc
+      self.activation_code = nil
+      save(false)
+    end
   end
 
   # Returns true if the user has just been activated.
@@ -71,8 +80,14 @@ class User < ActiveRecord::Base
     @pwd
   end
 
+  def reset_activation_code
+    self.make_activation_code
+    self.pwd = random_password
+    self.save
+  end
+
   protected
-    
+
   def make_activation_code
       self.activation_code = self.class.make_token
   end

@@ -44,12 +44,17 @@ class CompaniesController < ApplicationController
   # POST /company.xml
   def create
     @company = Company.new(params[:company])
-
+    @emails = {}
     respond_to do |format|
       if @company.save
         @company.users.each do |user|
-          TrucksEmail.deliver_registration_confirmation(user)
-        end|
+          email = TrucksEmail.create_registration_confirmation(user)
+          if Rails.env == "production"
+            email.deliver
+          else
+            @emails.merge!({user.login => email}) 
+          end
+        end
         format.html { render :action => "show" }
         format.xml  { render :xml => @company, :status => :created, :location => @company }
       else
