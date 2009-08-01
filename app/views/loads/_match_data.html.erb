@@ -1,0 +1,8 @@
+< 100km:<br>
+<%= results.inject(0){|res, val| res += (val[1][:change] < 100 ? 1 : 0)} %><br><br>
+< 200km:<br>
+<%= results.inject(0){|res, val| res += (val[1][:change] < 200 ? 1 : 0)} %><br><br>
+< 500km:<br>
+<%= results.inject(0){|res, val| res += (val[1][:change] < 500 ? 1 : 0)} %><br><br>
+Total:<br>
+<%= results.size %><br><br>

@@ -1,6 +1,40 @@
-/**
- * @author Dave
- */
+function getLoadMatchesData(start_lat, start_lng, end_lat, end_lng, load_type,authenticityToken) {
+    new Effect.BlindUp('match_data', {
+        duration: 0.5,
+        delay: 0.0
+    });
+
+	var date = new Date();
+	var curDate = null;
+
+    new Ajax.Request('/loads/match_data', {
+        parameters: $H({
+            authenticity_token: authenticityToken,
+            start_lat: start_lat,
+            start_lng: start_lng,
+            end_lat: end_lat,
+            end_lng: end_lng,
+            load_type: load_type
+        }).toQueryString(),
+        method: 'get',
+        onSuccess: function(request) {
+            $('match_data').innerHTML = request.responseText; 
+        },
+        onComplete:
+            function(){
+
+            while(curDate-date < 500)
+            { curDate = new Date(); }
+
+            new Effect.BlindDown('match_data', {
+                duration: 0.5,
+                delay: 0.0
+            })
+
+            //new Element.hide('spinner');
+        }
+    });
+}
 function showLoginScript(url) {
     new Ajax.Request(url, {
         method: 'get',

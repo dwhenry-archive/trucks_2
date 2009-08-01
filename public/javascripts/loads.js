@@ -1,7 +1,7 @@
 /**
  * @author Dave
  */
-function selectLoadRow(el) {
+function selectLoadRow(el,authenticityToken) {
 	if(el.className == 'data_input_table_selected')
 		return;
 		
@@ -13,4 +13,9 @@ function selectLoadRow(el) {
 	
 	el.className = 'data_input_table_selected';
 	setpoints(el.id + '_start',el.id + '_end');
+
+    // call AJAX function to update matches table..
+    getLoadMatchesData($(el.id + '_start_lat').value, $(el.id + '_start_lng').value,
+            $(el.id + '_end_lat').value,$(el.id + '_end_lng').value,$(el.id + '_load_type').value,
+            authenticityToken)
 }

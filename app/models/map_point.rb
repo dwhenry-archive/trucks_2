@@ -1,4 +1,4 @@
-class MapPoints < ActiveRecord::Base
+class MapPoint < ActiveRecord::Base
   belongs_to :load
 
   acts_as_mappable :default_units => :kms,

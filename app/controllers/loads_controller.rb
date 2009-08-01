@@ -1,9 +1,18 @@
 class LoadsController < ApplicationController
+  include Geokit::Geocoders
+  require 'extends_mappable'
   # GET /loads
   # GET /loads.xml
   def your
     @loads = current_user.company.loads
-
+    load = @loads.first
+    
+    if load
+      @results = get_match_results(load.start_lng,load.start_lat,load.end_lng,load.end_lat,load.load_type)
+    else
+      @results = ''
+    end
+    
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @loads }
@@ -94,4 +103,23 @@ class LoadsController < ApplicationController
       format.xml  { head :ok }
     end
   end
+
+  def match_data
+    #debugger
+    if params[:start_lng] and params[:start_lat] and
+            params[:end_lng] and params[:end_lat] and
+            params[:load_type]
+      res = get_match_results(params[:start_lng],params[:start_lat],
+                                 params[:end_lng],params[:end_lat],
+                                 params[:load_type])
+    end
+
+    render :partial => 'match_data', :locals => {:results => res}
+  end
+
+  protected
+  def get_match_results(start_lng, start_lat,end_lng,end_lat,load_type)
+    ExtendsMappable.calcualte_journey(start_lat.to_s + ',' + start_lng.to_s,end_lat.to_s + ',' + end_lng.to_s,load_type)
+  end
 end
+

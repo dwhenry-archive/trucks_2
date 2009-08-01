@@ -35,7 +35,7 @@
 		<hr>
 		<div id="data_table">
 			<% @loads.each do |load| %>
-				<div id="load_<%= load.id %>" class="data_input_table_row" onclick='selectLoadRow(this);'>
+				<div id="load_<%= load.id %>" class="data_input_table_row" onclick="selectLoadRow(this,'<%=h form_authenticity_token %>');">
 					<div class="data_col_journey">
 						<b>From: </b><%=h load.start_loc %><br>
 						<b>To: </b><%=h load.end_loc %><br>
@@ -45,6 +45,7 @@
 						<%= hidden_field_tag "load_#{load.id}_end_loc", load.end_loc %>
 						<%= hidden_field_tag "load_#{load.id}_end_lat", load.end_lat %>
 						<%= hidden_field_tag "load_#{load.id}_end_lng", load.end_lng %>
+                        <%= hidden_field_tag "load_#{load.id}_load_type", load.load_type %>
 					</div>
 					<div class="data_col_date">
 						<%=h load.load_date.strftime("%d %b %Y") if load.load_date %><br>
@@ -72,7 +73,10 @@
 			<br>
 			<br>
 			<div id="map_col_info">
-				<b>Matches:</b>
+				<b>Matches:</b><br>
+              <div id="match_data">
+                <%= render :partial => 'match_data', :locals => {:results => @results} %>
+              </div>
 			</div>
 		</div>
 		<% if @loads.size > 0 %>
@@ -82,3 +86,14 @@
 	</div>
 </div>
 <br>
+<!--
+<div>
+<% @results.each do |res| %>
+    <%= res[0] %>
+    <% res[1].each do |vals| %>
+        Key: <%= vals[0] %> = <%= vals[1] %>
+    <% end %>
+    <br>
+<% end %>
+    </div>
+    -->

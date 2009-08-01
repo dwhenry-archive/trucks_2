@@ -39,6 +39,7 @@ function initialize_maps_with_trip(el_name) {
 }
 
 function setpoints(start, stop) {
+    map.clearOverlays();
 	point1 = setpoint($(start + '_lng').value, 
 			$(start + '_lat').value,
 			'<div><b>From Point<b><br>' + $(start + '_loc').value + + '</div>',

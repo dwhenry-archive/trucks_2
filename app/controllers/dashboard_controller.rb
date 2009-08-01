@@ -1,6 +1,7 @@
 
 class DashboardController < ApplicationController
   include Geokit::Geocoders
+  
   skip_before_filter :login_required #, :only => :home
 
   def home
@@ -32,7 +33,7 @@ class DashboardController < ApplicationController
       render :json => { :status => 'fail' }
     end
   end
-  
+
 private
   def str_replace(str)
       res = str
