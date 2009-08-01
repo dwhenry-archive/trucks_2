@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090725142030) do
+ActiveRecord::Schema.define(:version => 20090801204443) do
 
   create_table "companies", :force => true do |t|
     t.string   "name"
@@ -42,6 +42,19 @@ ActiveRecord::Schema.define(:version => 20090725142030) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "map_points", :force => true do |t|
+    t.integer  "load_id",    :limit => 11
+    t.string   "point_type"
+    t.string   "load_type"
+    t.float    "lat"
+    t.float    "lng"
+    t.float    "point_dist"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "map_points", ["load_type", "point_type"], :name => "index_map_points_on_load_type_and_point_type"
 
   create_table "users", :force => true do |t|
     t.string   "login",                     :limit => 100

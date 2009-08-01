@@ -3,15 +3,17 @@
 </script>
 <%= javascript_include_tag 'google_new','loads' %>
 <script type="text/javascript">
+    var homeLat='';
+    var homeLng='';
 	// Add this to the bottom of application.js
 	document.observe('dom:loaded', function(){
 		// this is needed here as call in google_new is overwritten 
 		<% if @loads.size > 0 %>
 			initialize_maps_with_trip("load_<%= @loads.first.id %>");
+        <% else %>
+            initialize_maps();
 		<% end %>
 	});
-	var homeLat='';
-	var homeLng='';
 </script>
 <div class="PageTitle">
 	<%= current_user.company.name %> Loads

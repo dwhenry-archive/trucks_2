@@ -20650,3 +20650,359 @@ Rendered shared/_filter_options (0.00000)
 Rendered shared/_user_bar (0.00000)
 Rendered shared/_navigation (0.00000)
 Completed in 1.15600 (0 reqs/sec) | Rendering: 0.01600 (1%) | DB: 0.01600 (1%) | 200 OK [http://localhost/loads/your]
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-08-01 20:47:10) [GET]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlODhhMDYzNDg1N2NhZWI4
+MjE1ZGRkMzZkNTE4YmJkYzM6DHVzZXJfaWRpECIKZmxhc2hJQzonQWN0aW9u
+Q29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0
+dXJuX3RvMA==--8f0c3320bfef59f24a90473aa252e001032c9483
+  Parameters: {"action"=>"your", "controller"=>"loads"}
+  [4;35;1mUser Columns (0.000000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.016000)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 11) LIMIT 1[0m
+  [4;35;1mCompany Columns (0.016000)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mCompany Load (0.000000)[0m   [0;1mSELECT * FROM `companies` WHERE (`companies`.`id` = 11) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;35;1mLoad Columns (0.000000)[0m   [0mSHOW FIELDS FROM `loads`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `loads` WHERE (`loads`.company_id = 11) [0m
+Rendered shared/_filter_options (0.00000)
+Rendered shared/_user_bar (0.00000)
+Rendered shared/_navigation (0.00000)
+Completed in 1.10900 (0 reqs/sec) | Rendering: 0.03100 (2%) | DB: 0.03200 (2%) | 200 OK [http://localhost/loads/your]
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-08-01 20:47:56) [GET]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlODhhMDYzNDg1N2NhZWI4
+MjE1ZGRkMzZkNTE4YmJkYzM6DHVzZXJfaWRpECIKZmxhc2hJQzonQWN0aW9u
+Q29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0
+dXJuX3RvMA==--8f0c3320bfef59f24a90473aa252e001032c9483
+  Parameters: {"action"=>"your", "controller"=>"loads"}
+  [4;35;1mUser Columns (0.000000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 11) LIMIT 1[0m
+  [4;35;1mCompany Columns (0.015000)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mCompany Load (0.000000)[0m   [0;1mSELECT * FROM `companies` WHERE (`companies`.`id` = 11) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;35;1mLoad Columns (0.000000)[0m   [0mSHOW FIELDS FROM `loads`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `loads` WHERE (`loads`.company_id = 11) [0m
+Rendered shared/_filter_options (0.00000)
+Rendered shared/_user_bar (0.00000)
+Rendered shared/_navigation (0.00000)
+Completed in 1.03100 (0 reqs/sec) | Rendering: 0.01500 (1%) | DB: 0.01500 (1%) | 200 OK [http://localhost/loads/your]
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-08-01 20:48:04) [GET]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlODhhMDYzNDg1N2NhZWI4
+MjE1ZGRkMzZkNTE4YmJkYzM6DHVzZXJfaWRpECIKZmxhc2hJQzonQWN0aW9u
+Q29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0
+dXJuX3RvMA==--8f0c3320bfef59f24a90473aa252e001032c9483
+  Parameters: {"action"=>"your", "controller"=>"loads"}
+  [4;35;1mUser Columns (0.000000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 11) LIMIT 1[0m
+  [4;35;1mCompany Columns (0.000000)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mCompany Load (0.000000)[0m   [0;1mSELECT * FROM `companies` WHERE (`companies`.`id` = 11) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;35;1mLoad Columns (0.000000)[0m   [0mSHOW FIELDS FROM `loads`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `loads` WHERE (`loads`.company_id = 11) [0m
+Rendered shared/_filter_options (0.00000)
+Rendered shared/_user_bar (0.00000)
+Rendered shared/_navigation (0.00000)
+Completed in 0.75000 (1 reqs/sec) | Rendering: 0.01600 (2%) | DB: 0.00000 (0%) | 200 OK [http://localhost/loads/your]
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-08-01 20:48:15) [GET]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlODhhMDYzNDg1N2NhZWI4
+MjE1ZGRkMzZkNTE4YmJkYzM6DHVzZXJfaWRpECIKZmxhc2hJQzonQWN0aW9u
+Q29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0
+dXJuX3RvMA==--8f0c3320bfef59f24a90473aa252e001032c9483
+  Parameters: {"action"=>"your", "controller"=>"loads"}
+  [4;35;1mUser Columns (0.000000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 11) LIMIT 1[0m
+  [4;35;1mCompany Columns (0.016000)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mCompany Load (0.000000)[0m   [0;1mSELECT * FROM `companies` WHERE (`companies`.`id` = 11) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;35;1mLoad Columns (0.000000)[0m   [0mSHOW FIELDS FROM `loads`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `loads` WHERE (`loads`.company_id = 11) [0m
+Rendered shared/_filter_options (0.00000)
+Rendered shared/_user_bar (0.01500)
+Rendered shared/_navigation (0.00000)
+Completed in 0.93700 (1 reqs/sec) | Rendering: 0.04700 (5%) | DB: 0.01600 (1%) | 200 OK [http://localhost/loads/your]
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-08-01 20:48:30) [GET]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlODhhMDYzNDg1N2NhZWI4
+MjE1ZGRkMzZkNTE4YmJkYzM6DHVzZXJfaWRpECIKZmxhc2hJQzonQWN0aW9u
+Q29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0
+dXJuX3RvMA==--8f0c3320bfef59f24a90473aa252e001032c9483
+  Parameters: {"action"=>"your", "controller"=>"loads"}
+  [4;35;1mUser Columns (0.015000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 11) LIMIT 1[0m
+  [4;35;1mCompany Columns (0.000000)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mCompany Load (0.000000)[0m   [0;1mSELECT * FROM `companies` WHERE (`companies`.`id` = 11) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;35;1mLoad Columns (0.000000)[0m   [0mSHOW FIELDS FROM `loads`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `loads` WHERE (`loads`.company_id = 11) [0m
+Rendered shared/_filter_options (0.00000)
+Rendered shared/_user_bar (0.00000)
+Rendered shared/_navigation (0.00000)
+Completed in 0.90600 (1 reqs/sec) | Rendering: 0.01600 (1%) | DB: 0.01500 (1%) | 200 OK [http://localhost/loads/your]
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-08-01 20:49:17) [GET]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlODhhMDYzNDg1N2NhZWI4
+MjE1ZGRkMzZkNTE4YmJkYzM6DHVzZXJfaWRpECIKZmxhc2hJQzonQWN0aW9u
+Q29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0
+dXJuX3RvMA==--8f0c3320bfef59f24a90473aa252e001032c9483
+  Parameters: {"action"=>"your", "controller"=>"loads"}
+  [4;35;1mUser Columns (0.000000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 11) LIMIT 1[0m
+  [4;35;1mCompany Columns (0.000000)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mCompany Load (0.000000)[0m   [0;1mSELECT * FROM `companies` WHERE (`companies`.`id` = 11) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;35;1mLoad Columns (0.000000)[0m   [0mSHOW FIELDS FROM `loads`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `loads` WHERE (`loads`.company_id = 11) [0m
+Rendered shared/_filter_options (0.00000)
+Rendered shared/_user_bar (0.00000)
+Rendered shared/_navigation (0.00000)
+Completed in 0.93700 (1 reqs/sec) | Rendering: 0.01500 (1%) | DB: 0.00000 (0%) | 200 OK [http://localhost/loads/your]
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-08-01 20:49:29) [GET]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlODhhMDYzNDg1N2NhZWI4
+MjE1ZGRkMzZkNTE4YmJkYzM6DHVzZXJfaWRpECIKZmxhc2hJQzonQWN0aW9u
+Q29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0
+dXJuX3RvMA==--8f0c3320bfef59f24a90473aa252e001032c9483
+  Parameters: {"action"=>"your", "controller"=>"loads"}
+  [4;35;1mUser Columns (0.000000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 11) LIMIT 1[0m
+  [4;35;1mCompany Columns (0.000000)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mCompany Load (0.000000)[0m   [0;1mSELECT * FROM `companies` WHERE (`companies`.`id` = 11) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;35;1mLoad Columns (0.000000)[0m   [0mSHOW FIELDS FROM `loads`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `loads` WHERE (`loads`.company_id = 11) [0m
+Rendered shared/_filter_options (0.00000)
+Rendered shared/_user_bar (0.00000)
+Rendered shared/_navigation (0.00000)
+Completed in 0.86000 (1 reqs/sec) | Rendering: 0.01600 (1%) | DB: 0.00000 (0%) | 200 OK [http://localhost/loads/your]
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-08-01 20:49:39) [GET]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlODhhMDYzNDg1N2NhZWI4
+MjE1ZGRkMzZkNTE4YmJkYzM6DHVzZXJfaWRpECIKZmxhc2hJQzonQWN0aW9u
+Q29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0
+dXJuX3RvMA==--8f0c3320bfef59f24a90473aa252e001032c9483
+  Parameters: {"action"=>"your", "controller"=>"loads"}
+  [4;35;1mUser Columns (0.016000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 11) LIMIT 1[0m
+  [4;35;1mCompany Columns (0.016000)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mCompany Load (0.000000)[0m   [0;1mSELECT * FROM `companies` WHERE (`companies`.`id` = 11) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;35;1mLoad Columns (0.015000)[0m   [0mSHOW FIELDS FROM `loads`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `loads` WHERE (`loads`.company_id = 11) [0m
+Rendered shared/_filter_options (0.00000)
+Rendered shared/_user_bar (0.00000)
+Rendered shared/_navigation (0.00000)
+Completed in 0.95300 (1 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.04700 (4%) | 200 OK [http://localhost/loads/your]
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-08-01 20:49:47) [GET]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlODhhMDYzNDg1N2NhZWI4
+MjE1ZGRkMzZkNTE4YmJkYzM6DHVzZXJfaWRpECIKZmxhc2hJQzonQWN0aW9u
+Q29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0
+dXJuX3RvMA==--8f0c3320bfef59f24a90473aa252e001032c9483
+  Parameters: {"action"=>"your", "controller"=>"loads"}
+  [4;35;1mUser Columns (0.016000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 11) LIMIT 1[0m
+  [4;35;1mCompany Columns (0.000000)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mCompany Load (0.000000)[0m   [0;1mSELECT * FROM `companies` WHERE (`companies`.`id` = 11) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;35;1mLoad Columns (0.000000)[0m   [0mSHOW FIELDS FROM `loads`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `loads` WHERE (`loads`.company_id = 11) [0m
+Rendered shared/_filter_options (0.00000)
+Rendered shared/_user_bar (0.00000)
+Rendered shared/_navigation (0.00000)
+Completed in 1.14100 (0 reqs/sec) | Rendering: 0.01600 (1%) | DB: 0.01600 (1%) | 200 OK [http://localhost/loads/your]
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-08-01 20:49:58) [GET]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlODhhMDYzNDg1N2NhZWI4
+MjE1ZGRkMzZkNTE4YmJkYzM6DHVzZXJfaWRpECIKZmxhc2hJQzonQWN0aW9u
+Q29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0
+dXJuX3RvMA==--8f0c3320bfef59f24a90473aa252e001032c9483
+  Parameters: {"action"=>"your", "controller"=>"loads"}
+  [4;35;1mUser Columns (0.016000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 11) LIMIT 1[0m
+  [4;35;1mCompany Columns (0.000000)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mCompany Load (0.000000)[0m   [0;1mSELECT * FROM `companies` WHERE (`companies`.`id` = 11) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;35;1mLoad Columns (0.000000)[0m   [0mSHOW FIELDS FROM `loads`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `loads` WHERE (`loads`.company_id = 11) [0m
+Rendered shared/_filter_options (0.00000)
+Rendered shared/_user_bar (0.00000)
+Rendered shared/_navigation (0.00000)
+Completed in 1.18700 (0 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.01600 (1%) | 200 OK [http://localhost/loads/your]
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-08-01 20:50:12) [GET]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlODhhMDYzNDg1N2NhZWI4
+MjE1ZGRkMzZkNTE4YmJkYzM6DHVzZXJfaWRpECIKZmxhc2hJQzonQWN0aW9u
+Q29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0
+dXJuX3RvMA==--8f0c3320bfef59f24a90473aa252e001032c9483
+  Parameters: {"action"=>"your", "controller"=>"loads"}
+  [4;35;1mUser Columns (0.016000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 11) LIMIT 1[0m
+  [4;35;1mCompany Columns (0.000000)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mCompany Load (0.000000)[0m   [0;1mSELECT * FROM `companies` WHERE (`companies`.`id` = 11) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;35;1mLoad Columns (0.000000)[0m   [0mSHOW FIELDS FROM `loads`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `loads` WHERE (`loads`.company_id = 11) [0m
+Rendered shared/_filter_options (0.00000)
+Rendered shared/_user_bar (0.00000)
+Rendered shared/_navigation (0.00000)
+Completed in 1.07800 (0 reqs/sec) | Rendering: 0.01500 (1%) | DB: 0.01600 (1%) | 200 OK [http://localhost/loads/your]
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-08-01 20:50:22) [GET]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlODhhMDYzNDg1N2NhZWI4
+MjE1ZGRkMzZkNTE4YmJkYzM6DHVzZXJfaWRpECIKZmxhc2hJQzonQWN0aW9u
+Q29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0
+dXJuX3RvMA==--8f0c3320bfef59f24a90473aa252e001032c9483
+  Parameters: {"action"=>"your", "controller"=>"loads"}
+  [4;35;1mUser Columns (0.000000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.016000)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 11) LIMIT 1[0m
+  [4;35;1mCompany Columns (0.016000)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mCompany Load (0.000000)[0m   [0;1mSELECT * FROM `companies` WHERE (`companies`.`id` = 11) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;35;1mLoad Columns (0.000000)[0m   [0mSHOW FIELDS FROM `loads`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `loads` WHERE (`loads`.company_id = 11) [0m
+Rendered shared/_filter_options (0.00000)
+Rendered shared/_user_bar (0.00000)
+Rendered shared/_navigation (0.00000)
+Completed in 1.09300 (0 reqs/sec) | Rendering: 0.01500 (1%) | DB: 0.03200 (2%) | 200 OK [http://localhost/loads/your]
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-08-01 20:50:29) [GET]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlODhhMDYzNDg1N2NhZWI4
+MjE1ZGRkMzZkNTE4YmJkYzM6DHVzZXJfaWRpECIKZmxhc2hJQzonQWN0aW9u
+Q29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0
+dXJuX3RvMA==--8f0c3320bfef59f24a90473aa252e001032c9483
+  Parameters: {"action"=>"your", "controller"=>"loads"}
+  [4;35;1mUser Columns (0.016000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 11) LIMIT 1[0m
+  [4;35;1mCompany Columns (0.000000)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mCompany Load (0.000000)[0m   [0;1mSELECT * FROM `companies` WHERE (`companies`.`id` = 11) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;35;1mLoad Columns (0.000000)[0m   [0mSHOW FIELDS FROM `loads`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `loads` WHERE (`loads`.company_id = 11) [0m
+Rendered shared/_filter_options (0.00000)
+Rendered shared/_user_bar (0.00000)
+Rendered shared/_navigation (0.00000)
+Completed in 1.18700 (0 reqs/sec) | Rendering: 0.01500 (1%) | DB: 0.01600 (1%) | 200 OK [http://localhost/loads/your]
+
+
+Processing LoadsController#new (for 127.0.0.1 at 2009-08-01 20:53:43) [GET]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlODhhMDYzNDg1N2NhZWI4
+MjE1ZGRkMzZkNTE4YmJkYzM6DHVzZXJfaWRpECIKZmxhc2hJQzonQWN0aW9u
+Q29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0
+dXJuX3RvMA==--8f0c3320bfef59f24a90473aa252e001032c9483
+  Parameters: {"action"=>"new", "controller"=>"loads"}
+  [4;35;1mUser Columns (0.016000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 11) LIMIT 1[0m
+  [4;35;1mLoad Columns (0.016000)[0m   [0mSHOW FIELDS FROM `loads`[0m
+Rendering template within layouts/application
+Rendering loads/new
+Rendered shared/_filter_options (0.00000)
+Rendered shared/_user_bar (0.00000)
+Rendered shared/_navigation (0.00000)
+Completed in 1.20300 (0 reqs/sec) | Rendering: 0.06200 (5%) | DB: 0.03200 (2%) | 200 OK [http://localhost/loads/new]
+  [4;36;1mSQL (0.000000)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.015000)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateCompanies (20090725142010)
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20090725142018)
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateLoads (20090725142030)
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateMapPoints (20090801204443)
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.094000)[0m   [0mCREATE TABLE `map_points` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `load_id` int(11) DEFAULT NULL NULL, `point_type` varchar(255) DEFAULT NULL NULL, `load_type` varchar(255) DEFAULT NULL NULL, `lat` varchar(255) DEFAULT NULL NULL, `lng` varchar(255) DEFAULT NULL NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.203000)[0m   [0;1mCREATE INDEX `index_map_points_on_load_type_and_point_type` ON `map_points` (`load_type`, `point_type`)[0m
+  [4;35;1mSQL (0.031000)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090801204443')[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mSQL (0.015000)[0m   [0mdescribe `companies`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSHOW KEYS FROM `companies`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSHOW FIELDS FROM `loads`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mdescribe `loads`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSHOW KEYS FROM `loads`[0m
+  [4;36;1mSQL (0.016000)[0m   [0;1mSHOW FIELDS FROM `map_points`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mdescribe `map_points`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSHOW KEYS FROM `map_points`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.016000)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateMapPoints (20090801204443)
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.063000)[0m   [0mDROP TABLE `map_points`[0m
+  [4;36;1mSQL (0.031000)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20090801204443'[0m
+  [4;35;1mSQL (0.016000)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mdescribe `companies`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSHOW KEYS FROM `companies`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSHOW FIELDS FROM `loads`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mdescribe `loads`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSHOW KEYS FROM `loads`[0m
+  [4;35;1mSQL (0.015000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateCompanies (20090725142010)
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20090725142018)
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateLoads (20090725142030)
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateMapPoints (20090801204443)
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.141000)[0m   [0mCREATE TABLE `map_points` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `load_id` int(11) DEFAULT NULL NULL, `point_type` varchar(255) DEFAULT NULL NULL, `load_type` varchar(255) DEFAULT NULL NULL, `lat` float DEFAULT NULL NULL, `lng` float DEFAULT NULL NULL, `point_dist` float DEFAULT NULL NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.219000)[0m   [0;1mCREATE INDEX `index_map_points_on_load_type_and_point_type` ON `map_points` (`load_type`, `point_type`)[0m
+  [4;35;1mSQL (0.031000)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090801204443')[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mdescribe `companies`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSHOW KEYS FROM `companies`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSHOW FIELDS FROM `loads`[0m
+  [4;36;1mSQL (0.015000)[0m   [0;1mdescribe `loads`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSHOW KEYS FROM `loads`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSHOW FIELDS FROM `map_points`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mdescribe `map_points`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSHOW KEYS FROM `map_points`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.016000)[0m   [0mSHOW KEYS FROM `users`[0m

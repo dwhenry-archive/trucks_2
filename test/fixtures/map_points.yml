@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  load: 
+  point_type: MyString
+  load_type: MyString
+  lat: MyString
+  lng: MyString
+
+two:
+  load: 
+  point_type: MyString
+  load_type: MyString
+  lat: MyString
+  lng: MyString

@@ -37,4 +37,4 @@ config.action_mailer.smtp_settings = {
 #    :user_name => "none",
 #    :password => "none"
 }
-config.action_mailer.default_url_options = { :host => “www.bulkbackloads.com.au” }
+config.action_mailer.default_url_options = { :host => 'www.bulkbackloads.com.au' }

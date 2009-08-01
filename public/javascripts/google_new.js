@@ -25,7 +25,8 @@ function initialize_maps() {
 	if (homeLat != '' && false) 
 	    map.centerAndZoom(new GPoint(homeLat, homeLng), 6);
 	else 
-	    map.centerAndZoom(new GPoint(133.53, -23.48), 13);
+	    map.centerAndZoom(new GPoint(134.00, -26.00), 13);
+    //map.centerAndZoom(new GPoint(133.53, -23.48), 13);
 }    
 
 function initialize_maps_with_trip(el_name) {
