@@ -24,6 +24,7 @@ class SessionsController < ApplicationController
       redirect_back_or_default('/')
       flash[:notice] = "Logged in successfully"
     else
+      flash[:notice] = "Logged in failed. Please try Again"
       note_failed_signin
       @login       = params[:login]
       @remember_me = params[:remember_me]

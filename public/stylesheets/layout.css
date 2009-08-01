@@ -6,7 +6,19 @@
  * 5: #D9BA82 - cream
  * 
  * */
- 
+/* Flash Notice Style */
+#flash {
+	text-align: center;
+	padding: .5em;
+    margin-bottom: 1em;
+	font: bold 1em sans-serif;
+}
+
+.notice {
+	border: 1px solid #000099;
+	background-color: #F0F0FF;
+}
+
 .PageTitle {
 	color: #4B72A6;
 	width: 100%;

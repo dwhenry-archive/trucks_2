@@ -1,11 +1,11 @@
 class UsersController < ApplicationController
   # Be sure to include AuthenticationSystem in Application Controller instead
   #include AuthenticatedSystem
-  skip_before_filter :login_required, :only => [:activate,:send_activation_code]
+  skip_before_filter :login_required, :only => [:activate,:send_activation_code,:create]
 
   # render new.rhtml
   def new
-    redirect_to new_company_path
+    #redirect_to new_company_path
     # @user = User.new
   end
  
@@ -29,7 +29,7 @@ class UsersController < ApplicationController
     if (!params[:activation_code].blank?) && @user && !@user.active?
       # show password set page...
       flash[:notice] = "Please set User Password to complete Signup!"
-      render new_user_path
+      render :action => :new
     else
       # ask for login and resend new activation code
       flash[:notice] = "Incorrect Activation Code!"
@@ -55,17 +55,27 @@ class UsersController < ApplicationController
 
   # Reset password - admin action
   def create
-    @user = User.find(params[:id])
+    user = User.find(params[:id])
 
-    if @user.activate!(params[:activation_code],params[:password], params[:password_confirmation])
+    if user.activate!(params[:activation_code],params[:password], params[:password_confirmation])
       flash[:notice] = "Password successfully updated."
       #log_action("Security", "User (#{current_user.login}) has reset password for (#{@user.login})")
-      redirect_to users_path
+      # make sure user is logged in
+      self.current_user = user
+      new_cookie_flag = (params[:remember_me] == "1")
+      handle_remember_cookie! new_cookie_flag
+      redirect_back_or_default('/')
+
+      #redirect_to users_path
     else
       #@old_password = nil
-      flash.now[:error] = @user.errors.on_base || "There was a problem updating your password."
+      flash.now[:error] = user.errors.on_base || "There was a problem updating your password."
       #log_action("Security", "Admin (#{current_user.login}) has FAILED to reset password for (#{@user.login})")
-      render :action => 'new'
+      if user and user.activation_code == params[:activation_code]
+        render :action => :new
+      else
+        render :action => 'send_activation_code'
+      end
     end
   end
 end

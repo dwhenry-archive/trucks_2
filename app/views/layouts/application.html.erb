@@ -44,8 +44,11 @@
 
 	<div id="bd"><!-- body -->
 	    <% if flash[:notice] %>
+          <br>
+          <div id="flash" class="notice">
             <%= flash[:notice] %><br>
-        <% end %>  
+          </div>
+        <% end %>
 		<%= yield %>
 	</div>
 	  

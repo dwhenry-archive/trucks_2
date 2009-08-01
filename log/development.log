@@ -19295,3 +19295,1358 @@ ActionController::RenderError (You called render with invalid options : "/users/
     script/server:3
 
 Rendering D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing UsersController#activate (for 127.0.0.1 at 2009-08-01 20:26:22) [GET]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlZTE3ZTJmNjJmNmQ2NjQ0
+ZGQ0MTAyNzMyODA0YTZkYTc6DHVzZXJfaWQwIgpmbGFzaElDOidBY3Rpb25D
+b250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewY6C25vdGljZSIxUGxlYXNl
+IHNldCBVc2VyIFBhc3N3b3JkIHRvIGNvbXBsZXRlIFNpZ251cCEGOgpAdXNl
+ZHsGOwlGOg5yZXR1cm5fdG8iDy91c2Vycy9uZXc=--281ca61d80ab4fcbf07bcbc4a54b594ad7bb2f7c
+  Parameters: {"action"=>"activate", "activation_code"=>"b1ade50680a760809ab1af8f1eaf79e0db70eda3", "controller"=>"users"}
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`activation_code` = 'b1ade50680a760809ab1af8f1eaf79e0db70eda3') LIMIT 1[0m
+Rendering template within layouts/application
+
+
+ActionController::RenderError (You called render with invalid options : "/users/new"):
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:848:in `render_with_no_layout'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:51:in `render'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:51:in `render'
+    /app/controllers/users_controller.rb:32:in `activate'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1162:in `send'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1162:in `perform_action_without_filters'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:580:in `call_filters'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.0/lib/active_record/query_cache.rb:8:in `cache'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `send'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `process_without_filters'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/session_management.rb:130:in `process'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:389:in `process'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/bin/../lib/mongrel/rails.rb:76:in `process'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/bin/../lib/mongrel/rails.rb:74:in `process'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:159:in `process_client'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `each'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `process_client'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `initialize'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `new'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `initialize'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `new'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `run'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/configurator.rb:282:in `run'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/configurator.rb:281:in `each'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/configurator.rb:281:in `run'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/bin/mongrel_rails:128:in `run'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/command.rb:212:in `run'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/bin/mongrel_rails:281
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/commands/servers/mongrel.rb:64
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/commands/server.rb:39
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing UsersController#activate (for 127.0.0.1 at 2009-08-01 20:26:23) [GET]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlZTE3ZTJmNjJmNmQ2NjQ0
+ZGQ0MTAyNzMyODA0YTZkYTc6DHVzZXJfaWQwIgpmbGFzaElDOidBY3Rpb25D
+b250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewY6C25vdGljZSIxUGxlYXNl
+IHNldCBVc2VyIFBhc3N3b3JkIHRvIGNvbXBsZXRlIFNpZ251cCEGOgpAdXNl
+ZHsGOwlGOg5yZXR1cm5fdG8iDy91c2Vycy9uZXc=--281ca61d80ab4fcbf07bcbc4a54b594ad7bb2f7c
+  Parameters: {"action"=>"activate", "activation_code"=>"b1ade50680a760809ab1af8f1eaf79e0db70eda3", "controller"=>"users"}
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+  [4;36;1mUser Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`activation_code` = 'b1ade50680a760809ab1af8f1eaf79e0db70eda3') LIMIT 1[0m
+Rendering template within layouts/application
+
+
+ActionController::RenderError (You called render with invalid options : "/users/new"):
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:848:in `render_with_no_layout'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:51:in `render'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:51:in `render'
+    /app/controllers/users_controller.rb:32:in `activate'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1162:in `send'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1162:in `perform_action_without_filters'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:580:in `call_filters'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.0/lib/active_record/query_cache.rb:8:in `cache'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `send'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `process_without_filters'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/session_management.rb:130:in `process'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:389:in `process'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/bin/../lib/mongrel/rails.rb:76:in `process'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/bin/../lib/mongrel/rails.rb:74:in `process'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:159:in `process_client'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `each'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `process_client'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `initialize'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `new'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `initialize'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `new'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `run'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/configurator.rb:282:in `run'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/configurator.rb:281:in `each'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/configurator.rb:281:in `run'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/bin/mongrel_rails:128:in `run'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/command.rb:212:in `run'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/bin/mongrel_rails:281
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/commands/servers/mongrel.rb:64
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/commands/server.rb:39
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing UsersController#activate (for 127.0.0.1 at 2009-08-01 20:26:25) [GET]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlZTE3ZTJmNjJmNmQ2NjQ0
+ZGQ0MTAyNzMyODA0YTZkYTc6DHVzZXJfaWQwIgpmbGFzaElDOidBY3Rpb25D
+b250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewY6C25vdGljZSIxUGxlYXNl
+IHNldCBVc2VyIFBhc3N3b3JkIHRvIGNvbXBsZXRlIFNpZ251cCEGOgpAdXNl
+ZHsGOwlGOg5yZXR1cm5fdG8iDy91c2Vycy9uZXc=--281ca61d80ab4fcbf07bcbc4a54b594ad7bb2f7c
+  Parameters: {"action"=>"activate", "activation_code"=>"b1ade50680a760809ab1af8f1eaf79e0db70eda3", "controller"=>"users"}
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+  [4;36;1mUser Columns (0.015000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`activation_code` = 'b1ade50680a760809ab1af8f1eaf79e0db70eda3') LIMIT 1[0m
+Rendering template within layouts/application
+
+
+ActionController::RenderError (You called render with invalid options : "/users/new"):
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:848:in `render_with_no_layout'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:51:in `render'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:51:in `render'
+    /app/controllers/users_controller.rb:32:in `activate'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1162:in `send'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1162:in `perform_action_without_filters'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:580:in `call_filters'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.0/lib/active_record/query_cache.rb:8:in `cache'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `send'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `process_without_filters'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/session_management.rb:130:in `process'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:389:in `process'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/bin/../lib/mongrel/rails.rb:76:in `process'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/bin/../lib/mongrel/rails.rb:74:in `process'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:159:in `process_client'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `each'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `process_client'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `initialize'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `new'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `initialize'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `new'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `run'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/configurator.rb:282:in `run'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/configurator.rb:281:in `each'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/configurator.rb:281:in `run'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/bin/mongrel_rails:128:in `run'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/command.rb:212:in `run'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/bin/mongrel_rails:281
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/commands/servers/mongrel.rb:64
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/commands/server.rb:39
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing UsersController#activate (for 127.0.0.1 at 2009-08-01 20:26:37) [GET]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlZTE3ZTJmNjJmNmQ2NjQ0
+ZGQ0MTAyNzMyODA0YTZkYTc6DHVzZXJfaWQwIgpmbGFzaElDOidBY3Rpb25D
+b250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewY6C25vdGljZSIxUGxlYXNl
+IHNldCBVc2VyIFBhc3N3b3JkIHRvIGNvbXBsZXRlIFNpZ251cCEGOgpAdXNl
+ZHsGOwlGOg5yZXR1cm5fdG8iDy91c2Vycy9uZXc=--281ca61d80ab4fcbf07bcbc4a54b594ad7bb2f7c
+  Parameters: {"action"=>"activate", "activation_code"=>"b1ade50680a760809ab1af8f1eaf79e0db70eda3", "controller"=>"users"}
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.016000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`activation_code` = 'b1ade50680a760809ab1af8f1eaf79e0db70eda3') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered shared/_user_bar (0.00000)
+Rendered shared/_navigation (0.00000)
+Completed in 0.84400 (1 reqs/sec) | Rendering: 0.03100 (3%) | DB: 0.01600 (1%) | 200 OK [http://localhost/activate/b1ade50680a760809ab1af8f1eaf79e0db70eda3]
+
+
+Processing UsersController#activate (for 127.0.0.1 at 2009-08-01 20:27:10) [GET]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlZTE3ZTJmNjJmNmQ2NjQ0
+ZGQ0MTAyNzMyODA0YTZkYTc6DHVzZXJfaWQwIgpmbGFzaElDOidBY3Rpb25D
+b250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewY6C25vdGljZSIxUGxlYXNl
+IHNldCBVc2VyIFBhc3N3b3JkIHRvIGNvbXBsZXRlIFNpZ251cCEGOgpAdXNl
+ZHsGOwlGOg5yZXR1cm5fdG8iDy91c2Vycy9uZXc=--281ca61d80ab4fcbf07bcbc4a54b594ad7bb2f7c
+  Parameters: {"action"=>"activate", "activation_code"=>"b1ade50680a760809ab1af8f1eaf79e0db70eda3", "controller"=>"users"}
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+  [4;36;1mUser Columns (0.015000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`activation_code` = 'b1ade50680a760809ab1af8f1eaf79e0db70eda3') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered shared/_user_bar (0.00000)
+Rendered shared/_navigation (0.00000)
+Completed in 0.89100 (1 reqs/sec) | Rendering: 0.01600 (1%) | DB: 0.01500 (1%) | 200 OK [http://localhost/activate/b1ade50680a760809ab1af8f1eaf79e0db70eda3]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-08-01 20:27:17) [POST]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlZTE3ZTJmNjJmNmQ2NjQ0
+ZGQ0MTAyNzMyODA0YTZkYTc6DHVzZXJfaWQwIgpmbGFzaElDOidBY3Rpb25D
+b250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewY6C25vdGljZSIxUGxlYXNl
+IHNldCBVc2VyIFBhc3N3b3JkIHRvIGNvbXBsZXRlIFNpZ251cCEGOgpAdXNl
+ZHsGOwlGOg5yZXR1cm5fdG8iDy91c2Vycy9uZXc=--281ca61d80ab4fcbf07bcbc4a54b594ad7bb2f7c
+  Parameters: {"commit"=>"Set Password", "password_confirmation"=>"ybt486", "activation_code"=>"b1ade50680a760809ab1af8f1eaf79e0db70eda3", "authenticity_token"=>"13bad097e94acb71a694cabf959bdeb88aebb936", "action"=>"create", "id"=>"11", "controller"=>"users", "password"=>"ybt486"}
+Redirected to http://localhost:3000/dashboard/home
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1.20300 (0 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://localhost/register]
+
+
+Processing DashboardController#home (for 127.0.0.1 at 2009-08-01 20:27:18) [GET]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlZTE3ZTJmNjJmNmQ2NjQ0
+ZGQ0MTAyNzMyODA0YTZkYTc6DHVzZXJfaWQwIgpmbGFzaElDOidBY3Rpb25D
+b250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewY6C25vdGljZSIxUGxlYXNl
+IHNldCBVc2VyIFBhc3N3b3JkIHRvIGNvbXBsZXRlIFNpZ251cCEGOgpAdXNl
+ZHsGOwlUOg5yZXR1cm5fdG8iDi9yZWdpc3Rlcg==--6d864204ce0c9120777cac4145cdd5dcda052c1d
+  Parameters: {"action"=>"home", "controller"=>"dashboard"}
+Rendering template within layouts/application
+Rendering dashboard/home
+Rendered shared/_user_bar (0.00000)
+Rendered shared/_navigation (0.00000)
+Completed in 0.67200 (1 reqs/sec) | Rendering: 0.01600 (2%) | DB: 0.00000 (0%) | 200 OK [http://localhost/dashboard/home]
+
+
+Processing UsersController#activate (for 127.0.0.1 at 2009-08-01 20:27:34) [GET]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlZTE3ZTJmNjJmNmQ2NjQ0
+ZGQ0MTAyNzMyODA0YTZkYTc6DHVzZXJfaWQwIgpmbGFzaElDOidBY3Rpb25D
+b250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsAOg5yZXR1
+cm5fdG8iDi9yZWdpc3Rlcg==--ba946ca0477787a75ce4465e29e43f53be1f16bd
+  Parameters: {"action"=>"activate", "activation_code"=>"b1ade50680a760809ab1af8f1eaf79e0db70eda3", "controller"=>"users"}
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+  [4;36;1mUser Columns (0.015000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`activation_code` = 'b1ade50680a760809ab1af8f1eaf79e0db70eda3') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/new
+
+
+ActionView::TemplateError (undefined local variable or method `dashboard_path' for #<ActionView::Base:0x442508c>) on line #38 of users/new.html.erb:
+35: 	        &nbsp;
+36: 	    </div>
+37: 	    <div class="data">
+38: 	        <span class="button lt_blue"><%= link_to 'Cancel', dashboard_path %></span>
+39: 	        <%= submit_tag "Set Password", {:class => 'button lt_blue', :style => "display:inline"} %>
+40: 	    </div>
+41: 	</div>	
+
+    app/views/users/new.html.erb:38:in `_run_erb_47app47views47users47new46html46erb'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/helpers/capture_helper.rb:141:in `call'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/helpers/capture_helper.rb:141:in `capture_erb_with_buffer'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/helpers/capture_helper.rb:44:in `capture'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/helpers/form_tag_helper.rb:444:in `form_tag_in_block'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/helpers/form_tag_helper.rb:39:in `form_tag'
+    app/views/users/new.html.erb:10:in `_run_erb_47app47views47users47new46html46erb'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/base.rb:338:in `send'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/base.rb:338:in `execute'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/template_handlers/compilable.rb:29:in `send'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/template_handlers/compilable.rb:29:in `render'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/template.rb:35:in `render'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/template.rb:22:in `render_template'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/base.rb:245:in `render_file'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1108:in `render_for_file'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:865:in `render_with_no_layout'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:880:in `render_with_no_layout'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:51:in `render'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:51:in `render'
+    app/controllers/users_controller.rb:32:in `activate'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1162:in `send'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1162:in `perform_action_without_filters'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:580:in `call_filters'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.0/lib/active_record/query_cache.rb:8:in `cache'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `send'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `process_without_filters'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/session_management.rb:130:in `process'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:389:in `process'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/rails.rb:76:in `process'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/rails.rb:74:in `synchronize'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/rails.rb:74:in `process'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:159:in `process_client'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `each'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `process_client'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `initialize'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `new'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `initialize'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `new'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `run'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/configurator.rb:282:in `run'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/configurator.rb:281:in `each'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/configurator.rb:281:in `run'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/bin/mongrel_rails:128:in `run'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/command.rb:212:in `run'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/bin/mongrel_rails:281
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/commands/servers/mongrel.rb:64
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/commands/server.rb:39
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing UsersController#activate (for 127.0.0.1 at 2009-08-01 20:27:55) [GET]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlZTE3ZTJmNjJmNmQ2NjQ0
+ZGQ0MTAyNzMyODA0YTZkYTc6DHVzZXJfaWQwIgpmbGFzaElDOidBY3Rpb25D
+b250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewY6C25vdGljZSIxUGxlYXNl
+IHNldCBVc2VyIFBhc3N3b3JkIHRvIGNvbXBsZXRlIFNpZ251cCEGOgpAdXNl
+ZHsGOwlGOg5yZXR1cm5fdG8iDi9yZWdpc3Rlcg==--967a78580c8d5ff912fae5d1ae645aa8f118b9fb
+  Parameters: {"action"=>"activate", "activation_code"=>"b1ade50680a760809ab1af8f1eaf79e0db70eda3", "controller"=>"users"}
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+  [4;36;1mUser Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`activation_code` = 'b1ade50680a760809ab1af8f1eaf79e0db70eda3') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered shared/_user_bar (0.00000)
+Rendered shared/_navigation (0.00000)
+Completed in 0.96900 (1 reqs/sec) | Rendering: 0.01600 (1%) | DB: 0.01600 (1%) | 200 OK [http://localhost/activate/b1ade50680a760809ab1af8f1eaf79e0db70eda3]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-08-01 20:30:52) [POST]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlZTE3ZTJmNjJmNmQ2NjQ0
+ZGQ0MTAyNzMyODA0YTZkYTc6DHVzZXJfaWQwIgpmbGFzaElDOidBY3Rpb25D
+b250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewY6C25vdGljZSIxUGxlYXNl
+IHNldCBVc2VyIFBhc3N3b3JkIHRvIGNvbXBsZXRlIFNpZ251cCEGOgpAdXNl
+ZHsGOwlGOg5yZXR1cm5fdG8iDi9yZWdpc3Rlcg==--967a78580c8d5ff912fae5d1ae645aa8f118b9fb
+  Parameters: {"commit"=>"Set Password", "password_confirmation"=>"ybt486", "activation_code"=>"b1ade50680a760809ab1af8f1eaf79e0db70eda3", "authenticity_token"=>"13bad097e94acb71a694cabf959bdeb88aebb936", "action"=>"create", "id"=>"11", "controller"=>"users", "password"=>"ybt486"}
+Redirected to http://localhost:3000/dashboard/home
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0.93700 (1 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://localhost/register]
+
+
+Processing DashboardController#home (for 127.0.0.1 at 2009-08-01 20:30:53) [GET]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlZTE3ZTJmNjJmNmQ2NjQ0
+ZGQ0MTAyNzMyODA0YTZkYTc6DHVzZXJfaWQwIgpmbGFzaElDOidBY3Rpb25D
+b250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewY6C25vdGljZSIxUGxlYXNl
+IHNldCBVc2VyIFBhc3N3b3JkIHRvIGNvbXBsZXRlIFNpZ251cCEGOgpAdXNl
+ZHsGOwlUOg5yZXR1cm5fdG8iDi9yZWdpc3Rlcg==--6d864204ce0c9120777cac4145cdd5dcda052c1d
+  Parameters: {"action"=>"home", "controller"=>"dashboard"}
+Rendering template within layouts/application
+Rendering dashboard/home
+Rendered shared/_user_bar (0.00000)
+Rendered shared/_navigation (0.00000)
+Completed in 0.71900 (1 reqs/sec) | Rendering: 0.01600 (2%) | DB: 0.00000 (0%) | 200 OK [http://localhost/dashboard/home]
+
+
+Processing UsersController#activate (for 127.0.0.1 at 2009-08-01 20:32:37) [GET]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlZTE3ZTJmNjJmNmQ2NjQ0
+ZGQ0MTAyNzMyODA0YTZkYTc6DHVzZXJfaWQwIgpmbGFzaElDOidBY3Rpb25D
+b250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsAOg5yZXR1
+cm5fdG8iDi9yZWdpc3Rlcg==--ba946ca0477787a75ce4465e29e43f53be1f16bd
+  Parameters: {"action"=>"activate", "activation_code"=>"b1ade50680a760809ab1af8f1eaf79e0db70eda3", "controller"=>"users"}
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+  [4;36;1mUser Columns (0.015000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`activation_code` = 'b1ade50680a760809ab1af8f1eaf79e0db70eda3') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered shared/_user_bar (0.00000)
+Rendered shared/_navigation (0.00000)
+Completed in 1.26600 (0 reqs/sec) | Rendering: 0.01600 (1%) | DB: 0.01500 (1%) | 200 OK [http://localhost/activate/b1ade50680a760809ab1af8f1eaf79e0db70eda3]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-08-01 20:32:44) [POST]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlZTE3ZTJmNjJmNmQ2NjQ0
+ZGQ0MTAyNzMyODA0YTZkYTc6DHVzZXJfaWQwIgpmbGFzaElDOidBY3Rpb25D
+b250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewY6C25vdGljZSIxUGxlYXNl
+IHNldCBVc2VyIFBhc3N3b3JkIHRvIGNvbXBsZXRlIFNpZ251cCEGOgpAdXNl
+ZHsGOwlGOg5yZXR1cm5fdG8iDi9yZWdpc3Rlcg==--967a78580c8d5ff912fae5d1ae645aa8f118b9fb
+  Parameters: {"commit"=>"Set Password", "password_confirmation"=>"ybt486", "activation_code"=>"b1ade50680a760809ab1af8f1eaf79e0db70eda3", "authenticity_token"=>"13bad097e94acb71a694cabf959bdeb88aebb936", "action"=>"create", "id"=>"11", "controller"=>"users", "password"=>"ybt486"}
+  [4;36;1mUser Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 11) [0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT `login` FROM `users` WHERE (`users`.login = 'test41@mytest.com' AND `users`.id <> 11) [0m
+  [4;36;1mUser Update (0.000000)[0m   [0;1mUPDATE `users` SET `crypted_password` = '127e8e0187b4a0574623b3be45f4be6ad0601d90', `updated_at` = '2009-08-01 19:32:45' WHERE `id` = 11[0m
+  [4;35;1mSQL (0.344000)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT `login` FROM `users` WHERE (`users`.login = 'test41@mytest.com' AND `users`.id <> 11) [0m
+  [4;36;1mUser Update (0.016000)[0m   [0;1mUPDATE `users` SET `activated_at` = '2009-08-01 19:32:45', `activation_code` = NULL, `updated_at` = '2009-08-01 19:32:45' WHERE `id` = 11[0m
+  [4;35;1mSQL (0.031000)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/users
+Completed in 1.53100 (0 reqs/sec) | DB: 0.40700 (26%) | 302 Found [http://localhost/register]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-08-01 20:32:46) [GET]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlZTE3ZTJmNjJmNmQ2NjQ0
+ZGQ0MTAyNzMyODA0YTZkYTc6DHVzZXJfaWQwIgpmbGFzaElDOidBY3Rpb25D
+b250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewY6C25vdGljZSIjUGFzc3dv
+cmQgc3VjY2Vzc2Z1bGx5IHVwZGF0ZWQuBjoKQHVzZWR7BjsJRjoOcmV0dXJu
+X3RvIg4vcmVnaXN0ZXI=--72417a81ae2b02d0defa8dacd034b223a3122743
+  Parameters: {"action"=>"index", "controller"=>"users"}
+Redirected to http://localhost:3000/dashboard/home
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0.76500 (1 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://localhost/users]
+
+
+Processing DashboardController#home (for 127.0.0.1 at 2009-08-01 20:32:47) [GET]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlZTE3ZTJmNjJmNmQ2NjQ0
+ZGQ0MTAyNzMyODA0YTZkYTc6DHVzZXJfaWQwIgpmbGFzaElDOidBY3Rpb25D
+b250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewY6C25vdGljZSIjUGFzc3dv
+cmQgc3VjY2Vzc2Z1bGx5IHVwZGF0ZWQuBjoKQHVzZWR7BjsJVDoOcmV0dXJu
+X3RvIgsvdXNlcnM=--731d53b9739468fe2327467e5918e749fb8e4cb3
+  Parameters: {"action"=>"home", "controller"=>"dashboard"}
+Rendering template within layouts/application
+Rendering dashboard/home
+Rendered shared/_user_bar (0.00000)
+Rendered shared/_navigation (0.00000)
+Completed in 0.65600 (1 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.00000 (0%) | 200 OK [http://localhost/dashboard/home]
+
+
+Processing DashboardController#login (for 127.0.0.1 at 2009-08-01 20:34:38) [GET]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlZTE3ZTJmNjJmNmQ2NjQ0
+ZGQ0MTAyNzMyODA0YTZkYTc6DHVzZXJfaWQwIgpmbGFzaElDOidBY3Rpb25D
+b250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsAOg5yZXR1
+cm5fdG8iCy91c2Vycw==--0adce6242d4de33447df1e7f25d5f60367f718d2
+  Parameters: {"action"=>"login", "controller"=>"dashboard"}
+Rendered shared/_login (0.00000)
+Completed in 0.90600 (1 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.00000 (0%) | 200 OK [http://localhost/dashboard/login]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-08-01 20:34:54) [POST]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlZTE3ZTJmNjJmNmQ2NjQ0
+ZGQ0MTAyNzMyODA0YTZkYTc6DHVzZXJfaWQwIgpmbGFzaElDOidBY3Rpb25D
+b250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsAOg5yZXR1
+cm5fdG8iCy91c2Vycw==--0adce6242d4de33447df1e7f25d5f60367f718d2
+  Parameters: {"commit"=>"Login", "authenticity_token"=>"13bad097e94acb71a694cabf959bdeb88aebb936", "action"=>"create", "controller"=>"sessions", "password"=>"ybt486", "login"=>"test41@mytest.com"}
+
+***** Debugger requested, but was not available: Start server with --debugger to enable *****
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE (login = 'test41@mytest.com' and activated_at IS NOT NULL) LIMIT 1[0m
+  [4;35;1mUser Columns (0.016000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000000)[0m   [0mCOMMIT[0m
+Cookie set: auth_token=; path=/
+Redirected to http://localhost:3000/users
+Completed in 0.79700 (1 reqs/sec) | DB: 0.01600 (2%) | 302 Found [http://localhost/session]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-08-01 20:34:55) [GET]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlZTE3ZTJmNjJmNmQ2NjQ0
+ZGQ0MTAyNzMyODA0YTZkYTc6DHVzZXJfaWRpECIKZmxhc2hJQzonQWN0aW9u
+Q29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiG0xvZ2dl
+ZCBpbiBzdWNjZXNzZnVsbHkGOgpAdXNlZHsGOwlGOg5yZXR1cm5fdG8w--d7b62299168070b0e492081dc47a2c8a8c1ec620
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 11) LIMIT 1[0m
+
+
+ActionController::UnknownAction (No action responded to index):
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:580:in `call_filters'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.0/lib/active_record/query_cache.rb:8:in `cache'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `send'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `process_without_filters'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/session_management.rb:130:in `process'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:389:in `process'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/bin/../lib/mongrel/rails.rb:76:in `process'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/bin/../lib/mongrel/rails.rb:74:in `process'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:159:in `process_client'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `each'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `process_client'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `initialize'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `new'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `initialize'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `new'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `run'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/configurator.rb:282:in `run'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/configurator.rb:281:in `each'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/configurator.rb:281:in `run'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/bin/mongrel_rails:128:in `run'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/command.rb:212:in `run'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/bin/mongrel_rails:281
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/commands/servers/mongrel.rb:64
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/commands/server.rb:39
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing DashboardController#home (for 127.0.0.1 at 2009-08-01 20:35:07) [GET]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlZTE3ZTJmNjJmNmQ2NjQ0
+ZGQ0MTAyNzMyODA0YTZkYTc6DHVzZXJfaWRpECIKZmxhc2hJQzonQWN0aW9u
+Q29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiG0xvZ2dl
+ZCBpbiBzdWNjZXNzZnVsbHkGOgpAdXNlZHsGOwlUOg5yZXR1cm5fdG8w--fb46b607942f353250f26869929f73e0c7b9b976
+  Parameters: {"action"=>"home", "controller"=>"dashboard"}
+Rendering template within layouts/application
+Rendering dashboard/home
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 11) LIMIT 1[0m
+Rendered shared/_filter_options (0.00000)
+Rendered shared/_user_bar (0.00000)
+Rendered shared/_navigation (0.00000)
+Completed in 0.79700 (1 reqs/sec) | Rendering: 0.15700 (19%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-08-01 20:35:11) [GET]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlZTE3ZTJmNjJmNmQ2NjQ0
+ZGQ0MTAyNzMyODA0YTZkYTc6DHVzZXJfaWRpECIKZmxhc2hJQzonQWN0aW9u
+Q29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0
+dXJuX3RvMA==--1c05babd623ba8275cd773d9ad8d2cf1eacdd4ca
+  Parameters: {"action"=>"your", "controller"=>"loads"}
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 11) LIMIT 1[0m
+  [4;36;1mCompany Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mCompany Load (0.000000)[0m   [0mSELECT * FROM `companies` WHERE (`companies`.`id` = 11) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;36;1mLoad Columns (0.063000)[0m   [0;1mSHOW FIELDS FROM `loads`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `loads` WHERE (`loads`.company_id = 11) [0m
+Rendered shared/_filter_options (0.00000)
+Rendered shared/_user_bar (0.00000)
+Rendered shared/_navigation (0.00000)
+Completed in 1.06300 (0 reqs/sec) | Rendering: 0.03100 (2%) | DB: 0.06300 (5%) | 200 OK [http://localhost/loads/your]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2009-08-01 20:35:37) [GET]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlZTE3ZTJmNjJmNmQ2NjQ0
+ZGQ0MTAyNzMyODA0YTZkYTc6DHVzZXJfaWRpECIKZmxhc2hJQzonQWN0aW9u
+Q29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0
+dXJuX3RvMA==--1c05babd623ba8275cd773d9ad8d2cf1eacdd4ca
+  Parameters: {"action"=>"destroy", "controller"=>"sessions"}
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 11) LIMIT 1[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000000)[0m   [0mCOMMIT[0m
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+Redirected to http://localhost:3000/
+Completed in 1.07800 (0 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://localhost/logout]
+
+
+Processing DashboardController#home (for 127.0.0.1 at 2009-08-01 20:35:38) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsGOgtub3RpY2UiHllvdSBoYXZlIGJlZW4gbG9nZ2VkIG91dC4GOgpA
+dXNlZHsGOwZGOg5yZXR1cm5fdG8w--2e18d258152ada88cd8ea788d5af93cea183267f
+  Parameters: {"action"=>"home", "controller"=>"dashboard"}
+Rendering template within layouts/application
+Rendering dashboard/home
+Rendered shared/_user_bar (0.00000)
+Rendered shared/_navigation (0.00000)
+Completed in 1.01600 (0 reqs/sec) | Rendering: 0.01600 (1%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing DashboardController#login (for 127.0.0.1 at 2009-08-01 20:35:41) [GET]
+  Session ID: BAh7CDoRZ2VvX2xvY2F0aW9uMCIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxl
+cjo6Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiHllvdSBoYXZlIGJlZW4g
+bG9nZ2VkIG91dC4GOgpAdXNlZHsGOwdUOg5yZXR1cm5fdG8w--aeba3f812fb260b984e21977f962d015bb5c33e8
+  Parameters: {"action"=>"login", "controller"=>"dashboard"}
+Rendered shared/_login (0.00000)
+Completed in 1.18800 (0 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.00000 (0%) | 200 OK [http://localhost/dashboard/login]
+
+
+Processing UsersController#send_activation_code (for 127.0.0.1 at 2009-08-01 20:35:44) [GET]
+  Session ID: BAh7CToRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlYjRjYzQ3MDE0ZTZmZGIz
+NWVjYzFmMTEzODk3N2UxNWMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6
+OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DnJldHVybl90bzA=--08cf8bc612d02dc71c1c9a6002696c4769f2bfb5
+  Parameters: {"action"=>"send_activation_code", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/send_activation_code
+
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.size) on line #26 of users/send_activation_code.html.erb:
+23:         </div>
+24:     <% end %>
+25:  </div>
+26: <% if @emails.size > 0 %>
+27:   <hr>
+28:   <h3>Email's Send</h3>
+29:   <hr>
+
+    app/views/users/send_activation_code.html.erb:26:in `_run_erb_47app47views47users47send_activation_code46html46erb'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/base.rb:338:in `send'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/base.rb:338:in `execute'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/template_handlers/compilable.rb:29:in `send'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/template_handlers/compilable.rb:29:in `render'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/template.rb:35:in `render'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/template.rb:22:in `render_template'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/base.rb:245:in `render_file'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1108:in `render_for_file'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:841:in `render_with_no_layout'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:51:in `render'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:51:in `render'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1157:in `default_render'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1163:in `perform_action_without_filters'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:580:in `call_filters'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.0/lib/active_record/query_cache.rb:8:in `cache'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `send'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `process_without_filters'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/session_management.rb:130:in `process'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:389:in `process'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/rails.rb:76:in `process'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/rails.rb:74:in `synchronize'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/rails.rb:74:in `process'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:159:in `process_client'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `each'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `process_client'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `initialize'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `new'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `initialize'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `new'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `run'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/configurator.rb:282:in `run'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/configurator.rb:281:in `each'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/configurator.rb:281:in `run'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/bin/mongrel_rails:128:in `run'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/command.rb:212:in `run'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/bin/mongrel_rails:281
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/commands/servers/mongrel.rb:64
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/commands/server.rb:39
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing UsersController#send_activation_code (for 127.0.0.1 at 2009-08-01 20:36:31) [GET]
+  Session ID: BAh7CToRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlYjRjYzQ3MDE0ZTZmZGIz
+NWVjYzFmMTEzODk3N2UxNWMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6
+OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DnJldHVybl90bzA=--08cf8bc612d02dc71c1c9a6002696c4769f2bfb5
+  Parameters: {"action"=>"send_activation_code", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/send_activation_code
+Rendered shared/_user_bar (0.00000)
+Rendered shared/_navigation (0.00000)
+Completed in 0.79700 (1 reqs/sec) | Rendering: 0.03200 (4%) | DB: 0.00000 (0%) | 200 OK [http://localhost/send_activation_code]
+
+
+Processing UsersController#send_activation_code (for 127.0.0.1 at 2009-08-01 20:37:27) [GET]
+  Session ID: BAh7CToRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlYjRjYzQ3MDE0ZTZmZGIz
+NWVjYzFmMTEzODk3N2UxNWMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6
+OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DnJldHVybl90bzA=--08cf8bc612d02dc71c1c9a6002696c4769f2bfb5
+  Parameters: {"action"=>"send_activation_code", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/send_activation_code
+Rendered shared/_user_bar (0.00000)
+Rendered shared/_navigation (0.00000)
+Completed in 0.90700 (1 reqs/sec) | Rendering: 0.03200 (3%) | DB: 0.00000 (0%) | 200 OK [http://localhost/send_activation_code]
+
+
+Processing UsersController#send_activation_code (for 127.0.0.1 at 2009-08-01 20:38:00) [GET]
+  Session ID: BAh7CToRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlYjRjYzQ3MDE0ZTZmZGIz
+NWVjYzFmMTEzODk3N2UxNWMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6
+OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DnJldHVybl90bzA=--08cf8bc612d02dc71c1c9a6002696c4769f2bfb5
+  Parameters: {"action"=>"send_activation_code", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/send_activation_code
+Rendered shared/_user_bar (0.00000)
+Rendered shared/_navigation (0.00000)
+Completed in 0.90700 (1 reqs/sec) | Rendering: 0.03200 (3%) | DB: 0.00000 (0%) | 200 OK [http://localhost/send_activation_code]
+
+
+Processing UsersController#send_activation_code (for 127.0.0.1 at 2009-08-01 20:38:11) [GET]
+  Session ID: BAh7CToRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlYjRjYzQ3MDE0ZTZmZGIz
+NWVjYzFmMTEzODk3N2UxNWMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6
+OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DnJldHVybl90bzA=--08cf8bc612d02dc71c1c9a6002696c4769f2bfb5
+  Parameters: {"action"=>"send_activation_code", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/send_activation_code
+Rendered shared/_user_bar (0.00000)
+Rendered shared/_navigation (0.00000)
+Completed in 0.73400 (1 reqs/sec) | Rendering: 0.01600 (2%) | DB: 0.00000 (0%) | 200 OK [http://localhost/send_activation_code]
+
+
+Processing UsersController#send_activation_code (for 127.0.0.1 at 2009-08-01 20:38:12) [GET]
+  Session ID: BAh7CToRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlYjRjYzQ3MDE0ZTZmZGIz
+NWVjYzFmMTEzODk3N2UxNWMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6
+OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DnJldHVybl90bzA=--08cf8bc612d02dc71c1c9a6002696c4769f2bfb5
+  Parameters: {"action"=>"send_activation_code", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/send_activation_code
+Rendered shared/_user_bar (0.00000)
+Rendered shared/_navigation (0.00000)
+Completed in 0.75000 (1 reqs/sec) | Rendering: 0.01600 (2%) | DB: 0.00000 (0%) | 200 OK [http://localhost/send_activation_code]
+
+
+Processing UsersController#send_activation_code (for 127.0.0.1 at 2009-08-01 20:38:28) [GET]
+  Session ID: BAh7CToRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlYjRjYzQ3MDE0ZTZmZGIz
+NWVjYzFmMTEzODk3N2UxNWMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6
+OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DnJldHVybl90bzA=--08cf8bc612d02dc71c1c9a6002696c4769f2bfb5
+  Parameters: {"action"=>"send_activation_code", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/send_activation_code
+Rendered shared/_user_bar (0.00000)
+Rendered shared/_navigation (0.00000)
+Completed in 0.73500 (1 reqs/sec) | Rendering: 0.01600 (2%) | DB: 0.00000 (0%) | 200 OK [http://localhost/send_activation_code]
+
+
+Processing UsersController#send_activation_code (for 127.0.0.1 at 2009-08-01 20:38:39) [GET]
+  Session ID: BAh7CToRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlYjRjYzQ3MDE0ZTZmZGIz
+NWVjYzFmMTEzODk3N2UxNWMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6
+OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DnJldHVybl90bzA=--08cf8bc612d02dc71c1c9a6002696c4769f2bfb5
+  Parameters: {"action"=>"send_activation_code", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/send_activation_code
+Rendered shared/_user_bar (0.00000)
+Rendered shared/_navigation (0.00000)
+Completed in 0.81300 (1 reqs/sec) | Rendering: 0.03100 (3%) | DB: 0.00000 (0%) | 200 OK [http://localhost/send_activation_code]
+
+
+Processing UsersController#send_activation_code (for 127.0.0.1 at 2009-08-01 20:38:45) [POST]
+  Session ID: BAh7CToRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlYjRjYzQ3MDE0ZTZmZGIz
+NWVjYzFmMTEzODk3N2UxNWMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6
+OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DnJldHVybl90bzA=--08cf8bc612d02dc71c1c9a6002696c4769f2bfb5
+  Parameters: {"commit"=>"Send Activation Code", "authenticity_token"=>"960de9bc5e7d574534bccd3312806e32e2f6ee22", "action"=>"send_activation_code", "controller"=>"users", "login"=>"tt"}
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'tt') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/send_activation_code
+Rendered shared/_user_bar (0.00000)
+Rendered shared/_navigation (0.00000)
+Completed in 1.15700 (0 reqs/sec) | Rendering: 0.01600 (1%) | DB: 0.00000 (0%) | 200 OK [http://localhost/send_activation_code]
+
+
+Processing UsersController#send_activation_code (for 127.0.0.1 at 2009-08-01 20:40:43) [POST]
+  Session ID: BAh7CToRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlYjRjYzQ3MDE0ZTZmZGIz
+NWVjYzFmMTEzODk3N2UxNWMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6
+OkZsYXNoOjpGbGFzaEhhc2h7BjoLbm90aWNlIhhVbmtub3duIFVzZXIgTG9n
+aW4uBjoKQHVzZWR7BjsIRjoOcmV0dXJuX3RvMA==--94762a32c4f9d4725d2b39917066d254df84d7a5
+  Parameters: {"commit"=>"Send Activation Code", "authenticity_token"=>"960de9bc5e7d574534bccd3312806e32e2f6ee22", "action"=>"send_activation_code", "controller"=>"users", "login"=>""}
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = '') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/send_activation_code
+Rendered shared/_user_bar (0.00000)
+Rendered shared/_navigation (0.00000)
+Completed in 0.98500 (1 reqs/sec) | Rendering: 0.01600 (1%) | DB: 0.00000 (0%) | 200 OK [http://localhost/send_activation_code]
+
+
+Processing UsersController#send_activation_code (for 127.0.0.1 at 2009-08-01 20:40:56) [POST]
+  Session ID: BAh7CToRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlYjRjYzQ3MDE0ZTZmZGIz
+NWVjYzFmMTEzODk3N2UxNWMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6
+OkZsYXNoOjpGbGFzaEhhc2h7BjoLbm90aWNlIhhVbmtub3duIFVzZXIgTG9n
+aW4uBjoKQHVzZWR7BjsIRjoOcmV0dXJuX3RvMA==--94762a32c4f9d4725d2b39917066d254df84d7a5
+  Parameters: {"commit"=>"Send Activation Code", "authenticity_token"=>"960de9bc5e7d574534bccd3312806e32e2f6ee22", "action"=>"send_activation_code", "controller"=>"users", "login"=>""}
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = '') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/send_activation_code
+Rendered shared/_user_bar (0.00000)
+Rendered shared/_navigation (0.00000)
+Completed in 0.96800 (1 reqs/sec) | Rendering: 0.01500 (1%) | DB: 0.00000 (0%) | 200 OK [http://localhost/send_activation_code]
+
+
+Processing UsersController#send_activation_code (for 127.0.0.1 at 2009-08-01 20:40:58) [POST]
+  Session ID: BAh7CToRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlYjRjYzQ3MDE0ZTZmZGIz
+NWVjYzFmMTEzODk3N2UxNWMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6
+OkZsYXNoOjpGbGFzaEhhc2h7BjoLbm90aWNlIhhVbmtub3duIFVzZXIgTG9n
+aW4uBjoKQHVzZWR7BjsIRjoOcmV0dXJuX3RvMA==--94762a32c4f9d4725d2b39917066d254df84d7a5
+  Parameters: {"commit"=>"Send Activation Code", "authenticity_token"=>"960de9bc5e7d574534bccd3312806e32e2f6ee22", "action"=>"send_activation_code", "controller"=>"users", "login"=>""}
+  [4;36;1mUser Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = '') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/send_activation_code
+Rendered shared/_user_bar (0.00000)
+Rendered shared/_navigation (0.00000)
+Completed in 1.10900 (0 reqs/sec) | Rendering: 0.01500 (1%) | DB: 0.01600 (1%) | 200 OK [http://localhost/send_activation_code]
+
+
+Processing UsersController#send_activation_code (for 127.0.0.1 at 2009-08-01 20:41:23) [POST]
+  Session ID: BAh7CToRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlYjRjYzQ3MDE0ZTZmZGIz
+NWVjYzFmMTEzODk3N2UxNWMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6
+OkZsYXNoOjpGbGFzaEhhc2h7BjoLbm90aWNlIhhVbmtub3duIFVzZXIgTG9n
+aW4uBjoKQHVzZWR7BjsIRjoOcmV0dXJuX3RvMA==--94762a32c4f9d4725d2b39917066d254df84d7a5
+  Parameters: {"commit"=>"Send Activation Code", "authenticity_token"=>"960de9bc5e7d574534bccd3312806e32e2f6ee22", "action"=>"send_activation_code", "controller"=>"users", "login"=>""}
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = '') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/send_activation_code
+Rendered shared/_user_bar (0.00000)
+Rendered shared/_navigation (0.00000)
+Completed in 0.78100 (1 reqs/sec) | Rendering: 0.01500 (1%) | DB: 0.00000 (0%) | 200 OK [http://localhost/send_activation_code]
+
+
+Processing UsersController#send_activation_code (for 127.0.0.1 at 2009-08-01 20:41:47) [POST]
+  Session ID: BAh7CToRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlYjRjYzQ3MDE0ZTZmZGIz
+NWVjYzFmMTEzODk3N2UxNWMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6
+OkZsYXNoOjpGbGFzaEhhc2h7BjoLbm90aWNlIhhVbmtub3duIFVzZXIgTG9n
+aW4uBjoKQHVzZWR7BjsIRjoOcmV0dXJuX3RvMA==--94762a32c4f9d4725d2b39917066d254df84d7a5
+  Parameters: {"commit"=>"Send Activation Code", "authenticity_token"=>"960de9bc5e7d574534bccd3312806e32e2f6ee22", "action"=>"send_activation_code", "controller"=>"users", "login"=>""}
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = '') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/send_activation_code
+Rendered shared/_user_bar (0.00000)
+Rendered shared/_navigation (0.00000)
+Completed in 0.90600 (1 reqs/sec) | Rendering: 0.01500 (1%) | DB: 0.00000 (0%) | 200 OK [http://localhost/send_activation_code]
+
+
+Processing UsersController#send_activation_code (for 127.0.0.1 at 2009-08-01 20:42:00) [POST]
+  Session ID: BAh7CToRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlYjRjYzQ3MDE0ZTZmZGIz
+NWVjYzFmMTEzODk3N2UxNWMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6
+OkZsYXNoOjpGbGFzaEhhc2h7BjoLbm90aWNlIhhVbmtub3duIFVzZXIgTG9n
+aW4uBjoKQHVzZWR7BjsIRjoOcmV0dXJuX3RvMA==--94762a32c4f9d4725d2b39917066d254df84d7a5
+  Parameters: {"commit"=>"Send Activation Code", "authenticity_token"=>"960de9bc5e7d574534bccd3312806e32e2f6ee22", "action"=>"send_activation_code", "controller"=>"users", "login"=>""}
+  [4;36;1mUser Columns (0.015000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = '') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/send_activation_code
+Rendered shared/_user_bar (0.00000)
+Rendered shared/_navigation (0.00000)
+Completed in 1.00000 (1 reqs/sec) | Rendering: 0.01600 (1%) | DB: 0.01500 (1%) | 200 OK [http://localhost/send_activation_code]
+
+
+Processing LoadsController#index (for 127.0.0.1 at 2009-08-01 20:42:04) [GET]
+  Session ID: BAh7CToRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlYjRjYzQ3MDE0ZTZmZGIz
+NWVjYzFmMTEzODk3N2UxNWMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6
+OkZsYXNoOjpGbGFzaEhhc2h7BjoLbm90aWNlIhhVbmtub3duIFVzZXIgTG9n
+aW4uBjoKQHVzZWR7BjsIRjoOcmV0dXJuX3RvMA==--94762a32c4f9d4725d2b39917066d254df84d7a5
+  Parameters: {"action"=>"index", "controller"=>"loads"}
+Redirected to http://localhost:3000/dashboard/home
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1.00000 (1 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://localhost/loads]
+
+
+Processing DashboardController#home (for 127.0.0.1 at 2009-08-01 20:42:05) [GET]
+  Session ID: BAh7CToRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlYjRjYzQ3MDE0ZTZmZGIz
+NWVjYzFmMTEzODk3N2UxNWMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6
+OkZsYXNoOjpGbGFzaEhhc2h7BjoLbm90aWNlIhhVbmtub3duIFVzZXIgTG9n
+aW4uBjoKQHVzZWR7BjsIVDoOcmV0dXJuX3RvIgsvbG9hZHM=--4488e6d344af202fc16fa1bca6740bdaf8748904
+  Parameters: {"action"=>"home", "controller"=>"dashboard"}
+Rendering template within layouts/application
+Rendering dashboard/home
+Rendered shared/_user_bar (0.00000)
+Rendered shared/_navigation (0.00000)
+Completed in 0.79700 (1 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.00000 (0%) | 200 OK [http://localhost/dashboard/home]
+
+
+Processing LoadsController#index (for 127.0.0.1 at 2009-08-01 20:42:47) [GET]
+  Session ID: BAh7CToRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlYjRjYzQ3MDE0ZTZmZGIz
+NWVjYzFmMTEzODk3N2UxNWMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6
+OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DnJldHVybl90byILL2xv
+YWRz--c85bd10c2e32bf6dcb5d15a53df744c88bfb499e
+  Parameters: {"action"=>"index", "controller"=>"loads"}
+Redirected to http://localhost:3000/dashboard/home
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0.76500 (1 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://localhost/loads]
+
+
+Processing DashboardController#home (for 127.0.0.1 at 2009-08-01 20:42:48) [GET]
+  Session ID: BAh7CToRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlYjRjYzQ3MDE0ZTZmZGIz
+NWVjYzFmMTEzODk3N2UxNWMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6
+OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DnJldHVybl90byILL2xv
+YWRz--c85bd10c2e32bf6dcb5d15a53df744c88bfb499e
+  Parameters: {"action"=>"home", "controller"=>"dashboard"}
+Rendering template within layouts/application
+Rendering dashboard/home
+Rendered shared/_user_bar (0.00000)
+Rendered shared/_navigation (0.00000)
+Completed in 0.93800 (1 reqs/sec) | Rendering: 0.01600 (1%) | DB: 0.00000 (0%) | 200 OK [http://localhost/dashboard/home]
+
+
+Processing DashboardController#home (for 127.0.0.1 at 2009-08-01 20:42:52) [GET]
+  Session ID: BAh7CToRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlYjRjYzQ3MDE0ZTZmZGIz
+NWVjYzFmMTEzODk3N2UxNWMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6
+OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DnJldHVybl90byILL2xv
+YWRz--c85bd10c2e32bf6dcb5d15a53df744c88bfb499e
+  Parameters: {"action"=>"home", "controller"=>"dashboard"}
+Rendering template within layouts/application
+Rendering dashboard/home
+Rendered shared/_user_bar (0.00000)
+Rendered shared/_navigation (0.00000)
+Completed in 0.76600 (1 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.00000 (0%) | 200 OK [http://localhost/dashboard/home]
+
+
+Processing DashboardController#home (for 127.0.0.1 at 2009-08-01 20:43:23) [GET]
+  Session ID: BAh7CToRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlYjRjYzQ3MDE0ZTZmZGIz
+NWVjYzFmMTEzODk3N2UxNWMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6
+OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DnJldHVybl90byILL2xv
+YWRz--c85bd10c2e32bf6dcb5d15a53df744c88bfb499e
+  Parameters: {"action"=>"home", "controller"=>"dashboard"}
+Rendering template within layouts/application
+Rendering dashboard/home
+Rendered shared/_user_bar (0.01600)
+Rendered shared/_navigation (0.00000)
+Completed in 0.76600 (1 reqs/sec) | Rendering: 0.03200 (4%) | DB: 0.00000 (0%) | 200 OK [http://localhost/dashboard/home]
+
+
+Processing CompaniesController#new (for 127.0.0.1 at 2009-08-01 20:43:26) [GET]
+  Session ID: BAh7CToRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlYjRjYzQ3MDE0ZTZmZGIz
+NWVjYzFmMTEzODk3N2UxNWMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6
+OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DnJldHVybl90byILL2xv
+YWRz--c85bd10c2e32bf6dcb5d15a53df744c88bfb499e
+  Parameters: {"action"=>"new", "controller"=>"companies"}
+  [4;36;1mCompany Columns (0.015000)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mUser Columns (0.016000)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering companies/new
+Rendered companies/buttons/_new (0.00000)
+Rendered companies/_company_form (0.00000)
+Rendered shared/_user_bar (0.00000)
+Rendered shared/_navigation (0.00000)
+Completed in 0.87500 (1 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.03100 (3%) | 200 OK [http://localhost/companies/new]
+
+
+Processing DashboardController#login (for 127.0.0.1 at 2009-08-01 20:43:29) [GET]
+  Session ID: BAh7CToRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlYjRjYzQ3MDE0ZTZmZGIz
+NWVjYzFmMTEzODk3N2UxNWMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6
+OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DnJldHVybl90byILL2xv
+YWRz--c85bd10c2e32bf6dcb5d15a53df744c88bfb499e
+  Parameters: {"action"=>"login", "controller"=>"dashboard"}
+Rendered shared/_login (0.00000)
+Completed in 0.70300 (1 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.00000 (0%) | 200 OK [http://localhost/dashboard/login]
+
+
+Processing UsersController#send_activation_code (for 127.0.0.1 at 2009-08-01 20:43:30) [GET]
+  Session ID: BAh7CToRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlYjRjYzQ3MDE0ZTZmZGIz
+NWVjYzFmMTEzODk3N2UxNWMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6
+OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DnJldHVybl90byILL2xv
+YWRz--c85bd10c2e32bf6dcb5d15a53df744c88bfb499e
+  Parameters: {"action"=>"send_activation_code", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/send_activation_code
+Rendered shared/_user_bar (0.00000)
+Rendered shared/_navigation (0.00000)
+Completed in 0.67200 (1 reqs/sec) | Rendering: 0.01600 (2%) | DB: 0.00000 (0%) | 200 OK [http://localhost/send_activation_code]
+
+
+Processing UsersController#send_activation_code (for 127.0.0.1 at 2009-08-01 20:43:32) [POST]
+  Session ID: BAh7CToRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlYjRjYzQ3MDE0ZTZmZGIz
+NWVjYzFmMTEzODk3N2UxNWMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6
+OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DnJldHVybl90byILL2xv
+YWRz--c85bd10c2e32bf6dcb5d15a53df744c88bfb499e
+  Parameters: {"commit"=>"Send Activation Code", "authenticity_token"=>"960de9bc5e7d574534bccd3312806e32e2f6ee22", "action"=>"send_activation_code", "controller"=>"users", "login"=>""}
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.016000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = '') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/send_activation_code
+Rendered shared/_user_bar (0.00000)
+Rendered shared/_navigation (0.00000)
+Completed in 0.82800 (1 reqs/sec) | Rendering: 0.01500 (1%) | DB: 0.01600 (1%) | 200 OK [http://localhost/send_activation_code]
+
+
+Processing LoadsController#index (for 127.0.0.1 at 2009-08-01 20:43:38) [GET]
+  Session ID: BAh7CToRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlYjRjYzQ3MDE0ZTZmZGIz
+NWVjYzFmMTEzODk3N2UxNWMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6
+OkZsYXNoOjpGbGFzaEhhc2h7BjoLbm90aWNlIhhVbmtub3duIFVzZXIgTG9n
+aW4uBjoKQHVzZWR7BjsIRjoOcmV0dXJuX3RvIgsvbG9hZHM=--f03f50e0638b4c2704417c0d52a50a482ae6ce10
+  Parameters: {"action"=>"index", "controller"=>"loads"}
+Redirected to http://localhost:3000/dashboard/home
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0.65600 (1 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://localhost/loads]
+
+
+Processing DashboardController#home (for 127.0.0.1 at 2009-08-01 20:43:39) [GET]
+  Session ID: BAh7CToRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlYjRjYzQ3MDE0ZTZmZGIz
+NWVjYzFmMTEzODk3N2UxNWMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6
+OkZsYXNoOjpGbGFzaEhhc2h7BjoLbm90aWNlIhhVbmtub3duIFVzZXIgTG9n
+aW4uBjoKQHVzZWR7BjsIVDoOcmV0dXJuX3RvIgsvbG9hZHM=--4488e6d344af202fc16fa1bca6740bdaf8748904
+  Parameters: {"action"=>"home", "controller"=>"dashboard"}
+Rendering template within layouts/application
+Rendering dashboard/home
+Rendered shared/_user_bar (0.00000)
+Rendered shared/_navigation (0.00000)
+Completed in 1.04700 (0 reqs/sec) | Rendering: 0.01500 (1%) | DB: 0.00000 (0%) | 200 OK [http://localhost/dashboard/home]
+
+
+Processing DashboardController#login (for 127.0.0.1 at 2009-08-01 20:43:41) [GET]
+  Session ID: BAh7CToRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlYjRjYzQ3MDE0ZTZmZGIz
+NWVjYzFmMTEzODk3N2UxNWMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6
+OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DnJldHVybl90byILL2xv
+YWRz--c85bd10c2e32bf6dcb5d15a53df744c88bfb499e
+  Parameters: {"action"=>"login", "controller"=>"dashboard"}
+Rendered shared/_login (0.00000)
+Completed in 1.03100 (0 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.00000 (0%) | 200 OK [http://localhost/dashboard/login]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-08-01 20:44:00) [POST]
+  Session ID: BAh7CToRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlYjRjYzQ3MDE0ZTZmZGIz
+NWVjYzFmMTEzODk3N2UxNWMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6
+OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DnJldHVybl90byILL2xv
+YWRz--c85bd10c2e32bf6dcb5d15a53df744c88bfb499e
+  Parameters: {"commit"=>"Login", "authenticity_token"=>"960de9bc5e7d574534bccd3312806e32e2f6ee22", "action"=>"create", "controller"=>"sessions", "password"=>"ybt486", "login"=>"test14@mytest.com"}
+
+***** Debugger requested, but was not available: Start server with --debugger to enable *****
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE (login = 'test14@mytest.com' and activated_at IS NOT NULL) LIMIT 1[0m
+Failed login for 'test14@mytest.com' from 127.0.0.1 at Sat Aug 01 19:44:01 UTC 2009
+Redirected to http://localhost:3000/loads
+Completed in 1.04700 (0 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://localhost/session]
+
+
+Processing LoadsController#index (for 127.0.0.1 at 2009-08-01 20:44:01) [GET]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlYjRjYzQ3MDE0ZTZmZGIz
+NWVjYzFmMTEzODk3N2UxNWM6DHVzZXJfaWQwIgpmbGFzaElDOidBY3Rpb25D
+b250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewY6CmVycm9yIi9Db3VsZG4n
+dCBsb2cgeW91IGluIGFzICd0ZXN0MTRAbXl0ZXN0LmNvbScGOgpAdXNlZHsG
+OwlGOg5yZXR1cm5fdG8w--bf6a1ebde386d75100d71c58231f84f2172a1c07
+  Parameters: {"action"=>"index", "controller"=>"loads"}
+Redirected to http://localhost:3000/dashboard/home
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0.65600 (1 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://localhost/loads]
+
+
+Processing DashboardController#home (for 127.0.0.1 at 2009-08-01 20:44:02) [GET]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlYjRjYzQ3MDE0ZTZmZGIz
+NWVjYzFmMTEzODk3N2UxNWM6DHVzZXJfaWQwIgpmbGFzaElDOidBY3Rpb25D
+b250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewY6CmVycm9yIi9Db3VsZG4n
+dCBsb2cgeW91IGluIGFzICd0ZXN0MTRAbXl0ZXN0LmNvbScGOgpAdXNlZHsG
+OwlUOg5yZXR1cm5fdG8iCy9sb2Fkcw==--7d3e8b75ad46db452090af0f5c50164cbd5cfcc9
+  Parameters: {"action"=>"home", "controller"=>"dashboard"}
+Rendering template within layouts/application
+Rendering dashboard/home
+Rendered shared/_user_bar (0.00000)
+Rendered shared/_navigation (0.00000)
+Completed in 0.98400 (1 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.00000 (0%) | 200 OK [http://localhost/dashboard/home]
+
+
+Processing DashboardController#login (for 127.0.0.1 at 2009-08-01 20:44:11) [GET]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlYjRjYzQ3MDE0ZTZmZGIz
+NWVjYzFmMTEzODk3N2UxNWM6DHVzZXJfaWQwIgpmbGFzaElDOidBY3Rpb25D
+b250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsAOg5yZXR1
+cm5fdG8iCy9sb2Fkcw==--7bd931beff5bf3e7422812fa8311b8eed818a1f5
+  Parameters: {"action"=>"login", "controller"=>"dashboard"}
+Rendered shared/_login (0.00000)
+Completed in 0.92200 (1 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.00000 (0%) | 200 OK [http://localhost/dashboard/login]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-08-01 20:44:23) [POST]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlYjRjYzQ3MDE0ZTZmZGIz
+NWVjYzFmMTEzODk3N2UxNWM6DHVzZXJfaWQwIgpmbGFzaElDOidBY3Rpb25D
+b250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsAOg5yZXR1
+cm5fdG8iCy9sb2Fkcw==--7bd931beff5bf3e7422812fa8311b8eed818a1f5
+  Parameters: {"commit"=>"Login", "authenticity_token"=>"960de9bc5e7d574534bccd3312806e32e2f6ee22", "action"=>"create", "controller"=>"sessions", "password"=>"ybt486", "login"=>"test41@mytest.com"}
+
+***** Debugger requested, but was not available: Start server with --debugger to enable *****
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE (login = 'test41@mytest.com' and activated_at IS NOT NULL) LIMIT 1[0m
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mCOMMIT[0m
+Cookie set: auth_token=; path=/
+Redirected to http://localhost:3000/loads
+Completed in 1.15600 (0 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://localhost/session]
+
+
+Processing LoadsController#index (for 127.0.0.1 at 2009-08-01 20:44:25) [GET]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlYjRjYzQ3MDE0ZTZmZGIz
+NWVjYzFmMTEzODk3N2UxNWM6DHVzZXJfaWRpECIKZmxhc2hJQzonQWN0aW9u
+Q29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiG0xvZ2dl
+ZCBpbiBzdWNjZXNzZnVsbHkGOgpAdXNlZHsGOwlGOg5yZXR1cm5fdG8w--f56936a596be328719549c1f9bac9d0456145a5b
+  Parameters: {"action"=>"index", "controller"=>"loads"}
+  [4;35;1mUser Columns (0.000000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 11) LIMIT 1[0m
+  [4;35;1mLoad Load (0.000000)[0m   [0mSELECT * FROM `loads` [0m
+Rendering template within layouts/application
+Rendering loads/index
+Rendered shared/_filter_options (0.00000)
+Rendered shared/_user_bar (0.00000)
+Rendered shared/_navigation (0.00000)
+Completed in 1.10900 (0 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.00000 (0%) | 200 OK [http://localhost/loads]
+
+
+Processing LoadsController#index (for 127.0.0.1 at 2009-08-01 20:45:09) [GET]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlYjRjYzQ3MDE0ZTZmZGIz
+NWVjYzFmMTEzODk3N2UxNWM6DHVzZXJfaWRpECIKZmxhc2hJQzonQWN0aW9u
+Q29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiG0xvZ2dl
+ZCBpbiBzdWNjZXNzZnVsbHkGOgpAdXNlZHsGOwlUOg5yZXR1cm5fdG8w--8ec5211d8df858e99e5f803b44fae4edafe01fb5
+  Parameters: {"action"=>"index", "controller"=>"loads"}
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 11) LIMIT 1[0m
+  [4;36;1mLoad Load (0.000000)[0m   [0;1mSELECT * FROM `loads` [0m
+Rendering template within layouts/application
+Rendering loads/index
+Rendered shared/_filter_options (0.00000)
+Rendered shared/_user_bar (0.00000)
+Rendered shared/_navigation (0.00000)
+Completed in 0.84400 (1 reqs/sec) | Rendering: 0.01600 (1%) | DB: 0.00000 (0%) | 200 OK [http://localhost/loads]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2009-08-01 20:45:13) [GET]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlYjRjYzQ3MDE0ZTZmZGIz
+NWVjYzFmMTEzODk3N2UxNWM6DHVzZXJfaWRpECIKZmxhc2hJQzonQWN0aW9u
+Q29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0
+dXJuX3RvMA==--f06d08dd0612d7c60489164bbeb6eb44fd717f0a
+  Parameters: {"action"=>"destroy", "controller"=>"sessions"}
+  [4;35;1mUser Columns (0.016000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 11) LIMIT 1[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mCOMMIT[0m
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+Redirected to http://localhost:3000/
+Completed in 0.84400 (1 reqs/sec) | DB: 0.01600 (1%) | 302 Found [http://localhost/logout]
+
+
+Processing DashboardController#home (for 127.0.0.1 at 2009-08-01 20:45:14) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsGOgtub3RpY2UiHllvdSBoYXZlIGJlZW4gbG9nZ2VkIG91dC4GOgpA
+dXNlZHsGOwZGOg5yZXR1cm5fdG8w--2e18d258152ada88cd8ea788d5af93cea183267f
+  Parameters: {"action"=>"home", "controller"=>"dashboard"}
+Rendering template within layouts/application
+Rendering dashboard/home
+Rendered shared/_user_bar (0.00000)
+Rendered shared/_navigation (0.00000)
+Completed in 0.70300 (1 reqs/sec) | Rendering: 0.01500 (2%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing DashboardController#login (for 127.0.0.1 at 2009-08-01 20:45:15) [GET]
+  Session ID: BAh7CDoRZ2VvX2xvY2F0aW9uMCIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxl
+cjo6Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiHllvdSBoYXZlIGJlZW4g
+bG9nZ2VkIG91dC4GOgpAdXNlZHsGOwdUOg5yZXR1cm5fdG8w--aeba3f812fb260b984e21977f962d015bb5c33e8
+  Parameters: {"action"=>"login", "controller"=>"dashboard"}
+Rendered shared/_login (0.00000)
+Completed in 0.92200 (1 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.00000 (0%) | 200 OK [http://localhost/dashboard/login]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-08-01 20:45:18) [POST]
+  Session ID: BAh7CToRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlODhhMDYzNDg1N2NhZWI4
+MjE1ZGRkMzZkNTE4YmJkYzMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6
+OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DnJldHVybl90bzA=--1542cbb3ceeb3fc348dd0afcf2778c828a16fbde
+  Parameters: {"commit"=>"Login", "authenticity_token"=>"795eb98a49961b6f1603fd73f6cf522550c28688", "action"=>"create", "controller"=>"sessions", "password"=>"", "login"=>""}
+
+***** Debugger requested, but was not available: Start server with --debugger to enable *****
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+Failed login for '' from 127.0.0.1 at Sat Aug 01 19:45:19 UTC 2009
+Redirected to http://localhost:3000/
+Completed in 0.81200 (1 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://localhost/session]
+
+
+Processing DashboardController#home (for 127.0.0.1 at 2009-08-01 20:45:19) [GET]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlODhhMDYzNDg1N2NhZWI4
+MjE1ZGRkMzZkNTE4YmJkYzM6DHVzZXJfaWQwIgpmbGFzaElDOidBY3Rpb25D
+b250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewc6CmVycm9yIh5Db3VsZG4n
+dCBsb2cgeW91IGluIGFzICcnOgtub3RpY2UiJ0xvZ2dlZCBpbiBmYWlsZWQu
+IFBsZWFzZSB0cnkgQWdhaW4GOgpAdXNlZHsHOwlGOwpGOg5yZXR1cm5fdG8w--56844fa388a96268ac673d80c4739500a619a2d2
+  Parameters: {"action"=>"home", "controller"=>"dashboard"}
+Rendering template within layouts/application
+Rendering dashboard/home
+Rendered shared/_user_bar (0.00000)
+Rendered shared/_navigation (0.00000)
+Completed in 0.68700 (1 reqs/sec) | Rendering: 0.01600 (2%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing DashboardController#login (for 127.0.0.1 at 2009-08-01 20:45:22) [GET]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlODhhMDYzNDg1N2NhZWI4
+MjE1ZGRkMzZkNTE4YmJkYzM6DHVzZXJfaWQwIgpmbGFzaElDOidBY3Rpb25D
+b250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewc6CmVycm9yIh5Db3VsZG4n
+dCBsb2cgeW91IGluIGFzICcnOgtub3RpY2UiJ0xvZ2dlZCBpbiBmYWlsZWQu
+IFBsZWFzZSB0cnkgQWdhaW4GOgpAdXNlZHsHOwlUOwpUOg5yZXR1cm5fdG8w--1034aea1d766efb3f66ec20ccecd43a78eaae437
+  Parameters: {"action"=>"login", "controller"=>"dashboard"}
+Rendered shared/_login (0.00000)
+Completed in 0.95300 (1 reqs/sec) | Rendering: 0.01500 (1%) | DB: 0.00000 (0%) | 200 OK [http://localhost/dashboard/login]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-08-01 20:45:37) [POST]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlODhhMDYzNDg1N2NhZWI4
+MjE1ZGRkMzZkNTE4YmJkYzM6DHVzZXJfaWQwIgpmbGFzaElDOidBY3Rpb25D
+b250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsAOg5yZXR1
+cm5fdG8w--a44d09f88d641cc4b1118e122d154c4e0ba2cc12
+  Parameters: {"commit"=>"Login", "authenticity_token"=>"795eb98a49961b6f1603fd73f6cf522550c28688", "action"=>"create", "controller"=>"sessions", "password"=>"ybt486", "login"=>"test41@mytest.com"}
+
+***** Debugger requested, but was not available: Start server with --debugger to enable *****
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE (login = 'test41@mytest.com' and activated_at IS NOT NULL) LIMIT 1[0m
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.015000)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mCOMMIT[0m
+Cookie set: auth_token=; path=/
+Redirected to http://localhost:3000/
+Completed in 1.15600 (0 reqs/sec) | DB: 0.01500 (1%) | 302 Found [http://localhost/session]
+
+
+Processing DashboardController#home (for 127.0.0.1 at 2009-08-01 20:45:38) [GET]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlODhhMDYzNDg1N2NhZWI4
+MjE1ZGRkMzZkNTE4YmJkYzM6DHVzZXJfaWRpECIKZmxhc2hJQzonQWN0aW9u
+Q29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiG0xvZ2dl
+ZCBpbiBzdWNjZXNzZnVsbHkGOgpAdXNlZHsGOwlGOg5yZXR1cm5fdG8w--e0042eb6dea3c2886b59c56585819ed101069f19
+  Parameters: {"action"=>"home", "controller"=>"dashboard"}
+Rendering template within layouts/application
+Rendering dashboard/home
+  [4;35;1mUser Columns (0.000000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 11) LIMIT 1[0m
+Rendered shared/_filter_options (0.00000)
+Rendered shared/_user_bar (0.01600)
+Rendered shared/_navigation (0.00000)
+Completed in 1.21900 (0 reqs/sec) | Rendering: 0.21900 (17%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-08-01 20:45:44) [GET]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlODhhMDYzNDg1N2NhZWI4
+MjE1ZGRkMzZkNTE4YmJkYzM6DHVzZXJfaWRpECIKZmxhc2hJQzonQWN0aW9u
+Q29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiG0xvZ2dl
+ZCBpbiBzdWNjZXNzZnVsbHkGOgpAdXNlZHsGOwlUOg5yZXR1cm5fdG8w--303d296e46601721cd81d8e801024853d558e020
+  Parameters: {"action"=>"your", "controller"=>"loads"}
+  [4;35;1mUser Columns (0.016000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 11) LIMIT 1[0m
+  [4;35;1mCompany Columns (0.000000)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mCompany Load (0.000000)[0m   [0;1mSELECT * FROM `companies` WHERE (`companies`.`id` = 11) [0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;35;1mLoad Columns (0.000000)[0m   [0mSHOW FIELDS FROM `loads`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `loads` WHERE (`loads`.company_id = 11) [0m
+Rendered shared/_filter_options (0.00000)
+Rendered shared/_user_bar (0.00000)
+Rendered shared/_navigation (0.00000)
+Completed in 1.15600 (0 reqs/sec) | Rendering: 0.01600 (1%) | DB: 0.01600 (1%) | 200 OK [http://localhost/loads/your]

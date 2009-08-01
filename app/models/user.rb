@@ -35,7 +35,7 @@ class User < ActiveRecord::Base
       @activated = true
       self.activated_at = Time.now.utc
       self.activation_code = nil
-      save(false)
+      self.save#(false)
     end
   end
 

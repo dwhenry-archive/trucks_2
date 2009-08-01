@@ -1,37 +1,40 @@
-<div class="left_container">
-    <% form_tag do %>
-        <div class="data_input_row">
-            <div class="data_input_header">
-                Resend Activation Code (Password Reset)
+<div class="container">
+    <div class="left_container">
+        <% form_tag do %>
+            <div class="data_input_row">
+                <div class="data_input_header">
+                    Send Activation Code<br>
+                    (Password Reset)
+                </div>
             </div>
-        </div>
-        <div class="data_input_row">
-            <div class="data_input_field">
-                Login
+            <div class="data_input_row">
+                <div class="data_input_field">
+                    Login
+                </div>
+                <div class="data_input_data">
+                    <%= text_field_tag :login %>
+                </div>
             </div>
-            <div class="data_input_data">
-                <%= text_field_tag :login %>
+            <div class="data_input_row">
+                <div class="data_input_field">
+                    &nbsp;
+                </div>
+                <div class="data_input_data">
+                    <%= submit_tag 'Send Activation Code', :class => "button lt_blue wide" %>
+                </div>
             </div>
-        </div>
-        <div class="data_input_row">
-            <div class="data_input_field">
-                &nbsp;
-            </div>
-            <div class="data_input_data">
-                <span class="button lt_blue"><%= submit_tag 'Send Activation' %></span>
-            </div>
-        </div>
+        <% end %>
+     </div>
+    <% if @emails and @emails.size > 0 %>
+      <hr>
+      <h3>Email's Send</h3>
+      <hr>
+      <% @emails.each do |email| %>
+        <strong><%=h email[0] %></strong><br>
+        <pre style="padding:0 0 0 20px;">
+          <%=h email[1] %>
+        </pre>
+        <hr>
+      <% end %>
     <% end %>
- </div>
-<% if @emails.size > 0 %>
-  <hr>
-  <h3>Email's Send</h3>
-  <hr>
-  <% @emails.each do |email| %>
-    <strong><%=h email[0] %></strong><br>
-    <pre style="padding:0 0 0 20px;">
-      <%=h email[1] %>
-    </pre>
-    <hr>
-  <% end %>
-<% end %>
+</div>
