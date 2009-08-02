@@ -43,7 +43,7 @@ set :repository, "git@github.com:dwhenry/trucks_2.git"
 #set :scm_user, 'daveh'
 #set :scm_password, "73hDYMq$$"
 #set :scm_passphrase, "----------"
-set :deploy_via, :copy # :remote_cache
+set :deploy_via, :copy # :remote_cache#
 
 set :mongrel_port, "5001"                           # Mongrel port that was assigned to you
 set :mongrel_nodes, "1"                             # Number of Mongrel instances for those with multiple Mongrels

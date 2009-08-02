@@ -48,11 +48,11 @@ class CompaniesController < ApplicationController
     respond_to do |format|
       if @company.save
         @company.users.each do |user|
-          email = TrucksEmail.create_registration_confirmation(user)
           if Rails.env == "production"
-            email.deliver
+            email = TrucksEmail.deliver_registration_confirmation(user)
           else
-            @emails.merge!({user.login => email}) 
+            email = TrucksEmail.create_registration_confirmation(user)
+            @emails.merge!({user.login => email})
           end
         end
         format.html { render :action => "show" }

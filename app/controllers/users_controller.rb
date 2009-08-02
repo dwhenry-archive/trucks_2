@@ -41,10 +41,10 @@ class UsersController < ApplicationController
     if params[:login]
       user = User.find_by_login(params[:login])
       if user
-        email = TrucksEmail.create_registration_confirmation(user)
         if Rails.env == "production"
-          email.deliver
+          email = TrucksEmail.deliver_registration_confirmation(user)
         else
+          email = TrucksEmail.create_registration_confirmation(user)
           @emails.merge!({user.login => email})
         end
       else
