@@ -45,6 +45,7 @@ function showLoginScript(url) {
 }
 
 function processAddress(el,authenticityToken) {
+    disableSubmitButton();
 	valid = true;
 	if(el.value == '')
 		valid = false;
@@ -78,6 +79,7 @@ function processAddress(el,authenticityToken) {
 					if($('load_start_lng').value != '' && $('load_end_lng').value != '')
 						setpoints('load_start','load_end');
 				}
+                enableSubmitButton();
 			}
 	    });
 	}

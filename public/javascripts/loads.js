@@ -19,3 +19,13 @@ function selectLoadRow(el,authenticityToken) {
             $(el.id + '_end_lat').value,$(el.id + '_end_lng').value,$(el.id + '_load_type').value,
             authenticityToken)
 }
+
+function disableSubmitButton() {
+    $('load_submit').disabled = true;
+}
+
+function enableSubmitButton() {
+    if($('load_start_lat').value != '' && $('load_end_lat').value != '') {
+        $('load_submit').disabled = false;
+    }
+}

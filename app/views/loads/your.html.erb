@@ -3,8 +3,8 @@
 </script>
 <%= javascript_include_tag 'google_new','loads' %>
 <script type="text/javascript">
-    var homeLat='';
-    var homeLng='';
+    var homeLat="";
+    var homeLng="";
 	// Add this to the bottom of application.js
 	document.observe('dom:loaded', function(){
 		// this is needed here as call in google_new is overwritten 
@@ -79,9 +79,7 @@
               </div>
 			</div>
 		</div>
-		<% if @loads.size > 0 %>
-			<div id="map_shadow">&nbsp;</div>
-		<% end %>
+        <div id="map_shadow">&nbsp;</div>
 		<div id="map" style="">&nbsp;</div>
 	</div>
 </div>

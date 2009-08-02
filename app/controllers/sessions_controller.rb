@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
   end
 
   def create
-    debugger
+    
     logout_keeping_session!
     user = User.authenticate(params[:login], params[:password])
     if user

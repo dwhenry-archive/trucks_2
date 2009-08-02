@@ -6,7 +6,7 @@ class LoadsController < ApplicationController
   def your
     @loads = current_user.company.loads
     load = @loads.first
-    
+        
     if load
       @results = get_match_results(load.start_lng,load.start_lat,load.end_lng,load.end_lat,load.load_type)
     else

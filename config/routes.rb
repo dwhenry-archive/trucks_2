@@ -15,7 +15,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :companies
   map.your_loads '/loads/your', :controller => 'loads', :action => 'your'
-  map.your_loads '/loads/match_data', :controller => 'loads', :action => 'match_data'
+  map.loads_match_data '/loads/match_data', :controller => 'loads', :action => 'match_data'
   map.resources :loads
 
   map.resources :users
