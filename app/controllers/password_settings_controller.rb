@@ -37,7 +37,7 @@ class PasswordSettingsController < ApplicationController
     if current_user.change_password!(params[:old_password], params[:password], params[:password_confirmation])
       flash[:notice] = "Password successfully updated."
       #log_action("Security", "User (#{current_user.login}) has changed their password")
-      redirect_to profile_path(current_user)    
+      redirect_to dashboard_home_path    
     else
       @old_password = nil
       flash.now[:error] = current_user.errors.on_base || "There was a problem updating your password."

@@ -10,7 +10,7 @@ class LoadsController < ApplicationController
     if load
       @results = get_match_results(load.start_lng,load.start_lat,load.end_lng,load.end_lat,load.load_type)
     else
-      @results = ''
+      @results = []
     end
     
     respond_to do |format|
