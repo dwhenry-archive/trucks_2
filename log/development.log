@@ -36468,3 +36468,2328 @@ Rendered shared/_filter_options (0.00000)
 Rendered shared/_user_bar (0.01600)
 Rendered shared/_navigation (0.00000)
 Completed in 1.76600 (0 reqs/sec) | Rendering: 0.57900 (32%) | DB: 0.07800 (4%) | 200 OK [http://localhost/]
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-08-04 23:12:13) [GET]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlYmQ5N2FlZmIyNGYyYjQ2
+ZjQxNDY1NjhjMmFkOGNlYjM6DHVzZXJfaWRpECIKZmxhc2hJQzonQWN0aW9u
+Q29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0
+dXJuX3RvMA==--d8665b8dbda28e444c2dfc68a6fba1eceba80bb3
+  Parameters: {"action"=>"your", "controller"=>"loads"}
+  [4;35;1mUser Columns (0.063000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 11) LIMIT 1[0m
+  [4;35;1mCompany Columns (0.078000)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mCompany Load (0.000000)[0m   [0;1mSELECT * FROM `companies` WHERE (`companies`.`id` = 11) [0m
+  [4;35;1mLoad Load (0.031000)[0m   [0mSELECT * FROM `loads` WHERE (`loads`.company_id = 11) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mLoad Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `loads`[0m
+  [4;35;1mMapPoint Load (0.078000)[0m   [0mSELECT *, (ACOS(least(1,COS(-0.481037176459165)*COS(2.65208015828294)*COS(RADIANS(map_points.lat))*COS(RADIANS(map_points.lng))+
+ COS(-0.481037176459165)*SIN(2.65208015828294)*COS(RADIANS(map_points.lat))*SIN(RADIANS(map_points.lng))+
+ SIN(-0.481037176459165)*SIN(RADIANS(map_points.lat))))*6376.77271)
+ AS distance FROM `map_points` WHERE (point_type = 'start' and load_type != 'contract') [0m
+  [4;36;1mMapPoint Load (0.000000)[0m   [0;1mSELECT *, (ACOS(least(1,COS(-0.4652716173259)*COS(2.62122273710768)*COS(RADIANS(map_points.lat))*COS(RADIANS(map_points.lng))+
+ COS(-0.4652716173259)*SIN(2.62122273710768)*COS(RADIANS(map_points.lat))*SIN(RADIANS(map_points.lng))+
+ SIN(-0.4652716173259)*SIN(RADIANS(map_points.lat))))*6376.77271)
+ AS distance FROM `map_points` WHERE (point_type = 'end' and load_type != 'contract') [0m
+Google geocoding. Address: -27.5614,151.953. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>-27.5614,151.953</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>433-437 Ruthven St, Toowoomba QLD 4350, Australia</address>
+    <AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName><Locality><LocalityName>Toowoomba</LocalityName><Thoroughfare><ThoroughfareName>433-437 Ruthven St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>4350</PostalCodeNumber></PostalCode></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-27.5581754" south="-27.5644706" east="151.9560516" west="151.9497564" />
+    </ExtendedData>
+    <Point><coordinates>151.9529040,-27.5613230,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p2">
+    <address>Toowoomba QLD 4352, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName><Locality><LocalityName>Toowoomba</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-27.5502690" south="-27.5692850" east="151.9591820" west="151.9420820" />
+    </ExtendedData>
+    <Point><coordinates>151.9555050,-27.5613020,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p3">
+    <address>Queensland, Australia</address>
+    <AddressDetails Accuracy="2" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-10.6875420" south="-29.1778970" east="153.5521710" west="137.9959570" />
+    </ExtendedData>
+    <Point><coordinates>145.7740021,-19.7061005,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p4">
+    <address>Australia</address>
+    <AddressDetails Accuracy="1" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-9.2065000" south="-43.9572000" east="159.3320000" west="112.5000000" />
+    </ExtendedData>
+    <Point><coordinates>133.7751360,-25.2743980,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+Google geocoding. Address: -26.6581,150.185. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>-26.6581,150.185</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>31-33 Marian St, Miles QLD 4415, Australia</address>
+    <AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName><Thoroughfare><ThoroughfareName>31-33 Marian St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>4415</PostalCodeNumber></PostalCode></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.6549570" south="-26.6612522" east="150.1881470" west="150.1818518" />
+    </ExtendedData>
+    <Point><coordinates>150.1849965,-26.6581255,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p2">
+    <address>Miles QLD 4415, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.6061720" south="-26.8369420" east="150.2658060" west="150.0309590" />
+    </ExtendedData>
+    <Point><coordinates>150.1846150,-26.6580620,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p3">
+    <address>Queensland, Australia</address>
+    <AddressDetails Accuracy="2" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-10.6875420" south="-29.1778970" east="153.5521710" west="137.9959570" />
+    </ExtendedData>
+    <Point><coordinates>145.7740021,-19.7061005,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p4">
+    <address>Australia</address>
+    <AddressDetails Accuracy="1" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-9.2065000" south="-43.9572000" east="159.3320000" west="112.5000000" />
+    </ExtendedData>
+    <Point><coordinates>133.7751360,-25.2743980,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;35;1mMapPoint Columns (0.000000)[0m   [0mSHOW FIELDS FROM `map_points`[0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `loads` WHERE (`loads`.company_id = 11) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `loads` WHERE (`loads`.company_id = 11) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mLoad Load (0.000000)[0m   [0;1mSELECT * FROM `loads` WHERE (`loads`.company_id = 11) ORDER BY created_at DESC[0m
+Rendered loads/_match_data (0.00000)
+Rendered shared/_filter_options (0.00000)
+Rendered shared/_user_bar (0.00000)
+Rendered shared/_navigation (0.00000)
+Completed in 2.76600 (0 reqs/sec) | Rendering: 0.04700 (1%) | DB: 0.25000 (9%) | 200 OK [http://localhost/loads/your]
+
+
+Processing LoadsController#index (for 127.0.0.1 at 2009-08-04 23:55:08) [GET]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlYmQ5N2FlZmIyNGYyYjQ2
+ZjQxNDY1NjhjMmFkOGNlYjM6DHVzZXJfaWRpECIKZmxhc2hJQzonQWN0aW9u
+Q29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0
+dXJuX3RvMA==--d8665b8dbda28e444c2dfc68a6fba1eceba80bb3
+  Parameters: {"action"=>"index", "controller"=>"loads"}
+  [4;35;1mUser Columns (0.000000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 11) LIMIT 1[0m
+  [4;35;1mLoad Load (0.000000)[0m   [0mSELECT * FROM `loads` WHERE (company_id != 11) ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;36;1mCompany Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mCompany Load (0.000000)[0m   [0mSELECT * FROM `companies` WHERE (`companies`.`id` = 11) [0m
+Rendered loads/_match_data (0.00000)
+Rendered shared/_filter_options (0.00000)
+Rendered shared/_user_bar (0.00000)
+Rendered shared/_navigation (0.00000)
+Completed in 0.81300 (1 reqs/sec) | Rendering: 0.03100 (3%) | DB: 0.00000 (0%) | 200 OK [http://localhost/loads]
+
+
+Processing LoadsController#index (for 127.0.0.1 at 2009-08-04 23:57:39) [GET]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlYmQ5N2FlZmIyNGYyYjQ2
+ZjQxNDY1NjhjMmFkOGNlYjM6DHVzZXJfaWRpECIKZmxhc2hJQzonQWN0aW9u
+Q29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0
+dXJuX3RvMA==--d8665b8dbda28e444c2dfc68a6fba1eceba80bb3
+  Parameters: {"action"=>"index", "controller"=>"loads"}
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 11) LIMIT 1[0m
+  [4;36;1mLoad Load (0.000000)[0m   [0;1mSELECT * FROM `loads` WHERE (company_id != 11) ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering loads/index
+Rendered loads/_match_data (0.00000)
+Rendered shared/_filter_options (0.00000)
+Rendered shared/_user_bar (0.00000)
+Rendered shared/_navigation (0.00000)
+Completed in 0.81200 (1 reqs/sec) | Rendering: 0.01500 (1%) | DB: 0.00000 (0%) | 200 OK [http://localhost/loads]
+
+
+Processing LoadsController#index (for 127.0.0.1 at 2009-08-04 23:58:00) [GET]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlYmQ5N2FlZmIyNGYyYjQ2
+ZjQxNDY1NjhjMmFkOGNlYjM6DHVzZXJfaWRpECIKZmxhc2hJQzonQWN0aW9u
+Q29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0
+dXJuX3RvMA==--d8665b8dbda28e444c2dfc68a6fba1eceba80bb3
+  Parameters: {"action"=>"index", "controller"=>"loads"}
+  [4;35;1mUser Columns (0.000000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 11) LIMIT 1[0m
+  [4;35;1mLoad Load (0.000000)[0m   [0mSELECT * FROM `loads` WHERE (company_id != 11) ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering loads/index
+Rendered loads/_match_data (0.00000)
+Rendered shared/_filter_options (0.00000)
+Rendered shared/_user_bar (0.00000)
+Rendered shared/_navigation (0.00000)
+Completed in 0.79700 (1 reqs/sec) | Rendering: 0.01600 (2%) | DB: 0.00000 (0%) | 200 OK [http://localhost/loads]
+
+
+Processing LoadsController#index (for 127.0.0.1 at 2009-08-04 23:58:17) [GET]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlYmQ5N2FlZmIyNGYyYjQ2
+ZjQxNDY1NjhjMmFkOGNlYjM6DHVzZXJfaWRpECIKZmxhc2hJQzonQWN0aW9u
+Q29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0
+dXJuX3RvMA==--d8665b8dbda28e444c2dfc68a6fba1eceba80bb3
+  Parameters: {"action"=>"index", "controller"=>"loads"}
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 11) LIMIT 1[0m
+  [4;36;1mLoad Load (0.000000)[0m   [0;1mSELECT * FROM `loads` WHERE (company_id != 11) ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering loads/index
+Rendered loads/_match_data (0.00000)
+Rendered shared/_filter_options (0.00000)
+Rendered shared/_user_bar (0.00000)
+Rendered shared/_navigation (0.00000)
+Completed in 0.93700 (1 reqs/sec) | Rendering: 0.03100 (3%) | DB: 0.00000 (0%) | 200 OK [http://localhost/loads]
+
+
+Processing LoadsController#index (for 127.0.0.1 at 2009-08-05 00:10:32) [GET]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlYmQ5N2FlZmIyNGYyYjQ2
+ZjQxNDY1NjhjMmFkOGNlYjM6DHVzZXJfaWRpECIKZmxhc2hJQzonQWN0aW9u
+Q29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0
+dXJuX3RvMA==--d8665b8dbda28e444c2dfc68a6fba1eceba80bb3
+  Parameters: {"action"=>"index", "controller"=>"loads"}
+  [4;35;1mUser Columns (0.000000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 11) LIMIT 1[0m
+  [4;35;1mLoad Load (0.000000)[0m   [0mSELECT * FROM `loads` WHERE (company_id != 11) ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering loads/index
+Rendered loads/_match_data (0.00000)
+Rendered shared/_filter_options (0.00000)
+Rendered shared/_user_bar (0.00000)
+Rendered shared/_navigation (0.00000)
+Completed in 0.76600 (1 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.00000 (0%) | 200 OK [http://localhost/loads]
+
+
+Processing LoadsController#index (for 127.0.0.1 at 2009-08-05 00:10:44) [GET]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlYmQ5N2FlZmIyNGYyYjQ2
+ZjQxNDY1NjhjMmFkOGNlYjM6DHVzZXJfaWRpECIKZmxhc2hJQzonQWN0aW9u
+Q29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0
+dXJuX3RvMA==--d8665b8dbda28e444c2dfc68a6fba1eceba80bb3
+  Parameters: {"action"=>"index", "controller"=>"loads"}
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 11) LIMIT 1[0m
+  [4;36;1mLoad Load (0.000000)[0m   [0;1mSELECT * FROM `loads` WHERE (company_id != 11) ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering loads/index
+Rendered loads/_match_data (0.00000)
+Rendered shared/_filter_options (0.00000)
+Rendered shared/_user_bar (0.00000)
+Rendered shared/_navigation (0.00000)
+Completed in 1.12500 (0 reqs/sec) | Rendering: 0.01600 (1%) | DB: 0.00000 (0%) | 200 OK [http://localhost/loads]
+
+
+Processing LoadsController#index (for 127.0.0.1 at 2009-08-05 00:11:17) [GET]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlYmQ5N2FlZmIyNGYyYjQ2
+ZjQxNDY1NjhjMmFkOGNlYjM6DHVzZXJfaWRpECIKZmxhc2hJQzonQWN0aW9u
+Q29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0
+dXJuX3RvMA==--d8665b8dbda28e444c2dfc68a6fba1eceba80bb3
+  Parameters: {"action"=>"index", "controller"=>"loads"}
+  [4;35;1mUser Columns (0.000000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 11) LIMIT 1[0m
+  [4;35;1mLoad Load (0.000000)[0m   [0mSELECT * FROM `loads` WHERE (company_id != 11) ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering loads/index
+Rendered loads/_match_data (0.00000)
+Rendered shared/_filter_options (0.00000)
+Rendered shared/_user_bar (0.00000)
+Rendered shared/_navigation (0.00000)
+Completed in 0.90600 (1 reqs/sec) | Rendering: 0.01600 (1%) | DB: 0.00000 (0%) | 200 OK [http://localhost/loads]
+
+
+Processing LoadsController#index (for 127.0.0.1 at 2009-08-05 00:11:26) [GET]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlYmQ5N2FlZmIyNGYyYjQ2
+ZjQxNDY1NjhjMmFkOGNlYjM6DHVzZXJfaWRpECIKZmxhc2hJQzonQWN0aW9u
+Q29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0
+dXJuX3RvMA==--d8665b8dbda28e444c2dfc68a6fba1eceba80bb3
+  Parameters: {"action"=>"index", "controller"=>"loads"}
+  [4;36;1mUser Columns (0.015000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 11) LIMIT 1[0m
+  [4;36;1mLoad Load (0.000000)[0m   [0;1mSELECT * FROM `loads` WHERE (company_id != 11) ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering loads/index
+Rendered loads/_match_data (0.00000)
+Rendered shared/_filter_options (0.00000)
+Rendered shared/_user_bar (0.00000)
+Rendered shared/_navigation (0.00000)
+Completed in 0.96900 (1 reqs/sec) | Rendering: 0.01600 (1%) | DB: 0.01500 (1%) | 200 OK [http://localhost/loads]
+
+
+Processing LoadsController#index (for 127.0.0.1 at 2009-08-05 00:11:37) [GET]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlYmQ5N2FlZmIyNGYyYjQ2
+ZjQxNDY1NjhjMmFkOGNlYjM6DHVzZXJfaWRpECIKZmxhc2hJQzonQWN0aW9u
+Q29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0
+dXJuX3RvMA==--d8665b8dbda28e444c2dfc68a6fba1eceba80bb3
+  Parameters: {"action"=>"index", "controller"=>"loads"}
+  [4;35;1mUser Columns (0.000000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 11) LIMIT 1[0m
+  [4;35;1mLoad Load (0.000000)[0m   [0mSELECT * FROM `loads` WHERE (company_id != 11) ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering loads/index
+Rendered loads/_match_data (0.00000)
+Rendered shared/_filter_options (0.00000)
+Rendered shared/_user_bar (0.00000)
+Rendered shared/_navigation (0.00000)
+Completed in 0.85900 (1 reqs/sec) | Rendering: 0.01500 (1%) | DB: 0.00000 (0%) | 200 OK [http://localhost/loads]
+
+
+Processing LoadsController#index (for 127.0.0.1 at 2009-08-05 00:11:45) [GET]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlYmQ5N2FlZmIyNGYyYjQ2
+ZjQxNDY1NjhjMmFkOGNlYjM6DHVzZXJfaWRpECIKZmxhc2hJQzonQWN0aW9u
+Q29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0
+dXJuX3RvMA==--d8665b8dbda28e444c2dfc68a6fba1eceba80bb3
+  Parameters: {"action"=>"index", "controller"=>"loads"}
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 11) LIMIT 1[0m
+  [4;36;1mLoad Load (0.000000)[0m   [0;1mSELECT * FROM `loads` WHERE (company_id != 11) ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering loads/index
+Rendered loads/_match_data (0.00000)
+Rendered shared/_filter_options (0.00000)
+Rendered shared/_user_bar (0.00000)
+Rendered shared/_navigation (0.00000)
+Completed in 0.87500 (1 reqs/sec) | Rendering: 0.03100 (3%) | DB: 0.00000 (0%) | 200 OK [http://localhost/loads]
+
+
+Processing LoadsController#index (for 127.0.0.1 at 2009-08-05 00:12:07) [GET]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlYmQ5N2FlZmIyNGYyYjQ2
+ZjQxNDY1NjhjMmFkOGNlYjM6DHVzZXJfaWRpECIKZmxhc2hJQzonQWN0aW9u
+Q29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0
+dXJuX3RvMA==--d8665b8dbda28e444c2dfc68a6fba1eceba80bb3
+  Parameters: {"action"=>"index", "controller"=>"loads"}
+  [4;35;1mUser Columns (0.000000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 11) LIMIT 1[0m
+  [4;35;1mLoad Load (0.000000)[0m   [0mSELECT * FROM `loads` WHERE (company_id != 11) ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering loads/index
+Rendered loads/_match_data (0.00000)
+Rendered shared/_filter_options (0.00000)
+Rendered shared/_user_bar (0.00000)
+Rendered shared/_navigation (0.00000)
+Completed in 0.87500 (1 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.00000 (0%) | 200 OK [http://localhost/loads]
+
+
+Processing LoadsController#index (for 127.0.0.1 at 2009-08-05 00:12:26) [GET]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlYmQ5N2FlZmIyNGYyYjQ2
+ZjQxNDY1NjhjMmFkOGNlYjM6DHVzZXJfaWRpECIKZmxhc2hJQzonQWN0aW9u
+Q29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0
+dXJuX3RvMA==--d8665b8dbda28e444c2dfc68a6fba1eceba80bb3
+  Parameters: {"action"=>"index", "controller"=>"loads"}
+  [4;36;1mUser Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 11) LIMIT 1[0m
+  [4;36;1mLoad Load (0.000000)[0m   [0;1mSELECT * FROM `loads` WHERE (company_id != 11) ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering loads/index
+Rendered loads/_match_data (0.00000)
+Rendered shared/_filter_options (0.00000)
+Rendered shared/_user_bar (0.00000)
+Rendered shared/_navigation (0.00000)
+Completed in 0.84400 (1 reqs/sec) | Rendering: 0.01600 (1%) | DB: 0.01600 (1%) | 200 OK [http://localhost/loads]
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-08-05 00:12:41) [GET]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlYmQ5N2FlZmIyNGYyYjQ2
+ZjQxNDY1NjhjMmFkOGNlYjM6DHVzZXJfaWRpECIKZmxhc2hJQzonQWN0aW9u
+Q29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0
+dXJuX3RvMA==--d8665b8dbda28e444c2dfc68a6fba1eceba80bb3
+  Parameters: {"action"=>"your", "controller"=>"loads"}
+  [4;35;1mUser Columns (0.000000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 11) LIMIT 1[0m
+  [4;35;1mCompany Columns (0.000000)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mCompany Load (0.000000)[0m   [0;1mSELECT * FROM `companies` WHERE (`companies`.`id` = 11) [0m
+  [4;35;1mLoad Load (0.000000)[0m   [0mSELECT * FROM `loads` WHERE (`loads`.company_id = 11) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mLoad Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `loads`[0m
+  [4;35;1mMapPoint Load (0.000000)[0m   [0mSELECT *, (ACOS(least(1,COS(-0.481037176459165)*COS(2.65208015828294)*COS(RADIANS(map_points.lat))*COS(RADIANS(map_points.lng))+
+ COS(-0.481037176459165)*SIN(2.65208015828294)*COS(RADIANS(map_points.lat))*SIN(RADIANS(map_points.lng))+
+ SIN(-0.481037176459165)*SIN(RADIANS(map_points.lat))))*6376.77271)
+ AS distance FROM `map_points` WHERE (point_type = 'start' and load_type != 'contract') [0m
+  [4;36;1mMapPoint Load (0.000000)[0m   [0;1mSELECT *, (ACOS(least(1,COS(-0.4652716173259)*COS(2.62122273710768)*COS(RADIANS(map_points.lat))*COS(RADIANS(map_points.lng))+
+ COS(-0.4652716173259)*SIN(2.62122273710768)*COS(RADIANS(map_points.lat))*SIN(RADIANS(map_points.lng))+
+ SIN(-0.4652716173259)*SIN(RADIANS(map_points.lat))))*6376.77271)
+ AS distance FROM `map_points` WHERE (point_type = 'end' and load_type != 'contract') [0m
+Google geocoding. Address: -27.5614,151.953. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>-27.5614,151.953</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>433-437 Ruthven St, Toowoomba QLD 4350, Australia</address>
+    <AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName><Locality><LocalityName>Toowoomba</LocalityName><Thoroughfare><ThoroughfareName>433-437 Ruthven St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>4350</PostalCodeNumber></PostalCode></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-27.5581754" south="-27.5644706" east="151.9560516" west="151.9497564" />
+    </ExtendedData>
+    <Point><coordinates>151.9529040,-27.5613230,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p2">
+    <address>Toowoomba QLD 4352, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName><Locality><LocalityName>Toowoomba</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-27.5502690" south="-27.5692850" east="151.9591820" west="151.9420820" />
+    </ExtendedData>
+    <Point><coordinates>151.9555050,-27.5613020,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p3">
+    <address>Queensland, Australia</address>
+    <AddressDetails Accuracy="2" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-10.6875420" south="-29.1778970" east="153.5521710" west="137.9959570" />
+    </ExtendedData>
+    <Point><coordinates>145.7740021,-19.7061005,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p4">
+    <address>Australia</address>
+    <AddressDetails Accuracy="1" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-9.2065000" south="-43.9572000" east="159.3320000" west="112.5000000" />
+    </ExtendedData>
+    <Point><coordinates>133.7751360,-25.2743980,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+Google geocoding. Address: -26.6581,150.185. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>-26.6581,150.185</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>31-33 Marian St, Miles QLD 4415, Australia</address>
+    <AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName><Thoroughfare><ThoroughfareName>31-33 Marian St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>4415</PostalCodeNumber></PostalCode></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.6549570" south="-26.6612522" east="150.1881470" west="150.1818518" />
+    </ExtendedData>
+    <Point><coordinates>150.1849965,-26.6581255,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p2">
+    <address>Miles QLD 4415, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.6061720" south="-26.8369420" east="150.2658060" west="150.0309590" />
+    </ExtendedData>
+    <Point><coordinates>150.1846150,-26.6580620,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p3">
+    <address>Queensland, Australia</address>
+    <AddressDetails Accuracy="2" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-10.6875420" south="-29.1778970" east="153.5521710" west="137.9959570" />
+    </ExtendedData>
+    <Point><coordinates>145.7740021,-19.7061005,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p4">
+    <address>Australia</address>
+    <AddressDetails Accuracy="1" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-9.2065000" south="-43.9572000" east="159.3320000" west="112.5000000" />
+    </ExtendedData>
+    <Point><coordinates>133.7751360,-25.2743980,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;35;1mMapPoint Columns (0.016000)[0m   [0mSHOW FIELDS FROM `map_points`[0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `loads` WHERE (`loads`.company_id = 11) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `loads` WHERE (`loads`.company_id = 11) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mLoad Load (0.000000)[0m   [0;1mSELECT * FROM `loads` WHERE (`loads`.company_id = 11) ORDER BY created_at DESC[0m
+Rendered loads/_match_data (0.00000)
+Rendered shared/_filter_options (0.00000)
+Rendered shared/_user_bar (0.01500)
+Rendered shared/_navigation (0.00000)
+Completed in 1.53100 (0 reqs/sec) | Rendering: 0.03100 (2%) | DB: 0.01600 (1%) | 200 OK [http://localhost/loads/your]
+
+
+Processing LoadsController#match_data (for 127.0.0.1 at 2009-08-05 00:12:46) [GET]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlYmQ5N2FlZmIyNGYyYjQ2
+ZjQxNDY1NjhjMmFkOGNlYjM6DHVzZXJfaWRpECIKZmxhc2hJQzonQWN0aW9u
+Q29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0
+dXJuX3RvMA==--d8665b8dbda28e444c2dfc68a6fba1eceba80bb3
+  Parameters: {"end_lng"=>"153.028", "start_lng"=>"148.791", "authenticity_token"=>"8fb96ffbff6fb082c04dbc8e24f8df06678e247d", "action"=>"match_data", "end_lat"=>"-27.4676", "start_lat"=>"-26.5739", "controller"=>"loads", "load_type"=>"contract"}
+  [4;35;1mUser Columns (0.000000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 11) LIMIT 1[0m
+  [4;35;1mMapPoint Load (0.000000)[0m   [0mSELECT *, (ACOS(least(1,COS(-0.463802050095721)*COS(2.59689284733488)*COS(RADIANS(map_points.lat))*COS(RADIANS(map_points.lng))+
+ COS(-0.463802050095721)*SIN(2.59689284733488)*COS(RADIANS(map_points.lat))*SIN(RADIANS(map_points.lng))+
+ SIN(-0.463802050095721)*SIN(RADIANS(map_points.lat))))*6376.77271)
+ AS distance FROM `map_points` WHERE (point_type = 'start' and load_type != 'contract') [0m
+  [4;36;1mMapPoint Load (0.000000)[0m   [0;1mSELECT *, (ACOS(least(1,COS(-0.479400057620794)*COS(2.67084244774188)*COS(RADIANS(map_points.lat))*COS(RADIANS(map_points.lng))+
+ COS(-0.479400057620794)*SIN(2.67084244774188)*COS(RADIANS(map_points.lat))*SIN(RADIANS(map_points.lng))+
+ SIN(-0.479400057620794)*SIN(RADIANS(map_points.lat))))*6376.77271)
+ AS distance FROM `map_points` WHERE (point_type = 'end' and load_type != 'contract') [0m
+Google geocoding. Address: -26.5739,148.791. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>-26.5739,148.791</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>25 Bowen St, Roma QLD 4455, Australia</address>
+    <AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName><Locality><LocalityName>Roma</LocalityName><Thoroughfare><ThoroughfareName>25 Bowen St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>4455</PostalCodeNumber></PostalCode></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.5708439" south="-26.5771391" east="148.7943911" west="148.7880959" />
+    </ExtendedData>
+    <Point><coordinates>148.7912401,-26.5740123,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p2">
+    <address>Roma QLD 4455, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName><Locality><LocalityName>Roma</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.5194790" south="-26.6041570" east="148.8627170" west="148.7450300" />
+    </ExtendedData>
+    <Point><coordinates>148.7905920,-26.5739070,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p3">
+    <address>Queensland, Australia</address>
+    <AddressDetails Accuracy="2" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-10.6875420" south="-29.1778970" east="153.5521710" west="137.9959570" />
+    </ExtendedData>
+    <Point><coordinates>145.7740021,-19.7061005,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p4">
+    <address>Australia</address>
+    <AddressDetails Accuracy="1" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-9.2065000" south="-43.9572000" east="159.3320000" west="112.5000000" />
+    </ExtendedData>
+    <Point><coordinates>133.7751360,-25.2743980,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+Google geocoding. Address: -27.4676,153.028. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>-27.4676,153.028</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>289 Queen St, Brisbane QLD 4000, Australia</address>
+    <AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName><Locality><LocalityName>Brisbane</LocalityName><Thoroughfare><ThoroughfareName>289 Queen St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>4000</PostalCodeNumber></PostalCode></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-27.4645434" south="-27.4708386" east="153.0314106" west="153.0251154" />
+    </ExtendedData>
+    <Point><coordinates>153.0282630,-27.4676910,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p2">
+    <address>Brisbane QLD, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName><Locality><LocalityName>Brisbane</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-27.4585910" south="-27.4795290" east="153.0355330" west="153.0100180" />
+    </ExtendedData>
+    <Point><coordinates>153.0278920,-27.4675800,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p3">
+    <address>4000, Australia</address>
+    <AddressDetails Accuracy="5" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><PostalCode><PostalCodeNumber>4000</PostalCodeNumber></PostalCode></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-27.4493869" south="-27.4825506" east="153.0368341" west="153.0088712" />
+    </ExtendedData>
+    <Point><coordinates>153.0228526,-27.4659688,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p4">
+    <address>Queensland, Australia</address>
+    <AddressDetails Accuracy="2" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-10.6875420" south="-29.1778970" east="153.5521710" west="137.9959570" />
+    </ExtendedData>
+    <Point><coordinates>145.7740021,-19.7061005,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p5">
+    <address>Australia</address>
+    <AddressDetails Accuracy="1" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-9.2065000" south="-43.9572000" east="159.3320000" west="112.5000000" />
+    </ExtendedData>
+    <Point><coordinates>133.7751360,-25.2743980,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;35;1mMapPoint Columns (0.000000)[0m   [0mSHOW FIELDS FROM `map_points`[0m
+Rendered loads/_match_data (0.00000)
+Completed in 1.87500 (0 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.00000 (0%) | 200 OK [http://localhost/loads/match_data?authenticity_token=8fb96ffbff6fb082c04dbc8e24f8df06678e247d&start_lat=-26.5739&start_lng=148.791&end_lat=-27.4676&end_lng=153.028&load_type=contract]
+
+
+Processing LoadsController#match_data (for 127.0.0.1 at 2009-08-05 00:12:48) [GET]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlYmQ5N2FlZmIyNGYyYjQ2
+ZjQxNDY1NjhjMmFkOGNlYjM6DHVzZXJfaWRpECIKZmxhc2hJQzonQWN0aW9u
+Q29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0
+dXJuX3RvMA==--d8665b8dbda28e444c2dfc68a6fba1eceba80bb3
+  Parameters: {"end_lng"=>"147.113", "start_lng"=>"153.028", "authenticity_token"=>"8fb96ffbff6fb082c04dbc8e24f8df06678e247d", "action"=>"match_data", "end_lat"=>"-26.4158", "start_lat"=>"-27.4676", "controller"=>"loads", "load_type"=>"truck"}
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 11) LIMIT 1[0m
+  [4;36;1mMapPoint Load (0.000000)[0m   [0;1mSELECT *, (ACOS(least(1,COS(-0.479400057620794)*COS(2.67084244774188)*COS(RADIANS(map_points.lat))*COS(RADIANS(map_points.lng))+
+ COS(-0.479400057620794)*SIN(2.67084244774188)*COS(RADIANS(map_points.lat))*SIN(RADIANS(map_points.lng))+
+ SIN(-0.479400057620794)*SIN(RADIANS(map_points.lat))))*6376.77271)
+ AS distance FROM `map_points` WHERE (point_type = 'start' and load_type != 'truck') [0m
+  [4;35;1mMapPoint Load (0.016000)[0m   [0mSELECT *, (ACOS(least(1,COS(-0.461042684548318)*COS(2.56760622248642)*COS(RADIANS(map_points.lat))*COS(RADIANS(map_points.lng))+
+ COS(-0.461042684548318)*SIN(2.56760622248642)*COS(RADIANS(map_points.lat))*SIN(RADIANS(map_points.lng))+
+ SIN(-0.461042684548318)*SIN(RADIANS(map_points.lat))))*6376.77271)
+ AS distance FROM `map_points` WHERE (point_type = 'end' and load_type != 'truck') [0m
+Google geocoding. Address: -27.4676,153.028. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>-27.4676,153.028</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>289 Queen St, Brisbane QLD 4000, Australia</address>
+    <AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName><Locality><LocalityName>Brisbane</LocalityName><Thoroughfare><ThoroughfareName>289 Queen St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>4000</PostalCodeNumber></PostalCode></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-27.4645434" south="-27.4708386" east="153.0314106" west="153.0251154" />
+    </ExtendedData>
+    <Point><coordinates>153.0282630,-27.4676910,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p2">
+    <address>Brisbane QLD, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName><Locality><LocalityName>Brisbane</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-27.4585910" south="-27.4795290" east="153.0355330" west="153.0100180" />
+    </ExtendedData>
+    <Point><coordinates>153.0278920,-27.4675800,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p3">
+    <address>4000, Australia</address>
+    <AddressDetails Accuracy="5" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><PostalCode><PostalCodeNumber>4000</PostalCodeNumber></PostalCode></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-27.4493869" south="-27.4825506" east="153.0368341" west="153.0088712" />
+    </ExtendedData>
+    <Point><coordinates>153.0228526,-27.4659688,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p4">
+    <address>Queensland, Australia</address>
+    <AddressDetails Accuracy="2" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-10.6875420" south="-29.1778970" east="153.5521710" west="137.9959570" />
+    </ExtendedData>
+    <Point><coordinates>145.7740021,-19.7061005,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p5">
+    <address>Australia</address>
+    <AddressDetails Accuracy="1" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-9.2065000" south="-43.9572000" east="159.3320000" west="112.5000000" />
+    </ExtendedData>
+    <Point><coordinates>133.7751360,-25.2743980,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+Google geocoding. Address: -26.4158,147.113. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>-26.4158,147.113</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>LOT 7 Eurella St, Morven QLD 4468, Australia</address>
+    <AddressDetails Accuracy="9" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName><Locality><LocalityName>Morven</LocalityName><Thoroughfare><ThoroughfareName>Eurella St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>4468</PostalCodeNumber></PostalCode></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.4126164" south="-26.4189116" east="147.1161996" west="147.1099044" />
+    </ExtendedData>
+    <Point><coordinates>147.1130520,-26.4157640,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p2">
+    <address>66-78 Warrego Hwy, Morven QLD 4468, Australia</address>
+    <AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName><Locality><LocalityName>Morven</LocalityName><Thoroughfare><ThoroughfareName>66-78 Warrego Hwy</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>4468</PostalCodeNumber></PostalCode></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.4121953" south="-26.4184905" east="147.1159953" west="147.1097001" />
+    </ExtendedData>
+    <Point><coordinates>147.1128410,-26.4153228,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p3">
+    <address>Morven QLD, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName><Locality><LocalityName>Morven</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.1762300" south="-26.7854870" east="147.3787710" west="146.8058080" />
+    </ExtendedData>
+    <Point><coordinates>147.1127060,-26.4158220,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p4">
+    <address>Queensland 4468, Australia</address>
+    <AddressDetails Accuracy="5" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><PostalCode><PostalCodeNumber>4468</PostalCodeNumber></PostalCode></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-25.8159160" south="-26.8198216" east="147.3270485" west="146.4719928" />
+    </ExtendedData>
+    <Point><coordinates>146.8995206,-26.3178688,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p5">
+    <address>Queensland, Australia</address>
+    <AddressDetails Accuracy="2" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-10.6875420" south="-29.1778970" east="153.5521710" west="137.9959570" />
+    </ExtendedData>
+    <Point><coordinates>145.7740021,-19.7061005,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p6">
+    <address>Australia</address>
+    <AddressDetails Accuracy="1" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-9.2065000" south="-43.9572000" east="159.3320000" west="112.5000000" />
+    </ExtendedData>
+    <Point><coordinates>133.7751360,-25.2743980,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;36;1mMapPoint Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `map_points`[0m
+Rendered loads/_match_data (0.00000)
+Completed in 1.84400 (0 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.01600 (0%) | 200 OK [http://localhost/loads/match_data?authenticity_token=8fb96ffbff6fb082c04dbc8e24f8df06678e247d&start_lat=-27.4676&start_lng=153.028&end_lat=-26.4158&end_lng=147.113&load_type=truck]
+
+
+Processing LoadsController#match_data (for 127.0.0.1 at 2009-08-05 00:12:49) [GET]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlYmQ5N2FlZmIyNGYyYjQ2
+ZjQxNDY1NjhjMmFkOGNlYjM6DHVzZXJfaWRpECIKZmxhc2hJQzonQWN0aW9u
+Q29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0
+dXJuX3RvMA==--d8665b8dbda28e444c2dfc68a6fba1eceba80bb3
+  Parameters: {"end_lng"=>"147.113", "start_lng"=>"150.185", "authenticity_token"=>"8fb96ffbff6fb082c04dbc8e24f8df06678e247d", "action"=>"match_data", "end_lat"=>"-26.4158", "start_lat"=>"-26.6581", "controller"=>"loads", "load_type"=>"truck"}
+  [4;35;1mUser Columns (0.016000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 11) LIMIT 1[0m
+  [4;35;1mMapPoint Load (0.000000)[0m   [0mSELECT *, (ACOS(least(1,COS(-0.4652716173259)*COS(2.62122273710768)*COS(RADIANS(map_points.lat))*COS(RADIANS(map_points.lng))+
+ COS(-0.4652716173259)*SIN(2.62122273710768)*COS(RADIANS(map_points.lat))*SIN(RADIANS(map_points.lng))+
+ SIN(-0.4652716173259)*SIN(RADIANS(map_points.lat))))*6376.77271)
+ AS distance FROM `map_points` WHERE (point_type = 'start' and load_type != 'truck') [0m
+  [4;36;1mMapPoint Load (0.000000)[0m   [0;1mSELECT *, (ACOS(least(1,COS(-0.461042684548318)*COS(2.56760622248642)*COS(RADIANS(map_points.lat))*COS(RADIANS(map_points.lng))+
+ COS(-0.461042684548318)*SIN(2.56760622248642)*COS(RADIANS(map_points.lat))*SIN(RADIANS(map_points.lng))+
+ SIN(-0.461042684548318)*SIN(RADIANS(map_points.lat))))*6376.77271)
+ AS distance FROM `map_points` WHERE (point_type = 'end' and load_type != 'truck') [0m
+Google geocoding. Address: -26.6581,150.185. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>-26.6581,150.185</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>31-33 Marian St, Miles QLD 4415, Australia</address>
+    <AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName><Thoroughfare><ThoroughfareName>31-33 Marian St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>4415</PostalCodeNumber></PostalCode></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.6549570" south="-26.6612522" east="150.1881470" west="150.1818518" />
+    </ExtendedData>
+    <Point><coordinates>150.1849965,-26.6581255,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p2">
+    <address>Miles QLD 4415, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.6061720" south="-26.8369420" east="150.2658060" west="150.0309590" />
+    </ExtendedData>
+    <Point><coordinates>150.1846150,-26.6580620,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p3">
+    <address>Queensland, Australia</address>
+    <AddressDetails Accuracy="2" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-10.6875420" south="-29.1778970" east="153.5521710" west="137.9959570" />
+    </ExtendedData>
+    <Point><coordinates>145.7740021,-19.7061005,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p4">
+    <address>Australia</address>
+    <AddressDetails Accuracy="1" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-9.2065000" south="-43.9572000" east="159.3320000" west="112.5000000" />
+    </ExtendedData>
+    <Point><coordinates>133.7751360,-25.2743980,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+Google geocoding. Address: -26.4158,147.113. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>-26.4158,147.113</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>LOT 7 Eurella St, Morven QLD 4468, Australia</address>
+    <AddressDetails Accuracy="9" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName><Locality><LocalityName>Morven</LocalityName><Thoroughfare><ThoroughfareName>Eurella St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>4468</PostalCodeNumber></PostalCode></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.4126164" south="-26.4189116" east="147.1161996" west="147.1099044" />
+    </ExtendedData>
+    <Point><coordinates>147.1130520,-26.4157640,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p2">
+    <address>66-78 Warrego Hwy, Morven QLD 4468, Australia</address>
+    <AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName><Locality><LocalityName>Morven</LocalityName><Thoroughfare><ThoroughfareName>66-78 Warrego Hwy</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>4468</PostalCodeNumber></PostalCode></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.4121953" south="-26.4184905" east="147.1159953" west="147.1097001" />
+    </ExtendedData>
+    <Point><coordinates>147.1128410,-26.4153228,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p3">
+    <address>Morven QLD, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName><Locality><LocalityName>Morven</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.1762300" south="-26.7854870" east="147.3787710" west="146.8058080" />
+    </ExtendedData>
+    <Point><coordinates>147.1127060,-26.4158220,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p4">
+    <address>Queensland 4468, Australia</address>
+    <AddressDetails Accuracy="5" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><PostalCode><PostalCodeNumber>4468</PostalCodeNumber></PostalCode></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-25.8159160" south="-26.8198216" east="147.3270485" west="146.4719928" />
+    </ExtendedData>
+    <Point><coordinates>146.8995206,-26.3178688,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p5">
+    <address>Queensland, Australia</address>
+    <AddressDetails Accuracy="2" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-10.6875420" south="-29.1778970" east="153.5521710" west="137.9959570" />
+    </ExtendedData>
+    <Point><coordinates>145.7740021,-19.7061005,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p6">
+    <address>Australia</address>
+    <AddressDetails Accuracy="1" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-9.2065000" south="-43.9572000" east="159.3320000" west="112.5000000" />
+    </ExtendedData>
+    <Point><coordinates>133.7751360,-25.2743980,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;35;1mMapPoint Columns (0.000000)[0m   [0mSHOW FIELDS FROM `map_points`[0m
+Rendered loads/_match_data (0.00000)
+Completed in 1.81300 (0 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.01600 (0%) | 200 OK [http://localhost/loads/match_data?authenticity_token=8fb96ffbff6fb082c04dbc8e24f8df06678e247d&start_lat=-26.6581&start_lng=150.185&end_lat=-26.4158&end_lng=147.113&load_type=truck]
+
+
+Processing LoadsController#match_data (for 127.0.0.1 at 2009-08-05 00:12:51) [GET]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlYmQ5N2FlZmIyNGYyYjQ2
+ZjQxNDY1NjhjMmFkOGNlYjM6DHVzZXJfaWRpECIKZmxhc2hJQzonQWN0aW9u
+Q29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0
+dXJuX3RvMA==--d8665b8dbda28e444c2dfc68a6fba1eceba80bb3
+  Parameters: {"end_lng"=>"148.791", "start_lng"=>"150.185", "authenticity_token"=>"8fb96ffbff6fb082c04dbc8e24f8df06678e247d", "action"=>"match_data", "end_lat"=>"-26.5739", "start_lat"=>"-26.6581", "controller"=>"loads", "load_type"=>"truck"}
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 11) LIMIT 1[0m
+  [4;36;1mMapPoint Load (0.000000)[0m   [0;1mSELECT *, (ACOS(least(1,COS(-0.4652716173259)*COS(2.62122273710768)*COS(RADIANS(map_points.lat))*COS(RADIANS(map_points.lng))+
+ COS(-0.4652716173259)*SIN(2.62122273710768)*COS(RADIANS(map_points.lat))*SIN(RADIANS(map_points.lng))+
+ SIN(-0.4652716173259)*SIN(RADIANS(map_points.lat))))*6376.77271)
+ AS distance FROM `map_points` WHERE (point_type = 'start' and load_type != 'truck') [0m
+  [4;35;1mMapPoint Load (0.000000)[0m   [0mSELECT *, (ACOS(least(1,COS(-0.463802050095721)*COS(2.59689284733488)*COS(RADIANS(map_points.lat))*COS(RADIANS(map_points.lng))+
+ COS(-0.463802050095721)*SIN(2.59689284733488)*COS(RADIANS(map_points.lat))*SIN(RADIANS(map_points.lng))+
+ SIN(-0.463802050095721)*SIN(RADIANS(map_points.lat))))*6376.77271)
+ AS distance FROM `map_points` WHERE (point_type = 'end' and load_type != 'truck') [0m
+Google geocoding. Address: -26.6581,150.185. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>-26.6581,150.185</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>31-33 Marian St, Miles QLD 4415, Australia</address>
+    <AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName><Thoroughfare><ThoroughfareName>31-33 Marian St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>4415</PostalCodeNumber></PostalCode></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.6549570" south="-26.6612522" east="150.1881470" west="150.1818518" />
+    </ExtendedData>
+    <Point><coordinates>150.1849965,-26.6581255,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p2">
+    <address>Miles QLD 4415, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.6061720" south="-26.8369420" east="150.2658060" west="150.0309590" />
+    </ExtendedData>
+    <Point><coordinates>150.1846150,-26.6580620,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p3">
+    <address>Queensland, Australia</address>
+    <AddressDetails Accuracy="2" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-10.6875420" south="-29.1778970" east="153.5521710" west="137.9959570" />
+    </ExtendedData>
+    <Point><coordinates>145.7740021,-19.7061005,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p4">
+    <address>Australia</address>
+    <AddressDetails Accuracy="1" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-9.2065000" south="-43.9572000" east="159.3320000" west="112.5000000" />
+    </ExtendedData>
+    <Point><coordinates>133.7751360,-25.2743980,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+Google geocoding. Address: -26.5739,148.791. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>-26.5739,148.791</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>25 Bowen St, Roma QLD 4455, Australia</address>
+    <AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName><Locality><LocalityName>Roma</LocalityName><Thoroughfare><ThoroughfareName>25 Bowen St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>4455</PostalCodeNumber></PostalCode></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.5708439" south="-26.5771391" east="148.7943911" west="148.7880959" />
+    </ExtendedData>
+    <Point><coordinates>148.7912401,-26.5740123,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p2">
+    <address>Roma QLD 4455, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName><Locality><LocalityName>Roma</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.5194790" south="-26.6041570" east="148.8627170" west="148.7450300" />
+    </ExtendedData>
+    <Point><coordinates>148.7905920,-26.5739070,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p3">
+    <address>Queensland, Australia</address>
+    <AddressDetails Accuracy="2" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-10.6875420" south="-29.1778970" east="153.5521710" west="137.9959570" />
+    </ExtendedData>
+    <Point><coordinates>145.7740021,-19.7061005,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p4">
+    <address>Australia</address>
+    <AddressDetails Accuracy="1" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-9.2065000" south="-43.9572000" east="159.3320000" west="112.5000000" />
+    </ExtendedData>
+    <Point><coordinates>133.7751360,-25.2743980,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;36;1mMapPoint Columns (0.015000)[0m   [0;1mSHOW FIELDS FROM `map_points`[0m
+Rendered loads/_match_data (0.00000)
+Completed in 1.54600 (0 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.01500 (0%) | 200 OK [http://localhost/loads/match_data?authenticity_token=8fb96ffbff6fb082c04dbc8e24f8df06678e247d&start_lat=-26.6581&start_lng=150.185&end_lat=-26.5739&end_lng=148.791&load_type=truck]
+
+
+Processing LoadsController#match_data (for 127.0.0.1 at 2009-08-05 00:12:58) [GET]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlYmQ5N2FlZmIyNGYyYjQ2
+ZjQxNDY1NjhjMmFkOGNlYjM6DHVzZXJfaWRpECIKZmxhc2hJQzonQWN0aW9u
+Q29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0
+dXJuX3RvMA==--d8665b8dbda28e444c2dfc68a6fba1eceba80bb3
+  Parameters: {"end_lng"=>"150.185", "start_lng"=>"151.953", "authenticity_token"=>"8fb96ffbff6fb082c04dbc8e24f8df06678e247d", "action"=>"match_data", "end_lat"=>"-26.6581", "start_lat"=>"-27.5614", "controller"=>"loads", "load_type"=>"contract"}
+  [4;35;1mUser Columns (0.000000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 11) LIMIT 1[0m
+  [4;35;1mMapPoint Load (0.000000)[0m   [0mSELECT *, (ACOS(least(1,COS(-0.481037176459165)*COS(2.65208015828294)*COS(RADIANS(map_points.lat))*COS(RADIANS(map_points.lng))+
+ COS(-0.481037176459165)*SIN(2.65208015828294)*COS(RADIANS(map_points.lat))*SIN(RADIANS(map_points.lng))+
+ SIN(-0.481037176459165)*SIN(RADIANS(map_points.lat))))*6376.77271)
+ AS distance FROM `map_points` WHERE (point_type = 'start' and load_type != 'contract') [0m
+  [4;36;1mMapPoint Load (0.000000)[0m   [0;1mSELECT *, (ACOS(least(1,COS(-0.4652716173259)*COS(2.62122273710768)*COS(RADIANS(map_points.lat))*COS(RADIANS(map_points.lng))+
+ COS(-0.4652716173259)*SIN(2.62122273710768)*COS(RADIANS(map_points.lat))*SIN(RADIANS(map_points.lng))+
+ SIN(-0.4652716173259)*SIN(RADIANS(map_points.lat))))*6376.77271)
+ AS distance FROM `map_points` WHERE (point_type = 'end' and load_type != 'contract') [0m
+Google geocoding. Address: -27.5614,151.953. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>-27.5614,151.953</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>433-437 Ruthven St, Toowoomba QLD 4350, Australia</address>
+    <AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName><Locality><LocalityName>Toowoomba</LocalityName><Thoroughfare><ThoroughfareName>433-437 Ruthven St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>4350</PostalCodeNumber></PostalCode></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-27.5581754" south="-27.5644706" east="151.9560516" west="151.9497564" />
+    </ExtendedData>
+    <Point><coordinates>151.9529040,-27.5613230,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p2">
+    <address>Toowoomba QLD 4352, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName><Locality><LocalityName>Toowoomba</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-27.5502690" south="-27.5692850" east="151.9591820" west="151.9420820" />
+    </ExtendedData>
+    <Point><coordinates>151.9555050,-27.5613020,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p3">
+    <address>Queensland, Australia</address>
+    <AddressDetails Accuracy="2" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-10.6875420" south="-29.1778970" east="153.5521710" west="137.9959570" />
+    </ExtendedData>
+    <Point><coordinates>145.7740021,-19.7061005,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p4">
+    <address>Australia</address>
+    <AddressDetails Accuracy="1" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-9.2065000" south="-43.9572000" east="159.3320000" west="112.5000000" />
+    </ExtendedData>
+    <Point><coordinates>133.7751360,-25.2743980,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+Google geocoding. Address: -26.6581,150.185. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>-26.6581,150.185</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>31-33 Marian St, Miles QLD 4415, Australia</address>
+    <AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName><Thoroughfare><ThoroughfareName>31-33 Marian St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>4415</PostalCodeNumber></PostalCode></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.6549570" south="-26.6612522" east="150.1881470" west="150.1818518" />
+    </ExtendedData>
+    <Point><coordinates>150.1849965,-26.6581255,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p2">
+    <address>Miles QLD 4415, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.6061720" south="-26.8369420" east="150.2658060" west="150.0309590" />
+    </ExtendedData>
+    <Point><coordinates>150.1846150,-26.6580620,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p3">
+    <address>Queensland, Australia</address>
+    <AddressDetails Accuracy="2" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-10.6875420" south="-29.1778970" east="153.5521710" west="137.9959570" />
+    </ExtendedData>
+    <Point><coordinates>145.7740021,-19.7061005,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p4">
+    <address>Australia</address>
+    <AddressDetails Accuracy="1" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-9.2065000" south="-43.9572000" east="159.3320000" west="112.5000000" />
+    </ExtendedData>
+    <Point><coordinates>133.7751360,-25.2743980,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;35;1mMapPoint Columns (0.000000)[0m   [0mSHOW FIELDS FROM `map_points`[0m
+Rendered loads/_match_data (0.00000)
+Completed in 1.57800 (0 reqs/sec) | Rendering: 0.09300 (5%) | DB: 0.00000 (0%) | 200 OK [http://localhost/loads/match_data?authenticity_token=8fb96ffbff6fb082c04dbc8e24f8df06678e247d&start_lat=-27.5614&start_lng=151.953&end_lat=-26.6581&end_lng=150.185&load_type=contract]
+
+
+Processing LoadsController#match_data (for 127.0.0.1 at 2009-08-05 00:13:01) [GET]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlYmQ5N2FlZmIyNGYyYjQ2
+ZjQxNDY1NjhjMmFkOGNlYjM6DHVzZXJfaWRpECIKZmxhc2hJQzonQWN0aW9u
+Q29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0
+dXJuX3RvMA==--d8665b8dbda28e444c2dfc68a6fba1eceba80bb3
+  Parameters: {"end_lng"=>"153.028", "start_lng"=>"148.791", "authenticity_token"=>"8fb96ffbff6fb082c04dbc8e24f8df06678e247d", "action"=>"match_data", "end_lat"=>"-27.4676", "start_lat"=>"-26.5739", "controller"=>"loads", "load_type"=>"contract"}
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 11) LIMIT 1[0m
+  [4;36;1mMapPoint Load (0.000000)[0m   [0;1mSELECT *, (ACOS(least(1,COS(-0.463802050095721)*COS(2.59689284733488)*COS(RADIANS(map_points.lat))*COS(RADIANS(map_points.lng))+
+ COS(-0.463802050095721)*SIN(2.59689284733488)*COS(RADIANS(map_points.lat))*SIN(RADIANS(map_points.lng))+
+ SIN(-0.463802050095721)*SIN(RADIANS(map_points.lat))))*6376.77271)
+ AS distance FROM `map_points` WHERE (point_type = 'start' and load_type != 'contract') [0m
+  [4;35;1mMapPoint Load (0.015000)[0m   [0mSELECT *, (ACOS(least(1,COS(-0.479400057620794)*COS(2.67084244774188)*COS(RADIANS(map_points.lat))*COS(RADIANS(map_points.lng))+
+ COS(-0.479400057620794)*SIN(2.67084244774188)*COS(RADIANS(map_points.lat))*SIN(RADIANS(map_points.lng))+
+ SIN(-0.479400057620794)*SIN(RADIANS(map_points.lat))))*6376.77271)
+ AS distance FROM `map_points` WHERE (point_type = 'end' and load_type != 'contract') [0m
+Google geocoding. Address: -26.5739,148.791. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>-26.5739,148.791</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>25 Bowen St, Roma QLD 4455, Australia</address>
+    <AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName><Locality><LocalityName>Roma</LocalityName><Thoroughfare><ThoroughfareName>25 Bowen St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>4455</PostalCodeNumber></PostalCode></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.5708439" south="-26.5771391" east="148.7943911" west="148.7880959" />
+    </ExtendedData>
+    <Point><coordinates>148.7912401,-26.5740123,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p2">
+    <address>Roma QLD 4455, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName><Locality><LocalityName>Roma</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.5194790" south="-26.6041570" east="148.8627170" west="148.7450300" />
+    </ExtendedData>
+    <Point><coordinates>148.7905920,-26.5739070,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p3">
+    <address>Queensland, Australia</address>
+    <AddressDetails Accuracy="2" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-10.6875420" south="-29.1778970" east="153.5521710" west="137.9959570" />
+    </ExtendedData>
+    <Point><coordinates>145.7740021,-19.7061005,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p4">
+    <address>Australia</address>
+    <AddressDetails Accuracy="1" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-9.2065000" south="-43.9572000" east="159.3320000" west="112.5000000" />
+    </ExtendedData>
+    <Point><coordinates>133.7751360,-25.2743980,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+Google geocoding. Address: -27.4676,153.028. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>-27.4676,153.028</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>289 Queen St, Brisbane QLD 4000, Australia</address>
+    <AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName><Locality><LocalityName>Brisbane</LocalityName><Thoroughfare><ThoroughfareName>289 Queen St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>4000</PostalCodeNumber></PostalCode></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-27.4645434" south="-27.4708386" east="153.0314106" west="153.0251154" />
+    </ExtendedData>
+    <Point><coordinates>153.0282630,-27.4676910,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p2">
+    <address>Brisbane QLD, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName><Locality><LocalityName>Brisbane</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-27.4585910" south="-27.4795290" east="153.0355330" west="153.0100180" />
+    </ExtendedData>
+    <Point><coordinates>153.0278920,-27.4675800,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p3">
+    <address>4000, Australia</address>
+    <AddressDetails Accuracy="5" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><PostalCode><PostalCodeNumber>4000</PostalCodeNumber></PostalCode></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-27.4493869" south="-27.4825506" east="153.0368341" west="153.0088712" />
+    </ExtendedData>
+    <Point><coordinates>153.0228526,-27.4659688,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p4">
+    <address>Queensland, Australia</address>
+    <AddressDetails Accuracy="2" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-10.6875420" south="-29.1778970" east="153.5521710" west="137.9959570" />
+    </ExtendedData>
+    <Point><coordinates>145.7740021,-19.7061005,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p5">
+    <address>Australia</address>
+    <AddressDetails Accuracy="1" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-9.2065000" south="-43.9572000" east="159.3320000" west="112.5000000" />
+    </ExtendedData>
+    <Point><coordinates>133.7751360,-25.2743980,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;36;1mMapPoint Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `map_points`[0m
+Rendered loads/_match_data (0.00000)
+Completed in 1.43700 (0 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.01500 (1%) | 200 OK [http://localhost/loads/match_data?authenticity_token=8fb96ffbff6fb082c04dbc8e24f8df06678e247d&start_lat=-26.5739&start_lng=148.791&end_lat=-27.4676&end_lng=153.028&load_type=contract]
+
+
+Processing LoadsController#match_data (for 127.0.0.1 at 2009-08-05 00:13:52) [GET]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlYmQ5N2FlZmIyNGYyYjQ2
+ZjQxNDY1NjhjMmFkOGNlYjM6DHVzZXJfaWRpECIKZmxhc2hJQzonQWN0aW9u
+Q29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0
+dXJuX3RvMA==--d8665b8dbda28e444c2dfc68a6fba1eceba80bb3
+  Parameters: {"end_lng"=>"147.113", "start_lng"=>"153.028", "authenticity_token"=>"8fb96ffbff6fb082c04dbc8e24f8df06678e247d", "action"=>"match_data", "end_lat"=>"-26.4158", "start_lat"=>"-27.4676", "controller"=>"loads", "load_type"=>"truck"}
+  [4;35;1mUser Columns (0.000000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.015000)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 11) LIMIT 1[0m
+  [4;35;1mMapPoint Load (0.000000)[0m   [0mSELECT *, (ACOS(least(1,COS(-0.479400057620794)*COS(2.67084244774188)*COS(RADIANS(map_points.lat))*COS(RADIANS(map_points.lng))+
+ COS(-0.479400057620794)*SIN(2.67084244774188)*COS(RADIANS(map_points.lat))*SIN(RADIANS(map_points.lng))+
+ SIN(-0.479400057620794)*SIN(RADIANS(map_points.lat))))*6376.77271)
+ AS distance FROM `map_points` WHERE (point_type = 'start' and load_type != 'truck') [0m
+  [4;36;1mMapPoint Load (0.000000)[0m   [0;1mSELECT *, (ACOS(least(1,COS(-0.461042684548318)*COS(2.56760622248642)*COS(RADIANS(map_points.lat))*COS(RADIANS(map_points.lng))+
+ COS(-0.461042684548318)*SIN(2.56760622248642)*COS(RADIANS(map_points.lat))*SIN(RADIANS(map_points.lng))+
+ SIN(-0.461042684548318)*SIN(RADIANS(map_points.lat))))*6376.77271)
+ AS distance FROM `map_points` WHERE (point_type = 'end' and load_type != 'truck') [0m
+Google geocoding. Address: -27.4676,153.028. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>-27.4676,153.028</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>289 Queen St, Brisbane QLD 4000, Australia</address>
+    <AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName><Locality><LocalityName>Brisbane</LocalityName><Thoroughfare><ThoroughfareName>289 Queen St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>4000</PostalCodeNumber></PostalCode></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-27.4645434" south="-27.4708386" east="153.0314106" west="153.0251154" />
+    </ExtendedData>
+    <Point><coordinates>153.0282630,-27.4676910,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p2">
+    <address>Brisbane QLD, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName><Locality><LocalityName>Brisbane</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-27.4585910" south="-27.4795290" east="153.0355330" west="153.0100180" />
+    </ExtendedData>
+    <Point><coordinates>153.0278920,-27.4675800,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p3">
+    <address>4000, Australia</address>
+    <AddressDetails Accuracy="5" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><PostalCode><PostalCodeNumber>4000</PostalCodeNumber></PostalCode></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-27.4493869" south="-27.4825506" east="153.0368341" west="153.0088712" />
+    </ExtendedData>
+    <Point><coordinates>153.0228526,-27.4659688,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p4">
+    <address>Queensland, Australia</address>
+    <AddressDetails Accuracy="2" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-10.6875420" south="-29.1778970" east="153.5521710" west="137.9959570" />
+    </ExtendedData>
+    <Point><coordinates>145.7740021,-19.7061005,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p5">
+    <address>Australia</address>
+    <AddressDetails Accuracy="1" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-9.2065000" south="-43.9572000" east="159.3320000" west="112.5000000" />
+    </ExtendedData>
+    <Point><coordinates>133.7751360,-25.2743980,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+Google geocoding. Address: -26.4158,147.113. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>-26.4158,147.113</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>LOT 7 Eurella St, Morven QLD 4468, Australia</address>
+    <AddressDetails Accuracy="9" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName><Locality><LocalityName>Morven</LocalityName><Thoroughfare><ThoroughfareName>Eurella St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>4468</PostalCodeNumber></PostalCode></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.4126164" south="-26.4189116" east="147.1161996" west="147.1099044" />
+    </ExtendedData>
+    <Point><coordinates>147.1130520,-26.4157640,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p2">
+    <address>66-78 Warrego Hwy, Morven QLD 4468, Australia</address>
+    <AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName><Locality><LocalityName>Morven</LocalityName><Thoroughfare><ThoroughfareName>66-78 Warrego Hwy</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>4468</PostalCodeNumber></PostalCode></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.4121953" south="-26.4184905" east="147.1159953" west="147.1097001" />
+    </ExtendedData>
+    <Point><coordinates>147.1128410,-26.4153228,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p3">
+    <address>Morven QLD, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName><Locality><LocalityName>Morven</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.1762300" south="-26.7854870" east="147.3787710" west="146.8058080" />
+    </ExtendedData>
+    <Point><coordinates>147.1127060,-26.4158220,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p4">
+    <address>Queensland 4468, Australia</address>
+    <AddressDetails Accuracy="5" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><PostalCode><PostalCodeNumber>4468</PostalCodeNumber></PostalCode></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-25.8159160" south="-26.8198216" east="147.3270485" west="146.4719928" />
+    </ExtendedData>
+    <Point><coordinates>146.8995206,-26.3178688,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p5">
+    <address>Queensland, Australia</address>
+    <AddressDetails Accuracy="2" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-10.6875420" south="-29.1778970" east="153.5521710" west="137.9959570" />
+    </ExtendedData>
+    <Point><coordinates>145.7740021,-19.7061005,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p6">
+    <address>Australia</address>
+    <AddressDetails Accuracy="1" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-9.2065000" south="-43.9572000" east="159.3320000" west="112.5000000" />
+    </ExtendedData>
+    <Point><coordinates>133.7751360,-25.2743980,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;35;1mMapPoint Columns (0.015000)[0m   [0mSHOW FIELDS FROM `map_points`[0m
+Rendered loads/_match_data (0.00000)
+Completed in 1.71800 (0 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.03000 (1%) | 200 OK [http://localhost/loads/match_data?authenticity_token=8fb96ffbff6fb082c04dbc8e24f8df06678e247d&start_lat=-27.4676&start_lng=153.028&end_lat=-26.4158&end_lng=147.113&load_type=truck]
+
+
+Processing LoadsController#match_data (for 127.0.0.1 at 2009-08-05 00:13:53) [GET]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlYmQ5N2FlZmIyNGYyYjQ2
+ZjQxNDY1NjhjMmFkOGNlYjM6DHVzZXJfaWRpECIKZmxhc2hJQzonQWN0aW9u
+Q29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0
+dXJuX3RvMA==--d8665b8dbda28e444c2dfc68a6fba1eceba80bb3
+  Parameters: {"end_lng"=>"147.113", "start_lng"=>"150.185", "authenticity_token"=>"8fb96ffbff6fb082c04dbc8e24f8df06678e247d", "action"=>"match_data", "end_lat"=>"-26.4158", "start_lat"=>"-26.6581", "controller"=>"loads", "load_type"=>"truck"}
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 11) LIMIT 1[0m
+  [4;36;1mMapPoint Load (0.000000)[0m   [0;1mSELECT *, (ACOS(least(1,COS(-0.4652716173259)*COS(2.62122273710768)*COS(RADIANS(map_points.lat))*COS(RADIANS(map_points.lng))+
+ COS(-0.4652716173259)*SIN(2.62122273710768)*COS(RADIANS(map_points.lat))*SIN(RADIANS(map_points.lng))+
+ SIN(-0.4652716173259)*SIN(RADIANS(map_points.lat))))*6376.77271)
+ AS distance FROM `map_points` WHERE (point_type = 'start' and load_type != 'truck') [0m
+  [4;35;1mMapPoint Load (0.000000)[0m   [0mSELECT *, (ACOS(least(1,COS(-0.461042684548318)*COS(2.56760622248642)*COS(RADIANS(map_points.lat))*COS(RADIANS(map_points.lng))+
+ COS(-0.461042684548318)*SIN(2.56760622248642)*COS(RADIANS(map_points.lat))*SIN(RADIANS(map_points.lng))+
+ SIN(-0.461042684548318)*SIN(RADIANS(map_points.lat))))*6376.77271)
+ AS distance FROM `map_points` WHERE (point_type = 'end' and load_type != 'truck') [0m
+Google geocoding. Address: -26.6581,150.185. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>-26.6581,150.185</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>31-33 Marian St, Miles QLD 4415, Australia</address>
+    <AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName><Thoroughfare><ThoroughfareName>31-33 Marian St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>4415</PostalCodeNumber></PostalCode></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.6549570" south="-26.6612522" east="150.1881470" west="150.1818518" />
+    </ExtendedData>
+    <Point><coordinates>150.1849965,-26.6581255,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p2">
+    <address>Miles QLD 4415, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.6061720" south="-26.8369420" east="150.2658060" west="150.0309590" />
+    </ExtendedData>
+    <Point><coordinates>150.1846150,-26.6580620,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p3">
+    <address>Queensland, Australia</address>
+    <AddressDetails Accuracy="2" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-10.6875420" south="-29.1778970" east="153.5521710" west="137.9959570" />
+    </ExtendedData>
+    <Point><coordinates>145.7740021,-19.7061005,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p4">
+    <address>Australia</address>
+    <AddressDetails Accuracy="1" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-9.2065000" south="-43.9572000" east="159.3320000" west="112.5000000" />
+    </ExtendedData>
+    <Point><coordinates>133.7751360,-25.2743980,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+Google geocoding. Address: -26.4158,147.113. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>-26.4158,147.113</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>LOT 7 Eurella St, Morven QLD 4468, Australia</address>
+    <AddressDetails Accuracy="9" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName><Locality><LocalityName>Morven</LocalityName><Thoroughfare><ThoroughfareName>Eurella St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>4468</PostalCodeNumber></PostalCode></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.4126164" south="-26.4189116" east="147.1161996" west="147.1099044" />
+    </ExtendedData>
+    <Point><coordinates>147.1130520,-26.4157640,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p2">
+    <address>66-78 Warrego Hwy, Morven QLD 4468, Australia</address>
+    <AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName><Locality><LocalityName>Morven</LocalityName><Thoroughfare><ThoroughfareName>66-78 Warrego Hwy</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>4468</PostalCodeNumber></PostalCode></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.4121953" south="-26.4184905" east="147.1159953" west="147.1097001" />
+    </ExtendedData>
+    <Point><coordinates>147.1128410,-26.4153228,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p3">
+    <address>Morven QLD, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName><Locality><LocalityName>Morven</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.1762300" south="-26.7854870" east="147.3787710" west="146.8058080" />
+    </ExtendedData>
+    <Point><coordinates>147.1127060,-26.4158220,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p4">
+    <address>Queensland 4468, Australia</address>
+    <AddressDetails Accuracy="5" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><PostalCode><PostalCodeNumber>4468</PostalCodeNumber></PostalCode></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-25.8159160" south="-26.8198216" east="147.3270485" west="146.4719928" />
+    </ExtendedData>
+    <Point><coordinates>146.8995206,-26.3178688,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p5">
+    <address>Queensland, Australia</address>
+    <AddressDetails Accuracy="2" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-10.6875420" south="-29.1778970" east="153.5521710" west="137.9959570" />
+    </ExtendedData>
+    <Point><coordinates>145.7740021,-19.7061005,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p6">
+    <address>Australia</address>
+    <AddressDetails Accuracy="1" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-9.2065000" south="-43.9572000" east="159.3320000" west="112.5000000" />
+    </ExtendedData>
+    <Point><coordinates>133.7751360,-25.2743980,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;36;1mMapPoint Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `map_points`[0m
+Rendered loads/_match_data (0.00000)
+Completed in 1.76600 (0 reqs/sec) | Rendering: 0.01600 (0%) | DB: 0.00000 (0%) | 200 OK [http://localhost/loads/match_data?authenticity_token=8fb96ffbff6fb082c04dbc8e24f8df06678e247d&start_lat=-26.6581&start_lng=150.185&end_lat=-26.4158&end_lng=147.113&load_type=truck]
+
+
+Processing LoadsController#match_data (for 127.0.0.1 at 2009-08-05 00:13:55) [GET]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlYmQ5N2FlZmIyNGYyYjQ2
+ZjQxNDY1NjhjMmFkOGNlYjM6DHVzZXJfaWRpECIKZmxhc2hJQzonQWN0aW9u
+Q29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0
+dXJuX3RvMA==--d8665b8dbda28e444c2dfc68a6fba1eceba80bb3
+  Parameters: {"end_lng"=>"148.791", "start_lng"=>"150.185", "authenticity_token"=>"8fb96ffbff6fb082c04dbc8e24f8df06678e247d", "action"=>"match_data", "end_lat"=>"-26.5739", "start_lat"=>"-26.6581", "controller"=>"loads", "load_type"=>"truck"}
+  [4;35;1mUser Columns (0.000000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 11) LIMIT 1[0m
+  [4;35;1mMapPoint Load (0.000000)[0m   [0mSELECT *, (ACOS(least(1,COS(-0.4652716173259)*COS(2.62122273710768)*COS(RADIANS(map_points.lat))*COS(RADIANS(map_points.lng))+
+ COS(-0.4652716173259)*SIN(2.62122273710768)*COS(RADIANS(map_points.lat))*SIN(RADIANS(map_points.lng))+
+ SIN(-0.4652716173259)*SIN(RADIANS(map_points.lat))))*6376.77271)
+ AS distance FROM `map_points` WHERE (point_type = 'start' and load_type != 'truck') [0m
+  [4;36;1mMapPoint Load (0.000000)[0m   [0;1mSELECT *, (ACOS(least(1,COS(-0.463802050095721)*COS(2.59689284733488)*COS(RADIANS(map_points.lat))*COS(RADIANS(map_points.lng))+
+ COS(-0.463802050095721)*SIN(2.59689284733488)*COS(RADIANS(map_points.lat))*SIN(RADIANS(map_points.lng))+
+ SIN(-0.463802050095721)*SIN(RADIANS(map_points.lat))))*6376.77271)
+ AS distance FROM `map_points` WHERE (point_type = 'end' and load_type != 'truck') [0m
+Google geocoding. Address: -26.6581,150.185. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>-26.6581,150.185</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>31-33 Marian St, Miles QLD 4415, Australia</address>
+    <AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName><Thoroughfare><ThoroughfareName>31-33 Marian St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>4415</PostalCodeNumber></PostalCode></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.6549570" south="-26.6612522" east="150.1881470" west="150.1818518" />
+    </ExtendedData>
+    <Point><coordinates>150.1849965,-26.6581255,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p2">
+    <address>Miles QLD 4415, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.6061720" south="-26.8369420" east="150.2658060" west="150.0309590" />
+    </ExtendedData>
+    <Point><coordinates>150.1846150,-26.6580620,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p3">
+    <address>Queensland, Australia</address>
+    <AddressDetails Accuracy="2" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-10.6875420" south="-29.1778970" east="153.5521710" west="137.9959570" />
+    </ExtendedData>
+    <Point><coordinates>145.7740021,-19.7061005,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p4">
+    <address>Australia</address>
+    <AddressDetails Accuracy="1" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-9.2065000" south="-43.9572000" east="159.3320000" west="112.5000000" />
+    </ExtendedData>
+    <Point><coordinates>133.7751360,-25.2743980,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+Google geocoding. Address: -26.5739,148.791. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>-26.5739,148.791</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>25 Bowen St, Roma QLD 4455, Australia</address>
+    <AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName><Locality><LocalityName>Roma</LocalityName><Thoroughfare><ThoroughfareName>25 Bowen St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>4455</PostalCodeNumber></PostalCode></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.5708439" south="-26.5771391" east="148.7943911" west="148.7880959" />
+    </ExtendedData>
+    <Point><coordinates>148.7912401,-26.5740123,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p2">
+    <address>Roma QLD 4455, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName><Locality><LocalityName>Roma</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.5194790" south="-26.6041570" east="148.8627170" west="148.7450300" />
+    </ExtendedData>
+    <Point><coordinates>148.7905920,-26.5739070,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p3">
+    <address>Queensland, Australia</address>
+    <AddressDetails Accuracy="2" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-10.6875420" south="-29.1778970" east="153.5521710" west="137.9959570" />
+    </ExtendedData>
+    <Point><coordinates>145.7740021,-19.7061005,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p4">
+    <address>Australia</address>
+    <AddressDetails Accuracy="1" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-9.2065000" south="-43.9572000" east="159.3320000" west="112.5000000" />
+    </ExtendedData>
+    <Point><coordinates>133.7751360,-25.2743980,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;35;1mMapPoint Columns (0.000000)[0m   [0mSHOW FIELDS FROM `map_points`[0m
+Rendered loads/_match_data (0.00000)
+Completed in 1.62500 (0 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.00000 (0%) | 200 OK [http://localhost/loads/match_data?authenticity_token=8fb96ffbff6fb082c04dbc8e24f8df06678e247d&start_lat=-26.6581&start_lng=150.185&end_lat=-26.5739&end_lng=148.791&load_type=truck]
+
+
+Processing LoadsController#match_data (for 127.0.0.1 at 2009-08-05 00:13:57) [GET]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlYmQ5N2FlZmIyNGYyYjQ2
+ZjQxNDY1NjhjMmFkOGNlYjM6DHVzZXJfaWRpECIKZmxhc2hJQzonQWN0aW9u
+Q29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0
+dXJuX3RvMA==--d8665b8dbda28e444c2dfc68a6fba1eceba80bb3
+  Parameters: {"end_lng"=>"150.185", "start_lng"=>"151.953", "authenticity_token"=>"8fb96ffbff6fb082c04dbc8e24f8df06678e247d", "action"=>"match_data", "end_lat"=>"-26.6581", "start_lat"=>"-27.5614", "controller"=>"loads", "load_type"=>"contract"}
+  [4;36;1mUser Columns (0.015000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.016000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 11) LIMIT 1[0m
+  [4;36;1mMapPoint Load (0.000000)[0m   [0;1mSELECT *, (ACOS(least(1,COS(-0.481037176459165)*COS(2.65208015828294)*COS(RADIANS(map_points.lat))*COS(RADIANS(map_points.lng))+
+ COS(-0.481037176459165)*SIN(2.65208015828294)*COS(RADIANS(map_points.lat))*SIN(RADIANS(map_points.lng))+
+ SIN(-0.481037176459165)*SIN(RADIANS(map_points.lat))))*6376.77271)
+ AS distance FROM `map_points` WHERE (point_type = 'start' and load_type != 'contract') [0m
+  [4;35;1mMapPoint Load (0.000000)[0m   [0mSELECT *, (ACOS(least(1,COS(-0.4652716173259)*COS(2.62122273710768)*COS(RADIANS(map_points.lat))*COS(RADIANS(map_points.lng))+
+ COS(-0.4652716173259)*SIN(2.62122273710768)*COS(RADIANS(map_points.lat))*SIN(RADIANS(map_points.lng))+
+ SIN(-0.4652716173259)*SIN(RADIANS(map_points.lat))))*6376.77271)
+ AS distance FROM `map_points` WHERE (point_type = 'end' and load_type != 'contract') [0m
+Google geocoding. Address: -27.5614,151.953. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>-27.5614,151.953</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>433-437 Ruthven St, Toowoomba QLD 4350, Australia</address>
+    <AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName><Locality><LocalityName>Toowoomba</LocalityName><Thoroughfare><ThoroughfareName>433-437 Ruthven St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>4350</PostalCodeNumber></PostalCode></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-27.5581754" south="-27.5644706" east="151.9560516" west="151.9497564" />
+    </ExtendedData>
+    <Point><coordinates>151.9529040,-27.5613230,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p2">
+    <address>Toowoomba QLD 4352, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName><Locality><LocalityName>Toowoomba</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-27.5502690" south="-27.5692850" east="151.9591820" west="151.9420820" />
+    </ExtendedData>
+    <Point><coordinates>151.9555050,-27.5613020,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p3">
+    <address>Queensland, Australia</address>
+    <AddressDetails Accuracy="2" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-10.6875420" south="-29.1778970" east="153.5521710" west="137.9959570" />
+    </ExtendedData>
+    <Point><coordinates>145.7740021,-19.7061005,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p4">
+    <address>Australia</address>
+    <AddressDetails Accuracy="1" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-9.2065000" south="-43.9572000" east="159.3320000" west="112.5000000" />
+    </ExtendedData>
+    <Point><coordinates>133.7751360,-25.2743980,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+Google geocoding. Address: -26.6581,150.185. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>-26.6581,150.185</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>31-33 Marian St, Miles QLD 4415, Australia</address>
+    <AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName><Thoroughfare><ThoroughfareName>31-33 Marian St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>4415</PostalCodeNumber></PostalCode></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.6549570" south="-26.6612522" east="150.1881470" west="150.1818518" />
+    </ExtendedData>
+    <Point><coordinates>150.1849965,-26.6581255,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p2">
+    <address>Miles QLD 4415, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.6061720" south="-26.8369420" east="150.2658060" west="150.0309590" />
+    </ExtendedData>
+    <Point><coordinates>150.1846150,-26.6580620,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p3">
+    <address>Queensland, Australia</address>
+    <AddressDetails Accuracy="2" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-10.6875420" south="-29.1778970" east="153.5521710" west="137.9959570" />
+    </ExtendedData>
+    <Point><coordinates>145.7740021,-19.7061005,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p4">
+    <address>Australia</address>
+    <AddressDetails Accuracy="1" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-9.2065000" south="-43.9572000" east="159.3320000" west="112.5000000" />
+    </ExtendedData>
+    <Point><coordinates>133.7751360,-25.2743980,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;36;1mMapPoint Columns (0.015000)[0m   [0;1mSHOW FIELDS FROM `map_points`[0m
+Rendered loads/_match_data (0.00000)
+Completed in 1.57800 (0 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.04600 (2%) | 200 OK [http://localhost/loads/match_data?authenticity_token=8fb96ffbff6fb082c04dbc8e24f8df06678e247d&start_lat=-27.5614&start_lng=151.953&end_lat=-26.6581&end_lng=150.185&load_type=contract]
+
+
+Processing LoadsController#match_data (for 127.0.0.1 at 2009-08-05 00:13:59) [GET]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlYmQ5N2FlZmIyNGYyYjQ2
+ZjQxNDY1NjhjMmFkOGNlYjM6DHVzZXJfaWRpECIKZmxhc2hJQzonQWN0aW9u
+Q29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0
+dXJuX3RvMA==--d8665b8dbda28e444c2dfc68a6fba1eceba80bb3
+  Parameters: {"end_lng"=>"153.028", "start_lng"=>"148.791", "authenticity_token"=>"8fb96ffbff6fb082c04dbc8e24f8df06678e247d", "action"=>"match_data", "end_lat"=>"-27.4676", "start_lat"=>"-26.5739", "controller"=>"loads", "load_type"=>"contract"}
+  [4;35;1mUser Columns (0.000000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 11) LIMIT 1[0m
+  [4;35;1mMapPoint Load (0.000000)[0m   [0mSELECT *, (ACOS(least(1,COS(-0.463802050095721)*COS(2.59689284733488)*COS(RADIANS(map_points.lat))*COS(RADIANS(map_points.lng))+
+ COS(-0.463802050095721)*SIN(2.59689284733488)*COS(RADIANS(map_points.lat))*SIN(RADIANS(map_points.lng))+
+ SIN(-0.463802050095721)*SIN(RADIANS(map_points.lat))))*6376.77271)
+ AS distance FROM `map_points` WHERE (point_type = 'start' and load_type != 'contract') [0m
+  [4;36;1mMapPoint Load (0.000000)[0m   [0;1mSELECT *, (ACOS(least(1,COS(-0.479400057620794)*COS(2.67084244774188)*COS(RADIANS(map_points.lat))*COS(RADIANS(map_points.lng))+
+ COS(-0.479400057620794)*SIN(2.67084244774188)*COS(RADIANS(map_points.lat))*SIN(RADIANS(map_points.lng))+
+ SIN(-0.479400057620794)*SIN(RADIANS(map_points.lat))))*6376.77271)
+ AS distance FROM `map_points` WHERE (point_type = 'end' and load_type != 'contract') [0m
+Google geocoding. Address: -26.5739,148.791. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>-26.5739,148.791</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>25 Bowen St, Roma QLD 4455, Australia</address>
+    <AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName><Locality><LocalityName>Roma</LocalityName><Thoroughfare><ThoroughfareName>25 Bowen St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>4455</PostalCodeNumber></PostalCode></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.5708439" south="-26.5771391" east="148.7943911" west="148.7880959" />
+    </ExtendedData>
+    <Point><coordinates>148.7912401,-26.5740123,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p2">
+    <address>Roma QLD 4455, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName><Locality><LocalityName>Roma</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.5194790" south="-26.6041570" east="148.8627170" west="148.7450300" />
+    </ExtendedData>
+    <Point><coordinates>148.7905920,-26.5739070,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p3">
+    <address>Queensland, Australia</address>
+    <AddressDetails Accuracy="2" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-10.6875420" south="-29.1778970" east="153.5521710" west="137.9959570" />
+    </ExtendedData>
+    <Point><coordinates>145.7740021,-19.7061005,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p4">
+    <address>Australia</address>
+    <AddressDetails Accuracy="1" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-9.2065000" south="-43.9572000" east="159.3320000" west="112.5000000" />
+    </ExtendedData>
+    <Point><coordinates>133.7751360,-25.2743980,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+Google geocoding. Address: -27.4676,153.028. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>-27.4676,153.028</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>289 Queen St, Brisbane QLD 4000, Australia</address>
+    <AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName><Locality><LocalityName>Brisbane</LocalityName><Thoroughfare><ThoroughfareName>289 Queen St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>4000</PostalCodeNumber></PostalCode></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-27.4645434" south="-27.4708386" east="153.0314106" west="153.0251154" />
+    </ExtendedData>
+    <Point><coordinates>153.0282630,-27.4676910,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p2">
+    <address>Brisbane QLD, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName><Locality><LocalityName>Brisbane</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-27.4585910" south="-27.4795290" east="153.0355330" west="153.0100180" />
+    </ExtendedData>
+    <Point><coordinates>153.0278920,-27.4675800,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p3">
+    <address>4000, Australia</address>
+    <AddressDetails Accuracy="5" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><PostalCode><PostalCodeNumber>4000</PostalCodeNumber></PostalCode></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-27.4493869" south="-27.4825506" east="153.0368341" west="153.0088712" />
+    </ExtendedData>
+    <Point><coordinates>153.0228526,-27.4659688,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p4">
+    <address>Queensland, Australia</address>
+    <AddressDetails Accuracy="2" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-10.6875420" south="-29.1778970" east="153.5521710" west="137.9959570" />
+    </ExtendedData>
+    <Point><coordinates>145.7740021,-19.7061005,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p5">
+    <address>Australia</address>
+    <AddressDetails Accuracy="1" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-9.2065000" south="-43.9572000" east="159.3320000" west="112.5000000" />
+    </ExtendedData>
+    <Point><coordinates>133.7751360,-25.2743980,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;35;1mMapPoint Columns (0.000000)[0m   [0mSHOW FIELDS FROM `map_points`[0m
+Rendered loads/_match_data (0.00000)
+Completed in 1.68700 (0 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.00000 (0%) | 200 OK [http://localhost/loads/match_data?authenticity_token=8fb96ffbff6fb082c04dbc8e24f8df06678e247d&start_lat=-26.5739&start_lng=148.791&end_lat=-27.4676&end_lng=153.028&load_type=contract]
+
+
+Processing LoadsController#match_data (for 127.0.0.1 at 2009-08-05 00:14:00) [GET]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlYmQ5N2FlZmIyNGYyYjQ2
+ZjQxNDY1NjhjMmFkOGNlYjM6DHVzZXJfaWRpECIKZmxhc2hJQzonQWN0aW9u
+Q29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0
+dXJuX3RvMA==--d8665b8dbda28e444c2dfc68a6fba1eceba80bb3
+  Parameters: {"end_lng"=>"147.113", "start_lng"=>"153.028", "authenticity_token"=>"8fb96ffbff6fb082c04dbc8e24f8df06678e247d", "action"=>"match_data", "end_lat"=>"-26.4158", "start_lat"=>"-27.4676", "controller"=>"loads", "load_type"=>"truck"}
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 11) LIMIT 1[0m
+  [4;36;1mMapPoint Load (0.000000)[0m   [0;1mSELECT *, (ACOS(least(1,COS(-0.479400057620794)*COS(2.67084244774188)*COS(RADIANS(map_points.lat))*COS(RADIANS(map_points.lng))+
+ COS(-0.479400057620794)*SIN(2.67084244774188)*COS(RADIANS(map_points.lat))*SIN(RADIANS(map_points.lng))+
+ SIN(-0.479400057620794)*SIN(RADIANS(map_points.lat))))*6376.77271)
+ AS distance FROM `map_points` WHERE (point_type = 'start' and load_type != 'truck') [0m
+  [4;35;1mMapPoint Load (0.000000)[0m   [0mSELECT *, (ACOS(least(1,COS(-0.461042684548318)*COS(2.56760622248642)*COS(RADIANS(map_points.lat))*COS(RADIANS(map_points.lng))+
+ COS(-0.461042684548318)*SIN(2.56760622248642)*COS(RADIANS(map_points.lat))*SIN(RADIANS(map_points.lng))+
+ SIN(-0.461042684548318)*SIN(RADIANS(map_points.lat))))*6376.77271)
+ AS distance FROM `map_points` WHERE (point_type = 'end' and load_type != 'truck') [0m
+Google geocoding. Address: -27.4676,153.028. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>-27.4676,153.028</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>289 Queen St, Brisbane QLD 4000, Australia</address>
+    <AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName><Locality><LocalityName>Brisbane</LocalityName><Thoroughfare><ThoroughfareName>289 Queen St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>4000</PostalCodeNumber></PostalCode></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-27.4645434" south="-27.4708386" east="153.0314106" west="153.0251154" />
+    </ExtendedData>
+    <Point><coordinates>153.0282630,-27.4676910,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p2">
+    <address>Brisbane QLD, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName><Locality><LocalityName>Brisbane</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-27.4585910" south="-27.4795290" east="153.0355330" west="153.0100180" />
+    </ExtendedData>
+    <Point><coordinates>153.0278920,-27.4675800,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p3">
+    <address>4000, Australia</address>
+    <AddressDetails Accuracy="5" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><PostalCode><PostalCodeNumber>4000</PostalCodeNumber></PostalCode></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-27.4493869" south="-27.4825506" east="153.0368341" west="153.0088712" />
+    </ExtendedData>
+    <Point><coordinates>153.0228526,-27.4659688,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p4">
+    <address>Queensland, Australia</address>
+    <AddressDetails Accuracy="2" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-10.6875420" south="-29.1778970" east="153.5521710" west="137.9959570" />
+    </ExtendedData>
+    <Point><coordinates>145.7740021,-19.7061005,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p5">
+    <address>Australia</address>
+    <AddressDetails Accuracy="1" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-9.2065000" south="-43.9572000" east="159.3320000" west="112.5000000" />
+    </ExtendedData>
+    <Point><coordinates>133.7751360,-25.2743980,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+Google geocoding. Address: -26.4158,147.113. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>-26.4158,147.113</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>LOT 7 Eurella St, Morven QLD 4468, Australia</address>
+    <AddressDetails Accuracy="9" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName><Locality><LocalityName>Morven</LocalityName><Thoroughfare><ThoroughfareName>Eurella St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>4468</PostalCodeNumber></PostalCode></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.4126164" south="-26.4189116" east="147.1161996" west="147.1099044" />
+    </ExtendedData>
+    <Point><coordinates>147.1130520,-26.4157640,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p2">
+    <address>66-78 Warrego Hwy, Morven QLD 4468, Australia</address>
+    <AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName><Locality><LocalityName>Morven</LocalityName><Thoroughfare><ThoroughfareName>66-78 Warrego Hwy</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>4468</PostalCodeNumber></PostalCode></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.4121953" south="-26.4184905" east="147.1159953" west="147.1097001" />
+    </ExtendedData>
+    <Point><coordinates>147.1128410,-26.4153228,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p3">
+    <address>Morven QLD, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName><Locality><LocalityName>Morven</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.1762300" south="-26.7854870" east="147.3787710" west="146.8058080" />
+    </ExtendedData>
+    <Point><coordinates>147.1127060,-26.4158220,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p4">
+    <address>Queensland 4468, Australia</address>
+    <AddressDetails Accuracy="5" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><PostalCode><PostalCodeNumber>4468</PostalCodeNumber></PostalCode></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-25.8159160" south="-26.8198216" east="147.3270485" west="146.4719928" />
+    </ExtendedData>
+    <Point><coordinates>146.8995206,-26.3178688,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p5">
+    <address>Queensland, Australia</address>
+    <AddressDetails Accuracy="2" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-10.6875420" south="-29.1778970" east="153.5521710" west="137.9959570" />
+    </ExtendedData>
+    <Point><coordinates>145.7740021,-19.7061005,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p6">
+    <address>Australia</address>
+    <AddressDetails Accuracy="1" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-9.2065000" south="-43.9572000" east="159.3320000" west="112.5000000" />
+    </ExtendedData>
+    <Point><coordinates>133.7751360,-25.2743980,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;36;1mMapPoint Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `map_points`[0m
+Rendered loads/_match_data (0.00000)
+Completed in 1.89000 (0 reqs/sec) | Rendering: 0.01500 (0%) | DB: 0.00000 (0%) | 200 OK [http://localhost/loads/match_data?authenticity_token=8fb96ffbff6fb082c04dbc8e24f8df06678e247d&start_lat=-27.4676&start_lng=153.028&end_lat=-26.4158&end_lng=147.113&load_type=truck]
+
+
+Processing LoadsController#match_data (for 127.0.0.1 at 2009-08-05 00:14:02) [GET]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlYmQ5N2FlZmIyNGYyYjQ2
+ZjQxNDY1NjhjMmFkOGNlYjM6DHVzZXJfaWRpECIKZmxhc2hJQzonQWN0aW9u
+Q29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0
+dXJuX3RvMA==--d8665b8dbda28e444c2dfc68a6fba1eceba80bb3
+  Parameters: {"end_lng"=>"147.113", "start_lng"=>"150.185", "authenticity_token"=>"8fb96ffbff6fb082c04dbc8e24f8df06678e247d", "action"=>"match_data", "end_lat"=>"-26.4158", "start_lat"=>"-26.6581", "controller"=>"loads", "load_type"=>"truck"}
+  [4;35;1mUser Columns (0.000000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 11) LIMIT 1[0m
+  [4;35;1mMapPoint Load (0.000000)[0m   [0mSELECT *, (ACOS(least(1,COS(-0.4652716173259)*COS(2.62122273710768)*COS(RADIANS(map_points.lat))*COS(RADIANS(map_points.lng))+
+ COS(-0.4652716173259)*SIN(2.62122273710768)*COS(RADIANS(map_points.lat))*SIN(RADIANS(map_points.lng))+
+ SIN(-0.4652716173259)*SIN(RADIANS(map_points.lat))))*6376.77271)
+ AS distance FROM `map_points` WHERE (point_type = 'start' and load_type != 'truck') [0m
+  [4;36;1mMapPoint Load (0.000000)[0m   [0;1mSELECT *, (ACOS(least(1,COS(-0.461042684548318)*COS(2.56760622248642)*COS(RADIANS(map_points.lat))*COS(RADIANS(map_points.lng))+
+ COS(-0.461042684548318)*SIN(2.56760622248642)*COS(RADIANS(map_points.lat))*SIN(RADIANS(map_points.lng))+
+ SIN(-0.461042684548318)*SIN(RADIANS(map_points.lat))))*6376.77271)
+ AS distance FROM `map_points` WHERE (point_type = 'end' and load_type != 'truck') [0m
+Google geocoding. Address: -26.6581,150.185. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>-26.6581,150.185</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>31-33 Marian St, Miles QLD 4415, Australia</address>
+    <AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName><Thoroughfare><ThoroughfareName>31-33 Marian St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>4415</PostalCodeNumber></PostalCode></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.6549570" south="-26.6612522" east="150.1881470" west="150.1818518" />
+    </ExtendedData>
+    <Point><coordinates>150.1849965,-26.6581255,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p2">
+    <address>Miles QLD 4415, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.6061720" south="-26.8369420" east="150.2658060" west="150.0309590" />
+    </ExtendedData>
+    <Point><coordinates>150.1846150,-26.6580620,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p3">
+    <address>Queensland, Australia</address>
+    <AddressDetails Accuracy="2" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-10.6875420" south="-29.1778970" east="153.5521710" west="137.9959570" />
+    </ExtendedData>
+    <Point><coordinates>145.7740021,-19.7061005,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p4">
+    <address>Australia</address>
+    <AddressDetails Accuracy="1" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-9.2065000" south="-43.9572000" east="159.3320000" west="112.5000000" />
+    </ExtendedData>
+    <Point><coordinates>133.7751360,-25.2743980,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+Google geocoding. Address: -26.4158,147.113. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>-26.4158,147.113</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>LOT 7 Eurella St, Morven QLD 4468, Australia</address>
+    <AddressDetails Accuracy="9" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName><Locality><LocalityName>Morven</LocalityName><Thoroughfare><ThoroughfareName>Eurella St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>4468</PostalCodeNumber></PostalCode></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.4126164" south="-26.4189116" east="147.1161996" west="147.1099044" />
+    </ExtendedData>
+    <Point><coordinates>147.1130520,-26.4157640,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p2">
+    <address>66-78 Warrego Hwy, Morven QLD 4468, Australia</address>
+    <AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName><Locality><LocalityName>Morven</LocalityName><Thoroughfare><ThoroughfareName>66-78 Warrego Hwy</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>4468</PostalCodeNumber></PostalCode></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.4121953" south="-26.4184905" east="147.1159953" west="147.1097001" />
+    </ExtendedData>
+    <Point><coordinates>147.1128410,-26.4153228,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p3">
+    <address>Morven QLD, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName><Locality><LocalityName>Morven</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.1762300" south="-26.7854870" east="147.3787710" west="146.8058080" />
+    </ExtendedData>
+    <Point><coordinates>147.1127060,-26.4158220,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p4">
+    <address>Queensland 4468, Australia</address>
+    <AddressDetails Accuracy="5" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><PostalCode><PostalCodeNumber>4468</PostalCodeNumber></PostalCode></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-25.8159160" south="-26.8198216" east="147.3270485" west="146.4719928" />
+    </ExtendedData>
+    <Point><coordinates>146.8995206,-26.3178688,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p5">
+    <address>Queensland, Australia</address>
+    <AddressDetails Accuracy="2" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-10.6875420" south="-29.1778970" east="153.5521710" west="137.9959570" />
+    </ExtendedData>
+    <Point><coordinates>145.7740021,-19.7061005,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p6">
+    <address>Australia</address>
+    <AddressDetails Accuracy="1" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-9.2065000" south="-43.9572000" east="159.3320000" west="112.5000000" />
+    </ExtendedData>
+    <Point><coordinates>133.7751360,-25.2743980,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;35;1mMapPoint Columns (0.000000)[0m   [0mSHOW FIELDS FROM `map_points`[0m
+Rendered loads/_match_data (0.00000)
+Completed in 1.76600 (0 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.00000 (0%) | 200 OK [http://localhost/loads/match_data?authenticity_token=8fb96ffbff6fb082c04dbc8e24f8df06678e247d&start_lat=-26.6581&start_lng=150.185&end_lat=-26.4158&end_lng=147.113&load_type=truck]
+
+
+Processing LoadsController#match_data (for 127.0.0.1 at 2009-08-05 00:14:04) [GET]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlYmQ5N2FlZmIyNGYyYjQ2
+ZjQxNDY1NjhjMmFkOGNlYjM6DHVzZXJfaWRpECIKZmxhc2hJQzonQWN0aW9u
+Q29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0
+dXJuX3RvMA==--d8665b8dbda28e444c2dfc68a6fba1eceba80bb3
+  Parameters: {"end_lng"=>"148.791", "start_lng"=>"150.185", "authenticity_token"=>"8fb96ffbff6fb082c04dbc8e24f8df06678e247d", "action"=>"match_data", "end_lat"=>"-26.5739", "start_lat"=>"-26.6581", "controller"=>"loads", "load_type"=>"truck"}
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 11) LIMIT 1[0m
+  [4;36;1mMapPoint Load (0.000000)[0m   [0;1mSELECT *, (ACOS(least(1,COS(-0.4652716173259)*COS(2.62122273710768)*COS(RADIANS(map_points.lat))*COS(RADIANS(map_points.lng))+
+ COS(-0.4652716173259)*SIN(2.62122273710768)*COS(RADIANS(map_points.lat))*SIN(RADIANS(map_points.lng))+
+ SIN(-0.4652716173259)*SIN(RADIANS(map_points.lat))))*6376.77271)
+ AS distance FROM `map_points` WHERE (point_type = 'start' and load_type != 'truck') [0m
+  [4;35;1mMapPoint Load (0.000000)[0m   [0mSELECT *, (ACOS(least(1,COS(-0.463802050095721)*COS(2.59689284733488)*COS(RADIANS(map_points.lat))*COS(RADIANS(map_points.lng))+
+ COS(-0.463802050095721)*SIN(2.59689284733488)*COS(RADIANS(map_points.lat))*SIN(RADIANS(map_points.lng))+
+ SIN(-0.463802050095721)*SIN(RADIANS(map_points.lat))))*6376.77271)
+ AS distance FROM `map_points` WHERE (point_type = 'end' and load_type != 'truck') [0m
+Google geocoding. Address: -26.6581,150.185. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>-26.6581,150.185</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>31-33 Marian St, Miles QLD 4415, Australia</address>
+    <AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName><Thoroughfare><ThoroughfareName>31-33 Marian St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>4415</PostalCodeNumber></PostalCode></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.6549570" south="-26.6612522" east="150.1881470" west="150.1818518" />
+    </ExtendedData>
+    <Point><coordinates>150.1849965,-26.6581255,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p2">
+    <address>Miles QLD 4415, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.6061720" south="-26.8369420" east="150.2658060" west="150.0309590" />
+    </ExtendedData>
+    <Point><coordinates>150.1846150,-26.6580620,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p3">
+    <address>Queensland, Australia</address>
+    <AddressDetails Accuracy="2" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-10.6875420" south="-29.1778970" east="153.5521710" west="137.9959570" />
+    </ExtendedData>
+    <Point><coordinates>145.7740021,-19.7061005,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p4">
+    <address>Australia</address>
+    <AddressDetails Accuracy="1" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-9.2065000" south="-43.9572000" east="159.3320000" west="112.5000000" />
+    </ExtendedData>
+    <Point><coordinates>133.7751360,-25.2743980,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+Google geocoding. Address: -26.5739,148.791. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>-26.5739,148.791</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>25 Bowen St, Roma QLD 4455, Australia</address>
+    <AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName><Locality><LocalityName>Roma</LocalityName><Thoroughfare><ThoroughfareName>25 Bowen St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>4455</PostalCodeNumber></PostalCode></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.5708439" south="-26.5771391" east="148.7943911" west="148.7880959" />
+    </ExtendedData>
+    <Point><coordinates>148.7912401,-26.5740123,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p2">
+    <address>Roma QLD 4455, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName><Locality><LocalityName>Roma</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.5194790" south="-26.6041570" east="148.8627170" west="148.7450300" />
+    </ExtendedData>
+    <Point><coordinates>148.7905920,-26.5739070,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p3">
+    <address>Queensland, Australia</address>
+    <AddressDetails Accuracy="2" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-10.6875420" south="-29.1778970" east="153.5521710" west="137.9959570" />
+    </ExtendedData>
+    <Point><coordinates>145.7740021,-19.7061005,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p4">
+    <address>Australia</address>
+    <AddressDetails Accuracy="1" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-9.2065000" south="-43.9572000" east="159.3320000" west="112.5000000" />
+    </ExtendedData>
+    <Point><coordinates>133.7751360,-25.2743980,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;36;1mMapPoint Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `map_points`[0m
+Rendered loads/_match_data (0.00000)
+Completed in 1.53200 (0 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.00000 (0%) | 200 OK [http://localhost/loads/match_data?authenticity_token=8fb96ffbff6fb082c04dbc8e24f8df06678e247d&start_lat=-26.6581&start_lng=150.185&end_lat=-26.5739&end_lng=148.791&load_type=truck]
+
+
+Processing LoadsController#your (for 127.0.0.1 at 2009-08-05 00:14:06) [GET]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlYmQ5N2FlZmIyNGYyYjQ2
+ZjQxNDY1NjhjMmFkOGNlYjM6DHVzZXJfaWRpECIKZmxhc2hJQzonQWN0aW9u
+Q29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0
+dXJuX3RvMA==--d8665b8dbda28e444c2dfc68a6fba1eceba80bb3
+  Parameters: {"action"=>"your", "controller"=>"loads"}
+  [4;35;1mUser Columns (0.000000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 11) LIMIT 1[0m
+  [4;35;1mCompany Columns (0.000000)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mCompany Load (0.000000)[0m   [0;1mSELECT * FROM `companies` WHERE (`companies`.`id` = 11) [0m
+  [4;35;1mLoad Load (0.000000)[0m   [0mSELECT * FROM `loads` WHERE (`loads`.company_id = 11) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mLoad Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `loads`[0m
+  [4;35;1mMapPoint Load (0.000000)[0m   [0mSELECT *, (ACOS(least(1,COS(-0.481037176459165)*COS(2.65208015828294)*COS(RADIANS(map_points.lat))*COS(RADIANS(map_points.lng))+
+ COS(-0.481037176459165)*SIN(2.65208015828294)*COS(RADIANS(map_points.lat))*SIN(RADIANS(map_points.lng))+
+ SIN(-0.481037176459165)*SIN(RADIANS(map_points.lat))))*6376.77271)
+ AS distance FROM `map_points` WHERE (point_type = 'start' and load_type != 'contract') [0m
+  [4;36;1mMapPoint Load (0.000000)[0m   [0;1mSELECT *, (ACOS(least(1,COS(-0.4652716173259)*COS(2.62122273710768)*COS(RADIANS(map_points.lat))*COS(RADIANS(map_points.lng))+
+ COS(-0.4652716173259)*SIN(2.62122273710768)*COS(RADIANS(map_points.lat))*SIN(RADIANS(map_points.lng))+
+ SIN(-0.4652716173259)*SIN(RADIANS(map_points.lat))))*6376.77271)
+ AS distance FROM `map_points` WHERE (point_type = 'end' and load_type != 'contract') [0m
+Google geocoding. Address: -27.5614,151.953. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>-27.5614,151.953</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>433-437 Ruthven St, Toowoomba QLD 4350, Australia</address>
+    <AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName><Locality><LocalityName>Toowoomba</LocalityName><Thoroughfare><ThoroughfareName>433-437 Ruthven St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>4350</PostalCodeNumber></PostalCode></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-27.5581754" south="-27.5644706" east="151.9560516" west="151.9497564" />
+    </ExtendedData>
+    <Point><coordinates>151.9529040,-27.5613230,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p2">
+    <address>Toowoomba QLD 4352, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName><Locality><LocalityName>Toowoomba</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-27.5502690" south="-27.5692850" east="151.9591820" west="151.9420820" />
+    </ExtendedData>
+    <Point><coordinates>151.9555050,-27.5613020,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p3">
+    <address>Queensland, Australia</address>
+    <AddressDetails Accuracy="2" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-10.6875420" south="-29.1778970" east="153.5521710" west="137.9959570" />
+    </ExtendedData>
+    <Point><coordinates>145.7740021,-19.7061005,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p4">
+    <address>Australia</address>
+    <AddressDetails Accuracy="1" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-9.2065000" south="-43.9572000" east="159.3320000" west="112.5000000" />
+    </ExtendedData>
+    <Point><coordinates>133.7751360,-25.2743980,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+Google geocoding. Address: -26.6581,150.185. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>-26.6581,150.185</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>31-33 Marian St, Miles QLD 4415, Australia</address>
+    <AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName><Thoroughfare><ThoroughfareName>31-33 Marian St</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>4415</PostalCodeNumber></PostalCode></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.6549570" south="-26.6612522" east="150.1881470" west="150.1818518" />
+    </ExtendedData>
+    <Point><coordinates>150.1849965,-26.6581255,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p2">
+    <address>Miles QLD 4415, Australia</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName><Locality><LocalityName>Miles</LocalityName></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-26.6061720" south="-26.8369420" east="150.2658060" west="150.0309590" />
+    </ExtendedData>
+    <Point><coordinates>150.1846150,-26.6580620,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p3">
+    <address>Queensland, Australia</address>
+    <AddressDetails Accuracy="2" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName><AdministrativeArea><AdministrativeAreaName>QLD</AdministrativeAreaName></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-10.6875420" south="-29.1778970" east="153.5521710" west="137.9959570" />
+    </ExtendedData>
+    <Point><coordinates>145.7740021,-19.7061005,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p4">
+    <address>Australia</address>
+    <AddressDetails Accuracy="1" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>AU</CountryNameCode><CountryName>Australia</CountryName></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="-9.2065000" south="-43.9572000" east="159.3320000" west="112.5000000" />
+    </ExtendedData>
+    <Point><coordinates>133.7751360,-25.2743980,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;35;1mMapPoint Columns (0.016000)[0m   [0mSHOW FIELDS FROM `map_points`[0m
+Rendering template within layouts/application
+Rendering loads/your
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `loads` WHERE (`loads`.company_id = 11) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `loads` WHERE (`loads`.company_id = 11) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mLoad Load (0.000000)[0m   [0;1mSELECT * FROM `loads` WHERE (`loads`.company_id = 11) ORDER BY created_at DESC[0m
+Rendered loads/_match_data (0.00000)
+Rendered shared/_filter_options (0.00000)
+Rendered shared/_user_bar (0.00000)
+Rendered shared/_navigation (0.00000)
+Completed in 1.68700 (0 reqs/sec) | Rendering: 0.01500 (0%) | DB: 0.01600 (0%) | 200 OK [http://localhost/loads/your]
+
+
+Processing LoadsController#index (for 127.0.0.1 at 2009-08-05 00:14:08) [GET]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlYmQ5N2FlZmIyNGYyYjQ2
+ZjQxNDY1NjhjMmFkOGNlYjM6DHVzZXJfaWRpECIKZmxhc2hJQzonQWN0aW9u
+Q29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0
+dXJuX3RvMA==--d8665b8dbda28e444c2dfc68a6fba1eceba80bb3
+  Parameters: {"action"=>"index", "controller"=>"loads"}
+  [4;35;1mUser Columns (0.016000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 11) LIMIT 1[0m
+  [4;35;1mLoad Load (0.000000)[0m   [0mSELECT * FROM `loads` WHERE (company_id != 11) ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering loads/index
+Rendered loads/_match_data (0.00000)
+Rendered shared/_filter_options (0.00000)
+Rendered shared/_user_bar (0.00000)
+Rendered shared/_navigation (0.00000)
+Completed in 0.82800 (1 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.01600 (1%) | 200 OK [http://localhost/loads]
+
+
+Processing LoadsController#index (for 127.0.0.1 at 2009-08-05 00:35:18) [GET]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlYmQ5N2FlZmIyNGYyYjQ2
+ZjQxNDY1NjhjMmFkOGNlYjM6DHVzZXJfaWRpECIKZmxhc2hJQzonQWN0aW9u
+Q29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0
+dXJuX3RvMA==--d8665b8dbda28e444c2dfc68a6fba1eceba80bb3
+  Parameters: {"action"=>"index", "controller"=>"loads"}
+  [4;36;1mUser Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 11) LIMIT 1[0m
+  [4;36;1mLoad Load (0.000000)[0m   [0;1mSELECT * FROM `loads` WHERE (company_id != 11) ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering loads/index
+Rendered loads/_match_data (0.00000)
+Rendered shared/_filter_options (0.00000)
+Rendered shared/_user_bar (0.00000)
+Rendered shared/_navigation (0.00000)
+Completed in 0.85900 (1 reqs/sec) | Rendering: 0.01600 (1%) | DB: 0.01600 (1%) | 200 OK [http://localhost/loads]
+
+
+Processing LoadsController#index (for 127.0.0.1 at 2009-08-05 00:35:55) [GET]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlYmQ5N2FlZmIyNGYyYjQ2
+ZjQxNDY1NjhjMmFkOGNlYjM6DHVzZXJfaWRpECIKZmxhc2hJQzonQWN0aW9u
+Q29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0
+dXJuX3RvMA==--d8665b8dbda28e444c2dfc68a6fba1eceba80bb3
+  Parameters: {"action"=>"index", "controller"=>"loads"}
+  [4;35;1mUser Columns (0.000000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 11) LIMIT 1[0m
+  [4;35;1mLoad Load (0.000000)[0m   [0mSELECT * FROM `loads` WHERE (company_id != 11) ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering loads/index
+
+
+ActionView::TemplateError (undefined method `include?' for :menu_bar:Symbol) on line #27 of loads/index.html.erb:
+24:       <div class="data_input_table_header" style="background: black;width:580px;">
+25:         <div style="margin:0 2px 2px 2px;background: white;height:100px;">
+26:           <!-- now add a menu bar -->
+27:           <%= render :partial => :menu_bar %>
+28:         </div>
+29:       </div>
+30: 		<div class="data_input_table_header" style="margin:10px 0 0 0;">
+
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/partial_template.rb:57:in `partial_pieces'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/partial_template.rb:52:in `extract_partial_name_and_path'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/partial_template.rb:7:in `initialize'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/partials.rb:110:in `new'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/partials.rb:110:in `render_partial'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/base.rb:273:in `render'
+    app/views/loads/index.html.erb:27:in `_run_erb_47app47views47loads47index46html46erb'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/base.rb:338:in `send'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/base.rb:338:in `execute'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/template_handlers/compilable.rb:29:in `send'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/template_handlers/compilable.rb:29:in `render'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/template.rb:35:in `render'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/template.rb:22:in `render_template'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/base.rb:245:in `render_file'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1108:in `render_for_file'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:865:in `render_with_no_layout'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:880:in `render_with_no_layout'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:51:in `render'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:51:in `render'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/mime_responds.rb:131:in `send'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/mime_responds.rb:131:in `custom'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/mime_responds.rb:156:in `call'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/mime_responds.rb:156:in `respond'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/mime_responds.rb:154:in `each'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/mime_responds.rb:154:in `respond'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/loads_controller.rb:34:in `index'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1162:in `send'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1162:in `perform_action_without_filters'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:580:in `call_filters'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.0/lib/active_record/query_cache.rb:8:in `cache'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `send'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `process_without_filters'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/session_management.rb:130:in `process'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:389:in `process'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/rails.rb:76:in `process'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/rails.rb:74:in `synchronize'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/rails.rb:74:in `process'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:159:in `process_client'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `each'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `process_client'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `initialize'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `new'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `initialize'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `new'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `run'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/configurator.rb:282:in `run'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/configurator.rb:281:in `each'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/configurator.rb:281:in `run'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/bin/mongrel_rails:128:in `run'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel/command.rb:212:in `run'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/bin/mongrel_rails:281
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/commands/servers/mongrel.rb:64
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/commands/server.rb:39
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering D:/Applications/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing LoadsController#index (for 127.0.0.1 at 2009-08-05 00:36:25) [GET]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlYmQ5N2FlZmIyNGYyYjQ2
+ZjQxNDY1NjhjMmFkOGNlYjM6DHVzZXJfaWRpECIKZmxhc2hJQzonQWN0aW9u
+Q29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0
+dXJuX3RvMA==--d8665b8dbda28e444c2dfc68a6fba1eceba80bb3
+  Parameters: {"action"=>"index", "controller"=>"loads"}
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 11) LIMIT 1[0m
+  [4;36;1mLoad Load (0.000000)[0m   [0;1mSELECT * FROM `loads` WHERE (company_id != 11) ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering loads/index
+  [4;35;1mCompany Columns (0.000000)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mCompany Load (0.000000)[0m   [0;1mSELECT * FROM `companies` WHERE (`companies`.`id` = 11) [0m
+Rendered loads/_menu_bar (0.01600)
+Rendered loads/_match_data (0.00000)
+Rendered shared/_filter_options (0.00000)
+Rendered shared/_user_bar (0.00000)
+Rendered shared/_navigation (0.00000)
+Completed in 0.82900 (1 reqs/sec) | Rendering: 0.03200 (3%) | DB: 0.00000 (0%) | 200 OK [http://localhost/loads]
+
+
+Processing LoadsController#index (for 127.0.0.1 at 2009-08-05 00:37:02) [GET]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlYmQ5N2FlZmIyNGYyYjQ2
+ZjQxNDY1NjhjMmFkOGNlYjM6DHVzZXJfaWRpECIKZmxhc2hJQzonQWN0aW9u
+Q29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0
+dXJuX3RvMA==--d8665b8dbda28e444c2dfc68a6fba1eceba80bb3
+  Parameters: {"action"=>"index", "controller"=>"loads"}
+  [4;35;1mUser Columns (0.000000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 11) LIMIT 1[0m
+  [4;35;1mLoad Load (0.000000)[0m   [0mSELECT * FROM `loads` WHERE (company_id != 11) ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering loads/index
+  [4;36;1mCompany Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `companies`[0m
+  [4;35;1mCompany Load (0.000000)[0m   [0mSELECT * FROM `companies` WHERE (`companies`.`id` = 11) [0m
+Rendered loads/_menu_bar (0.01600)
+Rendered loads/_match_data (0.00000)
+Rendered shared/_filter_options (0.00000)
+Rendered shared/_user_bar (0.00000)
+Rendered shared/_navigation (0.00000)
+Completed in 0.87500 (1 reqs/sec) | Rendering: 0.03200 (3%) | DB: 0.00000 (0%) | 200 OK [http://localhost/loads]
+
+
+Processing LoadsController#index (for 127.0.0.1 at 2009-08-05 00:37:22) [GET]
+  Session ID: BAh7CjoRZ2VvX2xvY2F0aW9uMDoMY3NyZl9pZCIlYmQ5N2FlZmIyNGYyYjQ2
+ZjQxNDY1NjhjMmFkOGNlYjM6DHVzZXJfaWRpECIKZmxhc2hJQzonQWN0aW9u
+Q29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0
+dXJuX3RvMA==--d8665b8dbda28e444c2dfc68a6fba1eceba80bb3
+  Parameters: {"action"=>"index", "controller"=>"loads"}
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 11) LIMIT 1[0m
+  [4;36;1mLoad Load (0.000000)[0m   [0;1mSELECT * FROM `loads` WHERE (company_id != 11) ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering loads/index
+  [4;35;1mCompany Columns (0.000000)[0m   [0mSHOW FIELDS FROM `companies`[0m
+  [4;36;1mCompany Load (0.000000)[0m   [0;1mSELECT * FROM `companies` WHERE (`companies`.`id` = 11) [0m
+Rendered loads/_menu_bar (0.01500)
+Rendered loads/_match_data (0.00000)
+Rendered shared/_filter_options (0.00000)
+Rendered shared/_user_bar (0.00000)
+Rendered shared/_navigation (0.00000)
+Completed in 0.82800 (1 reqs/sec) | Rendering: 0.03100 (3%) | DB: 0.00000 (0%) | 200 OK [http://localhost/loads]

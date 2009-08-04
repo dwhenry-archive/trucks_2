@@ -24,7 +24,7 @@
 <div class="PageTitle">
 	New Journey
 </div>
-<b>NOTE: </b>session[:geo_location] value  is <%= session[:geo_location] %>
+<b>NOTE: </b>session[:geo_location] value  is <%= session[:geo_location] ?  session[:geo_location][:latitude] :  session[:geo_location] %>
 <div class="container">
 	<div class="left_container">
 		<% form_for(@load) do |f| %>

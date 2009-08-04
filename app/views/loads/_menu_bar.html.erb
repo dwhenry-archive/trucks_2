@@ -1,0 +1,12 @@
+<script language="javascript">
+	prevSelected='<%= current_user.company.pref_type %>';
+</script>
+<div id="smart_menu" >
+	<div class="menu">
+		<ul id="search_nav">
+			<li id="li_menu_available" <%= get_menu_class("menu_available",@menu_lev_1) %>><%= link_to 'TRUCKS', loads_path %></li>
+            <li id="li_menu_manage" <%= get_menu_class("menu_manage",@menu_lev_1) %>><%= link_to 'CONTRACTS', your_loads_path %></li>
+		</ul>
+	</div>
+
+</div>

@@ -4,7 +4,7 @@ class LoadsController < ApplicationController
   # GET /loads
   # GET /loads.xml
   def your
-    @loads = current_user.company.loads
+    @loads = current_user.company.loads #.paginate :page => params[:page]
     load = @loads.first
         
     if load
@@ -22,10 +22,17 @@ class LoadsController < ApplicationController
   # GET /loads
   # GET /loads.xml
   def index
-    @loads = Load.all
+    @loads = Load.all(:order => 'created_at DESC', :conditions => ['company_id != ?',current_user.company_id])
+    load = @loads.first
+        
+    if load
+      @results = get_match_results(load.start_lng,load.start_lat,load.end_lng,load.end_lat,load.load_type)
+    else
+      @results = []
+    end
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html #{ render :action => :your }
       format.xml  { render :xml => @loads }
     end
   end

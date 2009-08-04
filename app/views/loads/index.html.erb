@@ -1,18 +1,89 @@
-<h1>Listing loads</h1>
+<script src="http://maps.google.com/maps?file=api&v=2&key=ABQIAAAAbMoeqif6WesTuyyV7KfMphT5EG_nRGozuZeboEWjUCrU_tMJGxTdBe0yEKO9HBgw3R_U96Vnp8WjDQ"
+	type="text/javascript">
+</script>
+<%= javascript_include_tag 'google_new','loads' %>
+<script type="text/javascript">
+    var homeLat="";
+    var homeLng="";
+	// Add this to the bottom of application.js
+	document.observe('dom:loaded', function(){
+		// this is needed here as call in google_new is overwritten
+		<% if @loads.size > 0 %>
+			initialize_maps_with_trip("load_<%= @loads.first.id %>");
+        <% else %>
+            initialize_maps();
+		<% end %>
+	});
+</script>
+<div class="PageTitle">
+	Available Loads
+</div>
 
-<table>
-  <tr>
-  </tr>
+<div class="container">
+	<div class="left_container">
+      <div class="data_input_table_header" style="background: black;width:580px;">
+        <div style="margin:0 2px 2px 2px;background: white;height:100px;">
+          <!-- now add a menu bar -->
+          <%= render :partial => 'menu_bar' %>
+          Search Stuff Here..
+        </div>
+      </div>
+		<div class="data_input_table_header" style="margin:10px 0 0 0;">
+			<div class="data_col_journey">
+				Journey
+			</div>
+			<div class="data_col_date">
+				Date
+			</div>
+			<div class="data_col_details">
+				Details
+			</div>
+		</div>
+		<hr>
+		<div id="data_table">
+			<% @loads.each do |load| %>
+				<div id="load_<%= load.id %>" class="data_input_table_row" onclick="selectLoadRow(this,'<%=h form_authenticity_token %>');">
+					<div class="data_col_journey">
+						<b>From: </b><%=h load.start_loc %><br>
+						<b>To: </b><%=h load.end_loc %><br>
+						<%= hidden_field_tag "load_#{load.id}_start_loc", load.start_loc %>
+						<%= hidden_field_tag "load_#{load.id}_start_lat", load.start_lat %>
+						<%= hidden_field_tag "load_#{load.id}_start_lng", load.start_lng %>
+						<%= hidden_field_tag "load_#{load.id}_end_loc", load.end_loc %>
+						<%= hidden_field_tag "load_#{load.id}_end_lat", load.end_lat %>
+						<%= hidden_field_tag "load_#{load.id}_end_lng", load.end_lng %>
+                        <%= hidden_field_tag "load_#{load.id}_load_type", load.load_type %>
+					</div>
+					<div class="data_col_date">
+						<%=h load.load_date.strftime("%d %b %Y") if load.load_date %><br>
+					</div>
+					<div class="data_col_details">
+						Type: <%=h load.load_type.titlecase %><br>
+						<%=h load.details %><br>
+					</div>
+				</div>
+			<% end %>
+		</div>
+		<% if @loads.size > 0 %>
+			<hr>
+		<% end %>
 
-<% @loads.each do |load| %>
-  <tr>
-    <td><%= link_to 'Show', load %></td>
-    <td><%= link_to 'Edit', edit_load_path(load) %></td>
-    <td><%= link_to 'Destroy', load, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New loads', new_load_path %>
+	</div>
+	<div class="right_container" style="position:relative;height:410px">
+		<div id="map_select">&nbsp;</div>
+		<div id="map_col">
+			<span class="button lt_blue"><%= link_to 'Matches', new_load_path %></span>
+			<br>
+			<br>
+			<div id="map_col_info">
+				<b>Matches:</b><br>
+              <div id="match_data">
+                <%= render :partial => 'match_data', :locals => {:results => @results} %>
+              </div>
+			</div>
+		</div>
+        <div id="map_shadow">&nbsp;</div>
+		<div id="map" style="">&nbsp;</div>
+	</div>
+</div>
+<br>
