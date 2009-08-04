@@ -7,6 +7,9 @@
 <link href="/stylesheets/rich_calendar.css" media="screen" rel="stylesheet" type="text/css" />
 <% stylesheet_link_tag 'rich_calendar' %>
 <script type="text/javascript">
+    var homeLat=''; //< %= if session[:geo_location] ? session[:geo_location][:latitude] : "" %>';
+    var homeLng=''; //< %= if session[:geo_location] ? session[:geo_location][:longitude] : "" %>';
+
 	// Add this to the bottom of application.js
 	document.observe('dom:loaded', function(){
 		// this is needed here as call in google_new is overwritten 
@@ -16,8 +19,6 @@
 			initialize_maps_with_trip("load");
 		<% end %>
 	});
-	var homeLat='<%= session[:geo_location] || "" %>';
-	var homeLng='<%= session[:geo_location] || "" %>';
 </script>
 <%= javascript_include_tag 'google_new' %>
 <div class="PageTitle">
